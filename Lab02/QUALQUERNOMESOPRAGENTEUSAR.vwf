@@ -1,16 +1,16 @@
 /*<simulation_settings>
-<ftestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off Lab01 -c Lab01 --vector_source="/home/ec2015/ra165457/Desktop/MC613/Lab01/QUALQUERNOMESOPRAGENTEUSAR.vwf" --testbench_file="/home/ec2015/ra165457/Desktop/MC613/Lab01/simulation/qsim/QUALQUERNOMESOPRAGENTEUSAR.vwf.vt"</ftestbench_cmd>
-<ttestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off Lab01 -c Lab01 --vector_source="/home/ec2015/ra165457/Desktop/MC613/Lab01/QUALQUERNOMESOPRAGENTEUSAR.vwf" --testbench_file="/home/ec2015/ra165457/Desktop/MC613/Lab01/simulation/qsim/QUALQUERNOMESOPRAGENTEUSAR.vwf.vt"</ttestbench_cmd>
-<fnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="/home/ec2015/ra165457/Desktop/MC613/Lab01/simulation/qsim/" Lab01 -c Lab01</fnetlist_cmd>
-<tnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=verilog --output_directory="/home/ec2015/ra165457/Desktop/MC613/Lab01/simulation/qsim/" Lab01 -c Lab01</tnetlist_cmd>
+<ftestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Lab01 -c Lab01 --vector_source="/home/ec2015/ra165457/Desktop/MC613/Lab02/QUALQUERNOMESOPRAGENTEUSAR.vwf" --testbench_file="/home/ec2015/ra165457/Desktop/MC613/Lab02/1/simulation/qsim/../QUALQUERNOMESOPRAGENTEUSAR.vwf.vht"</ftestbench_cmd>
+<ttestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Lab01 -c Lab01 --vector_source="/home/ec2015/ra165457/Desktop/MC613/Lab02/QUALQUERNOMESOPRAGENTEUSAR.vwf" --testbench_file="/home/ec2015/ra165457/Desktop/MC613/Lab02/1/simulation/qsim/../QUALQUERNOMESOPRAGENTEUSAR.vwf.vht"</ttestbench_cmd>
+<fnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="/home/ec2015/ra165457/Desktop/MC613/Lab02/1/simulation/qsim/" Lab01 -c Lab01</fnetlist_cmd>
+<tnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=vhdl --output_directory="/home/ec2015/ra165457/Desktop/MC613/Lab02/1/simulation/qsim/" Lab01 -c Lab01</tnetlist_cmd>
 <modelsim_script>onerror {exit -code 1}
 vlib work
-vlog -work work Lab01.vo
-vlog -work work QUALQUERNOMESOPRAGENTEUSAR.vwf.vt
-vsim -novopt -c -t 1ps -L cyclonev_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.Lab01_vlg_vec_tst
+vcom -work work Lab01.vho
+vcom -work work ../QUALQUERNOMESOPRAGENTEUSAR.vwf.vht
+vsim -novopt -c -t 1ps -L cyclonev -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.Lab01_vhd_vec_tst
 vcd file -direction Lab01.msim.vcd
-vcd add -internal Lab01_vlg_vec_tst/*
-vcd add -internal Lab01_vlg_vec_tst/i1/*
+vcd add -internal Lab01_vhd_vec_tst/*
+vcd add -internal Lab01_vhd_vec_tst/i1/*
 proc simTimestamp {} {
     echo "Simulation time: $::now ps"
     if { [string equal running [runStatus]] } {
@@ -23,12 +23,12 @@ quit -f
 </modelsim_script>
 <modelsim_script_timing>onerror {exit -code 1}
 vlib work
-vlog -work work Lab01.vo
-vlog -work work QUALQUERNOMESOPRAGENTEUSAR.vwf.vt
-vsim -novopt -c -t 1ps -L cyclonev_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.Lab01_vlg_vec_tst
+vcom -work work Lab01.vho
+vcom -work work ../QUALQUERNOMESOPRAGENTEUSAR.vwf.vht
+vsim -novopt -c -t 1ps -sdfmax Lab01_vhd_vec_tst/i1=Lab01_vhd.sdo -L cyclonev -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.Lab01_vhd_vec_tst
 vcd file -direction Lab01.msim.vcd
-vcd add -internal Lab01_vlg_vec_tst/*
-vcd add -internal Lab01_vlg_vec_tst/i1/*
+vcd add -internal Lab01_vhd_vec_tst/*
+vcd add -internal Lab01_vhd_vec_tst/i1/*
 proc simTimestamp {} {
     echo "Simulation time: $::now ps"
     if { [string equal running [runStatus]] } {
@@ -39,7 +39,7 @@ after 2500 simTimestamp
 run -all
 quit -f
 </modelsim_script_timing>
-<hdl_lang>verilog</hdl_lang>
+<hdl_lang>vhdl</hdl_lang>
 </simulation_settings>*/
 /*
 WARNING: Do NOT edit the input and output ports in this file in a text
@@ -85,27 +85,7 @@ SIGNAL("pin_name6")
 	PARENT = "";
 }
 
-SIGNAL("Xa")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "";
-}
-
-SIGNAL("Xb")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "";
-}
-
-SIGNAL("Xc")
+SIGNAL("Xe")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -125,7 +105,27 @@ SIGNAL("Xd")
 	PARENT = "";
 }
 
-SIGNAL("Xe")
+SIGNAL("Xc")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("Xb")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("Xa")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -144,7 +144,7 @@ TRANSITION_LIST("pin_name6")
 	}
 }
 
-TRANSITION_LIST("Xa")
+TRANSITION_LIST("Xe")
 {
 	NODE
 	{
@@ -154,7 +154,7 @@ TRANSITION_LIST("Xa")
 	}
 }
 
-TRANSITION_LIST("Xb")
+TRANSITION_LIST("Xd")
 {
 	NODE
 	{
@@ -182,7 +182,7 @@ TRANSITION_LIST("Xc")
 	}
 }
 
-TRANSITION_LIST("Xd")
+TRANSITION_LIST("Xb")
 {
 	NODE
 	{
@@ -206,7 +206,7 @@ TRANSITION_LIST("Xd")
 	}
 }
 
-TRANSITION_LIST("Xe")
+TRANSITION_LIST("Xa")
 {
 	NODE
 	{
@@ -248,7 +248,7 @@ TRANSITION_LIST("Xe")
 
 DISPLAY_LINE
 {
-	CHANNEL = "Xa";
+	CHANNEL = "Xe";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 0;
@@ -257,7 +257,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "Xb";
+	CHANNEL = "Xd";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 1;
@@ -275,7 +275,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "Xd";
+	CHANNEL = "Xb";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 3;
@@ -284,7 +284,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "Xe";
+	CHANNEL = "Xa";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 4;

@@ -30,6 +30,94 @@ Z4 !s108 1520278907.000000
 Z5 o-work work
 Z6 tCvgOpt 0
 n@lab01
+Elab01
+Z7 w1520882888
+Z8 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z9 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 YZlobdkPHzE;N99jHfcMc3
+Z10 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z11 DPx8 cyclonev 19 cyclonev_components 0 22 WF17oJHHbo`b[5Bl5P6_h0
+Z12 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z13 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z14 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 dfin^_@l97Ngz6cK0kjS62
+Z15 d/home/ec2015/ra165457/Desktop/MC613/Lab02/1/simulation/qsim
+Z16 8Lab01.vho
+Z17 FLab01.vho
+l0
+L36
+V?a]bz`;I=i5m[k=dOTWG:2
+!s100 6dPSen4CR@[bD@2`IPoP>1
+Z18 OV;C;10.5b;63
+32
+Z19 !s110 1520882888
+!i10b 1
+Z20 !s108 1520882888.000000
+Z21 !s90 -work|work|Lab01.vho|
+Z22 !s107 Lab01.vho|
+!i113 1
+R5
+Z23 tExplicit 1 CvgOpt 0
+Astructure
+R8
+R9
+R10
+R11
+R12
+R13
+R14
+DEx4 work 5 lab01 0 22 ?a]bz`;I=i5m[k=dOTWG:2
+l85
+L56
+VWEK=]OV3e@@hkbWM[SfLW2
+!s100 Xcn:fLmNGHWg1Y68Xz1?n3
+R18
+32
+R19
+!i10b 1
+R20
+R21
+R22
+!i113 1
+R5
+R23
+Elab01_vhd_vec_tst
+Z24 w1520882886
+R12
+R13
+R15
+Z25 8../QUALQUERNOMESOPRAGENTEUSAR.vwf.vht
+Z26 F../QUALQUERNOMESOPRAGENTEUSAR.vwf.vht
+l0
+L31
+VEDDN5<:cO>_<_B_T?HII:2
+!s100 @U?]0DWHej:eo`cI3>^Qg1
+R18
+32
+R19
+!i10b 1
+R20
+Z27 !s90 -work|work|../QUALQUERNOMESOPRAGENTEUSAR.vwf.vht|
+Z28 !s107 ../QUALQUERNOMESOPRAGENTEUSAR.vwf.vht|
+!i113 1
+R5
+R23
+Alab01_arch
+R12
+R13
+Z29 DEx4 work 17 lab01_vhd_vec_tst 0 22 EDDN5<:cO>_<_B_T?HII:2
+l52
+L33
+Z30 VU<MjM2hDjJKhlLNdo^^=73
+Z31 !s100 X=5[98kj=@;?en474Cc[<2
+R18
+32
+R19
+!i10b 1
+R20
+R27
+R28
+!i113 1
+R5
+R23
 vLab01_vlg_vec_tst
 R1
 !i10b 1

@@ -7,23 +7,21 @@ Note: if both ModelSim-Altera and ModelSim executables are available, ModelSim-A
 
 **** Generating the ModelSim Testbench ****
 
-quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off Lab01 -c Lab01 --vector_source="/home/ec2015/ra165457/Desktop/MC613/Lab01/QUALQUERNOMESOPRAGENTEUSAR.vwf" --testbench_file="/home/ec2015/ra165457/Desktop/MC613/Lab01/simulation/qsim/QUALQUERNOMESOPRAGENTEUSAR.vwf.vt"
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Lab01 -c Lab01 --vector_source="/home/ec2015/ra165457/Desktop/MC613/Lab02/QUALQUERNOMESOPRAGENTEUSAR.vwf" --testbench_file="/home/ec2015/ra165457/Desktop/MC613/Lab02/1/simulation/qsim/../QUALQUERNOMESOPRAGENTEUSAR.vwf.vht"
 
-Info: *******************************************************************Info: Running Quartus Prime EDA Netlist Writer    Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition    Info: Copyright (C) 2017  Intel Corporation. All rights reserved.    Info: Your use of Intel Corporation's design tools, logic functions     Info: and other software and tools, and its AMPP partner logic     Info: functions, and any output files from any of the foregoing     Info: (including device programming or simulation files), and any     Info: associated documentation or information are expressly subject     Info: to the terms and conditions of the Intel Program License     Info: Subscription Agreement, the Intel Quartus Prime License Agreement,    Info: the Intel FPGA IP License Agreement, or other applicable license    Info: agreement, including, without limitation, that your use is for    Info: the sole purpose of programming logic devices manufactured by    Info: Intel and sold by Intel or its authorized distributors.  Please    Info: refer to the applicable agreement for further details.    Info: Processing started: Mon Mar  5 16:41:44 2018Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off Lab01 -c Lab01 --vector_source=/home/ec2015/ra165457/Desktop/MC613/Lab01/QUALQUERNOMESOPRAGENTEUSAR.vwf --testbench_file=/home/ec2015/ra165457/Desktop/MC613/Lab01/simulation/qsim/QUALQUERNOMESOPRAGENTEUSAR.vwf.vtWarning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Completed successfully. 
-
+Info: *******************************************************************Info: Running Quartus Prime EDA Netlist Writer    Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition    Info: Copyright (C) 2017  Intel Corporation. All rights reserved.    Info: Your use of Intel Corporation's design tools, logic functions     Info: and other software and tools, and its AMPP partner logic     Info: functions, and any output files from any of the foregoing     Info: (including device programming or simulation files), and any     Info: associated documentation or information are expressly subject     Info: to the terms and conditions of the Intel Program License     Info: Subscription Agreement, the Intel Quartus Prime License Agreement,    Info: the Intel FPGA IP License Agreement, or other applicable license    Info: agreement, including, without limitation, that your use is for    Info: the sole purpose of programming logic devices manufactured by    Info: Intel and sold by Intel or its authorized distributors.  Please    Info: refer to the applicable agreement for further details.    Info: Processing started: Mon Mar 12 16:28:06 2018Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Lab01 -c Lab01 --vector_source=/home/ec2015/ra165457/Desktop/MC613/Lab02/QUALQUERNOMESOPRAGENTEUSAR.vwf --testbench_file=/home/ec2015/ra165457/Desktop/MC613/Lab02/1/simulation/qsim/../QUALQUERNOMESOPRAGENTEUSAR.vwf.vhtWarning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Completed successfully. 
 
 **** Generating the functional simulation netlist ****
 
-quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="/home/ec2015/ra165457/Desktop/MC613/Lab01/simulation/qsim/" Lab01 -c Lab01
+quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="/home/ec2015/ra165457/Desktop/MC613/Lab02/1/simulation/qsim/" Lab01 -c Lab01
 
-Info: *******************************************************************Info: Running Quartus Prime EDA Netlist Writer    Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition    Info: Copyright (C) 2017  Intel Corporation. All rights reserved.    Info: Your use of Intel Corporation's design tools, logic functions     Info: and other software and tools, and its AMPP partner logic     Info: functions, and any output files from any of the foregoing     Info: (including device programming or simulation files), and any     Info: associated documentation or information are expressly subject     Info: to the terms and conditions of the Intel Program License     Info: Subscription Agreement, the Intel Quartus Prime License Agreement,    Info: the Intel FPGA IP License Agreement, or other applicable license    Info: agreement, including, without limitation, that your use is for    Info: the sole purpose of programming logic devices manufactured by    Info: Intel and sold by Intel or its authorized distributors.  Please    Info: refer to the applicable agreement for further details.    Info: Processing started: Mon Mar  5 16:41:45 2018Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=/home/ec2015/ra165457/Desktop/MC613/Lab01/simulation/qsim/ Lab01 -c Lab01Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.Info (204019): Generated file Lab01.vo in folder "/home/ec2015/ra165457/Desktop/MC613/Lab01/simulation/qsim//" for EDA simulation toolInfo: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning    Info: Peak virtual memory: 1245 megabytes    Info: Processing ended: Mon Mar  5 16:41:46 2018    Info: Elapsed time: 00:00:01    Info: Total CPU time (on all processors): 00:00:01
+Info: *******************************************************************Info: Running Quartus Prime EDA Netlist Writer    Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition    Info: Copyright (C) 2017  Intel Corporation. All rights reserved.    Info: Your use of Intel Corporation's design tools, logic functions     Info: and other software and tools, and its AMPP partner logic     Info: functions, and any output files from any of the foregoing     Info: (including device programming or simulation files), and any     Info: associated documentation or information are expressly subject     Info: to the terms and conditions of the Intel Program License     Info: Subscription Agreement, the Intel Quartus Prime License Agreement,    Info: the Intel FPGA IP License Agreement, or other applicable license    Info: agreement, including, without limitation, that your use is for    Info: the sole purpose of programming logic devices manufactured by    Info: Intel and sold by Intel or its authorized distributors.  Please    Info: refer to the applicable agreement for further details.    Info: Processing started: Mon Mar 12 16:28:07 2018Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=/home/ec2015/ra165457/Desktop/MC613/Lab02/1/simulation/qsim/ Lab01 -c Lab01Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.Info (204019): Generated file Lab01.vho in folder "/home/ec2015/ra165457/Desktop/MC613/Lab02/1/simulation/qsim//" for EDA simulation toolInfo: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning    Info: Peak virtual memory: 1245 megabytes    Info: Processing ended: Mon Mar 12 16:28:08 2018    Info: Elapsed time: 00:00:01    Info: Total CPU time (on all processors): 00:00:01
 Completed successfully. 
 
 **** Generating the ModelSim .do script ****
 
-/home/ec2015/ra165457/Desktop/MC613/Lab01/simulation/qsim/Lab01.do generated.
+/home/ec2015/ra165457/Desktop/MC613/Lab02/1/simulation/qsim/Lab01.do generated.
 
 Completed successfully. 
 
@@ -35,35 +33,42 @@ Reading pref.tcl
 # 10.5b
 # do Lab01.do
 # ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:41:47 on Mar 05,2018# vlog -work work Lab01.vo 
-# -- Compiling module Lab01
-# 
-# Top level modules:# 	Lab01
-# End time: 16:41:47 on Mar 05,2018, Elapsed time: 0:00:00
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:28:08 on Mar 12,2018# vcom -work work Lab01.vho 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164# -- Loading package altera_lnsim_components
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package cyclonev_atom_pack# -- Loading package cyclonev_components
+# -- Compiling entity Lab01
+# -- Compiling architecture structure of Lab01
+# End time: 16:28:08 on Mar 12,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:41:47 on Mar 05,2018# vlog -work work QUALQUERNOMESOPRAGENTEUSAR.vwf.vt 
-# -- Compiling module Lab01_vlg_vec_tst
-# 
-# Top level modules:# 	Lab01_vlg_vec_tst
-# End time: 16:41:47 on Mar 05,2018, Elapsed time: 0:00:00
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:28:08 on Mar 12,2018# vcom -work work ../QUALQUERNOMESOPRAGENTEUSAR.vwf.vht 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Lab01_vhd_vec_tst
+# -- Compiling architecture Lab01_arch of Lab01_vhd_vec_tst
+# End time: 16:28:08 on Mar 12,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vsim -novopt -c -t 1ps -L cyclonev_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.Lab01_vlg_vec_tst # Start time: 16:41:47 on Mar 05,2018# Loading work.Lab01_vlg_vec_tst# Loading work.Lab01
-# after#25
-# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.# ** Note: $finish    : QUALQUERNOMESOPRAGENTEUSAR.vwf.vt(52)#    Time: 800 ns  Iteration: 0  Instance: /Lab01_vlg_vec_tst
-# End time: 16:41:47 on Mar 05,2018, Elapsed time: 0:00:00# Errors: 0, Warnings: 1
+# vsim -novopt -c -t 1ps -L cyclonev -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.Lab01_vhd_vec_tst # Start time: 16:28:08 on Mar 12,2018# Loading std.standard# Loading std.textio(body)# Loading ieee.std_logic_1164(body)# Loading work.lab01_vhd_vec_tst(lab01_arch)# Loading altera_lnsim.altera_lnsim_components# Loading ieee.vital_timing(body)# Loading ieee.vital_primitives(body)# Loading cyclonev.cyclonev_atom_pack(body)# Loading cyclonev.cyclonev_components# Loading work.lab01(structure)# Loading ieee.std_logic_arith(body)# Loading cyclonev.cyclonev_io_obuf(arch)# Loading cyclonev.cyclonev_io_ibuf(arch)# Loading cyclonev.cyclonev_lcell_comb(vital_lcell_comb)
+# after#32
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+# End time: 16:28:08 on Mar 12,2018, Elapsed time: 0:00:00# Errors: 0, Warnings: 1
 Completed successfully. 
 
 **** Converting ModelSim VCD to vector waveform ****
 
-Reading /home/ec2015/ra165457/Desktop/MC613/Lab01/QUALQUERNOMESOPRAGENTEUSAR.vwf...
+Reading /home/ec2015/ra165457/Desktop/MC613/Lab02/QUALQUERNOMESOPRAGENTEUSAR.vwf...
 
-Reading /home/ec2015/ra165457/Desktop/MC613/Lab01/simulation/qsim/Lab01.msim.vcd...
+Reading /home/ec2015/ra165457/Desktop/MC613/Lab02/1/simulation/qsim/Lab01.msim.vcd...
 
 Processing channel transitions... 
 
-Writing the resulting VWF to /home/ec2015/ra165457/Desktop/MC613/Lab01/simulation/qsim/Lab01_20180305164147.sim.vwf
+Writing the resulting VWF to /home/ec2015/ra165457/Desktop/MC613/Lab02/1/simulation/qsim/Lab01_20180312162809.sim.vwf
 
 Finished VCD to VWF conversion.
 

@@ -1,19 +1,19 @@
 |Lab01
 pin_name6 <= inst5.DB_MAX_OUTPUT_PORT_TYPE
-Xa => inst.IN0
+Xe => inst.IN0
 Xc => inst.IN1
 Xc => inst8.IN0
 Xc => inst4.IN1
 Xc => inst3.IN2
-Xb => inst.IN2
-Xb => inst7.IN0
-Xb => inst1.IN3
-Xb => inst4.IN2
-Xe => inst.IN3
-Xe => inst9.IN0
-Xe => inst4.IN0
-Xe => inst3.IN0
-Xd => inst2.IN1
-Xd => inst6.IN0
+Xd => inst.IN2
+Xd => inst7.IN0
+Xd => inst1.IN3
+Xd => inst4.IN2
+Xa => inst.IN3
+Xa => inst9.IN0
+Xa => inst4.IN0
+Xa => inst3.IN0
+Xb => inst2.IN1
+Xb => inst6.IN0
 
 

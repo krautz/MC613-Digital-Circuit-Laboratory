@@ -1,30 +1,47 @@
 # do Lab01.do
 # ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:41:47 on Mar 05,2018
-# vlog -work work Lab01.vo 
-# -- Compiling module Lab01
-# 
-# Top level modules:
-# 	Lab01
-# End time: 16:41:47 on Mar 05,2018, Elapsed time: 0:00:00
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:28:08 on Mar 12,2018
+# vcom -work work Lab01.vho 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package altera_lnsim_components
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package cyclonev_atom_pack
+# -- Loading package cyclonev_components
+# -- Compiling entity Lab01
+# -- Compiling architecture structure of Lab01
+# End time: 16:28:08 on Mar 12,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:41:47 on Mar 05,2018
-# vlog -work work QUALQUERNOMESOPRAGENTEUSAR.vwf.vt 
-# -- Compiling module Lab01_vlg_vec_tst
-# 
-# Top level modules:
-# 	Lab01_vlg_vec_tst
-# End time: 16:41:47 on Mar 05,2018, Elapsed time: 0:00:00
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:28:08 on Mar 12,2018
+# vcom -work work ../QUALQUERNOMESOPRAGENTEUSAR.vwf.vht 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Lab01_vhd_vec_tst
+# -- Compiling architecture Lab01_arch of Lab01_vhd_vec_tst
+# End time: 16:28:08 on Mar 12,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vsim -novopt -c -t 1ps -L cyclonev_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.Lab01_vlg_vec_tst 
-# Start time: 16:41:47 on Mar 05,2018
-# Loading work.Lab01_vlg_vec_tst
-# Loading work.Lab01
-# after#25
+# vsim -novopt -c -t 1ps -L cyclonev -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.Lab01_vhd_vec_tst 
+# Start time: 16:28:08 on Mar 12,2018
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.lab01_vhd_vec_tst(lab01_arch)
+# Loading altera_lnsim.altera_lnsim_components
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading cyclonev.cyclonev_atom_pack(body)
+# Loading cyclonev.cyclonev_components
+# Loading work.lab01(structure)
+# Loading ieee.std_logic_arith(body)
+# Loading cyclonev.cyclonev_io_obuf(arch)
+# Loading cyclonev.cyclonev_io_ibuf(arch)
+# Loading cyclonev.cyclonev_lcell_comb(vital_lcell_comb)
+# after#32
 # ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
-# ** Note: $finish    : QUALQUERNOMESOPRAGENTEUSAR.vwf.vt(52)
-#    Time: 800 ns  Iteration: 0  Instance: /Lab01_vlg_vec_tst
-# End time: 16:41:47 on Mar 05,2018, Elapsed time: 0:00:00
+# End time: 16:28:08 on Mar 12,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 1
