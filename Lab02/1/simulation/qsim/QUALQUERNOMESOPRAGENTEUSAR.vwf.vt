@@ -1,0 +1,142 @@
+// Copyright (C) 2017  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "03/05/2018 16:41:45"
+                                                                                
+// Verilog Test Bench (with test vectors) for design :                          Lab01
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module Lab01_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg Xa;
+reg Xb;
+reg Xc;
+reg Xd;
+reg Xe;
+// wires                                               
+wire pin_name6;
+
+// assign statements (if any)                          
+Lab01 i1 (
+// port map - connection between master ports and signals/registers   
+	.pin_name6(pin_name6),
+	.Xa(Xa),
+	.Xb(Xb),
+	.Xc(Xc),
+	.Xd(Xd),
+	.Xe(Xe)
+);
+initial 
+begin 
+#800000 $finish;
+end 
+
+// Xa
+initial
+begin
+	Xa = 1'b0;
+	Xa = #400000 1'b1;
+end 
+
+// Xb
+initial
+begin
+	Xb = 1'b0;
+	Xb = #200000 1'b1;
+	Xb = #200000 1'b0;
+	Xb = #200000 1'b1;
+end 
+
+// Xc
+initial
+begin
+	Xc = 1'b0;
+	Xc = #100000 1'b1;
+	Xc = #100000 1'b0;
+	Xc = #100000 1'b1;
+	Xc = #100000 1'b0;
+	Xc = #100000 1'b1;
+	Xc = #100000 1'b0;
+	Xc = #100000 1'b1;
+end 
+
+// Xd
+initial
+begin
+	Xd = 1'b0;
+	Xd = #50000 1'b1;
+	Xd = #50000 1'b0;
+	Xd = #50000 1'b1;
+	Xd = #50000 1'b0;
+	Xd = #50000 1'b1;
+	Xd = #50000 1'b0;
+	Xd = #50000 1'b1;
+	Xd = #50000 1'b0;
+	Xd = #50000 1'b1;
+	Xd = #50000 1'b0;
+	Xd = #50000 1'b1;
+	Xd = #50000 1'b0;
+	Xd = #50000 1'b1;
+	Xd = #50000 1'b0;
+	Xd = #50000 1'b1;
+end 
+
+// Xe
+initial
+begin
+	Xe = 1'b0;
+	Xe = #20000 1'b1;
+	Xe = #30000 1'b0;
+	Xe = #30000 1'b1;
+	Xe = #20000 1'b0;
+	Xe = #30000 1'b1;
+	Xe = #20000 1'b0;
+	Xe = #30000 1'b1;
+	Xe = #20000 1'b0;
+	Xe = #30000 1'b1;
+	Xe = #20000 1'b0;
+	Xe = #30000 1'b1;
+	Xe = #20000 1'b0;
+	Xe = #30000 1'b1;
+	Xe = #20000 1'b0;
+	Xe = #30000 1'b1;
+	Xe = #20000 1'b0;
+	Xe = #30000 1'b1;
+	Xe = #20000 1'b0;
+	Xe = #30000 1'b1;
+	Xe = #20000 1'b0;
+	Xe = #30000 1'b1;
+	Xe = #20000 1'b0;
+	Xe = #30000 1'b1;
+	Xe = #20000 1'b0;
+	Xe = #30000 1'b1;
+	Xe = #20000 1'b0;
+	Xe = #30000 1'b1;
+	Xe = #20000 1'b0;
+	Xe = #30000 1'b1;
+	Xe = #20000 1'b0;
+	Xe = #30000 1'b1;
+end 
+endmodule
+

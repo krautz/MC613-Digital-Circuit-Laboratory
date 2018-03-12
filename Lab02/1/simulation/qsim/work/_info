@@ -1,0 +1,54 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/ec2015/ra165457/Desktop/MC613/Lab01/simulation/qsim
+vLab01
+Z1 !s110 1520278907
+!i10b 1
+!s100 fPfVXcXddSMVXo3Y[ZF]Y0
+IcVI4di7aSK07YhFZ]oZNM3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1520278906
+8Lab01.vo
+FLab01.vo
+L0 31
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1520278907.000000
+!s107 Lab01.vo|
+!s90 -work|work|Lab01.vo|
+!i113 1
+Z5 o-work work
+Z6 tCvgOpt 0
+n@lab01
+vLab01_vlg_vec_tst
+R1
+!i10b 1
+!s100 HHkf3lJ`F]Y;C;MQ5oN[c2
+IoLcEGE^S1eEh4U51Q8QKn2
+R2
+R0
+w1520278905
+8QUALQUERNOMESOPRAGENTEUSAR.vwf.vt
+FQUALQUERNOMESOPRAGENTEUSAR.vwf.vt
+L0 29
+R3
+r1
+!s85 0
+31
+R4
+!s107 QUALQUERNOMESOPRAGENTEUSAR.vwf.vt|
+!s90 -work|work|QUALQUERNOMESOPRAGENTEUSAR.vwf.vt|
+!i113 1
+R5
+R6
+n@lab01_vlg_vec_tst

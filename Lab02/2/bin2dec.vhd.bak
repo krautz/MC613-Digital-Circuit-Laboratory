@@ -1,0 +1,16 @@
+LIBRARY ieee ;
+USE ieee.std_logic_1164.all ;
+
+ENTITY bin2dec IS
+PORT (
+		SW:in std_logic_vector (3 DOWNTO 0);
+		HEX0: out std_logic_vector (6 DOWNTO 0)
+	);
+END bin2dec ;
+
+ARCHITECTURE LogicFunction OF bin2dec IS
+BEGIN
+	WITH SW SELECT
+		HEX0 <= 	"0111111" WHEN "0000",
+					"1111001" WHEN OTHERS;
+END LogicFunction;
