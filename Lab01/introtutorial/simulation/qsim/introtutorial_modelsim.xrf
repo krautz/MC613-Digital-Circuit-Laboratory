@@ -1,0 +1,9 @@
+vendor_name = ModelSim
+source_file = 1, /home/ec2015/ra175188/quartus/introtutorial/introtutorial.bdf
+source_file = 1, /home/ec2015/ra175188/quartus/introtutorial/Waveform.vwf
+source_file = 1, /home/ec2015/ra175188/quartus/introtutorial/db/introtutorial.cbx.xml
+design_name = introtutorial
+instance = comp, \f~output , f~output, introtutorial, 1
+instance = comp, \x1~input , x1~input, introtutorial, 1
+instance = comp, \x2~input , x2~input, introtutorial, 1
+instance = comp, \inst2~0 , inst2~0, introtutorial, 1
