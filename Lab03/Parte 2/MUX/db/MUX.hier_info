@@ -1,0 +1,235 @@
+|mux16_to_1
+data[0] => mux4_to_1:G1:0:muxes.d3
+data[1] => mux4_to_1:G1:0:muxes.d2
+data[2] => mux4_to_1:G1:0:muxes.d1
+data[3] => mux4_to_1:G1:0:muxes.d0
+data[4] => mux4_to_1:G1:1:muxes.d3
+data[5] => mux4_to_1:G1:1:muxes.d2
+data[6] => mux4_to_1:G1:1:muxes.d1
+data[7] => mux4_to_1:G1:1:muxes.d0
+data[8] => mux4_to_1:G1:2:muxes.d3
+data[9] => mux4_to_1:G1:2:muxes.d2
+data[10] => mux4_to_1:G1:2:muxes.d1
+data[11] => mux4_to_1:G1:2:muxes.d0
+data[12] => mux4_to_1:G1:3:muxes.d3
+data[13] => mux4_to_1:G1:3:muxes.d2
+data[14] => mux4_to_1:G1:3:muxes.d1
+data[15] => mux4_to_1:G1:3:muxes.d0
+sel[0] => mux4_to_1:G1:0:muxes.sel[0]
+sel[0] => mux4_to_1:G1:1:muxes.sel[0]
+sel[0] => mux4_to_1:G1:2:muxes.sel[0]
+sel[0] => mux4_to_1:G1:3:muxes.sel[0]
+sel[1] => mux4_to_1:G1:0:muxes.sel[1]
+sel[1] => mux4_to_1:G1:1:muxes.sel[1]
+sel[1] => mux4_to_1:G1:2:muxes.sel[1]
+sel[1] => mux4_to_1:G1:3:muxes.sel[1]
+sel[2] => mux4_to_1:mux5.sel[0]
+sel[3] => mux4_to_1:mux5.sel[1]
+output <= mux4_to_1:mux5.output
+
+
+|mux16_to_1|mux4_to_1:\G1:0:muxes
+d3 => extra_logic:pt2.w3
+d2 => extra_logic:pt2.w2
+d1 => extra_logic:pt2.w1
+d0 => extra_logic:pt2.w0
+sel[0] => dec2_to_4:pt1.w0
+sel[1] => dec2_to_4:pt1.w1
+output <= extra_logic:pt2.f
+
+
+|mux16_to_1|mux4_to_1:\G1:0:muxes|dec2_to_4:pt1
+en => Mux0.IN8
+en => Mux1.IN8
+en => Mux2.IN8
+en => Mux3.IN8
+w1 => Mux0.IN9
+w1 => Mux1.IN9
+w1 => Mux2.IN9
+w1 => Mux3.IN9
+w0 => Mux0.IN10
+w0 => Mux1.IN10
+w0 => Mux2.IN10
+w0 => Mux3.IN10
+y3 <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+y2 <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+y1 <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+y0 <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mux16_to_1|mux4_to_1:\G1:0:muxes|extra_logic:pt2
+w3 => vec[3].IN0
+w2 => vec[2].IN0
+w1 => vec[1].IN0
+w0 => vec[0].IN0
+y3 => vec[3].IN1
+y2 => vec[2].IN1
+y1 => vec[1].IN1
+y0 => vec[0].IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mux16_to_1|mux4_to_1:\G1:1:muxes
+d3 => extra_logic:pt2.w3
+d2 => extra_logic:pt2.w2
+d1 => extra_logic:pt2.w1
+d0 => extra_logic:pt2.w0
+sel[0] => dec2_to_4:pt1.w0
+sel[1] => dec2_to_4:pt1.w1
+output <= extra_logic:pt2.f
+
+
+|mux16_to_1|mux4_to_1:\G1:1:muxes|dec2_to_4:pt1
+en => Mux0.IN8
+en => Mux1.IN8
+en => Mux2.IN8
+en => Mux3.IN8
+w1 => Mux0.IN9
+w1 => Mux1.IN9
+w1 => Mux2.IN9
+w1 => Mux3.IN9
+w0 => Mux0.IN10
+w0 => Mux1.IN10
+w0 => Mux2.IN10
+w0 => Mux3.IN10
+y3 <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+y2 <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+y1 <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+y0 <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mux16_to_1|mux4_to_1:\G1:1:muxes|extra_logic:pt2
+w3 => vec[3].IN0
+w2 => vec[2].IN0
+w1 => vec[1].IN0
+w0 => vec[0].IN0
+y3 => vec[3].IN1
+y2 => vec[2].IN1
+y1 => vec[1].IN1
+y0 => vec[0].IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mux16_to_1|mux4_to_1:\G1:2:muxes
+d3 => extra_logic:pt2.w3
+d2 => extra_logic:pt2.w2
+d1 => extra_logic:pt2.w1
+d0 => extra_logic:pt2.w0
+sel[0] => dec2_to_4:pt1.w0
+sel[1] => dec2_to_4:pt1.w1
+output <= extra_logic:pt2.f
+
+
+|mux16_to_1|mux4_to_1:\G1:2:muxes|dec2_to_4:pt1
+en => Mux0.IN8
+en => Mux1.IN8
+en => Mux2.IN8
+en => Mux3.IN8
+w1 => Mux0.IN9
+w1 => Mux1.IN9
+w1 => Mux2.IN9
+w1 => Mux3.IN9
+w0 => Mux0.IN10
+w0 => Mux1.IN10
+w0 => Mux2.IN10
+w0 => Mux3.IN10
+y3 <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+y2 <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+y1 <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+y0 <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mux16_to_1|mux4_to_1:\G1:2:muxes|extra_logic:pt2
+w3 => vec[3].IN0
+w2 => vec[2].IN0
+w1 => vec[1].IN0
+w0 => vec[0].IN0
+y3 => vec[3].IN1
+y2 => vec[2].IN1
+y1 => vec[1].IN1
+y0 => vec[0].IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mux16_to_1|mux4_to_1:\G1:3:muxes
+d3 => extra_logic:pt2.w3
+d2 => extra_logic:pt2.w2
+d1 => extra_logic:pt2.w1
+d0 => extra_logic:pt2.w0
+sel[0] => dec2_to_4:pt1.w0
+sel[1] => dec2_to_4:pt1.w1
+output <= extra_logic:pt2.f
+
+
+|mux16_to_1|mux4_to_1:\G1:3:muxes|dec2_to_4:pt1
+en => Mux0.IN8
+en => Mux1.IN8
+en => Mux2.IN8
+en => Mux3.IN8
+w1 => Mux0.IN9
+w1 => Mux1.IN9
+w1 => Mux2.IN9
+w1 => Mux3.IN9
+w0 => Mux0.IN10
+w0 => Mux1.IN10
+w0 => Mux2.IN10
+w0 => Mux3.IN10
+y3 <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+y2 <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+y1 <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+y0 <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mux16_to_1|mux4_to_1:\G1:3:muxes|extra_logic:pt2
+w3 => vec[3].IN0
+w2 => vec[2].IN0
+w1 => vec[1].IN0
+w0 => vec[0].IN0
+y3 => vec[3].IN1
+y2 => vec[2].IN1
+y1 => vec[1].IN1
+y0 => vec[0].IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mux16_to_1|mux4_to_1:mux5
+d3 => extra_logic:pt2.w3
+d2 => extra_logic:pt2.w2
+d1 => extra_logic:pt2.w1
+d0 => extra_logic:pt2.w0
+sel[0] => dec2_to_4:pt1.w0
+sel[1] => dec2_to_4:pt1.w1
+output <= extra_logic:pt2.f
+
+
+|mux16_to_1|mux4_to_1:mux5|dec2_to_4:pt1
+en => Mux0.IN8
+en => Mux1.IN8
+en => Mux2.IN8
+en => Mux3.IN8
+w1 => Mux0.IN9
+w1 => Mux1.IN9
+w1 => Mux2.IN9
+w1 => Mux3.IN9
+w0 => Mux0.IN10
+w0 => Mux1.IN10
+w0 => Mux2.IN10
+w0 => Mux3.IN10
+y3 <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+y2 <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+y1 <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+y0 <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mux16_to_1|mux4_to_1:mux5|extra_logic:pt2
+w3 => vec[3].IN0
+w2 => vec[2].IN0
+w1 => vec[1].IN0
+w0 => vec[0].IN0
+y3 => vec[3].IN1
+y2 => vec[2].IN1
+y1 => vec[1].IN1
+y0 => vec[0].IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
