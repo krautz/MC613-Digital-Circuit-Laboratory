@@ -1,16 +1,16 @@
 /*<simulation_settings>
-<ftestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off MUX -c MUX --vector_source="/home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab03/Parte 2/MUX/Waveform.vwf" --testbench_file="/home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab03/Parte 2/MUX/simulation/qsim/Waveform.vwf.vt"</ftestbench_cmd>
-<ttestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off MUX -c MUX --vector_source="/home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab03/Parte 2/MUX/Waveform.vwf" --testbench_file="/home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab03/Parte 2/MUX/simulation/qsim/Waveform.vwf.vt"</ttestbench_cmd>
-<fnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="/home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab03/Parte 2/MUX/simulation/qsim/" MUX -c MUX</fnetlist_cmd>
-<tnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=verilog --output_directory="/home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab03/Parte 2/MUX/simulation/qsim/" MUX -c MUX</tnetlist_cmd>
+<ftestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off MUX -c MUX --vector_source="/home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab03/Parte 2/MUX/mux16_to_1.vwf" --testbench_file="/home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab03/Parte 2/MUX/simulation/qsim/mux16_to_1.vwf.vht"</ftestbench_cmd>
+<ttestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off MUX -c MUX --vector_source="/home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab03/Parte 2/MUX/mux16_to_1.vwf" --testbench_file="/home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab03/Parte 2/MUX/simulation/qsim/mux16_to_1.vwf.vht"</ttestbench_cmd>
+<fnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="/home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab03/Parte 2/MUX/simulation/qsim/" MUX -c MUX</fnetlist_cmd>
+<tnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=vhdl --output_directory="/home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab03/Parte 2/MUX/simulation/qsim/" MUX -c MUX</tnetlist_cmd>
 <modelsim_script>onerror {exit -code 1}
 vlib work
-vlog -work work MUX.vo
-vlog -work work Waveform.vwf.vt
-vsim -novopt -c -t 1ps -L cyclonev_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.mux16_to_1_vlg_vec_tst
+vcom -work work MUX.vho
+vcom -work work mux16_to_1.vwf.vht
+vsim -novopt -c -t 1ps -L cyclonev -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.mux16_to_1_vhd_vec_tst
 vcd file -direction MUX.msim.vcd
-vcd add -internal mux16_to_1_vlg_vec_tst/*
-vcd add -internal mux16_to_1_vlg_vec_tst/i1/*
+vcd add -internal mux16_to_1_vhd_vec_tst/*
+vcd add -internal mux16_to_1_vhd_vec_tst/i1/*
 proc simTimestamp {} {
     echo "Simulation time: $::now ps"
     if { [string equal running [runStatus]] } {
@@ -23,12 +23,12 @@ quit -f
 </modelsim_script>
 <modelsim_script_timing>onerror {exit -code 1}
 vlib work
-vlog -work work MUX.vo
-vlog -work work Waveform.vwf.vt
-vsim -novopt -c -t 1ps -L cyclonev_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.mux16_to_1_vlg_vec_tst
+vcom -work work MUX.vho
+vcom -work work mux16_to_1.vwf.vht
+vsim -novopt -c -t 1ps -sdfmax mux16_to_1_vhd_vec_tst/i1=MUX_vhd.sdo -L cyclonev -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.mux16_to_1_vhd_vec_tst
 vcd file -direction MUX.msim.vcd
-vcd add -internal mux16_to_1_vlg_vec_tst/*
-vcd add -internal mux16_to_1_vlg_vec_tst/i1/*
+vcd add -internal mux16_to_1_vhd_vec_tst/*
+vcd add -internal mux16_to_1_vhd_vec_tst/i1/*
 proc simTimestamp {} {
     echo "Simulation time: $::now ps"
     if { [string equal running [runStatus]] } {
@@ -39,7 +39,7 @@ after 2500 simTimestamp
 run -all
 quit -f
 </modelsim_script_timing>
-<hdl_lang>verilog</hdl_lang>
+<hdl_lang>vhdl</hdl_lang>
 </simulation_settings>*/
 /*
 WARNING: Do NOT edit the input and output ports in this file in a text
@@ -457,7 +457,13 @@ TRANSITION_LIST("data[5]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 800.0;
+		NODE
+		{
+			REPEAT = 512;
+			LEVEL 0 FOR 0.781;
+			LEVEL 1 FOR 0.781;
+		}
+		LEVEL 0 FOR 0.256;
 	}
 }
 
@@ -466,7 +472,14 @@ TRANSITION_LIST("data[4]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 800.0;
+		NODE
+		{
+			REPEAT = 1025;
+			LEVEL 0 FOR 0.39;
+			LEVEL 1 FOR 0.39;
+		}
+		LEVEL 0 FOR 0.39;
+		LEVEL 1 FOR 0.11;
 	}
 }
 
@@ -475,7 +488,13 @@ TRANSITION_LIST("data[3]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 800.0;
+		NODE
+		{
+			REPEAT = 2051;
+			LEVEL 0 FOR 0.195;
+			LEVEL 1 FOR 0.195;
+		}
+		LEVEL 0 FOR 0.11;
 	}
 }
 
@@ -484,7 +503,14 @@ TRANSITION_LIST("data[2]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 800.0;
+		NODE
+		{
+			REPEAT = 4123;
+			LEVEL 0 FOR 0.097;
+			LEVEL 1 FOR 0.097;
+		}
+		LEVEL 0 FOR 0.097;
+		LEVEL 1 FOR 0.041;
 	}
 }
 
@@ -493,7 +519,13 @@ TRANSITION_LIST("data[1]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 800.0;
+		NODE
+		{
+			REPEAT = 8333;
+			LEVEL 0 FOR 0.048;
+			LEVEL 1 FOR 0.048;
+		}
+		LEVEL 0 FOR 0.032;
 	}
 }
 
@@ -502,7 +534,14 @@ TRANSITION_LIST("data[0]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 800.0;
+		NODE
+		{
+			REPEAT = 16666;
+			LEVEL 0 FOR 0.024;
+			LEVEL 1 FOR 0.024;
+		}
+		LEVEL 0 FOR 0.024;
+		LEVEL 1 FOR 0.008;
 	}
 }
 
@@ -521,7 +560,13 @@ TRANSITION_LIST("sel[3]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 800.0;
+		NODE
+		{
+			REPEAT = 33333;
+			LEVEL 0 FOR 0.012;
+			LEVEL 1 FOR 0.012;
+		}
+		LEVEL 0 FOR 0.008;
 	}
 }
 
@@ -530,7 +575,14 @@ TRANSITION_LIST("sel[2]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 800.0;
+		NODE
+		{
+			REPEAT = 66666;
+			LEVEL 0 FOR 0.006;
+			LEVEL 1 FOR 0.006;
+		}
+		LEVEL 0 FOR 0.006;
+		LEVEL 1 FOR 0.002;
 	}
 }
 
@@ -539,7 +591,13 @@ TRANSITION_LIST("sel[1]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 800.0;
+		NODE
+		{
+			REPEAT = 133333;
+			LEVEL 0 FOR 0.003;
+			LEVEL 1 FOR 0.003;
+		}
+		LEVEL 0 FOR 0.002;
 	}
 }
 
@@ -548,7 +606,12 @@ TRANSITION_LIST("sel[0]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 800.0;
+		NODE
+		{
+			REPEAT = 400000;
+			LEVEL 0 FOR 0.001;
+			LEVEL 1 FOR 0.001;
+		}
 	}
 }
 

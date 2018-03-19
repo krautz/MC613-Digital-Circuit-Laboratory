@@ -1,5 +1,5 @@
 Flow report for MUX
-Sat Mar 17 20:08:08 2018
+Mon Mar 19 14:06:44 2018
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -40,7 +40,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Sat Mar 17 20:08:04 2018       ;
+; Flow Status                     ; Successful - Mon Mar 19 14:06:44 2018       ;
 ; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; MUX                                         ;
 ; Top-level Entity Name           ; mux16_to_1                                  ;
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/17/2018 20:07:19 ;
+; Start date & time ; 03/19/2018 14:04:53 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; MUX                 ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 273440552275683.152132803929321        ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 273440552275050.152147909322254        ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; mux16_to_1  ; Top        ;
@@ -95,24 +95,32 @@ refer to the applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:11     ; 1.0                     ; 1141 MB             ; 00:00:22                           ;
-; Fitter                    ; 00:00:27     ; 1.0                     ; 2473 MB             ; 00:00:42                           ;
-; Assembler                 ; 00:00:06     ; 1.0                     ; 1091 MB             ; 00:00:06                           ;
-; TimeQuest Timing Analyzer ; 00:00:04     ; 1.0                     ; 1296 MB             ; 00:00:03                           ;
-; Total                     ; 00:00:48     ; --                      ; --                  ; 00:01:13                           ;
+; Analysis & Synthesis      ; 00:00:11     ; 1.0                     ; 1144 MB             ; 00:00:22                           ;
+; Fitter                    ; 00:00:27     ; 1.0                     ; 2474 MB             ; 00:00:41                           ;
+; Assembler                 ; 00:00:06     ; 1.0                     ; 1091 MB             ; 00:00:05                           ;
+; TimeQuest Timing Analyzer ; 00:00:04     ; 1.0                     ; 1296 MB             ; 00:00:04                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 1244 MB             ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 1248 MB             ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 1241 MB             ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 1245 MB             ; 00:00:01                           ;
+; Total                     ; 00:00:51     ; --                      ; --                  ; 00:01:16                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                                       ;
-+---------------------------+------------------------------+-------------+-------------+----------------+
-; Module Name               ; Machine Hostname             ; OS Name     ; OS Version  ; Processor type ;
-+---------------------------+------------------------------+-------------+-------------+----------------+
-; Analysis & Synthesis      ; santalucia.lab.ic.unicamp.br ; Fedora Core ; Fedora Core ; x86_64         ;
-; Fitter                    ; santalucia.lab.ic.unicamp.br ; Fedora Core ; Fedora Core ; x86_64         ;
-; Assembler                 ; santalucia.lab.ic.unicamp.br ; Fedora Core ; Fedora Core ; x86_64         ;
-; TimeQuest Timing Analyzer ; santalucia.lab.ic.unicamp.br ; Fedora Core ; Fedora Core ; x86_64         ;
-+---------------------------+------------------------------+-------------+-------------+----------------+
++-----------------------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                                     ;
++---------------------------+----------------------------+-------------+-------------+----------------+
+; Module Name               ; Machine Hostname           ; OS Name     ; OS Version  ; Processor type ;
++---------------------------+----------------------------+-------------+-------------+----------------+
+; Analysis & Synthesis      ; honduras.lab.ic.unicamp.br ; Fedora Core ; Fedora Core ; x86_64         ;
+; Fitter                    ; honduras.lab.ic.unicamp.br ; Fedora Core ; Fedora Core ; x86_64         ;
+; Assembler                 ; honduras.lab.ic.unicamp.br ; Fedora Core ; Fedora Core ; x86_64         ;
+; TimeQuest Timing Analyzer ; honduras.lab.ic.unicamp.br ; Fedora Core ; Fedora Core ; x86_64         ;
+; EDA Netlist Writer        ; honduras.lab.ic.unicamp.br ; Fedora Core ; Fedora Core ; x86_64         ;
+; EDA Netlist Writer        ; honduras.lab.ic.unicamp.br ; Fedora Core ; Fedora Core ; x86_64         ;
+; EDA Netlist Writer        ; honduras.lab.ic.unicamp.br ; Fedora Core ; Fedora Core ; x86_64         ;
+; EDA Netlist Writer        ; honduras.lab.ic.unicamp.br ; Fedora Core ; Fedora Core ; x86_64         ;
++---------------------------+----------------------------+-------------+-------------+----------------+
 
 
 ------------
@@ -122,6 +130,10 @@ quartus_map --read_settings_files=on --write_settings_files=off MUX -c MUX
 quartus_fit --read_settings_files=off --write_settings_files=off MUX -c MUX
 quartus_asm --read_settings_files=off --write_settings_files=off MUX -c MUX
 quartus_sta MUX -c MUX
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off MUX -c MUX --vector_source="/home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab03/Parte 2/MUX/mux16_to_1.vwf" --testbench_file="/home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab03/Parte 2/MUX/simulation/qsim/mux16_to_1.vwf.vht"
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="/home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab03/Parte 2/MUX/simulation/qsim/" MUX -c MUX
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off MUX -c MUX --vector_source="/home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab03/Parte 2/MUX/mux16_to_1.vwf" --testbench_file="/home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab03/Parte 2/MUX/simulation/qsim/mux16_to_1.vwf.vht"
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="/home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab03/Parte 2/MUX/simulation/qsim/" MUX -c MUX
 
 
 

@@ -1,0 +1,316 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab03/Parte 2/MUX/simulation/qsim
+vdec2_to_4
+Z1 !s110 1521479004
+!i10b 1
+!s100 aeEM:kWLb7IM3k^jHezAA1
+IlOIQDXSm1oaQ:VR2_M7523
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1521479003
+8MUX.vo
+FMUX.vo
+L0 31
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1521479004.000000
+!s107 MUX.vo|
+!s90 -work|work|MUX.vo|
+!i113 1
+Z5 o-work work
+Z6 tCvgOpt 0
+vdec2_to_4_vlg_vec_tst
+R1
+!i10b 1
+!s100 >M9X3dRPel;CXz:VjU4<]2
+IT9ceQ9z6;N`Nj<8c1NIlV1
+R2
+R0
+w1521479002
+8dec2_to_4.vwf.vt
+Fdec2_to_4.vwf.vt
+L0 29
+R3
+r1
+!s85 0
+31
+R4
+!s107 dec2_to_4.vwf.vt|
+!s90 -work|work|dec2_to_4.vwf.vt|
+!i113 1
+R5
+R6
+Eextra_logic
+Z7 w1521478817
+Z8 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z9 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 YZlobdkPHzE;N99jHfcMc3
+Z10 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z11 DPx8 cyclonev 19 cyclonev_components 0 22 WF17oJHHbo`b[5Bl5P6_h0
+Z12 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z13 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z14 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 dfin^_@l97Ngz6cK0kjS62
+R0
+Z15 8MUX.vho
+Z16 FMUX.vho
+l0
+L36
+VKM=n;EQ]LEQM0bHM;_coc1
+!s100 61eHMPgEZ_F@5@FNAh?=I2
+Z17 OV;C;10.5b;63
+32
+Z18 !s110 1521478818
+!i10b 1
+Z19 !s108 1521478818.000000
+Z20 !s90 -work|work|MUX.vho|
+Z21 !s107 MUX.vho|
+!i113 1
+R5
+Z22 tExplicit 1 CvgOpt 0
+Astructure
+R8
+R9
+R10
+R11
+R12
+R13
+R14
+DEx4 work 11 extra_logic 0 22 KM=n;EQ]LEQM0bHM;_coc1
+l102
+L62
+VJHm>QZPk7P@Xk@UBG=SS`3
+!s100 FV3NOG9^jVYfPbBlGZ^SI0
+R17
+32
+R18
+!i10b 1
+R19
+R20
+R21
+!i113 1
+R5
+R22
+Eextra_logic_vhd_vec_tst
+Z23 w1521478816
+R12
+R13
+R0
+Z24 8extra_logic.vwf.vht
+Z25 Fextra_logic.vwf.vht
+l0
+L31
+VG=elj?PibKM[VKC`1:7gd3
+!s100 hNB>ScA]e:DCWKGHDeP[Y0
+R17
+32
+R18
+!i10b 1
+R19
+Z26 !s90 -work|work|extra_logic.vwf.vht|
+Z27 !s107 extra_logic.vwf.vht|
+!i113 1
+R5
+R22
+Aextra_logic_arch
+R12
+R13
+DEx4 work 23 extra_logic_vhd_vec_tst 0 22 G=elj?PibKM[VKC`1:7gd3
+l58
+L33
+V=dMKWc7oOeARNFzXTmiLn2
+!s100 69JmbiG:?Df`c5<OZ3nLV0
+R17
+32
+R18
+!i10b 1
+R19
+R26
+R27
+!i113 1
+R5
+R22
+Emux16_to_1
+Z28 w1521479204
+R8
+R9
+R10
+R11
+R12
+R13
+R14
+R0
+R15
+R16
+l0
+L36
+V2AMTCm@maWc:H9I1^kdI>2
+!s100 XF0z4iaIFJlLj1ZDiQ8a_0
+R17
+32
+Z29 !s110 1521479204
+!i10b 1
+Z30 !s108 1521479204.000000
+R20
+R21
+!i113 1
+R5
+R22
+Astructure
+R8
+R9
+R10
+R11
+R12
+R13
+R14
+DEx4 work 10 mux16_to_1 0 22 2AMTCm@maWc:H9I1^kdI>2
+l140
+L68
+VHf_LlFn7iLYCh9aBi2hA90
+!s100 FW6LFaR:`][oz^]OMbm:B2
+R17
+32
+R29
+!i10b 1
+R30
+R20
+R21
+!i113 1
+R5
+R22
+Emux16_to_1_vhd_vec_tst
+Z31 w1521479202
+R12
+R13
+R0
+Z32 8mux16_to_1.vwf.vht
+Z33 Fmux16_to_1.vwf.vht
+l0
+L31
+VR>2ZnIMg]D4oZF^I18]MQ3
+!s100 =IHN?=Qf@41PXM@c4l?Rj0
+R17
+32
+R29
+!i10b 1
+R30
+Z34 !s90 -work|work|mux16_to_1.vwf.vht|
+Z35 !s107 mux16_to_1.vwf.vht|
+!i113 1
+R5
+R22
+Amux16_to_1_arch
+R12
+R13
+Z36 DEx4 work 22 mux16_to_1_vhd_vec_tst 0 22 R>2ZnIMg]D4oZF^I18]MQ3
+l46
+L33
+Z37 V0]e_U3no>VV@XXoQ[nV[R1
+Z38 !s100 X_M97OI=OA5H:4<mB60DL1
+R17
+32
+R29
+!i10b 1
+R30
+R34
+R35
+!i113 1
+R5
+R22
+Emux4_to_1
+Z39 w1521478355
+R8
+R9
+R10
+R11
+R12
+R13
+R14
+R0
+R15
+R16
+l0
+L36
+V`MjQd@e<iX[:8zWPORoj33
+!s100 eUHFODTb0lM`O32Yg<:ko1
+R17
+32
+Z40 !s110 1521478355
+!i10b 1
+Z41 !s108 1521478355.000000
+R20
+R21
+!i113 1
+R5
+R22
+Astructure
+R8
+R9
+R10
+R11
+R12
+R13
+R14
+DEx4 work 9 mux4_to_1 0 22 `MjQd@e<iX[:8zWPORoj33
+l88
+L57
+V0aJTaPiSfzAjblJPBMUAc1
+!s100 SW0VfzNLfU_?:[cMRn_Ao2
+R17
+32
+R40
+!i10b 1
+R41
+R20
+R21
+!i113 1
+R5
+R22
+Emux4_to_1_vhd_vec_tst
+Z42 w1521478353
+R12
+R13
+R0
+Z43 8mux14_to_1.vwf.vht
+Z44 Fmux14_to_1.vwf.vht
+l0
+L31
+VQmR8hWGLFHoO=:]H0nDX?3
+!s100 noBAEE0MfNQDOWgg6BeG01
+R17
+32
+R40
+!i10b 1
+R41
+Z45 !s90 -work|work|mux14_to_1.vwf.vht|
+Z46 !s107 mux14_to_1.vwf.vht|
+!i113 1
+R5
+R22
+Amux4_to_1_arch
+R12
+R13
+DEx4 work 21 mux4_to_1_vhd_vec_tst 0 22 QmR8hWGLFHoO=:]H0nDX?3
+l52
+L33
+V:Ahd;D;jGhRRUf2QgCXfF0
+!s100 ;TdI8mjPiS4MWWoa76o``1
+R17
+32
+R40
+!i10b 1
+R41
+R45
+R46
+!i113 1
+R5
+R22

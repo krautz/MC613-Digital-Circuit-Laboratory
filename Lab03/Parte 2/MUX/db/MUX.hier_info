@@ -25,7 +25,7 @@ sel[1] => mux4_to_1:G1:2:muxes.sel[1]
 sel[1] => mux4_to_1:G1:3:muxes.sel[1]
 sel[2] => mux4_to_1:mux5.sel[0]
 sel[3] => mux4_to_1:mux5.sel[1]
-output <= mux4_to_1:mux5.output
+output << mux4_to_1:mux5.output
 
 
 |mux16_to_1|mux4_to_1:\G1:0:muxes
