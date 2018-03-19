@@ -21,11 +21,11 @@ begin
 
 	G1: for i in 0 to 3 GENERATE
 		muxes: mux4_to_1
-		PORT MAP (data(4*i), data (4*i + 1), data (4*i + 2), data (4*i + 3), sel (1 downto 0), m(i));
+		PORT MAP (data(4*i + 3), data (4*i + 2), data (4*i + 1), data (4*i), sel (1 downto 0), m(i));
 	END GENERATE;
 	
 	mux5: mux4_to_1
-	PORT MAP (m(0), m(1), m(2), m(3), sel (3 downto 2), output);
+	PORT MAP (m(3), m(2), m(1), m(0), sel (3 downto 2), output);
 
 end rtl;
 

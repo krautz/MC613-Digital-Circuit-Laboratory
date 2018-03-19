@@ -7,20 +7,18 @@ Note: if both ModelSim-Altera and ModelSim executables are available, ModelSim-A
 
 **** Generating the ModelSim Testbench ****
 
-quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off MUX -c MUX --vector_source="/home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab03/Parte 2/MUX/dec2_to_4.vwf" --testbench_file="/home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab03/Parte 2/MUX/simulation/qsim/dec2_to_4.vwf.vt"
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off MUX -c MUX --vector_source="/home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab03/Parte 2/MUX/mux16_to_1.vwf" --testbench_file="/home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab03/Parte 2/MUX/simulation/qsim/mux16_to_1.vwf.vht"
 
-Info: *******************************************************************Info: Running Quartus Prime EDA Netlist Writer    Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition    Info: Copyright (C) 2017  Intel Corporation. All rights reserved.    Info: Your use of Intel Corporation's design tools, logic functions     Info: and other software and tools, and its AMPP partner logic     Info: functions, and any output files from any of the foregoing     Info: (including device programming or simulation files), and any     Info: associated documentation or information are expressly subject     Info: to the terms and conditions of the Intel Program License     Info: Subscription Agreement, the Intel Quartus Prime License Agreement,    Info: the Intel FPGA IP License Agreement, or other applicable license    Info: agreement, including, without limitation, that your use is for    Info: the sole purpose of programming logic devices manufactured by    Info: Intel and sold by Intel or its authorized distributors.  Please    Info: refer to the applicable agreement for further details.    Info: Processing started: Mon Mar 19 14:03:21 2018Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off MUX -c MUX --vector_source="/home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab03/Parte 2/MUX/dec2_to_4.vwf" --testbench_file="/home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab03/Parte 2/MUX/simulation/qsim/dec2_to_4.vwf.vt"Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (292036): Thank you for using the Quartus Prime software 30-day evaluation. You have 9 days remaining (until Mar 28, 2018) to use the Quartus Prime software with compilation and simulation support.
-Completed successfully. 
-
+Info: *******************************************************************Info: Running Quartus Prime EDA Netlist Writer    Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition    Info: Copyright (C) 2017  Intel Corporation. All rights reserved.    Info: Your use of Intel Corporation's design tools, logic functions     Info: and other software and tools, and its AMPP partner logic     Info: functions, and any output files from any of the foregoing     Info: (including device programming or simulation files), and any     Info: associated documentation or information are expressly subject     Info: to the terms and conditions of the Intel Program License     Info: Subscription Agreement, the Intel Quartus Prime License Agreement,    Info: the Intel FPGA IP License Agreement, or other applicable license    Info: agreement, including, without limitation, that your use is for    Info: the sole purpose of programming logic devices manufactured by    Info: Intel and sold by Intel or its authorized distributors.  Please    Info: refer to the applicable agreement for further details.    Info: Processing started: Mon Mar 19 16:02:43 2018Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off MUX -c MUX --vector_source="/home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab03/Parte 2/MUX/mux16_to_1.vwf" --testbench_file="/home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab03/Parte 2/MUX/simulation/qsim/mux16_to_1.vwf.vht"Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Completed successfully. 
 
 **** Generating the functional simulation netlist ****
 
-quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="/home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab03/Parte 2/MUX/simulation/qsim/" MUX -c MUX
+quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="/home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab03/Parte 2/MUX/simulation/qsim/" MUX -c MUX
 
 Info (292036): Thank you for using the Quartus Prime software 30-day evaluation. You have 9 days remaining (until Mar 28, 2018) to use the Quartus Prime software with compilation and simulation support.
-Info: *******************************************************************Info: Running Quartus Prime EDA Netlist Writer    Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition    Info: Copyright (C) 2017  Intel Corporation. All rights reserved.    Info: Your use of Intel Corporation's design tools, logic functions     Info: and other software and tools, and its AMPP partner logic     Info: functions, and any output files from any of the foregoing     Info: (including device programming or simulation files), and any     Info: associated documentation or information are expressly subject     Info: to the terms and conditions of the Intel Program License     Info: Subscription Agreement, the Intel Quartus Prime License Agreement,    Info: the Intel FPGA IP License Agreement, or other applicable license    Info: agreement, including, without limitation, that your use is for    Info: the sole purpose of programming logic devices manufactured by    Info: Intel and sold by Intel or its authorized distributors.  Please    Info: refer to the applicable agreement for further details.    Info: Processing started: Mon Mar 19 14:03:23 2018Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="/home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab03/Parte 2/MUX/simulation/qsim/" MUX -c MUXWarning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.Info (204019): Generated file MUX.vo in folder "/home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab03/Parte 2/MUX/simulation/qsim//" for EDA simulation toolInfo: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning    Info: Peak virtual memory: 1248 megabytes    Info: Processing ended: Mon Mar 19 14:03:23 2018    Info: Elapsed time: 00:00:00    Info: Total CPU time (on all processors): 00:00:01
+Info: *******************************************************************Info: Running Quartus Prime EDA Netlist Writer    Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition    Info: Copyright (C) 2017  Intel Corporation. All rights reserved.    Info: Your use of Intel Corporation's design tools, logic functions     Info: and other software and tools, and its AMPP partner logic     Info: functions, and any output files from any of the foregoing     Info: (including device programming or simulation files), and any     Info: associated documentation or information are expressly subject     Info: to the terms and conditions of the Intel Program License     Info: Subscription Agreement, the Intel Quartus Prime License Agreement,    Info: the Intel FPGA IP License Agreement, or other applicable license    Info: agreement, including, without limitation, that your use is for    Info: the sole purpose of programming logic devices manufactured by    Info: Intel and sold by Intel or its authorized distributors.  Please    Info: refer to the applicable agreement for further details.    Info: Processing started: Mon Mar 19 16:02:45 2018Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="/home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab03/Parte 2/MUX/simulation/qsim/" MUX -c MUXWarning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.Info (204019): Generated file MUX.vho in folder "/home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab03/Parte 2/MUX/simulation/qsim//" for EDA simulation toolInfo: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning    Info: Peak virtual memory: 1248 megabytes    Info: Processing ended: Mon Mar 19 16:02:46 2018    Info: Elapsed time: 00:00:01    Info: Total CPU time (on all processors): 00:00:01
 Completed successfully. 
 
 **** Generating the ModelSim .do script ****
@@ -37,35 +35,40 @@ Reading pref.tcl
 # 10.5b
 # do MUX.do
 # ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:03:24 on Mar 19,2018# vlog -work work MUX.vo 
-# -- Compiling module dec2_to_4
-# 
-# Top level modules:# 	dec2_to_4
-# End time: 14:03:24 on Mar 19,2018, Elapsed time: 0:00:00
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:02:46 on Mar 19,2018# vcom -work work MUX.vho 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164# -- Loading package altera_lnsim_components
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives# -- Loading package cyclonev_atom_pack# -- Loading package cyclonev_components
+# -- Compiling entity mux16_to_1
+# -- Compiling architecture structure of mux16_to_1
+# End time: 16:02:46 on Mar 19,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:03:24 on Mar 19,2018# vlog -work work dec2_to_4.vwf.vt 
-# -- Compiling module dec2_to_4_vlg_vec_tst
-# 
-# Top level modules:# 	dec2_to_4_vlg_vec_tst
-# End time: 14:03:24 on Mar 19,2018, Elapsed time: 0:00:00
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:02:46 on Mar 19,2018# vcom -work work mux16_to_1.vwf.vht 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164# -- Compiling entity mux16_to_1_vhd_vec_tst
+# -- Compiling architecture mux16_to_1_arch of mux16_to_1_vhd_vec_tst
+# End time: 16:02:46 on Mar 19,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vsim -novopt -c -t 1ps -L cyclonev_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.dec2_to_4_vlg_vec_tst # Start time: 14:03:24 on Mar 19,2018# Loading work.dec2_to_4_vlg_vec_tst# Loading work.dec2_to_4
-# after#25
-# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.# ** Note: $finish    : dec2_to_4.vwf.vt(54)#    Time: 800 ns  Iteration: 0  Instance: /dec2_to_4_vlg_vec_tst
-# End time: 14:03:24 on Mar 19,2018, Elapsed time: 0:00:00# Errors: 0, Warnings: 1
+# vsim -novopt -c -t 1ps -L cyclonev -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.mux16_to_1_vhd_vec_tst # Start time: 16:02:46 on Mar 19,2018# Loading std.standard# Loading std.textio(body)# Loading ieee.std_logic_1164(body)# Loading work.mux16_to_1_vhd_vec_tst(mux16_to_1_arch)# Loading altera_lnsim.altera_lnsim_components# Loading ieee.vital_timing(body)# Loading ieee.vital_primitives(body)# Loading cyclonev.cyclonev_atom_pack(body)# Loading cyclonev.cyclonev_components# Loading work.mux16_to_1(structure)# Loading ieee.std_logic_arith(body)# Loading cyclonev.cyclonev_io_obuf(arch)# Loading cyclonev.cyclonev_io_ibuf(arch)# Loading cyclonev.cyclonev_lcell_comb(vital_lcell_comb)
+# after#32
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+# End time: 16:02:46 on Mar 19,2018, Elapsed time: 0:00:00# Errors: 0, Warnings: 1
 Completed successfully. 
 
 **** Converting ModelSim VCD to vector waveform ****
 
-Reading /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab03/Parte 2/MUX/dec2_to_4.vwf...
+Reading /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab03/Parte 2/MUX/mux16_to_1.vwf...
 
 Reading /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab03/Parte 2/MUX/simulation/qsim/MUX.msim.vcd...
 
 Processing channel transitions... 
 
-Writing the resulting VWF to /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab03/Parte 2/MUX/simulation/qsim/MUX_20180319140324.sim.vwf
+Writing the resulting VWF to /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab03/Parte 2/MUX/simulation/qsim/MUX_20180319160247.sim.vwf
 
 Finished VCD to VWF conversion.
 

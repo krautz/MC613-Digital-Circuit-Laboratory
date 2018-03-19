@@ -1,20 +1,20 @@
 |mux16_to_1
-data[0] => mux4_to_1:G1:0:muxes.d3
-data[1] => mux4_to_1:G1:0:muxes.d2
-data[2] => mux4_to_1:G1:0:muxes.d1
-data[3] => mux4_to_1:G1:0:muxes.d0
-data[4] => mux4_to_1:G1:1:muxes.d3
-data[5] => mux4_to_1:G1:1:muxes.d2
-data[6] => mux4_to_1:G1:1:muxes.d1
-data[7] => mux4_to_1:G1:1:muxes.d0
-data[8] => mux4_to_1:G1:2:muxes.d3
-data[9] => mux4_to_1:G1:2:muxes.d2
-data[10] => mux4_to_1:G1:2:muxes.d1
-data[11] => mux4_to_1:G1:2:muxes.d0
-data[12] => mux4_to_1:G1:3:muxes.d3
-data[13] => mux4_to_1:G1:3:muxes.d2
-data[14] => mux4_to_1:G1:3:muxes.d1
-data[15] => mux4_to_1:G1:3:muxes.d0
+data[0] => mux4_to_1:G1:0:muxes.d0
+data[1] => mux4_to_1:G1:0:muxes.d1
+data[2] => mux4_to_1:G1:0:muxes.d2
+data[3] => mux4_to_1:G1:0:muxes.d3
+data[4] => mux4_to_1:G1:1:muxes.d0
+data[5] => mux4_to_1:G1:1:muxes.d1
+data[6] => mux4_to_1:G1:1:muxes.d2
+data[7] => mux4_to_1:G1:1:muxes.d3
+data[8] => mux4_to_1:G1:2:muxes.d0
+data[9] => mux4_to_1:G1:2:muxes.d1
+data[10] => mux4_to_1:G1:2:muxes.d2
+data[11] => mux4_to_1:G1:2:muxes.d3
+data[12] => mux4_to_1:G1:3:muxes.d0
+data[13] => mux4_to_1:G1:3:muxes.d1
+data[14] => mux4_to_1:G1:3:muxes.d2
+data[15] => mux4_to_1:G1:3:muxes.d3
 sel[0] => mux4_to_1:G1:0:muxes.sel[0]
 sel[0] => mux4_to_1:G1:1:muxes.sel[0]
 sel[0] => mux4_to_1:G1:2:muxes.sel[0]
@@ -25,7 +25,7 @@ sel[1] => mux4_to_1:G1:2:muxes.sel[1]
 sel[1] => mux4_to_1:G1:3:muxes.sel[1]
 sel[2] => mux4_to_1:mux5.sel[0]
 sel[3] => mux4_to_1:mux5.sel[1]
-output << mux4_to_1:mux5.output
+output <= mux4_to_1:mux5.output
 
 
 |mux16_to_1|mux4_to_1:\G1:0:muxes

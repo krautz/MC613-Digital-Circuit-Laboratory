@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for MUX
-Mon Mar 19 14:05:42 2018
+Mon Mar 19 15:54:37 2018
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -97,13 +97,13 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.02        ;
+; Average used               ; 1.03        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   1.7%      ;
-;     Processors 3-4         ;   0.4%      ;
+;     Processor 2            ;   2.0%      ;
+;     Processors 3-4         ;   0.5%      ;
 +----------------------------+-------------+
 
 
@@ -303,22 +303,22 @@ No synchronizer chains to report.
 ; sel[3]   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; sel[1]   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; sel[2]   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; data[9]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; data[1]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; data[15] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; data[7]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; data[11] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; data[3]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; data[13] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; data[5]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; data[8]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; data[0]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; data[14] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; data[6]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; data[10] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; data[2]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; data[12] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; data[14] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; data[0]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; data[8]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; data[4]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; data[12] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; data[2]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; data[10] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; data[7]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; data[15] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; data[1]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; data[9]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; data[5]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; data[13] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; data[3]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; data[11] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 +----------+--------------+-----------------+-----------------+
 
 
@@ -470,7 +470,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime TimeQuest Timing Analyzer
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Mon Mar 19 14:05:38 2018
+    Info: Processing started: Mon Mar 19 15:54:34 2018
 Info: Command: quartus_sta MUX -c MUX
 Info: qsta_default_script.tcl version: #3
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -530,9 +530,9 @@ Info (332140): No Minimum Pulse Width paths to report
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 1296 megabytes
-    Info: Processing ended: Mon Mar 19 14:05:42 2018
-    Info: Elapsed time: 00:00:04
+    Info: Peak virtual memory: 1293 megabytes
+    Info: Processing ended: Mon Mar 19 15:54:37 2018
+    Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:04
 
 

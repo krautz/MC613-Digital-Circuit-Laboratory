@@ -6,7 +6,7 @@ JedecChain;
 	P ActionCode(Ign)
 		Device PartName(SOCVHPS) MfrSpec(OpMask(0));
 	P ActionCode(Cfg)
-		Device PartName(5CSEMA5F31) Path("/home/ec2015/ra165457/Desktop/MC613/Lab03/lab03-xbar-gen-5/") File("xbar_gen_5.sof") MfrSpec(OpMask(1));
+		Device PartName(5CSEMA5F31) Path("/home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab03/Parte 1/lab03-xbar-gen-5/") File("xbar_gen_5.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 
