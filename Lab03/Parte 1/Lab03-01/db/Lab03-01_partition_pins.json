@@ -12,7 +12,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "s[0]",
+					"name" : "x2",
+					"strict" : false
+				},
+				{
+					"name" : "s",
+					"strict" : false
+				},
+				{
+					"name" : "x1",
 					"strict" : false
 				}
 			]

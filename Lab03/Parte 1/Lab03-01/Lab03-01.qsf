@@ -5,7 +5,7 @@
 
 set_global_assignment -name FAMILY "Cyclone V"
 set_global_assignment -name DEVICE 5CSEMA5F31C6
-set_global_assignment -name TOP_LEVEL_ENTITY xbar_gen
+set_global_assignment -name TOP_LEVEL_ENTITY xbar_v3
 set_global_assignment -name DEVICE_FILTER_PACKAGE FBGA
 set_global_assignment -name CYCLONEII_RESERVE_NCEO_AFTER_CONFIGURATION "USE AS REGULAR IO"
 set_global_assignment -name SDC_FILE DE1_SoC.sdc
@@ -385,6 +385,14 @@ set_location_assignment PIN_W16 -to y2
 set_location_assignment PIN_AB12 -to x1
 set_location_assignment PIN_AC12 -to x2
 set_location_assignment PIN_AF9 -to s
+set_global_assignment -name LAST_QUARTUS_VERSION "17.1.0 Lite Edition"
+set_global_assignment -name VECTOR_WAVEFORM_FILE ../save.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE simulation/qsim/save.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE simulation/qsim/Waveform.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE teste.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE simulation/save.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE simulation/Waveform.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top

@@ -7,7 +7,7 @@ SW[4] => xbar_gen:xbar5.s[4]
 SW[5] => xbar_gen:xbar5.s[5]
 SW[6] => xbar_gen:xbar5.s[6]
 SW[7] => xbar_gen:xbar5.s[7]
-LEDR[0] <= xbar_gen:xbar5.y1
+LEDR[0] << xbar_gen:xbar5.y1
 
 
 |xbar_stage_8|xbar_gen:xbar5

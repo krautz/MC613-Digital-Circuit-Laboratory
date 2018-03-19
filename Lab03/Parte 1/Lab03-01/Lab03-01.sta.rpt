@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for Lab03-01
-Sat Mar 17 17:56:28 2018
+Mon Mar 19 13:09:38 2018
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -97,12 +97,13 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.01        ;
+; Average used               ; 1.02        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.2%      ;
+;     Processor 2            ;   1.6%      ;
+;     Processors 3-4         ;   0.2%      ;
 +----------------------------+-------------+
 
 
@@ -294,13 +295,15 @@ No synchronizer chains to report.
 +-----+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
 
 
-+---------------------------------------------------------+
-; Input Transition Times                                  ;
-+------+--------------+-----------------+-----------------+
-; Pin  ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
-+------+--------------+-----------------+-----------------+
-; s[0] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-+------+--------------+-----------------+-----------------+
++--------------------------------------------------------+
+; Input Transition Times                                 ;
++-----+--------------+-----------------+-----------------+
+; Pin ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
++-----+--------------+-----------------+-----------------+
+; x2  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; s   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; x1  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
++-----+--------------+-----------------+-----------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -368,10 +371,10 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +---------------------------------+-------+------+
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
-; Unconstrained Input Ports       ; 1     ; 1    ;
-; Unconstrained Input Port Paths  ; 2     ; 2    ;
+; Unconstrained Input Ports       ; 3     ; 3    ;
+; Unconstrained Input Port Paths  ; 6     ; 6    ;
 ; Unconstrained Output Ports      ; 2     ; 2    ;
-; Unconstrained Output Port Paths ; 2     ; 2    ;
+; Unconstrained Output Port Paths ; 6     ; 6    ;
 +---------------------------------+-------+------+
 
 
@@ -380,7 +383,9 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +------------+--------------------------------------------------------------------------------------+
 ; Input Port ; Comment                                                                              ;
 +------------+--------------------------------------------------------------------------------------+
-; s[0]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; s          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; x1         ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; x2         ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +------------+--------------------------------------------------------------------------------------+
 
 
@@ -399,7 +404,9 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +------------+--------------------------------------------------------------------------------------+
 ; Input Port ; Comment                                                                              ;
 +------------+--------------------------------------------------------------------------------------+
-; s[0]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; s          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; x1         ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; x2         ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +------------+--------------------------------------------------------------------------------------+
 
 
@@ -419,7 +426,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime TimeQuest Timing Analyzer
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Sat Mar 17 17:56:24 2018
+    Info: Processing started: Mon Mar 19 13:09:34 2018
 Info: Command: quartus_sta Lab03-01 -c Lab03-01
 Info: qsta_default_script.tcl version: #3
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -479,8 +486,8 @@ Info (332140): No Minimum Pulse Width paths to report
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 1294 megabytes
-    Info: Processing ended: Sat Mar 17 17:56:28 2018
+    Info: Peak virtual memory: 1293 megabytes
+    Info: Processing ended: Mon Mar 19 13:09:38 2018
     Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:04
 

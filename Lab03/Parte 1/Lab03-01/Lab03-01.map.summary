@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Sat Mar 17 17:55:48 2018
+Analysis & Synthesis Status : Successful - Mon Mar 19 13:08:57 2018
 Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 Revision Name : Lab03-01
-Top-level Entity Name : xbar_gen
+Top-level Entity Name : xbar_v3
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
 Total registers : 0
-Total pins : 3
+Total pins : 5
 Total virtual pins : 0
 Total block memory bits : 0
 Total DSP Blocks : 0

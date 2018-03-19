@@ -1,0 +1,94 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/ec2015/ra165457/Desktop/MC613/Lab03/Parte 1/lab03-xbar-gen-5/simulation/qsim
+vxbar_stage_5
+Z1 !s110 1521476281
+!i10b 1
+!s100 eNU_S@NHTEVSmLD;35hVP1
+IeU4aHXdd<^iKdBb_4_MNC3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1521476280
+Z3 8xbar_gen_5.vo
+Z4 Fxbar_gen_5.vo
+Z5 L0 31
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1521476280.000000
+Z7 !s107 xbar_gen_5.vo|
+Z8 !s90 -work|work|xbar_gen_5.vo|
+!i113 1
+Z9 o-work work
+Z10 tCvgOpt 0
+vxbar_stage_5_vlg_vec_tst
+R1
+!i10b 1
+!s100 MOFZL5F_H;<meghI^m[QN2
+ISS11D>VC8R[Ye[9lK1]=;0
+R2
+R0
+w1521476278
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+Z11 L0 29
+R6
+r1
+!s85 0
+31
+!s108 1521476281.000000
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R9
+R10
+vxbar_stage_8
+Z12 !s110 1521476817
+!i10b 1
+!s100 BoB3hJ48@<^MRI<Xmcc;X3
+IZQ0E]CG<0MdHCHB80`MW93
+R2
+R0
+w1521476816
+R3
+R4
+R5
+R6
+r1
+!s85 0
+31
+Z13 !s108 1521476817.000000
+R7
+R8
+!i113 1
+R9
+R10
+vxbar_stage_8_vlg_vec_tst
+R12
+!i10b 1
+!s100 ?F?[kPNKGiCQ:i@o@2[>71
+Iji0_UR@Hl4EjWbccffFGb2
+R2
+R0
+w1521476815
+8Waveform1.vwf.vt
+FWaveform1.vwf.vt
+R11
+R6
+r1
+!s85 0
+31
+R13
+!s107 Waveform1.vwf.vt|
+!s90 -work|work|Waveform1.vwf.vt|
+!i113 1
+R9
+R10
