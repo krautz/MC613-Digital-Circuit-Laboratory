@@ -24,8 +24,8 @@ architecture behavioral of alu is
 		overflow : out std_logic
 	);
 	END COMPONENT;
-	signal negB, addF, subF, andF, orF, outF, addvecN, subvecN : STD_LOGIC_VECTOR (3 downto 0);
-	signal addC, addV, subV, subC, addN, subN: STD_LOGIC;
+	signal negB1, negB, addF, subF, andF, orF, outF, addvecN, subvecN : STD_LOGIC_VECTOR (3 downto 0);
+	signal addC, addV, subV, subC, addN, subN, trash_1, trash_2: STD_LOGIC;
 	signal S0S1: STD_LOGIC_VECTOR (1 downto 0);
 BEGIN
 	
@@ -33,10 +33,14 @@ BEGIN
 	GENERIC MAP (N => 4)
 	PORT MAP (a, b, addF, '0', addC, addV);
 	
-	negB <= b XOR "1111";
+	negB1 <= b XOR "1111";
+	add_aux: ripple_carry
+	GENERIC MAP (N => 4)
+	PORT MAP (negB1, "0001", negB, '0', trash_1, trash_2);
+	
 	sub: ripple_carry
 			generic map (N => 4)
-			port map (a, negB, subF, '1', subC, subV);
+			port map (a, negB, subF, '0', subC, subV);
 	
 	ANDL: FOR i in 0 to 3 GENERATE
 		andF(i) <= a(i) AND b(i);

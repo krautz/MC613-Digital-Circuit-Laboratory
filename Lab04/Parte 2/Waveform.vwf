@@ -1,8 +1,8 @@
 /*<simulation_settings>
-<ftestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off alu -c alu --vector_source="/home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab04/Parte 2/Waveform.vwf" --testbench_file="/home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab04/Parte 2/simulation/qsim/Waveform.vwf.vht"</ftestbench_cmd>
-<ttestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off alu -c alu --vector_source="/home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab04/Parte 2/Waveform.vwf" --testbench_file="/home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab04/Parte 2/simulation/qsim/Waveform.vwf.vht"</ttestbench_cmd>
-<fnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="/home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab04/Parte 2/simulation/qsim/" alu -c alu</fnetlist_cmd>
-<tnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=vhdl --output_directory="/home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab04/Parte 2/simulation/qsim/" alu -c alu</tnetlist_cmd>
+<ftestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off alu -c alu --vector_source="/home/ec2015/ra165457/Desktop/MC613/Lab04/Parte 2/Waveform.vwf" --testbench_file="/home/ec2015/ra165457/Desktop/MC613/Lab04/Parte 2/simulation/qsim/Waveform.vwf.vht"</ftestbench_cmd>
+<ttestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off alu -c alu --vector_source="/home/ec2015/ra165457/Desktop/MC613/Lab04/Parte 2/Waveform.vwf" --testbench_file="/home/ec2015/ra165457/Desktop/MC613/Lab04/Parte 2/simulation/qsim/Waveform.vwf.vht"</ttestbench_cmd>
+<fnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="/home/ec2015/ra165457/Desktop/MC613/Lab04/Parte 2/simulation/qsim/" alu -c alu</fnetlist_cmd>
+<tnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=vhdl --output_directory="/home/ec2015/ra165457/Desktop/MC613/Lab04/Parte 2/simulation/qsim/" alu -c alu</tnetlist_cmd>
 <modelsim_script>onerror {exit -code 1}
 vlib work
 vcom -work work alu.vho

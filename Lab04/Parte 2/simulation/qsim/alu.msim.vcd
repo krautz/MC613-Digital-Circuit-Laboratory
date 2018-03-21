@@ -3,7 +3,7 @@ $comment
 		vcd file alu.msim.vcd -direction
 $end
 $date
-	Wed Mar 21 18:15:51 2018
+	Wed Mar 21 19:42:55 2018
 $end
 $version
 	ModelSim Version 10.5b
@@ -12,385 +12,906 @@ $timescale
 	1ps
 $end
 
-$scope module alu_board_vhd_vec_tst $end
-$var wire 1 ! HEX0 [6] $end
-$var wire 1 " HEX0 [5] $end
-$var wire 1 # HEX0 [4] $end
-$var wire 1 $ HEX0 [3] $end
-$var wire 1 % HEX0 [2] $end
-$var wire 1 & HEX0 [1] $end
-$var wire 1 ' HEX0 [0] $end
-$var wire 1 ( HEX1 [6] $end
-$var wire 1 ) HEX1 [5] $end
-$var wire 1 * HEX1 [4] $end
-$var wire 1 + HEX1 [3] $end
-$var wire 1 , HEX1 [2] $end
-$var wire 1 - HEX1 [1] $end
-$var wire 1 . HEX1 [0] $end
-$var wire 1 / HEX2 [6] $end
-$var wire 1 0 HEX2 [5] $end
-$var wire 1 1 HEX2 [4] $end
-$var wire 1 2 HEX2 [3] $end
-$var wire 1 3 HEX2 [2] $end
-$var wire 1 4 HEX2 [1] $end
-$var wire 1 5 HEX2 [0] $end
-$var wire 1 6 HEX3 [6] $end
-$var wire 1 7 HEX3 [5] $end
-$var wire 1 8 HEX3 [4] $end
-$var wire 1 9 HEX3 [3] $end
-$var wire 1 : HEX3 [2] $end
-$var wire 1 ; HEX3 [1] $end
-$var wire 1 < HEX3 [0] $end
-$var wire 1 = HEX4 [6] $end
-$var wire 1 > HEX4 [5] $end
-$var wire 1 ? HEX4 [4] $end
-$var wire 1 @ HEX4 [3] $end
-$var wire 1 A HEX4 [2] $end
-$var wire 1 B HEX4 [1] $end
-$var wire 1 C HEX4 [0] $end
-$var wire 1 D HEX5 [6] $end
-$var wire 1 E HEX5 [5] $end
-$var wire 1 F HEX5 [4] $end
-$var wire 1 G HEX5 [3] $end
-$var wire 1 H HEX5 [2] $end
-$var wire 1 I HEX5 [1] $end
-$var wire 1 J HEX5 [0] $end
-$var wire 1 K LEDR [3] $end
-$var wire 1 L LEDR [2] $end
-$var wire 1 M LEDR [1] $end
-$var wire 1 N LEDR [0] $end
-$var wire 1 O SW [9] $end
-$var wire 1 P SW [8] $end
-$var wire 1 Q SW [7] $end
-$var wire 1 R SW [6] $end
-$var wire 1 S SW [5] $end
-$var wire 1 T SW [4] $end
-$var wire 1 U SW [3] $end
-$var wire 1 V SW [2] $end
-$var wire 1 W SW [1] $end
-$var wire 1 X SW [0] $end
+$scope module alu_vhd_vec_tst $end
+$var wire 1 ! a [3] $end
+$var wire 1 " a [2] $end
+$var wire 1 # a [1] $end
+$var wire 1 $ a [0] $end
+$var wire 1 % b [3] $end
+$var wire 1 & b [2] $end
+$var wire 1 ' b [1] $end
+$var wire 1 ( b [0] $end
+$var wire 1 ) C $end
+$var wire 1 * F [3] $end
+$var wire 1 + F [2] $end
+$var wire 1 , F [1] $end
+$var wire 1 - F [0] $end
+$var wire 1 . N $end
+$var wire 1 / s0 $end
+$var wire 1 0 s1 $end
+$var wire 1 1 V $end
+$var wire 1 2 Z $end
 
 $scope module i1 $end
-$var wire 1 Y gnd $end
-$var wire 1 Z vcc $end
-$var wire 1 [ unknown $end
-$var wire 1 \ devoe $end
-$var wire 1 ] devclrn $end
-$var wire 1 ^ devpor $end
-$var wire 1 _ ww_devoe $end
-$var wire 1 ` ww_devclrn $end
-$var wire 1 a ww_devpor $end
-$var wire 1 b ww_SW [9] $end
-$var wire 1 c ww_SW [8] $end
-$var wire 1 d ww_SW [7] $end
-$var wire 1 e ww_SW [6] $end
-$var wire 1 f ww_SW [5] $end
-$var wire 1 g ww_SW [4] $end
-$var wire 1 h ww_SW [3] $end
-$var wire 1 i ww_SW [2] $end
-$var wire 1 j ww_SW [1] $end
-$var wire 1 k ww_SW [0] $end
-$var wire 1 l ww_HEX5 [6] $end
-$var wire 1 m ww_HEX5 [5] $end
-$var wire 1 n ww_HEX5 [4] $end
-$var wire 1 o ww_HEX5 [3] $end
-$var wire 1 p ww_HEX5 [2] $end
-$var wire 1 q ww_HEX5 [1] $end
-$var wire 1 r ww_HEX5 [0] $end
-$var wire 1 s ww_HEX4 [6] $end
-$var wire 1 t ww_HEX4 [5] $end
-$var wire 1 u ww_HEX4 [4] $end
-$var wire 1 v ww_HEX4 [3] $end
-$var wire 1 w ww_HEX4 [2] $end
-$var wire 1 x ww_HEX4 [1] $end
-$var wire 1 y ww_HEX4 [0] $end
-$var wire 1 z ww_HEX3 [6] $end
-$var wire 1 { ww_HEX3 [5] $end
-$var wire 1 | ww_HEX3 [4] $end
-$var wire 1 } ww_HEX3 [3] $end
-$var wire 1 ~ ww_HEX3 [2] $end
-$var wire 1 !! ww_HEX3 [1] $end
-$var wire 1 "! ww_HEX3 [0] $end
-$var wire 1 #! ww_HEX2 [6] $end
-$var wire 1 $! ww_HEX2 [5] $end
-$var wire 1 %! ww_HEX2 [4] $end
-$var wire 1 &! ww_HEX2 [3] $end
-$var wire 1 '! ww_HEX2 [2] $end
-$var wire 1 (! ww_HEX2 [1] $end
-$var wire 1 )! ww_HEX2 [0] $end
-$var wire 1 *! ww_HEX1 [6] $end
-$var wire 1 +! ww_HEX1 [5] $end
-$var wire 1 ,! ww_HEX1 [4] $end
-$var wire 1 -! ww_HEX1 [3] $end
-$var wire 1 .! ww_HEX1 [2] $end
-$var wire 1 /! ww_HEX1 [1] $end
-$var wire 1 0! ww_HEX1 [0] $end
-$var wire 1 1! ww_HEX0 [6] $end
-$var wire 1 2! ww_HEX0 [5] $end
-$var wire 1 3! ww_HEX0 [4] $end
-$var wire 1 4! ww_HEX0 [3] $end
-$var wire 1 5! ww_HEX0 [2] $end
-$var wire 1 6! ww_HEX0 [1] $end
-$var wire 1 7! ww_HEX0 [0] $end
-$var wire 1 8! ww_LEDR [3] $end
-$var wire 1 9! ww_LEDR [2] $end
-$var wire 1 :! ww_LEDR [1] $end
-$var wire 1 ;! ww_LEDR [0] $end
-$var wire 1 <! \~QUARTUS_CREATED_GND~I_combout\ $end
-$var wire 1 =! \SW[7]~input_o\ $end
-$var wire 1 >! \SW[6]~input_o\ $end
-$var wire 1 ?! \SW[4]~input_o\ $end
-$var wire 1 @! \SW[5]~input_o\ $end
-$var wire 1 A! \liga_A|Mux6~0_combout\ $end
-$var wire 1 B! \liga_A|Mux5~0_combout\ $end
-$var wire 1 C! \liga_A|Mux4~0_combout\ $end
-$var wire 1 D! \liga_A|Mux3~0_combout\ $end
-$var wire 1 E! \liga_A|Mux2~0_combout\ $end
-$var wire 1 F! \liga_A|Mux1~0_combout\ $end
-$var wire 1 G! \liga_A|Mux0~0_combout\ $end
-$var wire 1 H! \SW[3]~input_o\ $end
-$var wire 1 I! \SW[2]~input_o\ $end
-$var wire 1 J! \SW[1]~input_o\ $end
-$var wire 1 K! \SW[0]~input_o\ $end
-$var wire 1 L! \liga_B|Mux6~0_combout\ $end
-$var wire 1 M! \liga_B|Mux5~0_combout\ $end
-$var wire 1 N! \liga_B|Mux4~0_combout\ $end
-$var wire 1 O! \liga_B|Mux3~0_combout\ $end
-$var wire 1 P! \liga_B|Mux2~0_combout\ $end
-$var wire 1 Q! \liga_B|Mux1~0_combout\ $end
-$var wire 1 R! \liga_B|Mux0~0_combout\ $end
-$var wire 1 S! \SW[9]~input_o\ $end
-$var wire 1 T! \SW[8]~input_o\ $end
-$var wire 1 U! \faz_os_baguio|add|G1:2:adder|cout~0_combout\ $end
-$var wire 1 V! \faz_os_baguio|sub|G1:2:adder|cout~0_combout\ $end
-$var wire 1 W! \faz_os_baguio|Mux0~0_combout\ $end
-$var wire 1 X! \faz_os_baguio|sub|G1:1:adder|cout~0_combout\ $end
-$var wire 1 Y! \faz_os_baguio|add|G1:1:adder|cout~0_combout\ $end
-$var wire 1 Z! \faz_os_baguio|Mux1~0_combout\ $end
-$var wire 1 [! \faz_os_baguio|Mux3~0_combout\ $end
-$var wire 1 \! \faz_os_baguio|Mux2~0_combout\ $end
-$var wire 1 ]! \liga_F|Mux6~0_combout\ $end
-$var wire 1 ^! \liga_F|Mux5~0_combout\ $end
-$var wire 1 _! \liga_F|Mux4~0_combout\ $end
-$var wire 1 `! \liga_F|Mux3~0_combout\ $end
-$var wire 1 a! \liga_F|Mux2~0_combout\ $end
-$var wire 1 b! \liga_F|Mux1~0_combout\ $end
-$var wire 1 c! \liga_F|Mux0~0_combout\ $end
-$var wire 1 d! \faz_os_baguio|Mux8~0_combout\ $end
-$var wire 1 e! \faz_os_baguio|Mux5~0_combout\ $end
-$var wire 1 f! \faz_os_baguio|Mux4~0_combout\ $end
-$var wire 1 g! \faz_os_baguio|Equal0~0_combout\ $end
-$var wire 1 h! \ALT_INV_SW[9]~input_o\ $end
-$var wire 1 i! \ALT_INV_SW[8]~input_o\ $end
-$var wire 1 j! \ALT_INV_SW[2]~input_o\ $end
-$var wire 1 k! \ALT_INV_SW[1]~input_o\ $end
-$var wire 1 l! \ALT_INV_SW[0]~input_o\ $end
-$var wire 1 m! \ALT_INV_SW[3]~input_o\ $end
-$var wire 1 n! \ALT_INV_SW[6]~input_o\ $end
-$var wire 1 o! \ALT_INV_SW[5]~input_o\ $end
-$var wire 1 p! \ALT_INV_SW[4]~input_o\ $end
-$var wire 1 q! \ALT_INV_SW[7]~input_o\ $end
-$var wire 1 r! \liga_F|ALT_INV_Mux0~0_combout\ $end
-$var wire 1 s! \faz_os_baguio|ALT_INV_Mux1~0_combout\ $end
-$var wire 1 t! \faz_os_baguio|add|G1:1:adder|ALT_INV_cout~0_combout\ $end
-$var wire 1 u! \faz_os_baguio|sub|G1:1:adder|ALT_INV_cout~0_combout\ $end
-$var wire 1 v! \faz_os_baguio|ALT_INV_Mux2~0_combout\ $end
-$var wire 1 w! \faz_os_baguio|ALT_INV_Mux3~0_combout\ $end
-$var wire 1 x! \faz_os_baguio|ALT_INV_Mux0~0_combout\ $end
-$var wire 1 y! \faz_os_baguio|add|G1:2:adder|ALT_INV_cout~0_combout\ $end
-$var wire 1 z! \faz_os_baguio|sub|G1:2:adder|ALT_INV_cout~0_combout\ $end
-$var wire 1 {! \liga_B|ALT_INV_Mux0~0_combout\ $end
-$var wire 1 |! \liga_A|ALT_INV_Mux0~0_combout\ $end
+$var wire 1 3 gnd $end
+$var wire 1 4 vcc $end
+$var wire 1 5 unknown $end
+$var wire 1 6 devoe $end
+$var wire 1 7 devclrn $end
+$var wire 1 8 devpor $end
+$var wire 1 9 ww_devoe $end
+$var wire 1 : ww_devclrn $end
+$var wire 1 ; ww_devpor $end
+$var wire 1 < ww_a [3] $end
+$var wire 1 = ww_a [2] $end
+$var wire 1 > ww_a [1] $end
+$var wire 1 ? ww_a [0] $end
+$var wire 1 @ ww_b [3] $end
+$var wire 1 A ww_b [2] $end
+$var wire 1 B ww_b [1] $end
+$var wire 1 C ww_b [0] $end
+$var wire 1 D ww_F [3] $end
+$var wire 1 E ww_F [2] $end
+$var wire 1 F ww_F [1] $end
+$var wire 1 G ww_F [0] $end
+$var wire 1 H ww_s0 $end
+$var wire 1 I ww_s1 $end
+$var wire 1 J ww_Z $end
+$var wire 1 K ww_C $end
+$var wire 1 L ww_V $end
+$var wire 1 M ww_N $end
+$var wire 1 N \~QUARTUS_CREATED_GND~I_combout\ $end
+$var wire 1 O \s0~input_o\ $end
+$var wire 1 P \a[0]~input_o\ $end
+$var wire 1 Q \s1~input_o\ $end
+$var wire 1 R \b[0]~input_o\ $end
+$var wire 1 S \Mux3~0_combout\ $end
+$var wire 1 T \a[1]~input_o\ $end
+$var wire 1 U \b[1]~input_o\ $end
+$var wire 1 V \Mux2~0_combout\ $end
+$var wire 1 W \a[2]~input_o\ $end
+$var wire 1 X \add|G1:1:adder|cout~0_combout\ $end
+$var wire 1 Y \b[2]~input_o\ $end
+$var wire 1 Z \sub|G1:2:adder|r~combout\ $end
+$var wire 1 [ \Mux1~0_combout\ $end
+$var wire 1 \ \a[3]~input_o\ $end
+$var wire 1 ] \sub|G1:2:adder|cout~0_combout\ $end
+$var wire 1 ^ \b[3]~input_o\ $end
+$var wire 1 _ \sub|G1:3:adder|r~0_combout\ $end
+$var wire 1 ` \add|G1:2:adder|cout~0_combout\ $end
+$var wire 1 a \Mux0~0_combout\ $end
+$var wire 1 b \Equal0~0_combout\ $end
+$var wire 1 c \add_aux|G1:3:adder|r~combout\ $end
+$var wire 1 d \Mux4~0_combout\ $end
+$var wire 1 e \Mux5~0_combout\ $end
+$var wire 1 f \Mux8~0_combout\ $end
+$var wire 1 g \ALT_INV_a[3]~input_o\ $end
+$var wire 1 h \ALT_INV_b[3]~input_o\ $end
+$var wire 1 i \ALT_INV_a[2]~input_o\ $end
+$var wire 1 j \ALT_INV_b[2]~input_o\ $end
+$var wire 1 k \ALT_INV_a[1]~input_o\ $end
+$var wire 1 l \ALT_INV_b[1]~input_o\ $end
+$var wire 1 m \ALT_INV_s0~input_o\ $end
+$var wire 1 n \ALT_INV_b[0]~input_o\ $end
+$var wire 1 o \ALT_INV_a[0]~input_o\ $end
+$var wire 1 p \ALT_INV_s1~input_o\ $end
+$var wire 1 q \add_aux|G1:3:adder|ALT_INV_r~combout\ $end
+$var wire 1 r \sub|G1:3:adder|ALT_INV_r~0_combout\ $end
+$var wire 1 s \sub|G1:2:adder|ALT_INV_cout~0_combout\ $end
+$var wire 1 t \add|G1:2:adder|ALT_INV_cout~0_combout\ $end
+$var wire 1 u \ALT_INV_Mux1~0_combout\ $end
+$var wire 1 v \sub|G1:2:adder|ALT_INV_r~combout\ $end
+$var wire 1 w \add|G1:1:adder|ALT_INV_cout~0_combout\ $end
+$var wire 1 x \ALT_INV_Mux2~0_combout\ $end
+$var wire 1 y \ALT_INV_Mux3~0_combout\ $end
+$var wire 1 z \ALT_INV_Mux0~0_combout\ $end
 $upscope $end
 $upscope $end
 $enddefinitions $end
 #0
 $dumpvars
-0Y
-1Z
-x[
-1\
-1]
-1^
-1_
-1`
-1a
-x<!
-0=!
-1>!
-0?!
-0@!
-1A!
-0B!
-0C!
-1D!
-1E!
-0F!
-1G!
-0H!
-0I!
-1J!
-0K!
-0L!
-0M!
-1N!
-0O!
-0P!
-1Q!
-1R!
-0S!
-0T!
-0U!
-0V!
-0W!
-1X!
-0Y!
-1Z!
-0[!
-1\!
-0]!
-1^!
-0_!
-0`!
-0a!
-0b!
-1c!
-0d!
-0e!
-0f!
-0g!
-1h!
-1i!
-1j!
-0k!
-1l!
-1m!
-0n!
-1o!
-1p!
-1q!
-0r!
-0s!
-1t!
-0u!
-0v!
-1w!
-1x!
-1y!
-1z!
-0{!
-0|!
+0)
+1.
+0/
+00
+01
+02
+03
+14
+x5
 16
 17
 18
 19
 1:
 1;
+0H
+0I
+0J
+0K
+0L
+1M
+xN
+0O
+0P
+0Q
+1R
+1S
+1T
+0U
+1V
+0W
+0X
+1Y
+1Z
+1[
+1\
+0]
+0^
+0_
+0`
+1a
+0b
+1c
+0d
+0e
+1f
+0g
+1h
+1i
+0j
+0k
+1l
+1m
+0n
+1o
+1p
+0q
+1r
+1s
+1t
+0u
+0v
+1w
+0x
+0y
+0z
+1!
+0"
+1#
+0$
+0%
+1&
+0'
+1(
 1<
 0=
-0>
-1?
-1@
-0A
+1>
+0?
+0@
+1A
 0B
 1C
 1D
 1E
 1F
 1G
-1H
-1I
-1J
-0K
-0L
-0M
-0N
-0O
-0P
-0Q
-1R
-0S
-0T
-0U
-0V
-1W
-0X
-0b
-0c
-0d
-1e
-0f
-0g
-0h
-0i
-1j
-0k
-1l
-1m
-1n
-1o
-1p
-1q
-1r
-0s
-0t
-1u
-1v
-0w
-0x
-1y
-1z
-1{
-1|
-1}
-1~
-1!!
-1"!
-0#!
-1$!
-0%!
-0&!
-1'!
-0(!
-0)!
-1*!
-1+!
-1,!
-1-!
-1.!
-1/!
-10!
-01!
-02!
-03!
-04!
-05!
-16!
-07!
-08!
-09!
-0:!
-0;!
-0!
-0"
-0#
-0$
-0%
-1&
-0'
-1(
-1)
 1*
 1+
 1,
 1-
-1.
-0/
-10
-01
-02
-13
-04
-05
 $end
-#1000000
+#40000
+0!
+1"
+1$
+1%
+0&
+1?
+1=
+0<
+0A
+1@
+1^
+0Y
+0\
+1W
+1P
+0o
+0i
+1g
+1j
+0h
+0c
+0S
+0V
+1X
+1]
+1`
+0t
+0s
+0w
+1x
+1y
+1q
+0[
+1d
+0a
+0f
+1u
+0F
+0G
+1z
+0-
+0,
+1b
+1K
+0E
+0M
+0D
+1)
+0+
+0.
+0*
+1J
+12
+#80000
+1!
+0"
+1&
+0(
+0=
+1<
+0C
+1A
+1Y
+0R
+1\
+0W
+1i
+0g
+1n
+0j
+1S
+1V
+0X
+1_
+1a
+1f
+0]
+0`
+1t
+1s
+0z
+0r
+1w
+0x
+0y
+1[
+0b
+0a
+1e
+0f
+0u
+1M
+1D
+1F
+1G
+1z
+1.
+1-
+1,
+1*
+0J
+1E
+0M
+1L
+0D
+02
+1+
+0.
+11
+0*
+#120000
+0!
+1"
+0&
+1(
+0$
+0?
+1=
+0<
+1C
+0A
+0Y
+1R
+0\
+1W
+0P
+1o
+0i
+1g
+0n
+1j
+0_
+1a
+0d
+0e
+1f
+1]
+0s
+0z
+1r
+1M
+0L
+0K
+1D
+1.
+01
+0)
+1*
+#160000
+0"
+0(
+0%
+0#
+0>
+0=
+0C
+0@
+0^
+0R
+0W
+0T
+1k
+1i
+1n
+1h
+0a
+0f
+0S
+0[
+0V
+0Z
+0]
+1s
+1v
+1x
+1u
+1y
+1z
+1b
+0F
+0E
+0G
+0M
+0D
+0-
+0,
+0+
+0*
+0.
+1J
+12
+#200000
+1(
+1#
+1!
+1&
+10
+1C
+1A
+1>
+1<
+1I
+1Q
+1\
+1T
+1Y
+1R
+0n
+0j
+0k
+0g
+0p
+1Z
+1c
+0q
+0v
+#240000
+0!
+0&
+1"
+1%
+1$
+1?
+1=
+0<
+0A
+1@
+1^
+0Y
+0\
+1W
+1P
+0o
+0i
+1g
+1j
+0h
+0c
+1S
+1X
+1]
+1`
+0t
+0s
+0w
+0y
+1q
+0b
+1G
+1-
+0J
+02
+#280000
+1!
+1&
+0"
+0(
+0=
+1<
+0C
+1A
+1Y
+0R
+1\
+0W
+1i
+0g
+1n
+0j
+0S
+0X
+1_
+1a
+0]
+0`
+1t
+1s
+0z
+0r
+1w
+1y
+1D
+0G
+0-
+1*
+#320000
+0!
+0&
+1"
+1(
+0$
+0?
+1=
+0<
+1C
+0A
+0Y
+1R
+0\
+1W
+0P
+1o
+0i
+1g
+0n
+1j
+0_
+0a
+1]
+0s
+1z
+1r
+1b
+0D
+0*
+1J
+12
+#360000
+0"
+0(
+0%
+0#
+0>
+0=
+0C
+0@
+0^
+0R
+0W
+0T
+1k
+1i
+1n
+1h
+0Z
+0]
+1s
+1v
+#400000
+1(
+1#
+1!
+1&
+00
+1/
+1C
+1A
+1>
+1<
+0I
+1H
+1O
+0Q
+1\
+1T
+1Y
+1R
+0n
+0j
+0k
+0g
+1p
+0m
+1S
+1Z
+1c
+0q
+0v
+0y
+0b
+1[
+1d
+1e
+0u
+1G
+1-
+1L
+1K
+1E
+0J
+11
+1)
+1+
+02
+#440000
+0!
+0&
+1"
+1%
+1$
+1?
+1=
+0<
+0A
+1@
+1^
+0Y
+0\
+1W
+1P
+0o
+0i
+1g
+1j
+0h
+0c
+0d
+0e
+0S
+1V
+1X
+1]
+1`
+0t
+0s
+0w
+0x
+1y
+1q
+1a
+1e
+1f
+0z
+1F
+0G
+0L
+0K
+0-
+1,
+01
+0)
+1M
+1L
+1D
+1.
+11
+1*
+#480000
+1!
+1&
+0"
+0(
+0=
+1<
+0C
+1A
+1Y
+0R
+1\
+0W
+1i
+0g
+1n
+0j
+1S
+0X
+1_
+1d
+0e
+0]
+0`
+1t
+1s
+0r
+1w
+0y
+0d
+0L
+1K
+1G
+01
+1)
+1-
+0K
+0)
+#520000
+0!
+0&
+1"
+1(
+0$
+0?
+1=
+0<
+1C
+0A
+0Y
+1R
+0\
+1W
+0P
+1o
+0i
+1g
+0n
+1j
+0_
+0V
+1]
+0s
+1x
+1r
+1e
+0F
+0,
+1L
+11
+#560000
+0"
+0(
+0%
+0#
+0>
+0=
+0C
+0@
+0^
+0R
+0W
+0T
+1k
+1i
+1n
+1h
+0S
+0Z
+0]
+1s
+1v
+1y
+0[
+0a
+0e
+0f
+1z
+1u
+0G
+1b
+0-
+0M
+0L
+0D
+0E
+0.
+01
+0+
+0*
+1J
+12
+#600000
+1(
+1#
+1!
+1&
+10
+1C
+1A
+1>
+1<
+1I
+1Q
+1\
+1T
+1Y
+1R
+0n
+0j
+0k
+0g
+0p
+1a
+1[
+1S
+1V
+1Z
+1c
+0q
+0v
+0x
+0y
+0u
+0z
+0b
+1F
+1G
+1E
+1D
+1-
+1,
+1+
+1*
+0J
+02
+#640000
+0!
+0&
+1"
+1%
+1$
+1?
+1=
+0<
+0A
+1@
+1^
+0Y
+0\
+1W
+1P
+0o
+0i
+1g
+1j
+0h
+0c
+1X
+1]
+1`
+0t
+0s
+0w
+1q
+#680000
+1!
+1&
+0"
+0(
+0=
+1<
+0C
+1A
+1Y
+0R
+1\
+0W
+1i
+0g
+1n
+0j
+0X
+1_
+0]
+0`
+1t
+1s
+0r
+1w
+#720000
+0!
+0&
+1"
+1(
+0$
+0?
+1=
+0<
+1C
+0A
+0Y
+1R
+0\
+1W
+0P
+1o
+0i
+1g
+0n
+1j
+0_
+1]
+0s
+1r
+#760000
+0"
+0(
+0%
+0#
+0>
+0=
+0C
+0@
+0^
+0R
+0W
+0T
+1k
+1i
+1n
+1h
+0a
+0S
+0[
+0V
+0Z
+0]
+1s
+1v
+1x
+1u
+1y
+1z
+1b
+0F
+0E
+0G
+0D
+0-
+0,
+0+
+0*
+1J
+12
+#800000

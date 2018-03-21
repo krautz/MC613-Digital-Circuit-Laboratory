@@ -4,3 +4,4 @@ Ripple Carry
 16: 12.225
 32: 19.862
 64: 36.105
+Conforme o numero de N aumenta, o tempo também sobe (com exceção de N = 8, provavelmente por alguma falha em otimização para tal N). Isso ocorre pois a medida que N aumenta mais vezes usamos o crossbar, e tendo que respeitar o clock padrão e cada vez passando por mais crossbars fazem o tempo subir

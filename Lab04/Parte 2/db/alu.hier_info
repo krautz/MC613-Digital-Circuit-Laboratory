@@ -17,52 +17,52 @@ SW[7] => two_comp_to_7seg:liga_A.bin[3]
 SW[7] => alu:faz_os_baguio.a[3]
 SW[8] => alu:faz_os_baguio.s1
 SW[9] => alu:faz_os_baguio.s0
-HEX5[0] <= <VCC>
-HEX5[1] <= <VCC>
-HEX5[2] <= <VCC>
-HEX5[3] <= <VCC>
-HEX5[4] <= <VCC>
-HEX5[5] <= <VCC>
-HEX5[6] <= two_comp_to_7seg:liga_A.neg
-HEX4[0] <= two_comp_to_7seg:liga_A.segs[0]
-HEX4[1] <= two_comp_to_7seg:liga_A.segs[1]
-HEX4[2] <= two_comp_to_7seg:liga_A.segs[2]
-HEX4[3] <= two_comp_to_7seg:liga_A.segs[3]
-HEX4[4] <= two_comp_to_7seg:liga_A.segs[4]
-HEX4[5] <= two_comp_to_7seg:liga_A.segs[5]
-HEX4[6] <= two_comp_to_7seg:liga_A.segs[6]
-HEX3[0] <= <VCC>
-HEX3[1] <= <VCC>
-HEX3[2] <= <VCC>
-HEX3[3] <= <VCC>
-HEX3[4] <= <VCC>
-HEX3[5] <= <VCC>
-HEX3[6] <= two_comp_to_7seg:liga_B.neg
-HEX2[0] <= two_comp_to_7seg:liga_B.segs[0]
-HEX2[1] <= two_comp_to_7seg:liga_B.segs[1]
-HEX2[2] <= two_comp_to_7seg:liga_B.segs[2]
-HEX2[3] <= two_comp_to_7seg:liga_B.segs[3]
-HEX2[4] <= two_comp_to_7seg:liga_B.segs[4]
-HEX2[5] <= two_comp_to_7seg:liga_B.segs[5]
-HEX2[6] <= two_comp_to_7seg:liga_B.segs[6]
-HEX1[0] <= <VCC>
-HEX1[1] <= <VCC>
-HEX1[2] <= <VCC>
-HEX1[3] <= <VCC>
-HEX1[4] <= <VCC>
-HEX1[5] <= <VCC>
-HEX1[6] <= two_comp_to_7seg:liga_F.neg
-HEX0[0] <= two_comp_to_7seg:liga_F.segs[0]
-HEX0[1] <= two_comp_to_7seg:liga_F.segs[1]
-HEX0[2] <= two_comp_to_7seg:liga_F.segs[2]
-HEX0[3] <= two_comp_to_7seg:liga_F.segs[3]
-HEX0[4] <= two_comp_to_7seg:liga_F.segs[4]
-HEX0[5] <= two_comp_to_7seg:liga_F.segs[5]
-HEX0[6] <= two_comp_to_7seg:liga_F.segs[6]
-LEDR[0] <= alu:faz_os_baguio.N
-LEDR[1] <= alu:faz_os_baguio.V
-LEDR[2] <= alu:faz_os_baguio.C
-LEDR[3] <= alu:faz_os_baguio.Z
+HEX5[0] << <VCC>
+HEX5[1] << <VCC>
+HEX5[2] << <VCC>
+HEX5[3] << <VCC>
+HEX5[4] << <VCC>
+HEX5[5] << <VCC>
+HEX5[6] << two_comp_to_7seg:liga_A.neg
+HEX4[0] << two_comp_to_7seg:liga_A.segs[0]
+HEX4[1] << two_comp_to_7seg:liga_A.segs[1]
+HEX4[2] << two_comp_to_7seg:liga_A.segs[2]
+HEX4[3] << two_comp_to_7seg:liga_A.segs[3]
+HEX4[4] << two_comp_to_7seg:liga_A.segs[4]
+HEX4[5] << two_comp_to_7seg:liga_A.segs[5]
+HEX4[6] << two_comp_to_7seg:liga_A.segs[6]
+HEX3[0] << <VCC>
+HEX3[1] << <VCC>
+HEX3[2] << <VCC>
+HEX3[3] << <VCC>
+HEX3[4] << <VCC>
+HEX3[5] << <VCC>
+HEX3[6] << two_comp_to_7seg:liga_B.neg
+HEX2[0] << two_comp_to_7seg:liga_B.segs[0]
+HEX2[1] << two_comp_to_7seg:liga_B.segs[1]
+HEX2[2] << two_comp_to_7seg:liga_B.segs[2]
+HEX2[3] << two_comp_to_7seg:liga_B.segs[3]
+HEX2[4] << two_comp_to_7seg:liga_B.segs[4]
+HEX2[5] << two_comp_to_7seg:liga_B.segs[5]
+HEX2[6] << two_comp_to_7seg:liga_B.segs[6]
+HEX1[0] << <VCC>
+HEX1[1] << <VCC>
+HEX1[2] << <VCC>
+HEX1[3] << <VCC>
+HEX1[4] << <VCC>
+HEX1[5] << <VCC>
+HEX1[6] << two_comp_to_7seg:liga_F.neg
+HEX0[0] << two_comp_to_7seg:liga_F.segs[0]
+HEX0[1] << two_comp_to_7seg:liga_F.segs[1]
+HEX0[2] << two_comp_to_7seg:liga_F.segs[2]
+HEX0[3] << two_comp_to_7seg:liga_F.segs[3]
+HEX0[4] << two_comp_to_7seg:liga_F.segs[4]
+HEX0[5] << two_comp_to_7seg:liga_F.segs[5]
+HEX0[6] << two_comp_to_7seg:liga_F.segs[6]
+LEDR[0] << alu:faz_os_baguio.N
+LEDR[1] << alu:faz_os_baguio.V
+LEDR[2] << alu:faz_os_baguio.C
+LEDR[3] << alu:faz_os_baguio.Z
 
 
 |alu_board|two_comp_to_7seg:liga_A
@@ -161,19 +161,19 @@ a[3] => ripple_carry:sub.x[3]
 b[0] => andF[0].IN1
 b[0] => orF[0].IN1
 b[0] => ripple_carry:add.y[0]
-b[0] => ripple_carry:sub.y[0]
+b[0] => ripple_carry:add_aux.x[0]
 b[1] => andF[1].IN1
 b[1] => orF[1].IN1
 b[1] => ripple_carry:add.y[1]
-b[1] => ripple_carry:sub.y[1]
+b[1] => ripple_carry:add_aux.x[1]
 b[2] => andF[2].IN1
 b[2] => orF[2].IN1
 b[2] => ripple_carry:add.y[2]
-b[2] => ripple_carry:sub.y[2]
+b[2] => ripple_carry:add_aux.x[2]
 b[3] => andF[3].IN1
 b[3] => orF[3].IN1
 b[3] => ripple_carry:add.y[3]
-b[3] => ripple_carry:sub.y[3]
+b[3] => ripple_carry:add_aux.x[3]
 F[0] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
 F[1] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
 F[2] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
@@ -259,6 +259,80 @@ cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |alu_board|alu:faz_os_baguio|ripple_carry:add|full_adder:\G1:3:adder
+x => r.IN0
+x => intermediate[0].IN0
+x => intermediate[1].IN0
+y => r.IN1
+y => intermediate[0].IN1
+y => intermediate[2].IN0
+r <= r.DB_MAX_OUTPUT_PORT_TYPE
+cin => r.IN1
+cin => intermediate[1].IN1
+cin => intermediate[2].IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu_board|alu:faz_os_baguio|ripple_carry:add_aux
+x[0] => full_adder:G1:0:adder.x
+x[1] => full_adder:G1:1:adder.x
+x[2] => full_adder:G1:2:adder.x
+x[3] => full_adder:G1:3:adder.x
+y[0] => full_adder:G1:0:adder.y
+y[1] => full_adder:G1:1:adder.y
+y[2] => full_adder:G1:2:adder.y
+y[3] => full_adder:G1:3:adder.y
+r[0] <= full_adder:G1:0:adder.r
+r[1] <= full_adder:G1:1:adder.r
+r[2] <= full_adder:G1:2:adder.r
+r[3] <= full_adder:G1:3:adder.r
+cin => full_adder:G1:0:adder.cin
+cout <= full_adder:G1:3:adder.cout
+overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu_board|alu:faz_os_baguio|ripple_carry:add_aux|full_adder:\G1:0:adder
+x => r.IN0
+x => intermediate[0].IN0
+x => intermediate[1].IN0
+y => r.IN1
+y => intermediate[0].IN1
+y => intermediate[2].IN0
+r <= r.DB_MAX_OUTPUT_PORT_TYPE
+cin => r.IN1
+cin => intermediate[1].IN1
+cin => intermediate[2].IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu_board|alu:faz_os_baguio|ripple_carry:add_aux|full_adder:\G1:1:adder
+x => r.IN0
+x => intermediate[0].IN0
+x => intermediate[1].IN0
+y => r.IN1
+y => intermediate[0].IN1
+y => intermediate[2].IN0
+r <= r.DB_MAX_OUTPUT_PORT_TYPE
+cin => r.IN1
+cin => intermediate[1].IN1
+cin => intermediate[2].IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu_board|alu:faz_os_baguio|ripple_carry:add_aux|full_adder:\G1:2:adder
+x => r.IN0
+x => intermediate[0].IN0
+x => intermediate[1].IN0
+y => r.IN1
+y => intermediate[0].IN1
+y => intermediate[2].IN0
+r <= r.DB_MAX_OUTPUT_PORT_TYPE
+cin => r.IN1
+cin => intermediate[1].IN1
+cin => intermediate[2].IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu_board|alu:faz_os_baguio|ripple_carry:add_aux|full_adder:\G1:3:adder
 x => r.IN0
 x => intermediate[0].IN0
 x => intermediate[1].IN0

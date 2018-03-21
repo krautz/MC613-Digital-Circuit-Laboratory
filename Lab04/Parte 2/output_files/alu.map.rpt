@@ -1,5 +1,5 @@
 Analysis & Synthesis report for alu
-Wed Mar 21 18:30:37 2018
+Wed Mar 21 19:44:31 2018
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -16,12 +16,14 @@ Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
   8. General Register Statistics
   9. Multiplexer Restructuring Statistics (Restructuring Performed)
  10. Parameter Settings for User Entity Instance: alu:faz_os_baguio|ripple_carry:add
- 11. Parameter Settings for User Entity Instance: alu:faz_os_baguio|ripple_carry:sub
- 12. Port Connectivity Checks: "alu:faz_os_baguio|ripple_carry:sub"
- 13. Port Connectivity Checks: "alu:faz_os_baguio|ripple_carry:add"
- 14. Post-Synthesis Netlist Statistics for Top Partition
- 15. Elapsed Time Per Partition
- 16. Analysis & Synthesis Messages
+ 11. Parameter Settings for User Entity Instance: alu:faz_os_baguio|ripple_carry:add_aux
+ 12. Parameter Settings for User Entity Instance: alu:faz_os_baguio|ripple_carry:sub
+ 13. Port Connectivity Checks: "alu:faz_os_baguio|ripple_carry:sub"
+ 14. Port Connectivity Checks: "alu:faz_os_baguio|ripple_carry:add_aux"
+ 15. Port Connectivity Checks: "alu:faz_os_baguio|ripple_carry:add"
+ 16. Post-Synthesis Netlist Statistics for Top Partition
+ 17. Elapsed Time Per Partition
+ 18. Analysis & Synthesis Messages
 
 
 
@@ -47,7 +49,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Mar 21 18:30:37 2018       ;
+; Analysis & Synthesis Status     ; Successful - Wed Mar 21 19:44:31 2018       ;
 ; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; alu                                         ;
 ; Top-level Entity Name           ; alu_board                                   ;
@@ -188,14 +190,14 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimate of Logic utilization (ALMs needed) ; 21          ;
+; Estimate of Logic utilization (ALMs needed) ; 23          ;
 ;                                             ;             ;
-; Combinational ALUT usage for logic          ; 33          ;
-;     -- 7 input functions                    ; 0           ;
-;     -- 6 input functions                    ; 8           ;
-;     -- 5 input functions                    ; 0           ;
+; Combinational ALUT usage for logic          ; 36          ;
+;     -- 7 input functions                    ; 3           ;
+;     -- 6 input functions                    ; 6           ;
+;     -- 5 input functions                    ; 1           ;
 ;     -- 4 input functions                    ; 19          ;
-;     -- <=3 input functions                  ; 6           ;
+;     -- <=3 input functions                  ; 7           ;
 ;                                             ;             ;
 ; Dedicated logic registers                   ; 0           ;
 ;                                             ;             ;
@@ -203,30 +205,33 @@ refer to the applicable agreement for further details.
 ;                                             ;             ;
 ; Total DSP Blocks                            ; 0           ;
 ;                                             ;             ;
-; Maximum fan-out node                        ; SW[4]~input ;
-; Maximum fan-out                             ; 13          ;
-; Total fan-out                               ; 226         ;
-; Average fan-out                             ; 1.56        ;
+; Maximum fan-out node                        ; SW[0]~input ;
+; Maximum fan-out                             ; 15          ;
+; Total fan-out                               ; 243         ;
+; Average fan-out                             ; 1.64        ;
 +---------------------------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                 ;
-+-----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------+------------------+--------------+
-; Compilation Hierarchy Node        ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                  ; Entity Name      ; Library Name ;
-+-----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------+------------------+--------------+
-; |alu_board                        ; 33 (0)              ; 0 (0)                     ; 0                 ; 0          ; 56   ; 0            ; |alu_board                                                           ; alu_board        ; work         ;
-;    |alu:faz_os_baguio|            ; 12 (8)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_board|alu:faz_os_baguio                                         ; alu              ; work         ;
-;       |ripple_carry:add|          ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_board|alu:faz_os_baguio|ripple_carry:add                        ; ripple_carry     ; work         ;
-;          |full_adder:\G1:1:adder| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_board|alu:faz_os_baguio|ripple_carry:add|full_adder:\G1:1:adder ; full_adder       ; work         ;
-;          |full_adder:\G1:2:adder| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_board|alu:faz_os_baguio|ripple_carry:add|full_adder:\G1:2:adder ; full_adder       ; work         ;
-;       |ripple_carry:sub|          ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_board|alu:faz_os_baguio|ripple_carry:sub                        ; ripple_carry     ; work         ;
-;          |full_adder:\G1:1:adder| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_board|alu:faz_os_baguio|ripple_carry:sub|full_adder:\G1:1:adder ; full_adder       ; work         ;
-;          |full_adder:\G1:2:adder| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_board|alu:faz_os_baguio|ripple_carry:sub|full_adder:\G1:2:adder ; full_adder       ; work         ;
-;    |two_comp_to_7seg:liga_A|      ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_board|two_comp_to_7seg:liga_A                                   ; two_comp_to_7seg ; work         ;
-;    |two_comp_to_7seg:liga_B|      ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_board|two_comp_to_7seg:liga_B                                   ; two_comp_to_7seg ; work         ;
-;    |two_comp_to_7seg:liga_F|      ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_board|two_comp_to_7seg:liga_F                                   ; two_comp_to_7seg ; work         ;
-+-----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------+------------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                     ;
++-----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------+------------------+--------------+
+; Compilation Hierarchy Node        ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                      ; Entity Name      ; Library Name ;
++-----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------+------------------+--------------+
+; |alu_board                        ; 36 (0)              ; 0 (0)                     ; 0                 ; 0          ; 56   ; 0            ; |alu_board                                                               ; alu_board        ; work         ;
+;    |alu:faz_os_baguio|            ; 15 (8)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_board|alu:faz_os_baguio                                             ; alu              ; work         ;
+;       |ripple_carry:add_aux|      ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_board|alu:faz_os_baguio|ripple_carry:add_aux                        ; ripple_carry     ; work         ;
+;          |full_adder:\G1:3:adder| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_board|alu:faz_os_baguio|ripple_carry:add_aux|full_adder:\G1:3:adder ; full_adder       ; work         ;
+;       |ripple_carry:add|          ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_board|alu:faz_os_baguio|ripple_carry:add                            ; ripple_carry     ; work         ;
+;          |full_adder:\G1:1:adder| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_board|alu:faz_os_baguio|ripple_carry:add|full_adder:\G1:1:adder     ; full_adder       ; work         ;
+;          |full_adder:\G1:2:adder| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_board|alu:faz_os_baguio|ripple_carry:add|full_adder:\G1:2:adder     ; full_adder       ; work         ;
+;          |full_adder:\G1:3:adder| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_board|alu:faz_os_baguio|ripple_carry:add|full_adder:\G1:3:adder     ; full_adder       ; work         ;
+;       |ripple_carry:sub|          ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_board|alu:faz_os_baguio|ripple_carry:sub                            ; ripple_carry     ; work         ;
+;          |full_adder:\G1:2:adder| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_board|alu:faz_os_baguio|ripple_carry:sub|full_adder:\G1:2:adder     ; full_adder       ; work         ;
+;          |full_adder:\G1:3:adder| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_board|alu:faz_os_baguio|ripple_carry:sub|full_adder:\G1:3:adder     ; full_adder       ; work         ;
+;    |two_comp_to_7seg:liga_A|      ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_board|two_comp_to_7seg:liga_A                                       ; two_comp_to_7seg ; work         ;
+;    |two_comp_to_7seg:liga_B|      ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_board|two_comp_to_7seg:liga_B                                       ; two_comp_to_7seg ; work         ;
+;    |two_comp_to_7seg:liga_F|      ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_board|two_comp_to_7seg:liga_F                                       ; two_comp_to_7seg ; work         ;
++-----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------+------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -265,6 +270,16 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alu:faz_os_baguio|ripple_carry:add_aux ;
++----------------+-------+------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                       ;
++----------------+-------+------------------------------------------------------------+
+; n              ; 4     ; Signed Integer                                             ;
++----------------+-------+------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +---------------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: alu:faz_os_baguio|ripple_carry:sub ;
 +----------------+-------+--------------------------------------------------------+
@@ -280,8 +295,21 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+-------+----------+--------------------------------------+
 ; Port ; Type  ; Severity ; Details                              ;
 +------+-------+----------+--------------------------------------+
-; cin  ; Input ; Info     ; Stuck at VCC                         ;
+; cin  ; Input ; Info     ; Stuck at GND                         ;
 +------+-------+----------+--------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alu:faz_os_baguio|ripple_carry:add_aux"                                                 ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; y[3..1]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; y[0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; cin      ; Input  ; Info     ; Stuck at GND                                                                        ;
+; cout     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; overflow ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +----------------------------------------------------------------+
@@ -298,17 +326,20 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_lcell_comb     ; 40                          ;
+; arriav_lcell_comb     ; 43                          ;
+;     extend            ; 3                           ;
+;         7 data inputs ; 3                           ;
 ;     normal            ; 40                          ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 6                           ;
-;         3 data inputs ; 6                           ;
+;         3 data inputs ; 7                           ;
 ;         4 data inputs ; 19                          ;
-;         6 data inputs ; 8                           ;
+;         5 data inputs ; 1                           ;
+;         6 data inputs ; 6                           ;
 ; boundary_port         ; 56                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 4.00                        ;
-; Average LUT depth     ; 2.52                        ;
+; Average LUT depth     ; 2.60                        ;
 +-----------------------+-----------------------------+
 
 
@@ -327,7 +358,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Wed Mar 21 18:30:25 2018
+    Info: Processing started: Wed Mar 21 19:44:22 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off alu -c alu
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -344,6 +375,8 @@ Warning (12125): Using design file alu.vhd, which is not specified as a design f
     Info (12022): Found design unit 1: alu-behavioral File: /home/ec2015/ra165457/Desktop/MC613/Lab04/Parte 2/alu.vhd Line: 13
     Info (12023): Found entity 1: alu File: /home/ec2015/ra165457/Desktop/MC613/Lab04/Parte 2/alu.vhd Line: 4
 Info (12128): Elaborating entity "alu" for hierarchy "alu:faz_os_baguio" File: /home/ec2015/ra165457/Desktop/MC613/Lab04/Parte 2/alu_board.vhd Line: 44
+Warning (10036): Verilog HDL or VHDL warning at alu.vhd(28): object "trash_1" assigned a value but never read File: /home/ec2015/ra165457/Desktop/MC613/Lab04/Parte 2/alu.vhd Line: 28
+Warning (10036): Verilog HDL or VHDL warning at alu.vhd(28): object "trash_2" assigned a value but never read File: /home/ec2015/ra165457/Desktop/MC613/Lab04/Parte 2/alu.vhd Line: 28
 Warning (12125): Using design file ripple_carry.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
     Info (12022): Found design unit 1: ripple_carry-rtl File: /home/ec2015/ra165457/Desktop/MC613/Lab04/Parte 2/ripple_carry.vhd Line: 17
     Info (12023): Found entity 1: ripple_carry File: /home/ec2015/ra165457/Desktop/MC613/Lab04/Parte 2/ripple_carry.vhd Line: 4
@@ -374,14 +407,14 @@ Warning (13024): Output pins are stuck at VCC or GND
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 89 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 92 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 10 input pins
     Info (21059): Implemented 46 output pins
-    Info (21061): Implemented 33 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 26 warnings
-    Info: Peak virtual memory: 1170 megabytes
-    Info: Processing ended: Wed Mar 21 18:30:37 2018
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:24
+    Info (21061): Implemented 36 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 28 warnings
+    Info: Peak virtual memory: 1169 megabytes
+    Info: Processing ended: Wed Mar 21 19:44:31 2018
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:18
 
 
