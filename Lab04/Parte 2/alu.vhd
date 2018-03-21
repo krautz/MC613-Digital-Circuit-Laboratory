@@ -12,12 +12,11 @@ end alu;
 
 architecture behavioral of alu is
 
-	
 	COMPONENT ripple_carry
-	generic (
+	GENERIC (
 		N : integer
 	);
-	port (
+	PORT (
 		x,y : in std_logic_vector(N-1 downto 0);
 		r : out std_logic_vector(N-1 downto 0);
 		cin : in std_logic;
@@ -25,41 +24,61 @@ architecture behavioral of alu is
 		overflow : out std_logic
 	);
 	END COMPONENT;
+	signal negB, addF, subF, andF, orF, outF, addvecN, subvecN : STD_LOGIC_VECTOR (3 downto 0);
+	signal addC, addV, subV, subC, addN, subN: STD_LOGIC;
+	signal S0S1: STD_LOGIC_VECTOR (1 downto 0);
+BEGIN
+	
+	add: ripple_carry
+	GENERIC MAP (N => 4)
+	PORT MAP (a, b, addF, '0', addC, addV);
+	
+	negB <= b XOR "1111";
+	sub: ripple_carry
+			generic map (N => 4)
+			port map (a, negB, subF, '1', subC, subV);
+	
+	ANDL: FOR i in 0 to 3 GENERATE
+		andF(i) <= a(i) AND b(i);
+	END GENERATE;
 
-	signal negB: STD_LOGIC_VECTOR 3 downto 0;
-	signal S1S0: STD_LOGIC_VECTOR (1 downto 0);
+	ORL: FOR i in 0 to 3 GENERATE
+		orF(i) <= a(i) OR b(i);
+	END GENERATE;
 	
-begin
+	addvecN <= addF AND "1000";
+	subvecN <= subF AND "1000";
 	
-	PROCESS(a, b, s0, s1)
-	BEGIN
-		S1S0 <= S1 & S0
-		
-		IF S1S0 = "00" THEN
-			G1: ripple_carry
-					generic map (N => 4)
-					port map (
 	
-		negB <= b;
-		with b select
-			negB <= "0000" WHEN "0000",
-						"1111" WHEN "0001",
-						"1110" WHEN "0010",
-						"1101" WHEN "0011",
-						"1100" WHEN "0100",
-						"1011" WHEN "0101",
-						"1010" WHEN "0110",
-						"1001" WHEN "0111",
-						--"" WHEN "1000",
-						"0111" WHEN "1001",
-						"0110" WHEN "1010",
-						"0101" WHEN "1011",
-						"0100" WHEN "1100",
-						"0011" WHEN "1101",
-						"0010" WHEN "1110",
-						"0001" WHEN "1111";
+	S0S1 <= S0 & S1;	
+	WITH S0S1 SELECT
+		outF <= addF WHEN "00",
+			  subF WHEN "10",
+			  andF WHEN "01",
+			  orF WHEN "11";
+
+	WITH S0S1 SELECT
+		C <= addC WHEN "00",
+			  subC WHEN "10",
+			  '0' WHEN OTHERS;
+	WITH S0S1 SELECT
+		V <= addV WHEN "00",
+			  subV WHEN "10",
+			  '0' WHEN OTHERS;
+	
+	WITH addvecN SELECT
+		addN <=  '1' WHEN "1000",
+					'0' WHEN OTHERS;
 					
+	WITH subvecN SELECT
+		subN <=  '1' WHEN "1000",
+					'0' WHEN OTHERS;
 	
-  END PROCESS;
-  
-end behavioral;
+	WITH S0S1 SELECT
+		N <= addN WHEN "00",
+			  subN WHEN "10",
+			  '0' WHEN OTHERS;
+
+	Z <= '1' WHEN outF = "0000" ELSE '0';	
+	F <= outF;
+END behavioral;

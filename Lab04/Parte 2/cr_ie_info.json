@@ -1,0 +1,22 @@
+{
+	"system" : {
+		"platform" : "linux64",
+		"os_name" : "Fedora Core",
+		"os_version" : ""
+	},
+	"error" : {
+		"executable" : "quartus_eda",
+		"comment" : "not_applicable",
+		"error_message" : "instance_name != NULL",
+		"source_file" : "/quartus/neto/wsc/wsc_name_mgr.cpp",
+		"line" : "655",
+		"stack_trace" : "\t0x7fdd56e89c90: neto_wsc + 0xb2c90 (_ZN12WSC_NAME_MGR20get_legal_identifierEP13CDB_ATOM_NODERSs + 0xea)\n\t0x7fdd56e4a974: neto_wsc + 0x73974 (_ZN18WSC_HIERARCHY_INFO20get_legal_identifierEP13CDB_ATOM_NODERSs + 0x34)\n\t0x7fdd56e59fda: neto_wsc + 0x82fda (_ZN18WSC_HIERARCHY_INFO13add_atom_infoEP13CDB_ATOM_NODEbb + 0xf2)\n\t0x7fdd56e7025b: neto_wsc + 0x9925b (_ZN21WSC_HIERARCHY_BUILDER16build_atom_listsEv + 0x2df)\n\t0x7fdd56e732c7: neto_wsc + 0x9c2c7 (_ZN21WSC_HIERARCHY_BUILDER13build_defaultEv + 0x6b)\n\t0x7fdd56e7350d: neto_wsc + 0x9c50d (_ZN21WSC_HIERARCHY_BUILDER5buildEv + 0x22d)\n\t   0x4283ad: quartus_eda + 0x283ad (_ZN11QNETO_START23build_hierarchy_netlistERKSs16WSC_NETLIST_TYPEbbbbbbb + 0x235)\n\t   0x432064: quartus_eda + 0x32064 (_ZN11QNETO_START25generate_simulation_filesE14QEDA_CALL_TYPERK10QEDAU_UTIL + 0x4dc)\n\t   0x43d165: quartus_eda + 0x3d165 (_Z29generate_top_simulation_filesP10CMP_FACADERK10QEDAU_UTIL + 0x27)\n\t   0x440828: quartus_eda + 0x40828 (_Z13qneto_executeP10CMP_FACADEPKcbbSsSsSsbRK10QEDAU_UTIL + 0x1c9c)\n\t   0x412a50: quartus_eda + 0x12a50 (_ZN15QNETO_FRAMEWORK7executeEv + 0x52a)\n\t0x7fdd4f56e75b: comp_qexe + 0x1c75b (_Z18qexe_standard_mainP14QEXE_FRAMEWORKPPK22QEXE_OPTION_DEFINITIONiPPKc + 0x888)\n\t   0x412e01: quartus_eda + 0x12e01 (_Z10qneto_mainiPPKc + 0x9b)\n\t0x7fdd2cbac720: ccl_msg + 0x40720 (_Z15msg_main_threadPv + 0x10)\n\t0x7fdd29f0402c: ccl_thr + 0x602c (thr_final_wrapper + 0xc)\n\t0x7fdd2cbac7df: ccl_msg + 0x407df (_Z18msg_thread_wrapperPFPvS_ES_ + 0x62)\n\t0x7fdd2a575559: ccl_mem + 0xa559 (_Z18mem_thread_wrapperPFPvS_ES_ + 0x99)\n\t0x7fdd2a342f92: ccl_err + 0x8f92 (_Z18err_thread_wrapperPFPvS_ES_ + 0x27)\n\t0x7fdd29f043f2: ccl_thr + 0x63f2 (thr_thread_wrapper + 0x15)\n\t0x7fdd2cbae7e2: ccl_msg + 0x427e2 (_Z12msg_exe_mainiPPKcPFiiS1_E + 0xa3)\n\t   0x41aa18: quartus_eda + 0x1aa18 (main + 0x26)\n\t0x7fdd24b9800a: c.so.6 + 0x2100a (__libc_start_main + 0xea)\n\t   0x410e79: quartus_eda + 0x10e79\n",
+		"subsystem" : "WSC"
+	},
+	"quartus" : {
+		"quartus_bits" : "64",
+		"version" : "17.1.0",
+		"build" : "590",
+		"edition" : "Lite Edition"
+	}
+}

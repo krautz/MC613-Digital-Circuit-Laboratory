@@ -4,51 +4,155 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "segs[0]",
+					"name" : "HEX5[0]",
 					"strict" : false
 				},
 				{
-					"name" : "segs[1]",
+					"name" : "HEX4[0]",
 					"strict" : false
 				},
 				{
-					"name" : "segs[2]",
+					"name" : "HEX4[1]",
 					"strict" : false
 				},
 				{
-					"name" : "segs[3]",
+					"name" : "HEX4[2]",
 					"strict" : false
 				},
 				{
-					"name" : "segs[4]",
+					"name" : "HEX4[3]",
 					"strict" : false
 				},
 				{
-					"name" : "segs[5]",
+					"name" : "HEX4[4]",
 					"strict" : false
 				},
 				{
-					"name" : "segs[6]",
+					"name" : "HEX4[5]",
 					"strict" : false
 				},
 				{
-					"name" : "neg",
+					"name" : "HEX4[6]",
 					"strict" : false
 				},
 				{
-					"name" : "bin[0]",
+					"name" : "HEX3[0]",
 					"strict" : false
 				},
 				{
-					"name" : "bin[1]",
+					"name" : "HEX2[0]",
 					"strict" : false
 				},
 				{
-					"name" : "bin[2]",
+					"name" : "HEX2[1]",
 					"strict" : false
 				},
 				{
-					"name" : "bin[3]",
+					"name" : "HEX2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX2[5]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX2[6]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX0[0]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX0[1]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX0[2]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX0[3]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX0[4]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX0[5]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX0[6]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR[0]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR[1]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR[2]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR[3]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[7]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[4]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[5]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[6]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[3]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[8]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[9]",
 					"strict" : false
 				}
 			]
