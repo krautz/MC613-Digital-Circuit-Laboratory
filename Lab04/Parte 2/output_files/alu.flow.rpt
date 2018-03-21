@@ -1,5 +1,5 @@
 Flow report for alu
-Wed Mar 21 17:49:13 2018
+Wed Mar 21 18:31:23 2018
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -40,7 +40,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Wed Mar 21 17:49:07 2018       ;
+; Flow Status                     ; Successful - Wed Mar 21 18:31:16 2018       ;
 ; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; alu                                         ;
 ; Top-level Entity Name           ; alu_board                                   ;
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/21/2018 17:48:15 ;
+; Start date & time ; 03/21/2018 18:30:26 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; alu                 ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 180720257652619.152166529506557        ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 180720257655950.152166782610983        ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; alu_board   ; Top        ;
@@ -96,24 +96,24 @@ refer to the applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:11     ; 1.0                     ; 1140 MB             ; 00:00:24                           ;
-; Fitter                    ; 00:00:31     ; 1.0                     ; 2475 MB             ; 00:00:47                           ;
-; Assembler                 ; 00:00:07     ; 1.0                     ; 1094 MB             ; 00:00:06                           ;
-; TimeQuest Timing Analyzer ; 00:00:06     ; 1.1                     ; 1298 MB             ; 00:00:05                           ;
-; Total                     ; 00:00:55     ; --                      ; --                  ; 00:01:22                           ;
+; Analysis & Synthesis      ; 00:00:11     ; 1.0                     ; 1142 MB             ; 00:00:24                           ;
+; Fitter                    ; 00:00:30     ; 1.0                     ; 2531 MB             ; 00:00:46                           ;
+; Assembler                 ; 00:00:07     ; 1.0                     ; 1091 MB             ; 00:00:06                           ;
+; TimeQuest Timing Analyzer ; 00:00:06     ; 1.1                     ; 1321 MB             ; 00:00:05                           ;
+; Total                     ; 00:00:54     ; --                      ; --                  ; 00:01:21                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                                    ;
-+---------------------------+---------------------------+-------------+-------------+----------------+
-; Module Name               ; Machine Hostname          ; OS Name     ; OS Version  ; Processor type ;
-+---------------------------+---------------------------+-------------+-------------+----------------+
-; Analysis & Synthesis      ; azevedo.lab.ic.unicamp.br ; Fedora Core ; Fedora Core ; x86_64         ;
-; Fitter                    ; azevedo.lab.ic.unicamp.br ; Fedora Core ; Fedora Core ; x86_64         ;
-; Assembler                 ; azevedo.lab.ic.unicamp.br ; Fedora Core ; Fedora Core ; x86_64         ;
-; TimeQuest Timing Analyzer ; azevedo.lab.ic.unicamp.br ; Fedora Core ; Fedora Core ; x86_64         ;
-+---------------------------+---------------------------+-------------+-------------+----------------+
++-----------------------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                                     ;
++---------------------------+----------------------------+-------------+-------------+----------------+
+; Module Name               ; Machine Hostname           ; OS Name     ; OS Version  ; Processor type ;
++---------------------------+----------------------------+-------------+-------------+----------------+
+; Analysis & Synthesis      ; lawrence.lab.ic.unicamp.br ; Fedora Core ; Fedora Core ; x86_64         ;
+; Fitter                    ; lawrence.lab.ic.unicamp.br ; Fedora Core ; Fedora Core ; x86_64         ;
+; Assembler                 ; lawrence.lab.ic.unicamp.br ; Fedora Core ; Fedora Core ; x86_64         ;
+; TimeQuest Timing Analyzer ; lawrence.lab.ic.unicamp.br ; Fedora Core ; Fedora Core ; x86_64         ;
++---------------------------+----------------------------+-------------+-------------+----------------+
 
 
 ------------
