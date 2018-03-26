@@ -1,0 +1,52 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab05/Parte 1/simulation/qsim
+vbarrel_shifter
+Z1 !s110 1522088917
+!i10b 1
+!s100 5nQRMDS^n>9ZmiLnd2>7Y2
+IWZ6?]C=7IUNUCNW<g8^jN0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1522088914
+8barrel_shifter.vo
+Fbarrel_shifter.vo
+L0 31
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1522088916.000000
+!s107 barrel_shifter.vo|
+!s90 -work|work|barrel_shifter.vo|
+!i113 1
+Z4 o-work work
+Z5 tCvgOpt 0
+vbarrel_shifter_vlg_vec_tst
+R1
+!i10b 1
+!s100 ^i7lE?^CihM10fg8AjDmD2
+Iba0X7gPIHd^R5MO<`<I9F2
+R2
+R0
+w1522088913
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+L0 29
+R3
+r1
+!s85 0
+31
+!s108 1522088917.000000
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R4
+R5

@@ -1,0 +1,136 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab05/Parte 2/simulation/qsim
+vcla_4bits
+Z1 !s110 1522092118
+!i10b 1
+!s100 :KUdljjSUE1[00ZQi]=U`0
+IHTWId612jb5HVb7B4k;lR1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1522092118
+Z3 8CLA.vo
+Z4 FCLA.vo
+Z5 L0 31
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1522092118.000000
+Z8 !s107 CLA.vo|
+Z9 !s90 -work|work|CLA.vo|
+!i113 1
+Z10 o-work work
+Z11 tCvgOpt 0
+vcla_4bits_vlg_vec_tst
+R1
+!i10b 1
+!s100 eS_<dfV7Ba17aHKMlOG6j0
+I=SdNm69OFzH3`50XBZW;W3
+R2
+R0
+w1522092117
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+Z12 L0 29
+R6
+r1
+!s85 0
+31
+R7
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R10
+R11
+vcla_8bits
+Z13 !s110 1522094948
+!i10b 1
+!s100 z@R=aCA];KLT>L`ZFHRhT0
+I>A1P;6ClB58na1fzfRUkJ2
+R2
+R0
+w1522094948
+R3
+R4
+R5
+R6
+r1
+!s85 0
+31
+Z14 !s108 1522094948.000000
+R8
+R9
+!i113 1
+R10
+R11
+vcla_8bits_partial
+Z15 !s110 1522093647
+!i10b 1
+!s100 Km7`7=YddenL:l@VX98jc1
+I8^I:E`d7lhjm@_cfTjOJM0
+R2
+R0
+w1522093647
+R3
+R4
+R5
+R6
+r1
+!s85 0
+31
+Z16 !s108 1522093647.000000
+R8
+R9
+!i113 1
+R10
+R11
+vcla_8bits_partial_vlg_vec_tst
+R15
+!i10b 1
+!s100 fFE_Img>Q9:iV17?`NSAS3
+IhJ7Ffh5f^HQJEg`2H1I7@3
+R2
+R0
+w1522093645
+Z17 8Waveform1.vwf.vt
+Z18 FWaveform1.vwf.vt
+R12
+R6
+r1
+!s85 0
+31
+R16
+!s107 Waveform1.vwf.vt|
+Z19 !s90 -work|work|Waveform1.vwf.vt|
+!i113 1
+R10
+R11
+vcla_8bits_vlg_vec_tst
+R13
+!i10b 1
+!s100 Wc828]66`5P`HR`_b4QTM0
+Iam[fijCcnN1]?XE2UFHJ[1
+R2
+R0
+w1522094946
+R17
+R18
+R12
+R6
+r1
+!s85 0
+31
+R14
+!s107 Waveform1.vwf.vt|
+R19
+!i113 1
+R10
+R11

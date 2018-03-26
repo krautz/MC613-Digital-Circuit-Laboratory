@@ -1,5 +1,5 @@
 Flow report for adder
-Wed Mar 21 20:10:50 2018
+Mon Mar 26 14:31:50 2018
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -40,16 +40,16 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Wed Mar 21 20:10:45 2018       ;
+; Flow Status                     ; Successful - Mon Mar 26 14:31:44 2018       ;
 ; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; adder                                       ;
-; Top-level Entity Name           ; ripple_carry                                ;
+; Top-level Entity Name           ; ripple_carry_board                          ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSEMA5F31C6                                ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 10 / 32,070 ( < 1 % )                       ;
+; Logic utilization (in ALMs)     ; 15 / 32,070 ( < 1 % )                       ;
 ; Total registers                 ; 0                                           ;
-; Total pins                      ; 27 / 457 ( 6 % )                            ;
+; Total pins                      ; 30 / 457 ( 7 % )                            ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0 / 4,065,280 ( 0 % )                       ;
 ; Total DSP Blocks                ; 0 / 87 ( 0 % )                              ;
@@ -67,28 +67,28 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/21/2018 20:10:02 ;
+; Start date & time ; 03/26/2018 14:30:41 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; adder               ;
 +-------------------+---------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                         ;
-+-------------------------------------+----------------------------------------+---------------+--------------+------------+
-; Assignment Name                     ; Value                                  ; Default Value ; Entity Name  ; Section Id ;
-+-------------------------------------+----------------------------------------+---------------+--------------+------------+
-; COMPILER_SIGNATURE_ID               ; 66325076079929.152167380209674         ; --            ; --           ; --         ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --           ; --         ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --           ; --         ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; ripple_carry ; Top        ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; ripple_carry ; Top        ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; ripple_carry ; Top        ;
-; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --            ; --           ; --         ;
-; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --           ; --         ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --            ; --           ; --         ;
-; TOP_LEVEL_ENTITY                    ; ripple_carry                           ; adder         ; --           ; --         ;
-+-------------------------------------+----------------------------------------+---------------+--------------+------------+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                               ;
++-------------------------------------+----------------------------------------+---------------+--------------------+------------+
+; Assignment Name                     ; Value                                  ; Default Value ; Entity Name        ; Section Id ;
++-------------------------------------+----------------------------------------+---------------+--------------------+------------+
+; COMPILER_SIGNATURE_ID               ; 273440552278829.152208544129089        ; --            ; --                 ; --         ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --                 ; --         ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --                 ; --         ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; ripple_carry_board ; Top        ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; ripple_carry_board ; Top        ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; ripple_carry_board ; Top        ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --            ; --                 ; --         ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --                 ; --         ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --            ; --                 ; --         ;
+; TOP_LEVEL_ENTITY                    ; ripple_carry_board                     ; adder         ; --                 ; --         ;
++-------------------------------------+----------------------------------------+---------------+--------------------+------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------+
@@ -96,24 +96,24 @@ refer to the applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:09     ; 1.0                     ; 1142 MB             ; 00:00:19                           ;
-; Fitter                    ; 00:00:26     ; 1.0                     ; 2470 MB             ; 00:00:41                           ;
-; Assembler                 ; 00:00:06     ; 1.0                     ; 1094 MB             ; 00:00:05                           ;
-; TimeQuest Timing Analyzer ; 00:00:04     ; 1.0                     ; 1296 MB             ; 00:00:03                           ;
-; Total                     ; 00:00:45     ; --                      ; --                  ; 00:01:08                           ;
+; Analysis & Synthesis      ; 00:00:22     ; 1.0                     ; 1141 MB             ; 00:00:22                           ;
+; Fitter                    ; 00:00:35     ; 1.0                     ; 2467 MB             ; 00:00:48                           ;
+; Assembler                 ; 00:00:06     ; 1.0                     ; 1093 MB             ; 00:00:06                           ;
+; TimeQuest Timing Analyzer ; 00:00:06     ; 1.0                     ; 1297 MB             ; 00:00:04                           ;
+; Total                     ; 00:01:09     ; --                      ; --                  ; 00:01:20                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                                       ;
-+---------------------------+------------------------------+-------------+-------------+----------------+
-; Module Name               ; Machine Hostname             ; OS Name     ; OS Version  ; Processor type ;
-+---------------------------+------------------------------+-------------+-------------+----------------+
-; Analysis & Synthesis      ; pernalonga.lab.ic.unicamp.br ; Fedora Core ; Fedora Core ; x86_64         ;
-; Fitter                    ; pernalonga.lab.ic.unicamp.br ; Fedora Core ; Fedora Core ; x86_64         ;
-; Assembler                 ; pernalonga.lab.ic.unicamp.br ; Fedora Core ; Fedora Core ; x86_64         ;
-; TimeQuest Timing Analyzer ; pernalonga.lab.ic.unicamp.br ; Fedora Core ; Fedora Core ; x86_64         ;
-+---------------------------+------------------------------+-------------+-------------+----------------+
++-----------------------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                                     ;
++---------------------------+----------------------------+-------------+-------------+----------------+
+; Module Name               ; Machine Hostname           ; OS Name     ; OS Version  ; Processor type ;
++---------------------------+----------------------------+-------------+-------------+----------------+
+; Analysis & Synthesis      ; dominica.lab.ic.unicamp.br ; Fedora Core ; Fedora Core ; x86_64         ;
+; Fitter                    ; dominica.lab.ic.unicamp.br ; Fedora Core ; Fedora Core ; x86_64         ;
+; Assembler                 ; dominica.lab.ic.unicamp.br ; Fedora Core ; Fedora Core ; x86_64         ;
+; TimeQuest Timing Analyzer ; dominica.lab.ic.unicamp.br ; Fedora Core ; Fedora Core ; x86_64         ;
++---------------------------+----------------------------+-------------+-------------+----------------+
 
 
 ------------

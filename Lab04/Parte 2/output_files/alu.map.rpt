@@ -1,5 +1,5 @@
 Analysis & Synthesis report for alu
-Wed Mar 21 19:44:31 2018
+Mon Mar 26 15:08:20 2018
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -49,7 +49,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Mar 21 19:44:31 2018       ;
+; Analysis & Synthesis Status     ; Successful - Mon Mar 26 15:08:20 2018       ;
 ; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; alu                                         ;
 ; Top-level Entity Name           ; alu_board                                   ;
@@ -172,17 +172,18 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                        ;
-+----------------------------------+-----------------+-----------------------+------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type             ; File Name with Absolute Path                                           ; Library ;
-+----------------------------------+-----------------+-----------------------+------------------------------------------------------------------------+---------+
-; alu_board.vhd                    ; yes             ; Auto-Found VHDL File  ; /home/ec2015/ra165457/Desktop/MC613/Lab04/Parte 2/alu_board.vhd        ;         ;
-; two_comp_to_7seg.vhd             ; yes             ; Auto-Found VHDL File  ; /home/ec2015/ra165457/Desktop/MC613/Lab04/Parte 2/two_comp_to_7seg.vhd ;         ;
-; alu.vhd                          ; yes             ; Auto-Found VHDL File  ; /home/ec2015/ra165457/Desktop/MC613/Lab04/Parte 2/alu.vhd              ;         ;
-; ripple_carry.vhd                 ; yes             ; Auto-Found VHDL File  ; /home/ec2015/ra165457/Desktop/MC613/Lab04/Parte 2/ripple_carry.vhd     ;         ;
-; full_adder.vhd                   ; yes             ; Auto-Found VHDL File  ; /home/ec2015/ra165457/Desktop/MC613/Lab04/Parte 2/full_adder.vhd       ;         ;
-+----------------------------------+-----------------+-----------------------+------------------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                           ;
++----------------------------------+-----------------+-----------------------+-------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type             ; File Name with Absolute Path                                                              ; Library ;
++----------------------------------+-----------------+-----------------------+-------------------------------------------------------------------------------------------+---------+
+; alu_board.vhd                    ; yes             ; Auto-Found VHDL File  ; /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab04/Parte 2/alu_board.vhd        ;         ;
+; two_comp_to_7seg.vhd             ; yes             ; Auto-Found VHDL File  ; /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab04/Parte 2/two_comp_to_7seg.vhd ;         ;
+; bin2hex.vhd                      ; yes             ; Auto-Found VHDL File  ; /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab04/Parte 2/bin2hex.vhd          ;         ;
+; alu.vhd                          ; yes             ; Auto-Found VHDL File  ; /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab04/Parte 2/alu.vhd              ;         ;
+; ripple_carry.vhd                 ; yes             ; Auto-Found VHDL File  ; /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab04/Parte 2/ripple_carry.vhd     ;         ;
+; full_adder.vhd                   ; yes             ; Auto-Found VHDL File  ; /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab04/Parte 2/full_adder.vhd       ;         ;
++----------------------------------+-----------------+-----------------------+-------------------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------------+
@@ -190,13 +191,13 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimate of Logic utilization (ALMs needed) ; 23          ;
+; Estimate of Logic utilization (ALMs needed) ; 27          ;
 ;                                             ;             ;
-; Combinational ALUT usage for logic          ; 36          ;
-;     -- 7 input functions                    ; 3           ;
-;     -- 6 input functions                    ; 6           ;
-;     -- 5 input functions                    ; 1           ;
-;     -- 4 input functions                    ; 19          ;
+; Combinational ALUT usage for logic          ; 41          ;
+;     -- 7 input functions                    ; 1           ;
+;     -- 6 input functions                    ; 11          ;
+;     -- 5 input functions                    ; 18          ;
+;     -- 4 input functions                    ; 4           ;
 ;     -- <=3 input functions                  ; 7           ;
 ;                                             ;             ;
 ; Dedicated logic registers                   ; 0           ;
@@ -205,10 +206,10 @@ refer to the applicable agreement for further details.
 ;                                             ;             ;
 ; Total DSP Blocks                            ; 0           ;
 ;                                             ;             ;
-; Maximum fan-out node                        ; SW[0]~input ;
-; Maximum fan-out                             ; 15          ;
-; Total fan-out                               ; 243         ;
-; Average fan-out                             ; 1.64        ;
+; Maximum fan-out node                        ; SW[8]~input ;
+; Maximum fan-out                             ; 31          ;
+; Total fan-out                               ; 280         ;
+; Average fan-out                             ; 1.83        ;
 +---------------------------------------------+-------------+
 
 
@@ -217,20 +218,21 @@ refer to the applicable agreement for further details.
 +-----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------+------------------+--------------+
 ; Compilation Hierarchy Node        ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                      ; Entity Name      ; Library Name ;
 +-----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------+------------------+--------------+
-; |alu_board                        ; 36 (0)              ; 0 (0)                     ; 0                 ; 0          ; 56   ; 0            ; |alu_board                                                               ; alu_board        ; work         ;
-;    |alu:faz_os_baguio|            ; 15 (8)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_board|alu:faz_os_baguio                                             ; alu              ; work         ;
+; |alu_board                        ; 41 (9)              ; 0 (0)                     ; 0                 ; 0          ; 56   ; 0            ; |alu_board                                                               ; alu_board        ; work         ;
+;    |alu:faz_os_baguio|            ; 17 (9)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_board|alu:faz_os_baguio                                             ; alu              ; work         ;
 ;       |ripple_carry:add_aux|      ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_board|alu:faz_os_baguio|ripple_carry:add_aux                        ; ripple_carry     ; work         ;
 ;          |full_adder:\G1:3:adder| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_board|alu:faz_os_baguio|ripple_carry:add_aux|full_adder:\G1:3:adder ; full_adder       ; work         ;
-;       |ripple_carry:add|          ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_board|alu:faz_os_baguio|ripple_carry:add                            ; ripple_carry     ; work         ;
+;       |ripple_carry:add|          ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_board|alu:faz_os_baguio|ripple_carry:add                            ; ripple_carry     ; work         ;
+;          |full_adder:\G1:0:adder| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_board|alu:faz_os_baguio|ripple_carry:add|full_adder:\G1:0:adder     ; full_adder       ; work         ;
 ;          |full_adder:\G1:1:adder| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_board|alu:faz_os_baguio|ripple_carry:add|full_adder:\G1:1:adder     ; full_adder       ; work         ;
 ;          |full_adder:\G1:2:adder| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_board|alu:faz_os_baguio|ripple_carry:add|full_adder:\G1:2:adder     ; full_adder       ; work         ;
 ;          |full_adder:\G1:3:adder| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_board|alu:faz_os_baguio|ripple_carry:add|full_adder:\G1:3:adder     ; full_adder       ; work         ;
 ;       |ripple_carry:sub|          ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_board|alu:faz_os_baguio|ripple_carry:sub                            ; ripple_carry     ; work         ;
 ;          |full_adder:\G1:2:adder| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_board|alu:faz_os_baguio|ripple_carry:sub|full_adder:\G1:2:adder     ; full_adder       ; work         ;
 ;          |full_adder:\G1:3:adder| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_board|alu:faz_os_baguio|ripple_carry:sub|full_adder:\G1:3:adder     ; full_adder       ; work         ;
-;    |two_comp_to_7seg:liga_A|      ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_board|two_comp_to_7seg:liga_A                                       ; two_comp_to_7seg ; work         ;
-;    |two_comp_to_7seg:liga_B|      ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_board|two_comp_to_7seg:liga_B                                       ; two_comp_to_7seg ; work         ;
-;    |two_comp_to_7seg:liga_F|      ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_board|two_comp_to_7seg:liga_F                                       ; two_comp_to_7seg ; work         ;
+;    |two_comp_to_7seg:liga_A_arit| ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_board|two_comp_to_7seg:liga_A_arit                                  ; two_comp_to_7seg ; work         ;
+;    |two_comp_to_7seg:liga_B_arit| ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_board|two_comp_to_7seg:liga_B_arit                                  ; two_comp_to_7seg ; work         ;
+;    |two_comp_to_7seg:liga_F_arit| ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_board|two_comp_to_7seg:liga_F_arit                                  ; two_comp_to_7seg ; work         ;
 +-----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------+------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -255,8 +257,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output        ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------+
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |alu_board|alu:faz_os_baguio|Mux5 ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |alu_board|alu:faz_os_baguio|Mux1 ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |alu_board|alu:faz_os_baguio|Mux4 ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |alu_board|alu:faz_os_baguio|Mux2 ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 10 LEs               ; 2 LEs                  ; No         ; |alu_board|HEX4                   ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 10 LEs               ; 2 LEs                  ; No         ; |alu_board|HEX2                   ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 10 LEs               ; 2 LEs                  ; No         ; |alu_board|HEX0                   ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------+
 
 
@@ -326,20 +331,20 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_lcell_comb     ; 43                          ;
-;     extend            ; 3                           ;
-;         7 data inputs ; 3                           ;
-;     normal            ; 40                          ;
+; arriav_lcell_comb     ; 42                          ;
+;     extend            ; 1                           ;
+;         7 data inputs ; 1                           ;
+;     normal            ; 41                          ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 6                           ;
-;         3 data inputs ; 7                           ;
-;         4 data inputs ; 19                          ;
-;         5 data inputs ; 1                           ;
-;         6 data inputs ; 6                           ;
+;         2 data inputs ; 4                           ;
+;         3 data inputs ; 3                           ;
+;         4 data inputs ; 4                           ;
+;         5 data inputs ; 18                          ;
+;         6 data inputs ; 11                          ;
 ; boundary_port         ; 56                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 4.00                        ;
-; Average LUT depth     ; 2.60                        ;
+; Average LUT depth     ; 2.58                        ;
 +-----------------------+-----------------------------+
 
 
@@ -358,63 +363,67 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Wed Mar 21 19:44:22 2018
+    Info: Processing started: Mon Mar 26 15:08:10 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off alu -c alu
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Warning (12019): Can't analyze file -- file alu_modified.vhd is missing
 Warning (12125): Using design file alu_board.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: alu_board-behavioral File: /home/ec2015/ra165457/Desktop/MC613/Lab04/Parte 2/alu_board.vhd Line: 12
-    Info (12023): Found entity 1: alu_board File: /home/ec2015/ra165457/Desktop/MC613/Lab04/Parte 2/alu_board.vhd Line: 4
+    Info (12022): Found design unit 1: alu_board-behavioral File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab04/Parte 2/alu_board.vhd Line: 12
+    Info (12023): Found entity 1: alu_board File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab04/Parte 2/alu_board.vhd Line: 4
 Info (12127): Elaborating entity "alu_board" for the top level hierarchy
 Warning (12125): Using design file two_comp_to_7seg.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: two_comp_to_7seg-behavioral File: /home/ec2015/ra165457/Desktop/MC613/Lab04/Parte 2/two_comp_to_7seg.vhd Line: 12
-    Info (12023): Found entity 1: two_comp_to_7seg File: /home/ec2015/ra165457/Desktop/MC613/Lab04/Parte 2/two_comp_to_7seg.vhd Line: 4
-Info (12128): Elaborating entity "two_comp_to_7seg" for hierarchy "two_comp_to_7seg:liga_A" File: /home/ec2015/ra165457/Desktop/MC613/Lab04/Parte 2/alu_board.vhd Line: 36
+    Info (12022): Found design unit 1: two_comp_to_7seg-behavioral File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab04/Parte 2/two_comp_to_7seg.vhd Line: 12
+    Info (12023): Found entity 1: two_comp_to_7seg File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab04/Parte 2/two_comp_to_7seg.vhd Line: 4
+Info (12128): Elaborating entity "two_comp_to_7seg" for hierarchy "two_comp_to_7seg:liga_A_arit" File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab04/Parte 2/alu_board.vhd Line: 44
+Warning (12125): Using design file bin2hex.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: bin2hex-LogicFunction File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab04/Parte 2/bin2hex.vhd Line: 11
+    Info (12023): Found entity 1: bin2hex File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab04/Parte 2/bin2hex.vhd Line: 4
+Info (12128): Elaborating entity "bin2hex" for hierarchy "bin2hex:liga_A_log" File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab04/Parte 2/alu_board.vhd Line: 52
 Warning (12125): Using design file alu.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: alu-behavioral File: /home/ec2015/ra165457/Desktop/MC613/Lab04/Parte 2/alu.vhd Line: 13
-    Info (12023): Found entity 1: alu File: /home/ec2015/ra165457/Desktop/MC613/Lab04/Parte 2/alu.vhd Line: 4
-Info (12128): Elaborating entity "alu" for hierarchy "alu:faz_os_baguio" File: /home/ec2015/ra165457/Desktop/MC613/Lab04/Parte 2/alu_board.vhd Line: 44
-Warning (10036): Verilog HDL or VHDL warning at alu.vhd(28): object "trash_1" assigned a value but never read File: /home/ec2015/ra165457/Desktop/MC613/Lab04/Parte 2/alu.vhd Line: 28
-Warning (10036): Verilog HDL or VHDL warning at alu.vhd(28): object "trash_2" assigned a value but never read File: /home/ec2015/ra165457/Desktop/MC613/Lab04/Parte 2/alu.vhd Line: 28
+    Info (12022): Found design unit 1: alu-behavioral File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab04/Parte 2/alu.vhd Line: 13
+    Info (12023): Found entity 1: alu File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab04/Parte 2/alu.vhd Line: 4
+Info (12128): Elaborating entity "alu" for hierarchy "alu:faz_os_baguio" File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab04/Parte 2/alu_board.vhd Line: 60
+Warning (10036): Verilog HDL or VHDL warning at alu.vhd(28): object "trash_1" assigned a value but never read File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab04/Parte 2/alu.vhd Line: 28
+Warning (10036): Verilog HDL or VHDL warning at alu.vhd(28): object "trash_2" assigned a value but never read File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab04/Parte 2/alu.vhd Line: 28
 Warning (12125): Using design file ripple_carry.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: ripple_carry-rtl File: /home/ec2015/ra165457/Desktop/MC613/Lab04/Parte 2/ripple_carry.vhd Line: 17
-    Info (12023): Found entity 1: ripple_carry File: /home/ec2015/ra165457/Desktop/MC613/Lab04/Parte 2/ripple_carry.vhd Line: 4
-Info (12128): Elaborating entity "ripple_carry" for hierarchy "alu:faz_os_baguio|ripple_carry:add" File: /home/ec2015/ra165457/Desktop/MC613/Lab04/Parte 2/alu.vhd Line: 32
+    Info (12022): Found design unit 1: ripple_carry-rtl File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab04/Parte 2/ripple_carry.vhd Line: 17
+    Info (12023): Found entity 1: ripple_carry File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab04/Parte 2/ripple_carry.vhd Line: 4
+Info (12128): Elaborating entity "ripple_carry" for hierarchy "alu:faz_os_baguio|ripple_carry:add" File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab04/Parte 2/alu.vhd Line: 32
 Warning (12125): Using design file full_adder.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: full_adder-structural File: /home/ec2015/ra165457/Desktop/MC613/Lab04/Parte 2/full_adder.vhd Line: 13
-    Info (12023): Found entity 1: full_adder File: /home/ec2015/ra165457/Desktop/MC613/Lab04/Parte 2/full_adder.vhd Line: 4
-Info (12128): Elaborating entity "full_adder" for hierarchy "alu:faz_os_baguio|ripple_carry:add|full_adder:\G1:0:adder" File: /home/ec2015/ra165457/Desktop/MC613/Lab04/Parte 2/ripple_carry.vhd Line: 32
+    Info (12022): Found design unit 1: full_adder-structural File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab04/Parte 2/full_adder.vhd Line: 13
+    Info (12023): Found entity 1: full_adder File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab04/Parte 2/full_adder.vhd Line: 4
+Info (12128): Elaborating entity "full_adder" for hierarchy "alu:faz_os_baguio|ripple_carry:add|full_adder:\G1:0:adder" File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab04/Parte 2/ripple_carry.vhd Line: 32
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "HEX5[0]" is stuck at VCC File: /home/ec2015/ra165457/Desktop/MC613/Lab04/Parte 2/alu_board.vhd Line: 7
-    Warning (13410): Pin "HEX5[1]" is stuck at VCC File: /home/ec2015/ra165457/Desktop/MC613/Lab04/Parte 2/alu_board.vhd Line: 7
-    Warning (13410): Pin "HEX5[2]" is stuck at VCC File: /home/ec2015/ra165457/Desktop/MC613/Lab04/Parte 2/alu_board.vhd Line: 7
-    Warning (13410): Pin "HEX5[3]" is stuck at VCC File: /home/ec2015/ra165457/Desktop/MC613/Lab04/Parte 2/alu_board.vhd Line: 7
-    Warning (13410): Pin "HEX5[4]" is stuck at VCC File: /home/ec2015/ra165457/Desktop/MC613/Lab04/Parte 2/alu_board.vhd Line: 7
-    Warning (13410): Pin "HEX5[5]" is stuck at VCC File: /home/ec2015/ra165457/Desktop/MC613/Lab04/Parte 2/alu_board.vhd Line: 7
-    Warning (13410): Pin "HEX3[0]" is stuck at VCC File: /home/ec2015/ra165457/Desktop/MC613/Lab04/Parte 2/alu_board.vhd Line: 7
-    Warning (13410): Pin "HEX3[1]" is stuck at VCC File: /home/ec2015/ra165457/Desktop/MC613/Lab04/Parte 2/alu_board.vhd Line: 7
-    Warning (13410): Pin "HEX3[2]" is stuck at VCC File: /home/ec2015/ra165457/Desktop/MC613/Lab04/Parte 2/alu_board.vhd Line: 7
-    Warning (13410): Pin "HEX3[3]" is stuck at VCC File: /home/ec2015/ra165457/Desktop/MC613/Lab04/Parte 2/alu_board.vhd Line: 7
-    Warning (13410): Pin "HEX3[4]" is stuck at VCC File: /home/ec2015/ra165457/Desktop/MC613/Lab04/Parte 2/alu_board.vhd Line: 7
-    Warning (13410): Pin "HEX3[5]" is stuck at VCC File: /home/ec2015/ra165457/Desktop/MC613/Lab04/Parte 2/alu_board.vhd Line: 7
-    Warning (13410): Pin "HEX1[0]" is stuck at VCC File: /home/ec2015/ra165457/Desktop/MC613/Lab04/Parte 2/alu_board.vhd Line: 7
-    Warning (13410): Pin "HEX1[1]" is stuck at VCC File: /home/ec2015/ra165457/Desktop/MC613/Lab04/Parte 2/alu_board.vhd Line: 7
-    Warning (13410): Pin "HEX1[2]" is stuck at VCC File: /home/ec2015/ra165457/Desktop/MC613/Lab04/Parte 2/alu_board.vhd Line: 7
-    Warning (13410): Pin "HEX1[3]" is stuck at VCC File: /home/ec2015/ra165457/Desktop/MC613/Lab04/Parte 2/alu_board.vhd Line: 7
-    Warning (13410): Pin "HEX1[4]" is stuck at VCC File: /home/ec2015/ra165457/Desktop/MC613/Lab04/Parte 2/alu_board.vhd Line: 7
-    Warning (13410): Pin "HEX1[5]" is stuck at VCC File: /home/ec2015/ra165457/Desktop/MC613/Lab04/Parte 2/alu_board.vhd Line: 7
+    Warning (13410): Pin "HEX5[0]" is stuck at VCC File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab04/Parte 2/alu_board.vhd Line: 7
+    Warning (13410): Pin "HEX5[1]" is stuck at VCC File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab04/Parte 2/alu_board.vhd Line: 7
+    Warning (13410): Pin "HEX5[2]" is stuck at VCC File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab04/Parte 2/alu_board.vhd Line: 7
+    Warning (13410): Pin "HEX5[3]" is stuck at VCC File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab04/Parte 2/alu_board.vhd Line: 7
+    Warning (13410): Pin "HEX5[4]" is stuck at VCC File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab04/Parte 2/alu_board.vhd Line: 7
+    Warning (13410): Pin "HEX5[5]" is stuck at VCC File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab04/Parte 2/alu_board.vhd Line: 7
+    Warning (13410): Pin "HEX3[0]" is stuck at VCC File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab04/Parte 2/alu_board.vhd Line: 7
+    Warning (13410): Pin "HEX3[1]" is stuck at VCC File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab04/Parte 2/alu_board.vhd Line: 7
+    Warning (13410): Pin "HEX3[2]" is stuck at VCC File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab04/Parte 2/alu_board.vhd Line: 7
+    Warning (13410): Pin "HEX3[3]" is stuck at VCC File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab04/Parte 2/alu_board.vhd Line: 7
+    Warning (13410): Pin "HEX3[4]" is stuck at VCC File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab04/Parte 2/alu_board.vhd Line: 7
+    Warning (13410): Pin "HEX3[5]" is stuck at VCC File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab04/Parte 2/alu_board.vhd Line: 7
+    Warning (13410): Pin "HEX1[0]" is stuck at VCC File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab04/Parte 2/alu_board.vhd Line: 7
+    Warning (13410): Pin "HEX1[1]" is stuck at VCC File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab04/Parte 2/alu_board.vhd Line: 7
+    Warning (13410): Pin "HEX1[2]" is stuck at VCC File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab04/Parte 2/alu_board.vhd Line: 7
+    Warning (13410): Pin "HEX1[3]" is stuck at VCC File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab04/Parte 2/alu_board.vhd Line: 7
+    Warning (13410): Pin "HEX1[4]" is stuck at VCC File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab04/Parte 2/alu_board.vhd Line: 7
+    Warning (13410): Pin "HEX1[5]" is stuck at VCC File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab04/Parte 2/alu_board.vhd Line: 7
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 92 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 97 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 10 input pins
     Info (21059): Implemented 46 output pins
-    Info (21061): Implemented 36 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 28 warnings
+    Info (21061): Implemented 41 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 29 warnings
     Info: Peak virtual memory: 1169 megabytes
-    Info: Processing ended: Wed Mar 21 19:44:31 2018
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:18
+    Info: Processing ended: Mon Mar 26 15:08:20 2018
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:21
 
 

@@ -1,0 +1,15 @@
+Ripple Carry 
+N = 4: 8.070
+N = 8: 13.289
+N = 16: 12.225
+N = 32: 19.862
+N = 64: 36.105
+
+CLA 4 bits:
+N = 4: 11.102
+
+CLA 8 bits partial:
+N = 8: 12.135
+
+CLA 8 bits puro:
+N = 8: 12.149

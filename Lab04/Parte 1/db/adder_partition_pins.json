@@ -4,111 +4,123 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "r[0]",
+					"name" : "HEX4[0]",
 					"strict" : false
 				},
 				{
-					"name" : "r[1]",
+					"name" : "HEX4[1]",
 					"strict" : false
 				},
 				{
-					"name" : "r[2]",
+					"name" : "HEX4[2]",
 					"strict" : false
 				},
 				{
-					"name" : "r[3]",
+					"name" : "HEX4[3]",
 					"strict" : false
 				},
 				{
-					"name" : "r[4]",
+					"name" : "HEX4[4]",
 					"strict" : false
 				},
 				{
-					"name" : "r[5]",
+					"name" : "HEX4[5]",
 					"strict" : false
 				},
 				{
-					"name" : "r[6]",
+					"name" : "HEX4[6]",
 					"strict" : false
 				},
 				{
-					"name" : "r[7]",
+					"name" : "HEX2[0]",
 					"strict" : false
 				},
 				{
-					"name" : "cout",
+					"name" : "HEX2[1]",
 					"strict" : false
 				},
 				{
-					"name" : "overflow",
+					"name" : "HEX2[2]",
 					"strict" : false
 				},
 				{
-					"name" : "x[0]",
+					"name" : "HEX2[3]",
 					"strict" : false
 				},
 				{
-					"name" : "y[0]",
+					"name" : "HEX2[4]",
 					"strict" : false
 				},
 				{
-					"name" : "cin",
+					"name" : "HEX2[5]",
 					"strict" : false
 				},
 				{
-					"name" : "x[1]",
+					"name" : "HEX2[6]",
 					"strict" : false
 				},
 				{
-					"name" : "y[1]",
+					"name" : "HEX0[0]",
 					"strict" : false
 				},
 				{
-					"name" : "x[2]",
+					"name" : "HEX0[1]",
 					"strict" : false
 				},
 				{
-					"name" : "y[2]",
+					"name" : "HEX0[2]",
 					"strict" : false
 				},
 				{
-					"name" : "x[3]",
+					"name" : "HEX0[3]",
 					"strict" : false
 				},
 				{
-					"name" : "y[3]",
+					"name" : "HEX0[4]",
 					"strict" : false
 				},
 				{
-					"name" : "x[4]",
+					"name" : "HEX0[5]",
 					"strict" : false
 				},
 				{
-					"name" : "y[4]",
+					"name" : "HEX0[6]",
 					"strict" : false
 				},
 				{
-					"name" : "x[5]",
+					"name" : "LEDR[0]",
 					"strict" : false
 				},
 				{
-					"name" : "y[5]",
+					"name" : "SW[4]",
 					"strict" : false
 				},
 				{
-					"name" : "x[6]",
+					"name" : "SW[5]",
 					"strict" : false
 				},
 				{
-					"name" : "y[6]",
+					"name" : "SW[6]",
 					"strict" : false
 				},
 				{
-					"name" : "x[7]",
+					"name" : "SW[7]",
 					"strict" : false
 				},
 				{
-					"name" : "y[7]",
+					"name" : "SW[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[3]",
 					"strict" : false
 				}
 			]
