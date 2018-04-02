@@ -6,10 +6,14 @@ N = 32: 19.862
 N = 64: 36.105
 
 CLA 4 bits:
-N = 4: 
+N = 4: 11.102
 
 CLA 8 bits partial:
 N = 8: 12.135
 
 CLA 8 bits puro:
 N = 8: 12.149
+
+Comparando o CLA de 4 bits e o ripple carry adder notamos que o ripple carry é mais rápido, porém, a medida que aumentamos o numero de bits a serem somados, o comportamento esperado é que o ripple carry aumente proporcionalmente a n, enquanto o CLA é constante por todos bits serem somados paralelamente.
+
+Em teoria, o CLA de 8 bits puro e de 4 bits eram para dar o mesmo tempo (uma diferença pequena é aceitável). Já entre o CLA de 8 bis parcial e o puro eram, de acordo com a teoria, para apresentar uma diferença (puro ser mais rápido que o parcial), ja que o parcial instancia 2 CLA de 4 bits, e o CIN do 2o CLA de 4 bits precisa aguardar o COUT do 1o CLA de 4 bits, enquanto no de 8 bits puro tudo é paralelizável e então, ser mais rápido. Entretanto checando o netlist de ambos os CLA's de 8 bits o quartus fez otimizações que impediram de observar o resultado.

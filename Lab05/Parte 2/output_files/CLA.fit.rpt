@@ -1,5 +1,5 @@
 Fitter report for CLA
-Mon Mar 26 17:19:45 2018
+Mon Apr  2 14:20:53 2018
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -58,7 +58,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Fitter Summary                                                                ;
 +---------------------------------+---------------------------------------------+
-; Fitter Status                   ; Successful - Mon Mar 26 17:19:45 2018       ;
+; Fitter Status                   ; Successful - Mon Apr  2 14:20:53 2018       ;
 ; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; CLA                                         ;
 ; Top-level Entity Name           ; cla_4bits                                   ;
@@ -154,7 +154,7 @@ refer to the applicable agreement for further details.
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;   0.1%      ;
-;     Processors 3-4         ;   0.1%      ;
+;     Processors 3-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -448,7 +448,7 @@ refer to the applicable agreement for further details.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab05/Parte 2/output_files/CLA.pin.
+The pin-out file can be found in /home/ec2015/ra165457/Desktop/MC613/Lab05/Parte 2/output_files/CLA.pin.
 
 
 +------------------------------------------------------------------------------------------+
@@ -2171,17 +2171,17 @@ Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
-Info (11888): Total time spent on timing analysis during the Fitter is 0.15 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.09 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:03
+Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:02
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
-Info (144001): Generated suppressed messages file /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab05/Parte 2/output_files/CLA.fit.smsg
+Info (144001): Generated suppressed messages file /home/ec2015/ra165457/Desktop/MC613/Lab05/Parte 2/output_files/CLA.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 251 warnings
-    Info: Peak virtual memory: 2470 megabytes
-    Info: Processing ended: Mon Mar 26 17:19:45 2018
+    Info: Peak virtual memory: 2468 megabytes
+    Info: Processing ended: Mon Apr  2 14:20:54 2018
     Info: Elapsed time: 00:00:27
     Info: Total CPU time (on all processors): 00:00:42
 
@@ -2189,6 +2189,6 @@ Info: Quartus Prime Fitter was successful. 0 errors, 251 warnings
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab05/Parte 2/output_files/CLA.fit.smsg.
+The suppressed messages can be found in /home/ec2015/ra165457/Desktop/MC613/Lab05/Parte 2/output_files/CLA.fit.smsg.
 
 

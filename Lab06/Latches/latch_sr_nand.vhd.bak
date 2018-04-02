@@ -1,0 +1,16 @@
+-- brief : lab06 - question 1
+
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity latch_sr_nand is
+  port (
+    S_n	 :   		in  std_logic;
+    R_n	 :  		in  std_logic;
+    Qa	 :       out std_logic;
+	 Qb 	 :       out std_logic;
+	 );
+end latch_sr_nand;
+
+architecture structural of latch_sr_nand is
+begin

@@ -1,0 +1,10 @@
+|ff_t
+T => var.ENA
+Clk => var.CLK
+Q <= var.DB_MAX_OUTPUT_PORT_TYPE
+Q_n <= var.DB_MAX_OUTPUT_PORT_TYPE
+Preset => var.IN0
+Clear => var.ACLR
+Clear => var.IN1
+
+

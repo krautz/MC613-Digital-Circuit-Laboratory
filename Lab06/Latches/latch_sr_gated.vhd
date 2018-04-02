@@ -1,0 +1,28 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity latch_sr_gated is
+  port (
+    S		 :   		in  std_logic;
+    R		 :  		in  std_logic;
+	 Clk	 :			in  std_logic;
+    Q	 	 :       out std_logic;
+	 Q_n 	 :       out std_logic
+	 );
+end latch_sr_gated;
+
+architecture structural of latch_sr_gated is
+begin
+
+	PROCESS (S, R, Clk)
+	BEGIN
+		IF Clk = '1' and S = '0' and R = '1' THEN
+			Q <= '0';
+			Q_n <= '1';
+		ELSIF Clk = '1' and S = '1' and R = '0' THEN
+			Q <= '1';
+			Q_n <= '0';
+		END IF;
+	END PROCESS;
+END structural;
+		

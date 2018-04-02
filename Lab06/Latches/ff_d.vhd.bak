@@ -1,0 +1,24 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity ff_d is
+  port (
+    D		 :   		in  std_logic;
+	 Clk	 :			in  std_logic;
+    Q	 	 :       out std_logic;
+	 Q_n 	 :       out std_logic
+	 );
+end ff_d;
+
+architecture structural of ff_d is
+begin
+
+	PROCESS (D, Clk)
+	BEGIN
+		IF Clk = '1' THEN
+			Q <= D;
+			Q_n <= not(D);
+		END IF;
+	END PROCESS;
+END structural;
+		

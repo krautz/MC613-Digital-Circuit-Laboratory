@@ -1,0 +1,32 @@
+-- brief : lab06 - question 1
+
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity latch_sr_nand is
+  port (
+    S_n	 :   		in  std_logic;
+    R_n	 :  		in  std_logic;
+    Qa	 :       out std_logic;
+	 Qb 	 :       out std_logic
+	 );
+end latch_sr_nand;
+
+architecture structural of latch_sr_nand is
+begin
+
+	PROCESS (S_n, R_n)
+	BEGIN
+		IF S_n = '0' and R_n = '1' THEN
+			Qa <= '1';
+			Qb <= '0';
+		ELSIF S_n = '1' and R_n = '0' THEN
+			Qa <= '0';
+			Qb <= '1';
+		ELSIF S_n = '0' and R_n = '0' THEN
+			Qa <= '1';
+			Qb <= '1';
+		END IF;
+	END PROCESS;
+END structural;
+		
