@@ -1,11 +1,11 @@
 onerror {exit -code 1}
 vlib work
 vcom -work work Latches.vho
-vcom -work work Waveform5.vwf.vht
-vsim -novopt -c -t 1ps -L cyclonev -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.ff_t_vhd_vec_tst
+vcom -work work Waveform6.vwf.vht
+vsim -novopt -c -t 1ps -L cyclonev -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.latches_ffs_vhd_vec_tst
 vcd file -direction Latches.msim.vcd
-vcd add -internal ff_t_vhd_vec_tst/*
-vcd add -internal ff_t_vhd_vec_tst/i1/*
+vcd add -internal latches_ffs_vhd_vec_tst/*
+vcd add -internal latches_ffs_vhd_vec_tst/i1/*
 proc simTimestamp {} {
     echo "Simulation time: $::now ps"
     if { [string equal running [runStatus]] } {
@@ -15,3 +15,4 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
+

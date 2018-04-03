@@ -16,21 +16,20 @@ end ff_jk;
 architecture structural of ff_jk is
 begin
 
-	PROCESS (Preset, Clear, Clk)
+	PROCESS
 		variable var : std_logic;
 	BEGIN
+		WAIT UNTIL Clk'EVENT AND Clk = '1' ;
 		IF Clear = '1' THEN
 			var := '0';
 		ELSIF Preset = '1' THEN
 			var := '1';
-		ELSIF Clk'EVENT and Clk = '1' THEN
-			IF J = '0' and K = '1' THEN
-				var := '0';
-			ELSIF J = '1' and K = '0' THEN
-				var := '1';
-			ELSIF J = '1' and K = '1' THEN
-				var := not(var);
-			END IF;
+		ELSIF J = '0' and K = '1' THEN
+			var := '0';
+		ELSIF J = '1' and K = '0' THEN
+			var := '1';
+		ELSIF J = '1' and K = '1' THEN
+			var := not(var);
 		END IF;
 		Q <= var;
 		Q_n <= not(var);

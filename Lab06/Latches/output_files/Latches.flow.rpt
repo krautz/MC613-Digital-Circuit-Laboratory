@@ -1,5 +1,5 @@
 Flow report for Latches
-Mon Apr  2 17:54:37 2018
+Tue Apr  3 14:59:00 2018
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -40,16 +40,16 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Mon Apr  2 17:54:37 2018       ;
+; Flow Status                     ; Successful - Tue Apr  3 14:59:00 2018       ;
 ; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; Latches                                     ;
-; Top-level Entity Name           ; ff_t                                        ;
+; Top-level Entity Name           ; latches_ffs                                 ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSEMA5F31C6                                ;
 ; Timing Models                   ; Final                                       ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 1                                           ;
-; Total pins                      ; 6                                           ;
+; Total registers                 ; 5                                           ;
+; Total pins                      ; 11                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/02/2018 17:46:29 ;
+; Start date & time ; 04/03/2018 14:58:32 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Latches             ;
 +-------------------+---------------------+
@@ -78,16 +78,16 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 273440552276244.152270198921523        ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 273440552319778.152277831209458        ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; ff_t        ; Top        ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; ff_t        ; Top        ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; ff_t        ; Top        ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; latches_ffs ; Top        ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; latches_ffs ; Top        ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; latches_ffs ; Top        ;
 ; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --            ; --          ; --         ;
 ; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --          ; --         ;
 ; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --            ; --          ; --         ;
-; TOP_LEVEL_ENTITY                    ; ff_t                                   ; Latches       ; --          ; --         ;
+; TOP_LEVEL_ENTITY                    ; latches_ffs                            ; Latches       ; --          ; --         ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 
 
@@ -96,41 +96,29 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:09     ; 1.0                     ; 1140 MB             ; 00:00:20                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 1237 MB             ; 00:00:00                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 1242 MB             ; 00:00:00                           ;
-; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 1238 MB             ; 00:00:00                           ;
-; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 1243 MB             ; 00:00:00                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 1239 MB             ; 00:00:00                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 1242 MB             ; 00:00:00                           ;
-; Total                ; 00:00:13     ; --                      ; --                  ; 00:00:20                           ;
+; Analysis & Synthesis ; 00:00:09     ; 1.0                     ; 1141 MB             ; 00:00:21                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 1238 MB             ; 00:00:00                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 1241 MB             ; 00:00:00                           ;
+; Total                ; 00:00:11     ; --                      ; --                  ; 00:00:21                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                                ;
-+----------------------+----------------------------+-------------+-------------+----------------+
-; Module Name          ; Machine Hostname           ; OS Name     ; OS Version  ; Processor type ;
-+----------------------+----------------------------+-------------+-------------+----------------+
-; Analysis & Synthesis ; barbados.lab.ic.unicamp.br ; Fedora Core ; Fedora Core ; x86_64         ;
-; EDA Netlist Writer   ; barbados.lab.ic.unicamp.br ; Fedora Core ; Fedora Core ; x86_64         ;
-; EDA Netlist Writer   ; barbados.lab.ic.unicamp.br ; Fedora Core ; Fedora Core ; x86_64         ;
-; EDA Netlist Writer   ; barbados.lab.ic.unicamp.br ; Fedora Core ; Fedora Core ; x86_64         ;
-; EDA Netlist Writer   ; barbados.lab.ic.unicamp.br ; Fedora Core ; Fedora Core ; x86_64         ;
-; EDA Netlist Writer   ; barbados.lab.ic.unicamp.br ; Fedora Core ; Fedora Core ; x86_64         ;
-; EDA Netlist Writer   ; barbados.lab.ic.unicamp.br ; Fedora Core ; Fedora Core ; x86_64         ;
-+----------------------+----------------------------+-------------+-------------+----------------+
++-------------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                           ;
++----------------------+-----------------------+-------------+-------------+----------------+
+; Module Name          ; Machine Hostname      ; OS Name     ; OS Version  ; Processor type ;
++----------------------+-----------------------+-------------+-------------+----------------+
+; Analysis & Synthesis ; yes.lab.ic.unicamp.br ; Fedora Core ; Fedora Core ; x86_64         ;
+; EDA Netlist Writer   ; yes.lab.ic.unicamp.br ; Fedora Core ; Fedora Core ; x86_64         ;
+; EDA Netlist Writer   ; yes.lab.ic.unicamp.br ; Fedora Core ; Fedora Core ; x86_64         ;
++----------------------+-----------------------+-------------+-------------+----------------+
 
 
 ------------
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off Latches -c Latches
-quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Latches -c Latches --vector_source=/home/ec2015/ra165457/Desktop/MC613/Lab06/Latches/Waveform5.vwf --testbench_file=/home/ec2015/ra165457/Desktop/MC613/Lab06/Latches/simulation/qsim/Waveform5.vwf.vht
-quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=/home/ec2015/ra165457/Desktop/MC613/Lab06/Latches/simulation/qsim/ Latches -c Latches
-quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Latches -c Latches --vector_source=/home/ec2015/ra165457/Desktop/MC613/Lab06/Latches/Waveform5.vwf --testbench_file=/home/ec2015/ra165457/Desktop/MC613/Lab06/Latches/simulation/qsim/Waveform5.vwf.vht
-quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=/home/ec2015/ra165457/Desktop/MC613/Lab06/Latches/simulation/qsim/ Latches -c Latches
-quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Latches -c Latches --vector_source=/home/ec2015/ra165457/Desktop/MC613/Lab06/Latches/Waveform5.vwf --testbench_file=/home/ec2015/ra165457/Desktop/MC613/Lab06/Latches/simulation/qsim/Waveform5.vwf.vht
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Latches -c Latches --vector_source=/home/ec2015/ra165457/Desktop/MC613/Lab06/Latches/Waveform6.vwf --testbench_file=/home/ec2015/ra165457/Desktop/MC613/Lab06/Latches/simulation/qsim/Waveform6.vwf.vht
 quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=/home/ec2015/ra165457/Desktop/MC613/Lab06/Latches/simulation/qsim/ Latches -c Latches
 
 

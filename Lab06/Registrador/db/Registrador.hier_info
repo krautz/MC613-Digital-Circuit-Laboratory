@@ -1,0 +1,20 @@
+|register_bank
+clk => ~NO_FANOUT~
+data_in[0] => ~NO_FANOUT~
+data_in[1] => ~NO_FANOUT~
+data_in[2] => ~NO_FANOUT~
+data_in[3] => ~NO_FANOUT~
+data_out[0] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+data_out[1] <= data_out[1].DB_MAX_OUTPUT_PORT_TYPE
+data_out[2] <= data_out[2].DB_MAX_OUTPUT_PORT_TYPE
+data_out[3] <= data_out[3].DB_MAX_OUTPUT_PORT_TYPE
+reg_rd[0] => ~NO_FANOUT~
+reg_rd[1] => ~NO_FANOUT~
+reg_rd[2] => ~NO_FANOUT~
+reg_wr[0] => ~NO_FANOUT~
+reg_wr[1] => ~NO_FANOUT~
+reg_wr[2] => ~NO_FANOUT~
+we => ~NO_FANOUT~
+clear => ~NO_FANOUT~
+
+

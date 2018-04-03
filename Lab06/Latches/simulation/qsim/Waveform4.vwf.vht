@@ -18,7 +18,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "04/02/2018 17:43:32"
+-- Generated on "04/03/2018 14:55:04"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          ff_jk
 -- 
@@ -76,20 +76,14 @@ BEGIN
 	Clear <= '1';
 	WAIT FOR 20000 ps;
 	Clear <= '0';
-	WAIT FOR 270000 ps;
-	Clear <= '1';
-	WAIT FOR 30000 ps;
-	Clear <= '0';
 WAIT;
 END PROCESS t_prcs_Clear;
 
 -- Preset
 t_prcs_Preset: PROCESS
 BEGIN
-	Preset <= '1';
-	WAIT FOR 20000 ps;
 	Preset <= '0';
-	WAIT FOR 240000 ps;
+	WAIT FOR 260000 ps;
 	Preset <= '1';
 	WAIT FOR 30000 ps;
 	Preset <= '0';
@@ -97,9 +91,9 @@ BEGIN
 	Preset <= '1';
 	WAIT FOR 20000 ps;
 	Preset <= '0';
-	WAIT FOR 310000 ps;
+	WAIT FOR 290000 ps;
 	Preset <= '1';
-	WAIT FOR 30000 ps;
+	WAIT FOR 50000 ps;
 	Preset <= '0';
 WAIT;
 END PROCESS t_prcs_Preset;
@@ -108,11 +102,7 @@ END PROCESS t_prcs_Preset;
 t_prcs_Clk: PROCESS
 BEGIN
 	Clk <= '0';
-	WAIT FOR 30000 ps;
-	Clk <= '1';
-	WAIT FOR 40000 ps;
-	Clk <= '0';
-	WAIT FOR 140000 ps;
+	WAIT FOR 210000 ps;
 	Clk <= '1';
 	WAIT FOR 30000 ps;
 	Clk <= '0';
@@ -134,24 +124,26 @@ END PROCESS t_prcs_Clk;
 -- J
 t_prcs_J: PROCESS
 BEGIN
-LOOP
 	J <= '0';
 	WAIT FOR 400000 ps;
 	J <= '1';
-	WAIT FOR 400000 ps;
-	IF (NOW >= 800000 ps) THEN WAIT; END IF;
-END LOOP;
+	WAIT FOR 330000 ps;
+	J <= '0';
+WAIT;
 END PROCESS t_prcs_J;
 
 -- K
 t_prcs_K: PROCESS
 BEGIN
-LOOP
 	K <= '0';
 	WAIT FOR 200000 ps;
 	K <= '1';
 	WAIT FOR 200000 ps;
-	IF (NOW >= 800000 ps) THEN WAIT; END IF;
-END LOOP;
+	K <= '0';
+	WAIT FOR 200000 ps;
+	K <= '1';
+	WAIT FOR 130000 ps;
+	K <= '0';
+WAIT;
 END PROCESS t_prcs_K;
 END ff_jk_arch;

@@ -1,10 +1,97 @@
-|ff_t
-T => var.ENA
+|latches_ffs
+clock => latch_sr_gated:lff2.Clk
+clock => latch_d_gated:lff3.Clk
+clock => ff_d:lff4.Clk
+clock => ff_jk:lff5.Clk
+clock => ff_t:lff6.Clk
+preset => ff_d:lff4.Preset
+preset => ff_jk:lff5.Preset
+preset => ff_t:lff6.Preset
+clear => ff_d:lff4.Clear
+clear => ff_jk:lff5.Clear
+clear => ff_t:lff6.Clear
+A => latch_sr_gated:lff2.S
+A => latch_d_gated:lff3.D
+A => ff_d:lff4.D
+A => ff_jk:lff5.J
+A => ff_t:lff6.T
+A => latch_sr_nand:lff1.S_n
+B => latch_sr_gated:lff2.R
+B => ff_jk:lff5.K
+B => latch_sr_nand:lff1.R_n
+Q[6] << latch_sr_nand:lff1.Qa
+Q[5] << ff_jk:lff5.Q
+Q[4] << latch_sr_gated:lff2.Q
+Q[3] << ff_d:lff4.Q
+Q[2] << ff_t:lff6.Q
+Q[1] << latch_d_gated:lff3.Q
+
+
+|latches_ffs|latch_sr_nand:lff1
+S_n => process_0.IN0
+S_n => process_0.IN0
+S_n => process_0.IN0
+R_n => process_0.IN1
+R_n => process_0.IN1
+R_n => process_0.IN1
+Qa <= Qa$latch.DB_MAX_OUTPUT_PORT_TYPE
+Qb <= Qb$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|latches_ffs|latch_sr_gated:lff2
+S => process_0.IN0
+S => process_0.IN0
+R => process_0.IN1
+R => process_0.IN1
+Clk => process_0.IN1
+Clk => process_0.IN1
+Q <= Q$latch.DB_MAX_OUTPUT_PORT_TYPE
+Q_n <= Q_n$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|latches_ffs|latch_d_gated:lff3
+D => Q$latch.DATAIN
+D => Q_n$latch.DATAIN
+Clk => Q_n$latch.LATCH_ENABLE
+Clk => Q$latch.LATCH_ENABLE
+Q <= Q$latch.DB_MAX_OUTPUT_PORT_TYPE
+Q_n <= Q_n$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|latches_ffs|ff_d:lff4
+D => var.DATAA
+Clk => Q_n~reg0.CLK
+Clk => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q_n <= Q_n~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Preset => var.OUTPUTSELECT
+Clear => var.OUTPUTSELECT
+
+
+|latches_ffs|ff_jk:lff5
+J => process_0.IN0
+J => process_0.IN0
+J => process_0.IN0
+K => process_0.IN1
+K => process_0.IN1
+K => process_0.IN1
+Clk => Q_n~reg0.CLK
+Clk => Q~reg0.CLK
 Clk => var.CLK
-Q <= var.DB_MAX_OUTPUT_PORT_TYPE
-Q_n <= var.DB_MAX_OUTPUT_PORT_TYPE
-Preset => var.IN0
-Clear => var.ACLR
-Clear => var.IN1
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q_n <= Q_n~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Preset => var.OUTPUTSELECT
+Clear => var.OUTPUTSELECT
+
+
+|latches_ffs|ff_t:lff6
+T => var.OUTPUTSELECT
+Clk => Q_n~reg0.CLK
+Clk => Q~reg0.CLK
+Clk => var.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q_n <= Q_n~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Preset => var.OUTPUTSELECT
+Clear => var.OUTPUTSELECT
 
 

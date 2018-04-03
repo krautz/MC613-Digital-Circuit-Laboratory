@@ -15,14 +15,15 @@ end ff_t;
 architecture structural of ff_t is
 begin
 
-	PROCESS (Preset, Clear, Clk)
+	PROCESS
 		variable var : std_logic;
 	BEGIN
+		WAIT UNTIL Clk'EVENT AND Clk = '1' ;
 		IF Clear = '1' THEN
 			var := '0';
 		ELSIF Preset = '1' THEN
 			var := '1';
-		ELSIF Clk'EVENT and Clk = '1' and T = '1' THEN
+		ELSIF T = '1' THEN
 			var := not(var);
 		END IF;
 		Q <= var;

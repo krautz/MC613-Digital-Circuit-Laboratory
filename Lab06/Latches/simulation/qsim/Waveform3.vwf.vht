@@ -18,7 +18,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "04/02/2018 17:38:49"
+-- Generated on "04/03/2018 14:57:54"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          ff_d
 -- 
@@ -69,6 +69,10 @@ BEGIN
 	Clear <= '1';
 	WAIT FOR 20000 ps;
 	Clear <= '0';
+	WAIT FOR 90000 ps;
+	Clear <= '1';
+	WAIT FOR 20000 ps;
+	Clear <= '0';
 WAIT;
 END PROCESS t_prcs_Clear;
 
@@ -84,7 +88,15 @@ BEGIN
 	Preset <= '1';
 	WAIT FOR 20000 ps;
 	Preset <= '0';
-	WAIT FOR 210000 ps;
+	WAIT FOR 90000 ps;
+	Preset <= '1';
+	WAIT FOR 20000 ps;
+	Preset <= '0';
+	WAIT FOR 100000 ps;
+	Preset <= '1';
+	WAIT FOR 30000 ps;
+	Preset <= '0';
+	WAIT FOR 20000 ps;
 	Preset <= '1';
 	WAIT FOR 30000 ps;
 	Preset <= '0';

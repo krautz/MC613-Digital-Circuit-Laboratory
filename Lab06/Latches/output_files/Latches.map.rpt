@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Latches
-Mon Apr  2 17:46:39 2018
+Tue Apr  3 14:58:42 2018
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -13,10 +13,17 @@ Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Post-Synthesis Netlist Statistics for Top Partition
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
+  8. User-Specified and Inferred Latches
+  9. General Register Statistics
+ 10. Port Connectivity Checks: "ff_t:lff6"
+ 11. Port Connectivity Checks: "ff_jk:lff5"
+ 12. Port Connectivity Checks: "ff_d:lff4"
+ 13. Port Connectivity Checks: "latch_d_gated:lff3"
+ 14. Port Connectivity Checks: "latch_sr_gated:lff2"
+ 15. Port Connectivity Checks: "latch_sr_nand:lff1"
+ 16. Post-Synthesis Netlist Statistics for Top Partition
+ 17. Elapsed Time Per Partition
+ 18. Analysis & Synthesis Messages
 
 
 
@@ -42,14 +49,14 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Apr  2 17:46:39 2018       ;
+; Analysis & Synthesis Status     ; Successful - Tue Apr  3 14:58:42 2018       ;
 ; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; Latches                                     ;
-; Top-level Entity Name           ; ff_t                                        ;
+; Top-level Entity Name           ; latches_ffs                                 ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 1                                           ;
-; Total pins                      ; 6                                           ;
+; Total registers                 ; 5                                           ;
+; Total pins                      ; 11                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -68,7 +75,7 @@ refer to the applicable agreement for further details.
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
-; Top-level entity name                                                           ; ff_t               ; Latches            ;
+; Top-level entity name                                                           ; latches_ffs        ; Latches            ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation      ; On                 ; On                 ;
@@ -162,54 +169,81 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                      ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                               ; Library ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------------------+---------+
-; ff_t.vhd                         ; yes             ; User VHDL File  ; /home/ec2015/ra165457/Desktop/MC613/Lab06/Latches/ff_t.vhd ;         ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                        ;
++----------------------------------+-----------------+-----------------------+------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type             ; File Name with Absolute Path                                           ; Library ;
++----------------------------------+-----------------+-----------------------+------------------------------------------------------------------------+---------+
+; latch_sr_nand.vhd                ; yes             ; User VHDL File        ; /home/ec2015/ra165457/Desktop/MC613/Lab06/Latches/latch_sr_nand.vhd    ;         ;
+; latch_sr_gated.vhd               ; yes             ; User VHDL File        ; /home/ec2015/ra165457/Desktop/MC613/Lab06/Latches/latch_sr_gated.vhd   ;         ;
+; latch_d_gated.vhd                ; yes             ; User VHDL File        ; /home/ec2015/ra165457/Desktop/MC613/Lab06/Latches/latch_d_gated.vhd    ;         ;
+; ff_d.vhd                         ; yes             ; User VHDL File        ; /home/ec2015/ra165457/Desktop/MC613/Lab06/Latches/ff_d.vhd             ;         ;
+; ff_jk.vhd                        ; yes             ; User VHDL File        ; /home/ec2015/ra165457/Desktop/MC613/Lab06/Latches/ff_jk.vhd            ;         ;
+; ff_t.vhd                         ; yes             ; User VHDL File        ; /home/ec2015/ra165457/Desktop/MC613/Lab06/Latches/ff_t.vhd             ;         ;
+; latches_ffs_pack.vhd             ; yes             ; User VHDL File        ; /home/ec2015/ra165457/Desktop/MC613/Lab06/Latches/latches_ffs_pack.vhd ;         ;
+; latches_ffs.vhd                  ; yes             ; Auto-Found VHDL File  ; /home/ec2015/ra165457/Desktop/MC613/Lab06/Latches/latches_ffs.vhd      ;         ;
++----------------------------------+-----------------+-----------------------+------------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary         ;
-+---------------------------------------------+-------+
-; Resource                                    ; Usage ;
-+---------------------------------------------+-------+
-; Estimate of Logic utilization (ALMs needed) ; 3     ;
-;                                             ;       ;
-; Combinational ALUT usage for logic          ; 5     ;
-;     -- 7 input functions                    ; 0     ;
-;     -- 6 input functions                    ; 0     ;
-;     -- 5 input functions                    ; 0     ;
-;     -- 4 input functions                    ; 1     ;
-;     -- <=3 input functions                  ; 4     ;
-;                                             ;       ;
-; Dedicated logic registers                   ; 1     ;
-;                                             ;       ;
-; I/O pins                                    ; 6     ;
-;                                             ;       ;
-; Total DSP Blocks                            ; 0     ;
-;                                             ;       ;
-; Maximum fan-out node                        ; var~2 ;
-; Maximum fan-out                             ; 3     ;
-; Total fan-out                               ; 24    ;
-; Average fan-out                             ; 1.33  ;
-+---------------------------------------------+-------+
++-------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary           ;
++---------------------------------------------+---------+
+; Resource                                    ; Usage   ;
++---------------------------------------------+---------+
+; Estimate of Logic utilization (ALMs needed) ; 5       ;
+;                                             ;         ;
+; Combinational ALUT usage for logic          ; 9       ;
+;     -- 7 input functions                    ; 0       ;
+;     -- 6 input functions                    ; 0       ;
+;     -- 5 input functions                    ; 1       ;
+;     -- 4 input functions                    ; 1       ;
+;     -- <=3 input functions                  ; 7       ;
+;                                             ;         ;
+; Dedicated logic registers                   ; 5       ;
+;                                             ;         ;
+; I/O pins                                    ; 11      ;
+;                                             ;         ;
+; Total DSP Blocks                            ; 0       ;
+;                                             ;         ;
+; Maximum fan-out node                        ; A~input ;
+; Maximum fan-out                             ; 8       ;
+; Total fan-out                               ; 56      ;
+; Average fan-out                             ; 1.56    ;
++---------------------------------------------+---------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                    ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; |ff_t                      ; 5 (5)               ; 1 (1)                     ; 0                 ; 0          ; 6    ; 0            ; |ff_t               ; ff_t        ; work         ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                    ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------+----------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name              ; Entity Name    ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------+----------------+--------------+
+; |latches_ffs               ; 9 (0)               ; 5 (0)                     ; 0                 ; 0          ; 11   ; 0            ; |latches_ffs                     ; latches_ffs    ; work         ;
+;    |ff_d:lff4|             ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |latches_ffs|ff_d:lff4           ; ff_d           ; work         ;
+;    |ff_jk:lff5|            ; 1 (1)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |latches_ffs|ff_jk:lff5          ; ff_jk          ; work         ;
+;    |ff_t:lff6|             ; 1 (1)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |latches_ffs|ff_t:lff6           ; ff_t           ; work         ;
+;    |latch_d_gated:lff3|    ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |latches_ffs|latch_d_gated:lff3  ; latch_d_gated  ; work         ;
+;    |latch_sr_gated:lff2|   ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |latches_ffs|latch_sr_gated:lff2 ; latch_sr_gated ; work         ;
+;    |latch_sr_nand:lff1|    ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |latches_ffs|latch_sr_nand:lff1  ; latch_sr_nand  ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------+----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                               ;
++----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
++----------------------------------------------------+---------------------+------------------------+
+; latch_sr_nand:lff1|Qa                              ; GND                 ; yes                    ;
+; latch_sr_gated:lff2|Q                              ; GND                 ; yes                    ;
+; latch_d_gated:lff3|Q                               ; clock               ; yes                    ;
+; Number of user-specified and inferred latches = 3  ;                     ;                        ;
++----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
 +------------------------------------------------------+
@@ -217,14 +251,68 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1     ;
+; Total registers                              ; 5     ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 1     ;
+; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ff_t:lff6"                                                                          ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; q_n  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ff_jk:lff5"                                                                         ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; q_n  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ff_d:lff4"                                                                          ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; q_n  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "latch_d_gated:lff3"                                                                 ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; q_n  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "latch_sr_gated:lff2"                                                                ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; q_n  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "latch_sr_nand:lff1"                                                                 ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; qb   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -232,18 +320,18 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 1                           ;
-;     CLR               ; 1                           ;
-; arriav_lcell_comb     ; 6                           ;
-;     normal            ; 6                           ;
-;         1 data inputs ; 1                           ;
-;         2 data inputs ; 3                           ;
-;         3 data inputs ; 1                           ;
+; arriav_ff             ; 5                           ;
+;     plain             ; 5                           ;
+; arriav_lcell_comb     ; 9                           ;
+;     normal            ; 9                           ;
+;         2 data inputs ; 1                           ;
+;         3 data inputs ; 6                           ;
 ;         4 data inputs ; 1                           ;
-; boundary_port         ; 6                           ;
+;         5 data inputs ; 1                           ;
+; boundary_port         ; 11                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 3.00                        ;
-; Average LUT depth     ; 2.25                        ;
+; Max LUT depth         ; 2.00                        ;
+; Average LUT depth     ; 1.23                        ;
 +-----------------------+-----------------------------+
 
 
@@ -262,7 +350,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Mon Apr  2 17:46:29 2018
+    Info: Processing started: Tue Apr  3 14:58:32 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Latches -c Latches
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -284,21 +372,41 @@ Info (12021): Found 2 design units, including 1 entities, in source file ff_jk.v
 Info (12021): Found 2 design units, including 1 entities, in source file ff_t.vhd
     Info (12022): Found design unit 1: ff_t-structural File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Latches/ff_t.vhd Line: 15
     Info (12023): Found entity 1: ff_t File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Latches/ff_t.vhd Line: 4
-Info (12127): Elaborating entity "ff_t" for the top level hierarchy
-Warning (10492): VHDL Process Statement warning at ff_t.vhd(25): signal "T" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Latches/ff_t.vhd Line: 25
-Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
-    Warning (13310): Register "var" is converted into an equivalent circuit using register "var~_emulated" and latch "var~1" File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Latches/ff_t.vhd Line: 21
+Info (12021): Found 1 design units, including 0 entities, in source file latches_ffs_pack.vhd
+    Info (12022): Found design unit 1: latches_ffs_pack File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Latches/latches_ffs_pack.vhd Line: 6
+Warning (12125): Using design file latches_ffs.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: latches_ffs-structural File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Latches/latches_ffs.vhd Line: 18
+    Info (12023): Found entity 1: latches_ffs File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Latches/latches_ffs.vhd Line: 7
+Info (12127): Elaborating entity "latches_ffs" for the top level hierarchy
+Info (12128): Elaborating entity "latch_sr_nand" for hierarchy "latch_sr_nand:lff1" File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Latches/latches_ffs.vhd Line: 21
+Warning (10631): VHDL Process Statement warning at latch_sr_nand.vhd(18): inferring latch(es) for signal or variable "Qa", which holds its previous value in one or more paths through the process File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Latches/latch_sr_nand.vhd Line: 18
+Warning (10631): VHDL Process Statement warning at latch_sr_nand.vhd(18): inferring latch(es) for signal or variable "Qb", which holds its previous value in one or more paths through the process File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Latches/latch_sr_nand.vhd Line: 18
+Info (10041): Inferred latch for "Qb" at latch_sr_nand.vhd(18) File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Latches/latch_sr_nand.vhd Line: 18
+Info (10041): Inferred latch for "Qa" at latch_sr_nand.vhd(18) File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Latches/latch_sr_nand.vhd Line: 18
+Info (12128): Elaborating entity "latch_sr_gated" for hierarchy "latch_sr_gated:lff2" File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Latches/latches_ffs.vhd Line: 28
+Warning (10631): VHDL Process Statement warning at latch_sr_gated.vhd(17): inferring latch(es) for signal or variable "Q", which holds its previous value in one or more paths through the process File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Latches/latch_sr_gated.vhd Line: 17
+Warning (10631): VHDL Process Statement warning at latch_sr_gated.vhd(17): inferring latch(es) for signal or variable "Q_n", which holds its previous value in one or more paths through the process File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Latches/latch_sr_gated.vhd Line: 17
+Info (10041): Inferred latch for "Q_n" at latch_sr_gated.vhd(17) File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Latches/latch_sr_gated.vhd Line: 17
+Info (10041): Inferred latch for "Q" at latch_sr_gated.vhd(17) File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Latches/latch_sr_gated.vhd Line: 17
+Info (12128): Elaborating entity "latch_d_gated" for hierarchy "latch_d_gated:lff3" File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Latches/latches_ffs.vhd Line: 36
+Warning (10631): VHDL Process Statement warning at latch_d_gated.vhd(16): inferring latch(es) for signal or variable "Q", which holds its previous value in one or more paths through the process File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Latches/latch_d_gated.vhd Line: 16
+Warning (10631): VHDL Process Statement warning at latch_d_gated.vhd(16): inferring latch(es) for signal or variable "Q_n", which holds its previous value in one or more paths through the process File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Latches/latch_d_gated.vhd Line: 16
+Info (10041): Inferred latch for "Q_n" at latch_d_gated.vhd(16) File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Latches/latch_d_gated.vhd Line: 16
+Info (10041): Inferred latch for "Q" at latch_d_gated.vhd(16) File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Latches/latch_d_gated.vhd Line: 16
+Info (12128): Elaborating entity "ff_d" for hierarchy "ff_d:lff4" File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Latches/latches_ffs.vhd Line: 43
+Info (12128): Elaborating entity "ff_jk" for hierarchy "ff_jk:lff5" File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Latches/latches_ffs.vhd Line: 52
+Info (12128): Elaborating entity "ff_t" for hierarchy "ff_t:lff6" File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Latches/latches_ffs.vhd Line: 62
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 11 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 4 input pins
-    Info (21059): Implemented 2 output pins
-    Info (21061): Implemented 5 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 1178 megabytes
-    Info: Processing ended: Mon Apr  2 17:46:39 2018
+Info (21057): Implemented 24 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 5 input pins
+    Info (21059): Implemented 6 output pins
+    Info (21061): Implemented 13 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 8 warnings
+    Info: Peak virtual memory: 1173 megabytes
+    Info: Processing ended: Tue Apr  3 14:58:42 2018
     Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:20
+    Info: Total CPU time (on all processors): 00:00:21
 
 
