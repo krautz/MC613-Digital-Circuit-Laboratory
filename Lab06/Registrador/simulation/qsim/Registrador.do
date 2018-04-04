@@ -1,11 +1,11 @@
 onerror {exit -code 1}
 vlib work
 vcom -work work Registrador.vho
-vcom -work work Waveform1.vwf.vht
-vsim -novopt -c -t 1ps -L cyclonev -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.zbuffer_vhd_vec_tst
+vcom -work work Waveform3.vwf.vht
+vsim -novopt -c -t 1ps -L cyclonev -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.register_bank_vhd_vec_tst
 vcd file -direction Registrador.msim.vcd
-vcd add -internal zbuffer_vhd_vec_tst/*
-vcd add -internal zbuffer_vhd_vec_tst/i1/*
+vcd add -internal register_bank_vhd_vec_tst/*
+vcd add -internal register_bank_vhd_vec_tst/i1/*
 proc simTimestamp {} {
     echo "Simulation time: $::now ps"
     if { [string equal running [runStatus]] } {

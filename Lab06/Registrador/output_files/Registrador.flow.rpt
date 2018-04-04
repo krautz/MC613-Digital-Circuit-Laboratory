@@ -1,5 +1,5 @@
 Flow report for Registrador
-Tue Apr  3 15:59:18 2018
+Wed Apr  4 20:25:49 2018
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -40,7 +40,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Tue Apr  3 15:59:18 2018       ;
+; Flow Status                     ; Successful - Wed Apr  4 20:25:49 2018       ;
 ; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; Registrador                                 ;
 ; Top-level Entity Name           ; register_bank                               ;
@@ -48,7 +48,7 @@ refer to the applicable agreement for further details.
 ; Device                          ; 5CSEMA5F31C6                                ;
 ; Timing Models                   ; Final                                       ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 0                                           ;
+; Total registers                 ; 32                                          ;
 ; Total pins                      ; 17                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/03/2018 15:59:08 ;
+; Start date & time ; 04/04/2018 20:21:47 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Registrador         ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+---------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name   ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+---------------+------------+
-; COMPILER_SIGNATURE_ID               ; 273440552319778.152278194811596        ; --            ; --            ; --         ;
+; COMPILER_SIGNATURE_ID               ; 273440552275683.152288410705644        ; --            ; --            ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --            ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --            ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; register_bank ; Top        ;
@@ -96,24 +96,36 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:09     ; 1.0                     ; 1142 MB             ; 00:00:20                           ;
-; Total                ; 00:00:09     ; --                      ; --                  ; 00:00:20                           ;
+; Analysis & Synthesis ; 00:00:09     ; 1.0                     ; 1141 MB             ; 00:00:21                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 1238 MB             ; 00:00:00                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 1243 MB             ; 00:00:00                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 1239 MB             ; 00:00:00                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 1242 MB             ; 00:00:00                           ;
+; Total                ; 00:00:10     ; --                      ; --                  ; 00:00:21                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                           ;
-+----------------------+-----------------------+-------------+-------------+----------------+
-; Module Name          ; Machine Hostname      ; OS Name     ; OS Version  ; Processor type ;
-+----------------------+-----------------------+-------------+-------------+----------------+
-; Analysis & Synthesis ; yes.lab.ic.unicamp.br ; Fedora Core ; Fedora Core ; x86_64         ;
-+----------------------+-----------------------+-------------+-------------+----------------+
++--------------------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                                  ;
++----------------------+------------------------------+-------------+-------------+----------------+
+; Module Name          ; Machine Hostname             ; OS Name     ; OS Version  ; Processor type ;
++----------------------+------------------------------+-------------+-------------+----------------+
+; Analysis & Synthesis ; santalucia.lab.ic.unicamp.br ; Fedora Core ; Fedora Core ; x86_64         ;
+; EDA Netlist Writer   ; santalucia.lab.ic.unicamp.br ; Fedora Core ; Fedora Core ; x86_64         ;
+; EDA Netlist Writer   ; santalucia.lab.ic.unicamp.br ; Fedora Core ; Fedora Core ; x86_64         ;
+; EDA Netlist Writer   ; santalucia.lab.ic.unicamp.br ; Fedora Core ; Fedora Core ; x86_64         ;
+; EDA Netlist Writer   ; santalucia.lab.ic.unicamp.br ; Fedora Core ; Fedora Core ; x86_64         ;
++----------------------+------------------------------+-------------+-------------+----------------+
 
 
 ------------
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off Registrador -c Registrador
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Registrador -c Registrador --vector_source=/home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/Waveform3.vwf --testbench_file=/home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/simulation/qsim/Waveform3.vwf.vht
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=/home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/simulation/qsim/ Registrador -c Registrador
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Registrador -c Registrador --vector_source=/home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/Waveform3.vwf --testbench_file=/home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/simulation/qsim/Waveform3.vwf.vht
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=/home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/simulation/qsim/ Registrador -c Registrador
 
 
 

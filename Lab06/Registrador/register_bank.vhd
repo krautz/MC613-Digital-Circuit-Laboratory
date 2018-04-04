@@ -43,7 +43,43 @@ architecture structural of register_bank is
 			y: out std_logic_vector (7 downto 0)
 		);
 	end component;
-
+	
+	signal enable_reg, enable_buffer: std_logic_vector (7 downto 0);
+	signal data_out_aux, data_out_final: std_logic_vector (31 downto 0);
+	signal data_out_placa: std_logic_vector (3 downto 0);
+	signal aux: std_logic;
 begin
-  -- Your code here!
+  
+	dec3_to_8_instance_1: dec3_to_8 port map (
+			we, reg_rd, enable_reg
+	);
+	
+	dec3_to_8_instance_2: dec3_to_8 port map (
+			we, reg_wr, enable_buffer
+	);
+	
+
+	G1: For i in 0 to 7 GENERATE
+		reg_instance: reg 
+		generic map (N => 4)
+		port map (
+				clk, data_in, data_out_aux(((4 * (i + 1)) - 1) downto (4 * i)), enable_reg(i), clear
+		);
+		buffer_instance: zbuffer port map (
+				data_out_aux(((4 * (i + 1)) - 1) downto (4 * i)), enable_buffer(i), data_out_final(((4 * (i + 1)) - 1) downto (4 * i))
+		);
+		
+	end generate;
+	
+	with enable_buffer select
+		data_out <= data_out_final (3 downto 0) 	when "00000001",
+						data_out_final (7 downto 4) 	when "00000010",
+						data_out_final (11 downto 8) 	when "00000100",
+						data_out_final (15 downto 12) when "00001000",
+						data_out_final (19 downto 16) when "00010000",
+						data_out_final (23 downto 20) when "00100000",
+						data_out_final (27 downto 24) when "01000000",
+						data_out_final (31 downto 28) when "10000000",
+						"ZZZZ" when Others;
+	
 end structural;

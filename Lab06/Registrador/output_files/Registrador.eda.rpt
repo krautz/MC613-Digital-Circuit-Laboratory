@@ -1,5 +1,5 @@
 EDA Netlist Writer report for Registrador
-Tue Apr  3 15:53:24 2018
+Wed Apr  4 20:25:49 2018
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -36,9 +36,9 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Tue Apr  3 15:53:24 2018 ;
+; EDA Netlist Writer Status ; Successful - Wed Apr  4 20:25:49 2018 ;
 ; Revision Name             ; Registrador                           ;
-; Top-level Entity Name     ; zbuffer                               ;
+; Top-level Entity Name     ; register_bank                         ;
 ; Family                    ; Cyclone V                             ;
 ; Simulation Files Creation ; Successful                            ;
 +---------------------------+---------------------------------------+
@@ -93,15 +93,15 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: the sole purpose of programming logic devices manufactured by
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details.
-    Info: Processing started: Tue Apr  3 15:53:22 2018
+    Info: Processing started: Wed Apr  4 20:25:49 2018
 Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=/home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/simulation/qsim/ Registrador -c Registrador
 Info (119006): Selected device 5CSEMA5F31C6 for design "Registrador"
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (204019): Generated file Registrador.vho in folder "/home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 1242 megabytes
-    Info: Processing ended: Tue Apr  3 15:53:24 2018
-    Info: Elapsed time: 00:00:02
+    Info: Processing ended: Wed Apr  4 20:25:49 2018
+    Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:01
 
 

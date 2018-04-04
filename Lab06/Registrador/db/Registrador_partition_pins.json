@@ -2,7 +2,76 @@
 	"partitions" : [
 		{
 			"name" : "Top",
-			"pins" : []
+			"pins" : [
+				{
+					"name" : "data_out[0]",
+					"strict" : false
+				},
+				{
+					"name" : "data_out[1]",
+					"strict" : false
+				},
+				{
+					"name" : "data_out[2]",
+					"strict" : false
+				},
+				{
+					"name" : "data_out[3]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_wr[0]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_wr[1]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_wr[2]",
+					"strict" : false
+				},
+				{
+					"name" : "we",
+					"strict" : false
+				},
+				{
+					"name" : "data_in[0]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "clear",
+					"strict" : false
+				},
+				{
+					"name" : "reg_rd[1]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_rd[2]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_rd[0]",
+					"strict" : false
+				},
+				{
+					"name" : "data_in[1]",
+					"strict" : false
+				},
+				{
+					"name" : "data_in[2]",
+					"strict" : false
+				},
+				{
+					"name" : "data_in[3]",
+					"strict" : false
+				}
+			]
 		}
 	]
 }

@@ -1,46 +1,54 @@
 # do Registrador.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:53:25 on Apr 03,2018
+# Start time: 20:25:50 on Apr 04,2018
 # vcom -work work Registrador.vho 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Loading package altera_lnsim_components
 # -- Loading package VITAL_Timing
 # -- Loading package VITAL_Primitives
+# -- Loading package dffeas_pack
+# -- Loading package altera_primitives_components
+# -- Loading package altera_lnsim_components
 # -- Loading package cyclonev_atom_pack
 # -- Loading package cyclonev_components
-# -- Compiling entity zbuffer
-# -- Compiling architecture structure of zbuffer
-# End time: 15:53:26 on Apr 03,2018, Elapsed time: 0:00:01
+# -- Compiling entity register_bank
+# -- Compiling architecture structure of register_bank
+# End time: 20:25:50 on Apr 04,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:53:26 on Apr 03,2018
-# vcom -work work Waveform1.vwf.vht 
+# Start time: 20:25:50 on Apr 04,2018
+# vcom -work work Waveform3.vwf.vht 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling entity zbuffer_vhd_vec_tst
-# -- Compiling architecture zbuffer_arch of zbuffer_vhd_vec_tst
-# End time: 15:53:26 on Apr 03,2018, Elapsed time: 0:00:00
+# -- Compiling entity register_bank_vhd_vec_tst
+# -- Compiling architecture register_bank_arch of register_bank_vhd_vec_tst
+# End time: 20:25:50 on Apr 04,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vsim -novopt -c -t 1ps -L cyclonev -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.zbuffer_vhd_vec_tst 
-# Start time: 15:53:26 on Apr 03,2018
+# vsim -novopt -c -t 1ps -L cyclonev -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.register_bank_vhd_vec_tst 
+# Start time: 20:25:50 on Apr 04,2018
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
-# Loading work.zbuffer_vhd_vec_tst(zbuffer_arch)
-# Loading altera_lnsim.altera_lnsim_components
+# Loading work.register_bank_vhd_vec_tst(register_bank_arch)
 # Loading ieee.vital_timing(body)
 # Loading ieee.vital_primitives(body)
+# Loading altera.dffeas_pack
+# Loading altera.altera_primitives_components
+# Loading altera_lnsim.altera_lnsim_components
 # Loading cyclonev.cyclonev_atom_pack(body)
 # Loading cyclonev.cyclonev_components
-# Loading work.zbuffer(structure)
+# Loading work.register_bank(structure)
 # Loading ieee.std_logic_arith(body)
 # Loading cyclonev.cyclonev_io_obuf(arch)
 # Loading cyclonev.cyclonev_io_ibuf(arch)
-# after#32
+# Loading cyclonev.cyclonev_lcell_comb(vital_lcell_comb)
+# Loading altera.dffeas(vital_dffeas)
+# ** Warning: Design size of 12736 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# Expect performance to be adversely affected.
+# after#34
 # ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
-# End time: 15:53:26 on Apr 03,2018, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 1
+# End time: 20:25:50 on Apr 04,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
