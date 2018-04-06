@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Registrador
-Wed Apr  4 20:21:57 2018
+Fri Apr  6 19:53:37 2018
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -51,14 +51,14 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Apr  4 20:21:57 2018       ;
+; Analysis & Synthesis Status     ; Successful - Fri Apr  6 19:53:37 2018       ;
 ; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; Registrador                                 ;
-; Top-level Entity Name           ; register_bank                               ;
+; Top-level Entity Name           ; register_bank_placa                         ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
 ; Total registers                 ; 32                                          ;
-; Total pins                      ; 17                                          ;
+; Total pins                      ; 24                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -71,91 +71,91 @@ refer to the applicable agreement for further details.
 +---------------------------------+---------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Settings                                                                                             ;
-+---------------------------------------------------------------------------------+--------------------+--------------------+
-; Option                                                                          ; Setting            ; Default Value      ;
-+---------------------------------------------------------------------------------+--------------------+--------------------+
-; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
-; Top-level entity name                                                           ; register_bank      ; Registrador        ;
-; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
-; Use smart compilation                                                           ; Off                ; Off                ;
-; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation      ; On                 ; On                 ;
-; Enable compact report table                                                     ; Off                ; Off                ;
-; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
-; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
-; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
-; Preserve fewer node names                                                       ; On                 ; On                 ;
-; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
-; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
-; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
-; State Machine Processing                                                        ; Auto               ; Auto               ;
-; Safe State Machine                                                              ; Off                ; Off                ;
-; Extract Verilog State Machines                                                  ; On                 ; On                 ;
-; Extract VHDL State Machines                                                     ; On                 ; On                 ;
-; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
-; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
-; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
-; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
-; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
-; Parallel Synthesis                                                              ; On                 ; On                 ;
-; DSP Block Balancing                                                             ; Auto               ; Auto               ;
-; NOT Gate Push-Back                                                              ; On                 ; On                 ;
-; Power-Up Don't Care                                                             ; On                 ; On                 ;
-; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
-; Remove Duplicate Registers                                                      ; On                 ; On                 ;
-; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
-; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
-; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
-; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
-; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
-; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
-; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
-; Optimization Technique                                                          ; Balanced           ; Balanced           ;
-; Carry Chain Length                                                              ; 70                 ; 70                 ;
-; Auto Carry Chains                                                               ; On                 ; On                 ;
-; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
-; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
-; Auto ROM Replacement                                                            ; On                 ; On                 ;
-; Auto RAM Replacement                                                            ; On                 ; On                 ;
-; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
-; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
-; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
-; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
-; Strict RAM Replacement                                                          ; Off                ; Off                ;
-; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
-; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
-; Auto Resource Sharing                                                           ; Off                ; Off                ;
-; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
-; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
-; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
-; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
-; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
-; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
-; Report Parameter Settings                                                       ; On                 ; On                 ;
-; Report Source Assignments                                                       ; On                 ; On                 ;
-; Report Connectivity Checks                                                      ; On                 ; On                 ;
-; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
-; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
-; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
-; HDL message level                                                               ; Level2             ; Level2             ;
-; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
-; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
-; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
-; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
-; Clock MUX Protection                                                            ; On                 ; On                 ;
-; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
-; Block Design Naming                                                             ; Auto               ; Auto               ;
-; SDC constraint protection                                                       ; Off                ; Off                ;
-; Synthesis Effort                                                                ; Auto               ; Auto               ;
-; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
-; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
-; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
-; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
-; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
-; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
-; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
-+---------------------------------------------------------------------------------+--------------------+--------------------+
++----------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                              ;
++---------------------------------------------------------------------------------+---------------------+--------------------+
+; Option                                                                          ; Setting             ; Default Value      ;
++---------------------------------------------------------------------------------+---------------------+--------------------+
+; Device                                                                          ; 5CSEMA5F31C6        ;                    ;
+; Top-level entity name                                                           ; register_bank_placa ; Registrador        ;
+; Family name                                                                     ; Cyclone V           ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                 ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation      ; On                  ; On                 ;
+; Enable compact report table                                                     ; Off                 ; Off                ;
+; Restructure Multiplexers                                                        ; Auto                ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                 ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                 ; Off                ;
+; Preserve fewer node names                                                       ; On                  ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable              ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001        ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993           ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto                ; Auto               ;
+; Safe State Machine                                                              ; Off                 ; Off                ;
+; Extract Verilog State Machines                                                  ; On                  ; On                 ;
+; Extract VHDL State Machines                                                     ; On                  ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                 ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000                ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                 ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                  ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                  ; On                 ;
+; Parallel Synthesis                                                              ; On                  ; On                 ;
+; DSP Block Balancing                                                             ; Auto                ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                  ; On                 ;
+; Power-Up Don't Care                                                             ; On                  ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                 ; Off                ;
+; Remove Duplicate Registers                                                      ; On                  ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                 ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                 ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                 ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                 ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                 ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                  ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                 ; Off                ;
+; Optimization Technique                                                          ; Balanced            ; Balanced           ;
+; Carry Chain Length                                                              ; 70                  ; 70                 ;
+; Auto Carry Chains                                                               ; On                  ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                  ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                 ; Off                ;
+; Auto ROM Replacement                                                            ; On                  ; On                 ;
+; Auto RAM Replacement                                                            ; On                  ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                  ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto                ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto                ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                  ; On                 ;
+; Strict RAM Replacement                                                          ; Off                 ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                  ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                 ; Off                ;
+; Auto Resource Sharing                                                           ; Off                 ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                 ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                 ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                 ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                  ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                 ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                  ; On                 ;
+; Report Parameter Settings                                                       ; On                  ; On                 ;
+; Report Source Assignments                                                       ; On                  ; On                 ;
+; Report Connectivity Checks                                                      ; On                  ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                 ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                   ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation  ; Normal compilation ;
+; HDL message level                                                               ; Level2              ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                 ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000                ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000                ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                 ; 100                ;
+; Clock MUX Protection                                                            ; On                  ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                 ; Off                ;
+; Block Design Naming                                                             ; Auto                ; Auto               ;
+; SDC constraint protection                                                       ; Off                 ; Off                ;
+; Synthesis Effort                                                                ; Auto                ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                  ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                 ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium              ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto                ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                  ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                  ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                 ; Off                ;
++---------------------------------------------------------------------------------+---------------------+--------------------+
 
 
 +------------------------------------------+
@@ -174,16 +174,17 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                         ;
-+----------------------------------+-----------------+-----------------------+-------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type             ; File Name with Absolute Path                                            ; Library ;
-+----------------------------------+-----------------+-----------------------+-------------------------------------------------------------------------+---------+
-; zbuffer.vhd                      ; yes             ; User VHDL File        ; /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/zbuffer.vhd       ;         ;
-; dec3_to_8.vhd                    ; yes             ; User VHDL File        ; /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/dec3_to_8.vhd     ;         ;
-; register_bank.vhd                ; yes             ; Auto-Found VHDL File  ; /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/register_bank.vhd ;         ;
-; reg.vhd                          ; yes             ; Auto-Found VHDL File  ; /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/reg.vhd           ;         ;
-+----------------------------------+-----------------+-----------------------+-------------------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                  ;
++----------------------------------+-----------------+-----------------------+--------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type             ; File Name with Absolute Path                                                                     ; Library ;
++----------------------------------+-----------------+-----------------------+--------------------------------------------------------------------------------------------------+---------+
+; zbuffer.vhd                      ; yes             ; User VHDL File        ; /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/zbuffer.vhd             ;         ;
+; dec3_to_8.vhd                    ; yes             ; User VHDL File        ; /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/dec3_to_8.vhd           ;         ;
+; register_bank_placa.vhd          ; yes             ; Auto-Found VHDL File  ; /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/register_bank_placa.vhd ;         ;
+; reg.vhd                          ; yes             ; Auto-Found VHDL File  ; /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/reg.vhd                 ;         ;
+; bin2hex.vhd                      ; yes             ; Auto-Found VHDL File  ; /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/bin2hex.vhd             ;         ;
++----------------------------------+-----------------+-----------------------+--------------------------------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -191,45 +192,46 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 25        ;
+; Estimate of Logic utilization (ALMs needed) ; 26        ;
 ;                                             ;           ;
-; Combinational ALUT usage for logic          ; 26        ;
+; Combinational ALUT usage for logic          ; 33        ;
 ;     -- 7 input functions                    ; 0         ;
 ;     -- 6 input functions                    ; 4         ;
 ;     -- 5 input functions                    ; 8         ;
-;     -- 4 input functions                    ; 12        ;
+;     -- 4 input functions                    ; 19        ;
 ;     -- <=3 input functions                  ; 2         ;
 ;                                             ;           ;
 ; Dedicated logic registers                   ; 32        ;
 ;                                             ;           ;
-; I/O pins                                    ; 17        ;
+; I/O pins                                    ; 24        ;
 ;                                             ;           ;
 ; Total DSP Blocks                            ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
 ; Maximum fan-out                             ; 32        ;
-; Total fan-out                               ; 271       ;
-; Average fan-out                             ; 2.95      ;
+; Total fan-out                               ; 305       ;
+; Average fan-out                             ; 2.70      ;
 +---------------------------------------------+-----------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                         ;
-+-------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------+---------------+--------------+
-; Compilation Hierarchy Node          ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                           ; Entity Name   ; Library Name ;
-+-------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------+---------------+--------------+
-; |register_bank                      ; 26 (17)             ; 32 (0)                    ; 0                 ; 0          ; 17   ; 0            ; |register_bank                                ; register_bank ; work         ;
-;    |dec3_to_8:dec3_to_8_instance_1| ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |register_bank|dec3_to_8:dec3_to_8_instance_1 ; dec3_to_8     ; work         ;
-;    |dec3_to_8:dec3_to_8_instance_2| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |register_bank|dec3_to_8:dec3_to_8_instance_2 ; dec3_to_8     ; work         ;
-;    |reg:\G1:0:reg_instance|         ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |register_bank|reg:\G1:0:reg_instance         ; reg           ; work         ;
-;    |reg:\G1:1:reg_instance|         ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |register_bank|reg:\G1:1:reg_instance         ; reg           ; work         ;
-;    |reg:\G1:2:reg_instance|         ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |register_bank|reg:\G1:2:reg_instance         ; reg           ; work         ;
-;    |reg:\G1:3:reg_instance|         ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |register_bank|reg:\G1:3:reg_instance         ; reg           ; work         ;
-;    |reg:\G1:4:reg_instance|         ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |register_bank|reg:\G1:4:reg_instance         ; reg           ; work         ;
-;    |reg:\G1:5:reg_instance|         ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |register_bank|reg:\G1:5:reg_instance         ; reg           ; work         ;
-;    |reg:\G1:6:reg_instance|         ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |register_bank|reg:\G1:6:reg_instance         ; reg           ; work         ;
-;    |reg:\G1:7:reg_instance|         ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |register_bank|reg:\G1:7:reg_instance         ; reg           ; work         ;
-+-------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------+---------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                     ;
++-------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------+---------------------+--------------+
+; Compilation Hierarchy Node          ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                 ; Entity Name         ; Library Name ;
++-------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------+---------------------+--------------+
+; |register_bank_placa                ; 33 (17)             ; 32 (0)                    ; 0                 ; 0          ; 24   ; 0            ; |register_bank_placa                                ; register_bank_placa ; work         ;
+;    |bin2hex:bin2hex_instance|       ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |register_bank_placa|bin2hex:bin2hex_instance       ; bin2hex             ; work         ;
+;    |dec3_to_8:dec3_to_8_instance_1| ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |register_bank_placa|dec3_to_8:dec3_to_8_instance_1 ; dec3_to_8           ; work         ;
+;    |dec3_to_8:dec3_to_8_instance_2| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |register_bank_placa|dec3_to_8:dec3_to_8_instance_2 ; dec3_to_8           ; work         ;
+;    |reg:\G1:0:reg_instance|         ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |register_bank_placa|reg:\G1:0:reg_instance         ; reg                 ; work         ;
+;    |reg:\G1:1:reg_instance|         ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |register_bank_placa|reg:\G1:1:reg_instance         ; reg                 ; work         ;
+;    |reg:\G1:2:reg_instance|         ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |register_bank_placa|reg:\G1:2:reg_instance         ; reg                 ; work         ;
+;    |reg:\G1:3:reg_instance|         ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |register_bank_placa|reg:\G1:3:reg_instance         ; reg                 ; work         ;
+;    |reg:\G1:4:reg_instance|         ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |register_bank_placa|reg:\G1:4:reg_instance         ; reg                 ; work         ;
+;    |reg:\G1:5:reg_instance|         ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |register_bank_placa|reg:\G1:5:reg_instance         ; reg                 ; work         ;
+;    |reg:\G1:6:reg_instance|         ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |register_bank_placa|reg:\G1:6:reg_instance         ; reg                 ; work         ;
+;    |reg:\G1:7:reg_instance|         ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |register_bank_placa|reg:\G1:7:reg_instance         ; reg                 ; work         ;
++-------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -253,7 +255,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 8:1                ; 4 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |register_bank|Mux0        ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |register_bank_placa|Mux0  ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
@@ -344,17 +346,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; arriav_ff             ; 32                          ;
 ;     ENA CLR           ; 32                          ;
-; arriav_io_obuf        ; 4                           ;
-; arriav_lcell_comb     ; 26                          ;
-;     normal            ; 26                          ;
+; arriav_lcell_comb     ; 35                          ;
+;     normal            ; 35                          ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 1                           ;
 ;         3 data inputs ; 2                           ;
-;         4 data inputs ; 12                          ;
+;         4 data inputs ; 19                          ;
 ;         5 data inputs ; 8                           ;
 ;         6 data inputs ; 4                           ;
-; boundary_port         ; 17                          ;
+; boundary_port         ; 24                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 3.00                        ;
-; Average LUT depth     ; 1.80                        ;
+; Max LUT depth         ; 5.00                        ;
+; Average LUT depth     ; 3.46                        ;
 +-----------------------+-----------------------------+
 
 
@@ -373,71 +376,81 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Wed Apr  4 20:21:47 2018
+    Info: Processing started: Fri Apr  6 19:53:27 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Registrador -c Registrador
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file zbuffer.vhd
-    Info (12022): Found design unit 1: zbuffer-Behavior File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/zbuffer.vhd Line: 13
-    Info (12023): Found entity 1: zbuffer File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/zbuffer.vhd Line: 4
+    Info (12022): Found design unit 1: zbuffer-Behavior File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/zbuffer.vhd Line: 13
+    Info (12023): Found entity 1: zbuffer File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/zbuffer.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file dec3_to_8.vhd
-    Info (12022): Found design unit 1: dec3_to_8-rtl File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/dec3_to_8.vhd Line: 12
-    Info (12023): Found entity 1: dec3_to_8 File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/dec3_to_8.vhd Line: 4
-Warning (12125): Using design file register_bank.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: register_bank-structural File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/register_bank.vhd Line: 16
-    Info (12023): Found entity 1: register_bank File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/register_bank.vhd Line: 4
-Info (12127): Elaborating entity "register_bank" for the top level hierarchy
-Info (12128): Elaborating entity "dec3_to_8" for hierarchy "dec3_to_8:dec3_to_8_instance_1" File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/register_bank.vhd Line: 53
+    Info (12022): Found design unit 1: dec3_to_8-rtl File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/dec3_to_8.vhd Line: 12
+    Info (12023): Found entity 1: dec3_to_8 File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/dec3_to_8.vhd Line: 4
+Warning (12125): Using design file register_bank_placa.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: register_bank_placa-structural File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/register_bank_placa.vhd Line: 17
+    Info (12023): Found entity 1: register_bank_placa File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/register_bank_placa.vhd Line: 4
+Info (12127): Elaborating entity "register_bank_placa" for the top level hierarchy
+Warning (10541): VHDL Signal Declaration warning at register_bank_placa.vhd(8): used implicit default value for signal "data_out" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/register_bank_placa.vhd Line: 8
+Info (12128): Elaborating entity "dec3_to_8" for hierarchy "dec3_to_8:dec3_to_8_instance_1" File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/register_bank_placa.vhd Line: 61
 Warning (12125): Using design file reg.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: reg-rtl File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/reg.vhd Line: 17
-    Info (12023): Found entity 1: reg File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/reg.vhd Line: 4
-Info (12128): Elaborating entity "reg" for hierarchy "reg:\G1:0:reg_instance" File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/register_bank.vhd Line: 63
-Warning (10492): VHDL Process Statement warning at reg.vhd(28): signal "load" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/reg.vhd Line: 28
-Info (12128): Elaborating entity "zbuffer" for hierarchy "zbuffer:\G1:0:buffer_instance" File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/register_bank.vhd Line: 68
+    Info (12022): Found design unit 1: reg-rtl File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/reg.vhd Line: 17
+    Info (12023): Found entity 1: reg File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/reg.vhd Line: 4
+Info (12128): Elaborating entity "reg" for hierarchy "reg:\G1:0:reg_instance" File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/register_bank_placa.vhd Line: 71
+Warning (10492): VHDL Process Statement warning at reg.vhd(28): signal "load" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/reg.vhd Line: 28
+Info (12128): Elaborating entity "zbuffer" for hierarchy "zbuffer:\G1:0:buffer_instance" File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/register_bank_placa.vhd Line: 76
+Warning (12125): Using design file bin2hex.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: bin2hex-LogicFunction File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/bin2hex.vhd Line: 11
+    Info (12023): Found entity 1: bin2hex File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/bin2hex.vhd Line: 4
+Info (12128): Elaborating entity "bin2hex" for hierarchy "bin2hex:bin2hex_instance" File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/register_bank_placa.vhd Line: 93
 Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
-    Warning (13049): Converted tri-state buffer "zbuffer:\G1:7:buffer_instance|F[0]" feeding internal logic into a wire File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/zbuffer.vhd Line: 8
-    Warning (13049): Converted tri-state buffer "zbuffer:\G1:7:buffer_instance|F[1]" feeding internal logic into a wire File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/zbuffer.vhd Line: 8
-    Warning (13049): Converted tri-state buffer "zbuffer:\G1:7:buffer_instance|F[2]" feeding internal logic into a wire File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/zbuffer.vhd Line: 8
-    Warning (13049): Converted tri-state buffer "zbuffer:\G1:7:buffer_instance|F[3]" feeding internal logic into a wire File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/zbuffer.vhd Line: 8
-    Warning (13049): Converted tri-state buffer "zbuffer:\G1:6:buffer_instance|F[0]" feeding internal logic into a wire File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/zbuffer.vhd Line: 8
-    Warning (13049): Converted tri-state buffer "zbuffer:\G1:6:buffer_instance|F[1]" feeding internal logic into a wire File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/zbuffer.vhd Line: 8
-    Warning (13049): Converted tri-state buffer "zbuffer:\G1:6:buffer_instance|F[2]" feeding internal logic into a wire File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/zbuffer.vhd Line: 8
-    Warning (13049): Converted tri-state buffer "zbuffer:\G1:6:buffer_instance|F[3]" feeding internal logic into a wire File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/zbuffer.vhd Line: 8
-    Warning (13049): Converted tri-state buffer "zbuffer:\G1:5:buffer_instance|F[0]" feeding internal logic into a wire File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/zbuffer.vhd Line: 8
-    Warning (13049): Converted tri-state buffer "zbuffer:\G1:5:buffer_instance|F[1]" feeding internal logic into a wire File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/zbuffer.vhd Line: 8
-    Warning (13049): Converted tri-state buffer "zbuffer:\G1:5:buffer_instance|F[2]" feeding internal logic into a wire File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/zbuffer.vhd Line: 8
-    Warning (13049): Converted tri-state buffer "zbuffer:\G1:5:buffer_instance|F[3]" feeding internal logic into a wire File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/zbuffer.vhd Line: 8
-    Warning (13049): Converted tri-state buffer "zbuffer:\G1:4:buffer_instance|F[0]" feeding internal logic into a wire File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/zbuffer.vhd Line: 8
-    Warning (13049): Converted tri-state buffer "zbuffer:\G1:4:buffer_instance|F[1]" feeding internal logic into a wire File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/zbuffer.vhd Line: 8
-    Warning (13049): Converted tri-state buffer "zbuffer:\G1:4:buffer_instance|F[2]" feeding internal logic into a wire File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/zbuffer.vhd Line: 8
-    Warning (13049): Converted tri-state buffer "zbuffer:\G1:4:buffer_instance|F[3]" feeding internal logic into a wire File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/zbuffer.vhd Line: 8
-    Warning (13049): Converted tri-state buffer "zbuffer:\G1:3:buffer_instance|F[0]" feeding internal logic into a wire File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/zbuffer.vhd Line: 8
-    Warning (13049): Converted tri-state buffer "zbuffer:\G1:3:buffer_instance|F[1]" feeding internal logic into a wire File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/zbuffer.vhd Line: 8
-    Warning (13049): Converted tri-state buffer "zbuffer:\G1:3:buffer_instance|F[2]" feeding internal logic into a wire File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/zbuffer.vhd Line: 8
-    Warning (13049): Converted tri-state buffer "zbuffer:\G1:3:buffer_instance|F[3]" feeding internal logic into a wire File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/zbuffer.vhd Line: 8
-    Warning (13049): Converted tri-state buffer "zbuffer:\G1:2:buffer_instance|F[0]" feeding internal logic into a wire File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/zbuffer.vhd Line: 8
-    Warning (13049): Converted tri-state buffer "zbuffer:\G1:2:buffer_instance|F[1]" feeding internal logic into a wire File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/zbuffer.vhd Line: 8
-    Warning (13049): Converted tri-state buffer "zbuffer:\G1:2:buffer_instance|F[2]" feeding internal logic into a wire File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/zbuffer.vhd Line: 8
-    Warning (13049): Converted tri-state buffer "zbuffer:\G1:2:buffer_instance|F[3]" feeding internal logic into a wire File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/zbuffer.vhd Line: 8
-    Warning (13049): Converted tri-state buffer "zbuffer:\G1:1:buffer_instance|F[0]" feeding internal logic into a wire File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/zbuffer.vhd Line: 8
-    Warning (13049): Converted tri-state buffer "zbuffer:\G1:1:buffer_instance|F[1]" feeding internal logic into a wire File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/zbuffer.vhd Line: 8
-    Warning (13049): Converted tri-state buffer "zbuffer:\G1:1:buffer_instance|F[2]" feeding internal logic into a wire File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/zbuffer.vhd Line: 8
-    Warning (13049): Converted tri-state buffer "zbuffer:\G1:1:buffer_instance|F[3]" feeding internal logic into a wire File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/zbuffer.vhd Line: 8
-    Warning (13049): Converted tri-state buffer "zbuffer:\G1:0:buffer_instance|F[0]" feeding internal logic into a wire File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/zbuffer.vhd Line: 8
-    Warning (13049): Converted tri-state buffer "zbuffer:\G1:0:buffer_instance|F[1]" feeding internal logic into a wire File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/zbuffer.vhd Line: 8
-    Warning (13049): Converted tri-state buffer "zbuffer:\G1:0:buffer_instance|F[2]" feeding internal logic into a wire File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/zbuffer.vhd Line: 8
-    Warning (13049): Converted tri-state buffer "zbuffer:\G1:0:buffer_instance|F[3]" feeding internal logic into a wire File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/zbuffer.vhd Line: 8
+    Warning (13049): Converted tri-state buffer "zbuffer:\G1:7:buffer_instance|F[0]" feeding internal logic into a wire File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/zbuffer.vhd Line: 8
+    Warning (13049): Converted tri-state buffer "zbuffer:\G1:7:buffer_instance|F[1]" feeding internal logic into a wire File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/zbuffer.vhd Line: 8
+    Warning (13049): Converted tri-state buffer "zbuffer:\G1:7:buffer_instance|F[2]" feeding internal logic into a wire File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/zbuffer.vhd Line: 8
+    Warning (13049): Converted tri-state buffer "zbuffer:\G1:7:buffer_instance|F[3]" feeding internal logic into a wire File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/zbuffer.vhd Line: 8
+    Warning (13049): Converted tri-state buffer "zbuffer:\G1:6:buffer_instance|F[0]" feeding internal logic into a wire File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/zbuffer.vhd Line: 8
+    Warning (13049): Converted tri-state buffer "zbuffer:\G1:6:buffer_instance|F[1]" feeding internal logic into a wire File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/zbuffer.vhd Line: 8
+    Warning (13049): Converted tri-state buffer "zbuffer:\G1:6:buffer_instance|F[2]" feeding internal logic into a wire File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/zbuffer.vhd Line: 8
+    Warning (13049): Converted tri-state buffer "zbuffer:\G1:6:buffer_instance|F[3]" feeding internal logic into a wire File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/zbuffer.vhd Line: 8
+    Warning (13049): Converted tri-state buffer "zbuffer:\G1:5:buffer_instance|F[0]" feeding internal logic into a wire File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/zbuffer.vhd Line: 8
+    Warning (13049): Converted tri-state buffer "zbuffer:\G1:5:buffer_instance|F[1]" feeding internal logic into a wire File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/zbuffer.vhd Line: 8
+    Warning (13049): Converted tri-state buffer "zbuffer:\G1:5:buffer_instance|F[2]" feeding internal logic into a wire File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/zbuffer.vhd Line: 8
+    Warning (13049): Converted tri-state buffer "zbuffer:\G1:5:buffer_instance|F[3]" feeding internal logic into a wire File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/zbuffer.vhd Line: 8
+    Warning (13049): Converted tri-state buffer "zbuffer:\G1:4:buffer_instance|F[0]" feeding internal logic into a wire File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/zbuffer.vhd Line: 8
+    Warning (13049): Converted tri-state buffer "zbuffer:\G1:4:buffer_instance|F[1]" feeding internal logic into a wire File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/zbuffer.vhd Line: 8
+    Warning (13049): Converted tri-state buffer "zbuffer:\G1:4:buffer_instance|F[2]" feeding internal logic into a wire File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/zbuffer.vhd Line: 8
+    Warning (13049): Converted tri-state buffer "zbuffer:\G1:4:buffer_instance|F[3]" feeding internal logic into a wire File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/zbuffer.vhd Line: 8
+    Warning (13049): Converted tri-state buffer "zbuffer:\G1:3:buffer_instance|F[0]" feeding internal logic into a wire File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/zbuffer.vhd Line: 8
+    Warning (13049): Converted tri-state buffer "zbuffer:\G1:3:buffer_instance|F[1]" feeding internal logic into a wire File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/zbuffer.vhd Line: 8
+    Warning (13049): Converted tri-state buffer "zbuffer:\G1:3:buffer_instance|F[2]" feeding internal logic into a wire File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/zbuffer.vhd Line: 8
+    Warning (13049): Converted tri-state buffer "zbuffer:\G1:3:buffer_instance|F[3]" feeding internal logic into a wire File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/zbuffer.vhd Line: 8
+    Warning (13049): Converted tri-state buffer "zbuffer:\G1:2:buffer_instance|F[0]" feeding internal logic into a wire File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/zbuffer.vhd Line: 8
+    Warning (13049): Converted tri-state buffer "zbuffer:\G1:2:buffer_instance|F[1]" feeding internal logic into a wire File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/zbuffer.vhd Line: 8
+    Warning (13049): Converted tri-state buffer "zbuffer:\G1:2:buffer_instance|F[2]" feeding internal logic into a wire File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/zbuffer.vhd Line: 8
+    Warning (13049): Converted tri-state buffer "zbuffer:\G1:2:buffer_instance|F[3]" feeding internal logic into a wire File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/zbuffer.vhd Line: 8
+    Warning (13049): Converted tri-state buffer "zbuffer:\G1:1:buffer_instance|F[0]" feeding internal logic into a wire File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/zbuffer.vhd Line: 8
+    Warning (13049): Converted tri-state buffer "zbuffer:\G1:1:buffer_instance|F[1]" feeding internal logic into a wire File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/zbuffer.vhd Line: 8
+    Warning (13049): Converted tri-state buffer "zbuffer:\G1:1:buffer_instance|F[2]" feeding internal logic into a wire File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/zbuffer.vhd Line: 8
+    Warning (13049): Converted tri-state buffer "zbuffer:\G1:1:buffer_instance|F[3]" feeding internal logic into a wire File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/zbuffer.vhd Line: 8
+    Warning (13049): Converted tri-state buffer "zbuffer:\G1:0:buffer_instance|F[0]" feeding internal logic into a wire File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/zbuffer.vhd Line: 8
+    Warning (13049): Converted tri-state buffer "zbuffer:\G1:0:buffer_instance|F[1]" feeding internal logic into a wire File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/zbuffer.vhd Line: 8
+    Warning (13049): Converted tri-state buffer "zbuffer:\G1:0:buffer_instance|F[2]" feeding internal logic into a wire File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/zbuffer.vhd Line: 8
+    Warning (13049): Converted tri-state buffer "zbuffer:\G1:0:buffer_instance|F[3]" feeding internal logic into a wire File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/zbuffer.vhd Line: 8
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "data_out[0]" is stuck at GND File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/register_bank_placa.vhd Line: 8
+    Warning (13410): Pin "data_out[1]" is stuck at GND File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/register_bank_placa.vhd Line: 8
+    Warning (13410): Pin "data_out[2]" is stuck at GND File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/register_bank_placa.vhd Line: 8
+    Warning (13410): Pin "data_out[3]" is stuck at GND File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/register_bank_placa.vhd Line: 8
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 75 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 89 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 13 input pins
-    Info (21059): Implemented 4 output pins
-    Info (21061): Implemented 58 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 37 warnings
-    Info: Peak virtual memory: 1168 megabytes
-    Info: Processing ended: Wed Apr  4 20:21:57 2018
+    Info (21059): Implemented 11 output pins
+    Info (21061): Implemented 65 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 44 warnings
+    Info: Peak virtual memory: 1162 megabytes
+    Info: Processing ended: Fri Apr  6 19:53:37 2018
     Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:21
+    Info: Total CPU time (on all processors): 00:00:20
 
 

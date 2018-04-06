@@ -189,7 +189,7 @@ R32
 R16
 R17
 Eregister_bank
-Z33 w1522884349
+Z33 w1523054096
 R3
 R5
 R8
@@ -199,7 +199,7 @@ R4
 R6
 R7
 R25
-R0
+Z34 d/home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/simulation/qsim
 R9
 R10
 l0
@@ -208,9 +208,9 @@ V_9F8]kO[Z:d6V[?TP57eU3
 !s100 1Zm3ZFj0ck_1j`LJa2MB31
 R11
 32
-Z34 !s110 1522884350
+Z35 !s110 1523054097
 !i10b 1
-Z35 !s108 1522884350.000000
+Z36 !s108 1523054097.000000
 R14
 R15
 !i113 1
@@ -229,59 +229,59 @@ R25
 DEx4 work 13 register_bank 0 22 _9F8]kO[Z:d6V[?TP57eU3
 l149
 L50
-VICV20G0E4YcW`jAcYaOYk2
-!s100 _A8AEdG][F_1bXjObl=0g2
+Vb9Aj[K[Wc0zmk8;O59U8a1
+!s100 YT37eXIo7@T`Vh?;NZQ2g0
 R11
 32
-R34
-!i10b 1
 R35
+!i10b 1
+R36
 R14
 R15
 !i113 1
 R16
 R17
 Eregister_bank_vhd_vec_tst
-Z36 w1522884348
+Z37 w1523054095
 R6
 R7
-R0
-Z37 8Waveform3.vwf.vht
-Z38 FWaveform3.vwf.vht
+R34
+Z38 8Waveform3.vwf.vht
+Z39 FWaveform3.vwf.vht
 l0
 L31
 V7Z2o6LK[VBDzSge`lnknW1
 !s100 URYZbTSS`dofjoco]mc8M2
 R11
 32
-R34
-!i10b 1
 R35
-Z39 !s90 -work|work|Waveform3.vwf.vht|
-Z40 !s107 Waveform3.vwf.vht|
+!i10b 1
+R36
+Z40 !s90 -work|work|Waveform3.vwf.vht|
+Z41 !s107 Waveform3.vwf.vht|
 !i113 1
 R16
 R17
 Aregister_bank_arch
 R6
 R7
-Z41 DEx4 work 25 register_bank_vhd_vec_tst 0 22 7Z2o6LK[VBDzSge`lnknW1
+Z42 DEx4 work 25 register_bank_vhd_vec_tst 0 22 7Z2o6LK[VBDzSge`lnknW1
 l54
 L33
-VnW1QojCf=Vi5_2nNNUWZd1
-!s100 Y8mUVQnTB0;iTY[ULh6Hj2
+VHfJTK:K15T_MGeGTVXPUW1
+!s100 UX7]RW9n`2QPON`?N7kJ33
 R11
 32
-R34
-!i10b 1
 R35
-R39
+!i10b 1
+R36
 R40
+R41
 !i113 1
 R16
 R17
 Ezbuffer
-Z42 w1522781604
+Z43 w1522781604
 R2
 R3
 R4
@@ -298,9 +298,9 @@ VYDLJIg^O=VBmXiY;1T88l1
 !s100 IZUfgn_EJC62N@i^50lh]3
 R11
 32
-Z43 !s110 1522781605
+Z44 !s110 1522781605
 !i10b 1
-Z44 !s108 1522781605.000000
+Z45 !s108 1522781605.000000
 R14
 R15
 !i113 1
@@ -321,32 +321,32 @@ VHf8z1S9e:h7JhNU@CBFMS0
 !s100 U^P>Ogk0;n>REi<iJFS:;0
 R11
 32
-R43
-!i10b 1
 R44
+!i10b 1
+R45
 R14
 R15
 !i113 1
 R16
 R17
 Ezbuffer_vhd_vec_tst
-Z45 w1522781601
+Z46 w1522781601
 R6
 R7
 R0
-Z46 8Waveform1.vwf.vht
-Z47 FWaveform1.vwf.vht
+Z47 8Waveform1.vwf.vht
+Z48 FWaveform1.vwf.vht
 l0
 L31
 V0h2302Ub;NJ96QE?XMAl<3
 !s100 P6zWUA`Vo7;OU2[0MV46k0
 R11
 32
-Z48 !s110 1522781606
+Z49 !s110 1522781606
 !i10b 1
-Z49 !s108 1522781606.000000
-Z50 !s90 -work|work|Waveform1.vwf.vht|
-Z51 !s107 Waveform1.vwf.vht|
+Z50 !s108 1522781606.000000
+Z51 !s90 -work|work|Waveform1.vwf.vht|
+Z52 !s107 Waveform1.vwf.vht|
 !i113 1
 R16
 R17
@@ -360,11 +360,11 @@ V3EQkJ0WQgdTC;leLLmbC]1
 !s100 ;:2jA<k8R40BUmjBIE^R<2
 R11
 32
-R48
-!i10b 1
 R49
+!i10b 1
 R50
 R51
+R52
 !i113 1
 R16
 R17

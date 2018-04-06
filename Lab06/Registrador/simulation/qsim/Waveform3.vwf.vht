@@ -18,7 +18,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "04/04/2018 20:25:48"
+-- Generated on "04/06/2018 19:34:55"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          register_bank
 -- 
@@ -68,6 +68,10 @@ BEGIN
 t_prcs_clear: PROCESS
 BEGIN
 	clear <= '0';
+	WAIT FOR 420000 ps;
+	clear <= '1';
+	WAIT FOR 40000 ps;
+	clear <= '0';
 WAIT;
 END PROCESS t_prcs_clear;
 
@@ -83,12 +87,24 @@ BEGIN
 	clk <= '1';
 	WAIT FOR 10000 ps;
 	clk <= '0';
+	WAIT FOR 70000 ps;
+	clk <= '1';
+	WAIT FOR 10000 ps;
+	clk <= '0';
+	WAIT FOR 140000 ps;
+	clk <= '1';
+	WAIT FOR 10000 ps;
+	clk <= '0';
 WAIT;
 END PROCESS t_prcs_clk;
 
 -- we
 t_prcs_we: PROCESS
 BEGIN
+	we <= '1';
+	WAIT FOR 170000 ps;
+	we <= '0';
+	WAIT FOR 120000 ps;
 	we <= '1';
 WAIT;
 END PROCESS t_prcs_we;
@@ -97,6 +113,14 @@ t_prcs_reg_rd_2: PROCESS
 BEGIN
 	reg_rd(2) <= '1';
 	WAIT FOR 160000 ps;
+	reg_rd(2) <= '0';
+	WAIT FOR 20000 ps;
+	reg_rd(2) <= '1';
+	WAIT FOR 40000 ps;
+	reg_rd(2) <= '0';
+	WAIT FOR 100000 ps;
+	reg_rd(2) <= '1';
+	WAIT FOR 50000 ps;
 	reg_rd(2) <= '0';
 WAIT;
 END PROCESS t_prcs_reg_rd_2;
@@ -116,6 +140,14 @@ BEGIN
 	reg_rd(0) <= '1';
 	WAIT FOR 160000 ps;
 	reg_rd(0) <= '0';
+	WAIT FOR 20000 ps;
+	reg_rd(0) <= '1';
+	WAIT FOR 40000 ps;
+	reg_rd(0) <= '0';
+	WAIT FOR 100000 ps;
+	reg_rd(0) <= '1';
+	WAIT FOR 50000 ps;
+	reg_rd(0) <= '0';
 WAIT;
 END PROCESS t_prcs_reg_rd_0;
 -- reg_wr[2]
@@ -124,11 +156,35 @@ BEGIN
 	reg_wr(2) <= '1';
 	WAIT FOR 80000 ps;
 	reg_wr(2) <= '0';
+	WAIT FOR 50000 ps;
+	reg_wr(2) <= '1';
+	WAIT FOR 120000 ps;
+	reg_wr(2) <= '0';
+	WAIT FOR 70000 ps;
+	reg_wr(2) <= '1';
+	WAIT FOR 90000 ps;
+	reg_wr(2) <= '0';
+	WAIT FOR 70000 ps;
+	reg_wr(2) <= '1';
+	WAIT FOR 50000 ps;
+	reg_wr(2) <= '0';
+	WAIT FOR 150000 ps;
+	reg_wr(2) <= '1';
+	WAIT FOR 110000 ps;
+	reg_wr(2) <= '0';
 WAIT;
 END PROCESS t_prcs_reg_wr_2;
 -- reg_wr[1]
 t_prcs_reg_wr_1: PROCESS
 BEGIN
+	reg_wr(1) <= '0';
+	WAIT FOR 130000 ps;
+	reg_wr(1) <= '1';
+	WAIT FOR 30000 ps;
+	reg_wr(1) <= '0';
+	WAIT FOR 520000 ps;
+	reg_wr(1) <= '1';
+	WAIT FOR 110000 ps;
 	reg_wr(1) <= '0';
 WAIT;
 END PROCESS t_prcs_reg_wr_1;
@@ -138,6 +194,22 @@ BEGIN
 	reg_wr(0) <= '1';
 	WAIT FOR 80000 ps;
 	reg_wr(0) <= '0';
+	WAIT FOR 50000 ps;
+	reg_wr(0) <= '1';
+	WAIT FOR 120000 ps;
+	reg_wr(0) <= '0';
+	WAIT FOR 70000 ps;
+	reg_wr(0) <= '1';
+	WAIT FOR 90000 ps;
+	reg_wr(0) <= '0';
+	WAIT FOR 70000 ps;
+	reg_wr(0) <= '1';
+	WAIT FOR 50000 ps;
+	reg_wr(0) <= '0';
+	WAIT FOR 150000 ps;
+	reg_wr(0) <= '1';
+	WAIT FOR 110000 ps;
+	reg_wr(0) <= '0';
 WAIT;
 END PROCESS t_prcs_reg_wr_0;
 -- data_in[3]
@@ -145,6 +217,10 @@ t_prcs_data_in_3: PROCESS
 BEGIN
 	data_in(3) <= '1';
 	WAIT FOR 80000 ps;
+	data_in(3) <= '0';
+	WAIT FOR 220000 ps;
+	data_in(3) <= '1';
+	WAIT FOR 60000 ps;
 	data_in(3) <= '0';
 WAIT;
 END PROCESS t_prcs_data_in_3;
@@ -154,11 +230,23 @@ BEGIN
 	data_in(2) <= '1';
 	WAIT FOR 80000 ps;
 	data_in(2) <= '0';
+	WAIT FOR 220000 ps;
+	data_in(2) <= '1';
+	WAIT FOR 60000 ps;
+	data_in(2) <= '0';
 WAIT;
 END PROCESS t_prcs_data_in_2;
 -- data_in[1]
 t_prcs_data_in_1: PROCESS
 BEGIN
+	data_in(1) <= '0';
+	WAIT FOR 180000 ps;
+	data_in(1) <= '1';
+	WAIT FOR 30000 ps;
+	data_in(1) <= '0';
+	WAIT FOR 90000 ps;
+	data_in(1) <= '1';
+	WAIT FOR 60000 ps;
 	data_in(1) <= '0';
 WAIT;
 END PROCESS t_prcs_data_in_1;
@@ -167,6 +255,14 @@ t_prcs_data_in_0: PROCESS
 BEGIN
 	data_in(0) <= '1';
 	WAIT FOR 160000 ps;
+	data_in(0) <= '0';
+	WAIT FOR 20000 ps;
+	data_in(0) <= '1';
+	WAIT FOR 30000 ps;
+	data_in(0) <= '0';
+	WAIT FOR 90000 ps;
+	data_in(0) <= '1';
+	WAIT FOR 60000 ps;
 	data_in(0) <= '0';
 WAIT;
 END PROCESS t_prcs_data_in_0;

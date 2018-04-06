@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Wed Apr  4 20:21:57 2018
+Analysis & Synthesis Status : Successful - Fri Apr  6 19:53:37 2018
 Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 Revision Name : Registrador
-Top-level Entity Name : register_bank
+Top-level Entity Name : register_bank_placa
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
 Total registers : 32
-Total pins : 17
+Total pins : 24
 Total virtual pins : 0
 Total block memory bits : 0
 Total DSP Blocks : 0

@@ -1,8 +1,8 @@
 /*<simulation_settings>
-<ftestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Registrador -c Registrador --vector_source="/home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/Waveform3.vwf" --testbench_file="/home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/simulation/qsim/Waveform3.vwf.vht"</ftestbench_cmd>
-<ttestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Registrador -c Registrador --vector_source="/home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/Waveform3.vwf" --testbench_file="/home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/simulation/qsim/Waveform3.vwf.vht"</ttestbench_cmd>
-<fnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="/home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/simulation/qsim/" Registrador -c Registrador</fnetlist_cmd>
-<tnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=vhdl --output_directory="/home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/simulation/qsim/" Registrador -c Registrador</tnetlist_cmd>
+<ftestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Registrador -c Registrador --vector_source="/home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/Waveform3.vwf" --testbench_file="/home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/simulation/qsim/Waveform3.vwf.vht"</ftestbench_cmd>
+<ttestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Registrador -c Registrador --vector_source="/home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/Waveform3.vwf" --testbench_file="/home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/simulation/qsim/Waveform3.vwf.vht"</ttestbench_cmd>
+<fnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="/home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/simulation/qsim/" Registrador -c Registrador</fnetlist_cmd>
+<tnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=vhdl --output_directory="/home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/simulation/qsim/" Registrador -c Registrador</tnetlist_cmd>
 <modelsim_script>onerror {exit -code 1}
 vlib work
 vcom -work work Registrador.vho
@@ -290,7 +290,9 @@ TRANSITION_LIST("clear")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 800.0;
+		LEVEL 0 FOR 420.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 340.0;
 	}
 }
 
@@ -303,7 +305,11 @@ TRANSITION_LIST("clk")
 		LEVEL 1 FOR 10.0;
 		LEVEL 0 FOR 80.0;
 		LEVEL 1 FOR 10.0;
-		LEVEL 0 FOR 680.0;
+		LEVEL 0 FOR 70.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 140.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 450.0;
 	}
 }
 
@@ -313,7 +319,9 @@ TRANSITION_LIST("data_in[3]")
 	{
 		REPEAT = 1;
 		LEVEL 1 FOR 80.0;
-		LEVEL 0 FOR 720.0;
+		LEVEL 0 FOR 220.0;
+		LEVEL 1 FOR 60.0;
+		LEVEL 0 FOR 440.0;
 	}
 }
 
@@ -323,7 +331,9 @@ TRANSITION_LIST("data_in[2]")
 	{
 		REPEAT = 1;
 		LEVEL 1 FOR 80.0;
-		LEVEL 0 FOR 720.0;
+		LEVEL 0 FOR 220.0;
+		LEVEL 1 FOR 60.0;
+		LEVEL 0 FOR 440.0;
 	}
 }
 
@@ -332,7 +342,11 @@ TRANSITION_LIST("data_in[1]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 800.0;
+		LEVEL 0 FOR 180.0;
+		LEVEL 1 FOR 30.0;
+		LEVEL 0 FOR 90.0;
+		LEVEL 1 FOR 60.0;
+		LEVEL 0 FOR 440.0;
 	}
 }
 
@@ -342,7 +356,11 @@ TRANSITION_LIST("data_in[0]")
 	{
 		REPEAT = 1;
 		LEVEL 1 FOR 160.0;
-		LEVEL 0 FOR 640.0;
+		LEVEL 0 FOR 20.0;
+		LEVEL 1 FOR 30.0;
+		LEVEL 0 FOR 90.0;
+		LEVEL 1 FOR 60.0;
+		LEVEL 0 FOR 440.0;
 	}
 }
 
@@ -388,7 +406,11 @@ TRANSITION_LIST("reg_rd[2]")
 	{
 		REPEAT = 1;
 		LEVEL 1 FOR 160.0;
-		LEVEL 0 FOR 640.0;
+		LEVEL 0 FOR 20.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 100.0;
+		LEVEL 1 FOR 50.0;
+		LEVEL 0 FOR 430.0;
 	}
 }
 
@@ -409,7 +431,11 @@ TRANSITION_LIST("reg_rd[0]")
 	{
 		REPEAT = 1;
 		LEVEL 1 FOR 160.0;
-		LEVEL 0 FOR 640.0;
+		LEVEL 0 FOR 20.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 100.0;
+		LEVEL 1 FOR 50.0;
+		LEVEL 0 FOR 430.0;
 	}
 }
 
@@ -419,7 +445,15 @@ TRANSITION_LIST("reg_wr[2]")
 	{
 		REPEAT = 1;
 		LEVEL 1 FOR 80.0;
-		LEVEL 0 FOR 720.0;
+		LEVEL 0 FOR 50.0;
+		LEVEL 1 FOR 120.0;
+		LEVEL 0 FOR 70.0;
+		LEVEL 1 FOR 90.0;
+		LEVEL 0 FOR 70.0;
+		LEVEL 1 FOR 50.0;
+		LEVEL 0 FOR 150.0;
+		LEVEL 1 FOR 110.0;
+		LEVEL 0 FOR 10.0;
 	}
 }
 
@@ -428,7 +462,11 @@ TRANSITION_LIST("reg_wr[1]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 800.0;
+		LEVEL 0 FOR 130.0;
+		LEVEL 1 FOR 30.0;
+		LEVEL 0 FOR 520.0;
+		LEVEL 1 FOR 110.0;
+		LEVEL 0 FOR 10.0;
 	}
 }
 
@@ -438,7 +476,15 @@ TRANSITION_LIST("reg_wr[0]")
 	{
 		REPEAT = 1;
 		LEVEL 1 FOR 80.0;
-		LEVEL 0 FOR 720.0;
+		LEVEL 0 FOR 50.0;
+		LEVEL 1 FOR 120.0;
+		LEVEL 0 FOR 70.0;
+		LEVEL 1 FOR 90.0;
+		LEVEL 0 FOR 70.0;
+		LEVEL 1 FOR 50.0;
+		LEVEL 0 FOR 150.0;
+		LEVEL 1 FOR 110.0;
+		LEVEL 0 FOR 10.0;
 	}
 }
 
@@ -447,7 +493,9 @@ TRANSITION_LIST("we")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 800.0;
+		LEVEL 1 FOR 170.0;
+		LEVEL 0 FOR 120.0;
+		LEVEL 1 FOR 510.0;
 	}
 }
 

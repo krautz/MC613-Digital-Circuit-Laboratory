@@ -1,4 +1,4 @@
-|register_bank
+|register_bank_placa
 clk => reg:G1:0:reg_instance.clk
 clk => reg:G1:1:reg_instance.clk
 clk => reg:G1:2:reg_instance.clk
@@ -39,10 +39,10 @@ data_in[3] => reg:G1:4:reg_instance.data_in[3]
 data_in[3] => reg:G1:5:reg_instance.data_in[3]
 data_in[3] => reg:G1:6:reg_instance.data_in[3]
 data_in[3] => reg:G1:7:reg_instance.data_in[3]
-data_out[0] <= data_out[0].DB_MAX_OUTPUT_PORT_TYPE
-data_out[1] <= data_out[1].DB_MAX_OUTPUT_PORT_TYPE
-data_out[2] <= data_out[2].DB_MAX_OUTPUT_PORT_TYPE
-data_out[3] <= data_out[3].DB_MAX_OUTPUT_PORT_TYPE
+data_out[0] << comb.DB_MAX_OUTPUT_PORT_TYPE
+data_out[1] << data_out[1].DB_MAX_OUTPUT_PORT_TYPE
+data_out[2] << data_out[2].DB_MAX_OUTPUT_PORT_TYPE
+data_out[3] << data_out[3].DB_MAX_OUTPUT_PORT_TYPE
 reg_rd[0] => dec3_to_8:dec3_to_8_instance_1.w[0]
 reg_rd[1] => dec3_to_8:dec3_to_8_instance_1.w[1]
 reg_rd[2] => dec3_to_8:dec3_to_8_instance_1.w[2]
@@ -59,9 +59,16 @@ clear => reg:G1:4:reg_instance.clear
 clear => reg:G1:5:reg_instance.clear
 clear => reg:G1:6:reg_instance.clear
 clear => reg:G1:7:reg_instance.clear
+HEX0[0] << bin2hex:bin2hex_instance.HEX0[0]
+HEX0[1] << bin2hex:bin2hex_instance.HEX0[1]
+HEX0[2] << bin2hex:bin2hex_instance.HEX0[2]
+HEX0[3] << bin2hex:bin2hex_instance.HEX0[3]
+HEX0[4] << bin2hex:bin2hex_instance.HEX0[4]
+HEX0[5] << bin2hex:bin2hex_instance.HEX0[5]
+HEX0[6] << bin2hex:bin2hex_instance.HEX0[6]
 
 
-|register_bank|dec3_to_8:dec3_to_8_instance_1
+|register_bank_placa|dec3_to_8:dec3_to_8_instance_1
 en => Equal0.IN3
 en => Equal1.IN2
 en => Equal2.IN2
@@ -104,7 +111,7 @@ y[6] <= Equal6.DB_MAX_OUTPUT_PORT_TYPE
 y[7] <= Equal7.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|register_bank|dec3_to_8:dec3_to_8_instance_2
+|register_bank_placa|dec3_to_8:dec3_to_8_instance_2
 en => Equal0.IN3
 en => Equal1.IN2
 en => Equal2.IN2
@@ -147,7 +154,7 @@ y[6] <= Equal6.DB_MAX_OUTPUT_PORT_TYPE
 y[7] <= Equal7.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|register_bank|reg:\G1:0:reg_instance
+|register_bank_placa|reg:\G1:0:reg_instance
 clk => var[0].CLK
 clk => var[1].CLK
 clk => var[2].CLK
@@ -170,7 +177,7 @@ clear => var[2].ACLR
 clear => var[3].ACLR
 
 
-|register_bank|zbuffer:\G1:0:buffer_instance
+|register_bank_placa|zbuffer:\G1:0:buffer_instance
 X[0] => F[0].DATAIN
 X[1] => F[1].DATAIN
 X[2] => F[2].DATAIN
@@ -185,7 +192,7 @@ F[2] <= F[2].DB_MAX_OUTPUT_PORT_TYPE
 F[3] <= F[3].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|register_bank|reg:\G1:1:reg_instance
+|register_bank_placa|reg:\G1:1:reg_instance
 clk => var[0].CLK
 clk => var[1].CLK
 clk => var[2].CLK
@@ -208,7 +215,7 @@ clear => var[2].ACLR
 clear => var[3].ACLR
 
 
-|register_bank|zbuffer:\G1:1:buffer_instance
+|register_bank_placa|zbuffer:\G1:1:buffer_instance
 X[0] => F[0].DATAIN
 X[1] => F[1].DATAIN
 X[2] => F[2].DATAIN
@@ -223,7 +230,7 @@ F[2] <= F[2].DB_MAX_OUTPUT_PORT_TYPE
 F[3] <= F[3].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|register_bank|reg:\G1:2:reg_instance
+|register_bank_placa|reg:\G1:2:reg_instance
 clk => var[0].CLK
 clk => var[1].CLK
 clk => var[2].CLK
@@ -246,7 +253,7 @@ clear => var[2].ACLR
 clear => var[3].ACLR
 
 
-|register_bank|zbuffer:\G1:2:buffer_instance
+|register_bank_placa|zbuffer:\G1:2:buffer_instance
 X[0] => F[0].DATAIN
 X[1] => F[1].DATAIN
 X[2] => F[2].DATAIN
@@ -261,7 +268,7 @@ F[2] <= F[2].DB_MAX_OUTPUT_PORT_TYPE
 F[3] <= F[3].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|register_bank|reg:\G1:3:reg_instance
+|register_bank_placa|reg:\G1:3:reg_instance
 clk => var[0].CLK
 clk => var[1].CLK
 clk => var[2].CLK
@@ -284,7 +291,7 @@ clear => var[2].ACLR
 clear => var[3].ACLR
 
 
-|register_bank|zbuffer:\G1:3:buffer_instance
+|register_bank_placa|zbuffer:\G1:3:buffer_instance
 X[0] => F[0].DATAIN
 X[1] => F[1].DATAIN
 X[2] => F[2].DATAIN
@@ -299,7 +306,7 @@ F[2] <= F[2].DB_MAX_OUTPUT_PORT_TYPE
 F[3] <= F[3].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|register_bank|reg:\G1:4:reg_instance
+|register_bank_placa|reg:\G1:4:reg_instance
 clk => var[0].CLK
 clk => var[1].CLK
 clk => var[2].CLK
@@ -322,7 +329,7 @@ clear => var[2].ACLR
 clear => var[3].ACLR
 
 
-|register_bank|zbuffer:\G1:4:buffer_instance
+|register_bank_placa|zbuffer:\G1:4:buffer_instance
 X[0] => F[0].DATAIN
 X[1] => F[1].DATAIN
 X[2] => F[2].DATAIN
@@ -337,7 +344,7 @@ F[2] <= F[2].DB_MAX_OUTPUT_PORT_TYPE
 F[3] <= F[3].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|register_bank|reg:\G1:5:reg_instance
+|register_bank_placa|reg:\G1:5:reg_instance
 clk => var[0].CLK
 clk => var[1].CLK
 clk => var[2].CLK
@@ -360,7 +367,7 @@ clear => var[2].ACLR
 clear => var[3].ACLR
 
 
-|register_bank|zbuffer:\G1:5:buffer_instance
+|register_bank_placa|zbuffer:\G1:5:buffer_instance
 X[0] => F[0].DATAIN
 X[1] => F[1].DATAIN
 X[2] => F[2].DATAIN
@@ -375,7 +382,7 @@ F[2] <= F[2].DB_MAX_OUTPUT_PORT_TYPE
 F[3] <= F[3].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|register_bank|reg:\G1:6:reg_instance
+|register_bank_placa|reg:\G1:6:reg_instance
 clk => var[0].CLK
 clk => var[1].CLK
 clk => var[2].CLK
@@ -398,7 +405,7 @@ clear => var[2].ACLR
 clear => var[3].ACLR
 
 
-|register_bank|zbuffer:\G1:6:buffer_instance
+|register_bank_placa|zbuffer:\G1:6:buffer_instance
 X[0] => F[0].DATAIN
 X[1] => F[1].DATAIN
 X[2] => F[2].DATAIN
@@ -413,7 +420,7 @@ F[2] <= F[2].DB_MAX_OUTPUT_PORT_TYPE
 F[3] <= F[3].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|register_bank|reg:\G1:7:reg_instance
+|register_bank_placa|reg:\G1:7:reg_instance
 clk => var[0].CLK
 clk => var[1].CLK
 clk => var[2].CLK
@@ -436,7 +443,7 @@ clear => var[2].ACLR
 clear => var[3].ACLR
 
 
-|register_bank|zbuffer:\G1:7:buffer_instance
+|register_bank_placa|zbuffer:\G1:7:buffer_instance
 X[0] => F[0].DATAIN
 X[1] => F[1].DATAIN
 X[2] => F[2].DATAIN
@@ -449,5 +456,43 @@ F[0] <= F[0].DB_MAX_OUTPUT_PORT_TYPE
 F[1] <= F[1].DB_MAX_OUTPUT_PORT_TYPE
 F[2] <= F[2].DB_MAX_OUTPUT_PORT_TYPE
 F[3] <= F[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|register_bank_placa|bin2hex:bin2hex_instance
+SW[0] => Mux0.IN19
+SW[0] => Mux1.IN19
+SW[0] => Mux2.IN19
+SW[0] => Mux3.IN19
+SW[0] => Mux4.IN19
+SW[0] => Mux5.IN19
+SW[0] => Mux6.IN19
+SW[1] => Mux0.IN18
+SW[1] => Mux1.IN18
+SW[1] => Mux2.IN18
+SW[1] => Mux3.IN18
+SW[1] => Mux4.IN18
+SW[1] => Mux5.IN18
+SW[1] => Mux6.IN18
+SW[2] => Mux0.IN17
+SW[2] => Mux1.IN17
+SW[2] => Mux2.IN17
+SW[2] => Mux3.IN17
+SW[2] => Mux4.IN17
+SW[2] => Mux5.IN17
+SW[2] => Mux6.IN17
+SW[3] => Mux0.IN16
+SW[3] => Mux1.IN16
+SW[3] => Mux2.IN16
+SW[3] => Mux3.IN16
+SW[3] => Mux4.IN16
+SW[3] => Mux5.IN16
+SW[3] => Mux6.IN16
+HEX0[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 

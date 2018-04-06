@@ -1,7 +1,7 @@
 # do Registrador.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:25:50 on Apr 04,2018
+# Start time: 19:34:57 on Apr 06,2018
 # vcom -work work Registrador.vho 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -15,20 +15,20 @@
 # -- Loading package cyclonev_components
 # -- Compiling entity register_bank
 # -- Compiling architecture structure of register_bank
-# End time: 20:25:50 on Apr 04,2018, Elapsed time: 0:00:00
+# End time: 19:34:57 on Apr 06,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:25:50 on Apr 04,2018
+# Start time: 19:34:57 on Apr 06,2018
 # vcom -work work Waveform3.vwf.vht 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity register_bank_vhd_vec_tst
 # -- Compiling architecture register_bank_arch of register_bank_vhd_vec_tst
-# End time: 20:25:50 on Apr 04,2018, Elapsed time: 0:00:00
+# End time: 19:34:57 on Apr 06,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -novopt -c -t 1ps -L cyclonev -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.register_bank_vhd_vec_tst 
-# Start time: 20:25:50 on Apr 04,2018
+# Start time: 19:34:57 on Apr 06,2018
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -46,9 +46,9 @@
 # Loading cyclonev.cyclonev_io_ibuf(arch)
 # Loading cyclonev.cyclonev_lcell_comb(vital_lcell_comb)
 # Loading altera.dffeas(vital_dffeas)
-# ** Warning: Design size of 12736 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# ** Warning: Design size of 12848 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
 # Expect performance to be adversely affected.
 # after#34
 # ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
-# End time: 20:25:50 on Apr 04,2018, Elapsed time: 0:00:00
+# End time: 19:34:57 on Apr 06,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 2
