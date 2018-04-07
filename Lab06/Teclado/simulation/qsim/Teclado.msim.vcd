@@ -1,0 +1,88 @@
+$comment
+	File created using the following command:
+		vcd file Teclado.msim.vcd -direction
+$end
+$date
+	Sat Apr  7 17:36:58 2018
+$end
+$version
+	ModelSim Version 10.5b
+$end
+$timescale
+	1ps
+$end
+
+$scope module reg_caps_vhd_vec_tst $end
+$var wire 1 ! data_in $end
+$var wire 1 " data_out $end
+
+$scope module i1 $end
+$var wire 1 # gnd $end
+$var wire 1 $ vcc $end
+$var wire 1 % unknown $end
+$var wire 1 & devoe $end
+$var wire 1 ' devclrn $end
+$var wire 1 ( devpor $end
+$var wire 1 ) ww_devoe $end
+$var wire 1 * ww_devclrn $end
+$var wire 1 + ww_devpor $end
+$var wire 1 , ww_data_in $end
+$var wire 1 - ww_data_out $end
+$var wire 1 . \data_out~output_o\ $end
+$var wire 1 / \data_in~input_o\ $end
+$var wire 1 0 \var~0_combout\ $end
+$var wire 1 1 \var~q\ $end
+$var wire 1 2 \ALT_INV_var~q\ $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+0"
+0#
+1$
+x%
+1&
+1'
+1(
+1)
+1*
+1+
+0,
+0-
+0.
+0/
+10
+01
+12
+$end
+#40000
+1!
+1,
+1/
+11
+02
+00
+1.
+1-
+1"
+#200000
+0!
+0,
+0/
+#400000
+1!
+1,
+1/
+01
+12
+10
+0.
+0-
+0"
+#600000
+0!
+0,
+0/
+#800000

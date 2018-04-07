@@ -1,0 +1,16 @@
+vendor_name = ModelSim
+source_file = 1, /home/ec2015/ra165457/Desktop/MC613/Lab06/Teclado/ps2_kbd_test.vhd
+source_file = 1, /home/ec2015/ra165457/Desktop/MC613/Lab06/Teclado/ps2_iobase.vhd
+source_file = 1, /home/ec2015/ra165457/Desktop/MC613/Lab06/Teclado/bin2hex.vhd
+source_file = 1, /home/ec2015/ra165457/Desktop/MC613/Lab06/Teclado/kbdex_ctrl.vhd
+source_file = 1, /home/ec2015/ra165457/Desktop/MC613/Lab06/Teclado/output_files/kbd_alphanum.vhd
+source_file = 1, /home/ec2015/ra165457/Desktop/MC613/Lab06/Teclado/output_files/dec_tec2asc.vhd
+source_file = 1, /opt/altera/17.1/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
+source_file = 1, /opt/altera/17.1/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
+source_file = 1, /opt/altera/17.1/quartus/libraries/vhdl/ieee/timing_b.vhd
+source_file = 1, /opt/altera/17.1/quartus/libraries/vhdl/ieee/timing_p.vhd
+source_file = 1, /home/ec2015/ra165457/Desktop/MC613/Lab06/Teclado/reg_caps.vhd
+design_name = reg_caps
+instance = comp, \data_out~output\, data_out~output, reg_caps, 1
+instance = comp, \data_in~input\, data_in~input, reg_caps, 1
+instance = comp, \var~0\, var~0, reg_caps, 1

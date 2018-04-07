@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Teclado
-Fri Apr  6 20:36:53 2018
+Sat Apr  7 18:38:25 2018
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -13,17 +13,17 @@ Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. State Machine - |ps2_kbd_test|kbdex_ctrl:kbd_ctrl|cmdstate
-  9. State Machine - |ps2_kbd_test|kbdex_ctrl:kbd_ctrl|state
+  8. State Machine - |kbd_alphanum_board|kbdex_ctrl:kbdex_ctrl_inst|cmdstate
+  9. State Machine - |kbd_alphanum_board|kbdex_ctrl:kbdex_ctrl_inst|state
  10. User-Specified and Inferred Latches
  11. Registers Removed During Synthesis
  12. Removed Registers Triggering Further Register Optimizations
  13. General Register Statistics
  14. Inverted Register Statistics
  15. Multiplexer Restructuring Statistics (Restructuring Performed)
- 16. Parameter Settings for User Entity Instance: kbdex_ctrl:kbd_ctrl
- 17. Parameter Settings for User Entity Instance: kbdex_ctrl:kbd_ctrl|ps2_iobase:ps2_ctrl
- 18. Port Connectivity Checks: "kbdex_ctrl:kbd_ctrl"
+ 16. Parameter Settings for User Entity Instance: kbdex_ctrl:kbdex_ctrl_inst
+ 17. Parameter Settings for User Entity Instance: kbdex_ctrl:kbdex_ctrl_inst|ps2_iobase:ps2_ctrl
+ 18. Port Connectivity Checks: "kbdex_ctrl:kbdex_ctrl_inst"
  19. Post-Synthesis Netlist Statistics for Top Partition
  20. Elapsed Time Per Partition
  21. Analysis & Synthesis Messages
@@ -52,14 +52,14 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Fri Apr  6 20:36:53 2018       ;
+; Analysis & Synthesis Status     ; Successful - Sat Apr  7 18:38:25 2018       ;
 ; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; Teclado                                     ;
-; Top-level Entity Name           ; ps2_kbd_test                                ;
+; Top-level Entity Name           ; kbd_alphanum_board                          ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 174                                         ;
-; Total pins                      ; 55                                          ;
+; Total registers                 ; 133                                         ;
+; Total pins                      ; 17                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -78,7 +78,7 @@ refer to the applicable agreement for further details.
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
-; Top-level entity name                                                           ; ps2_kbd_test       ; Teclado            ;
+; Top-level entity name                                                           ; kbd_alphanum_board ; Teclado            ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation      ; On                 ; On                 ;
@@ -177,16 +177,19 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                 ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                          ; Library ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------+---------+
-; ps2_kbd_test.vhd                 ; yes             ; User VHDL File  ; /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Teclado/ps2_kbd_test.vhd ;         ;
-; ps2_iobase.vhd                   ; yes             ; User VHDL File  ; /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Teclado/ps2_iobase.vhd   ;         ;
-; bin2hex.vhd                      ; yes             ; User VHDL File  ; /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Teclado/bin2hex.vhd      ;         ;
-; kbdex_ctrl.vhd                   ; yes             ; User VHDL File  ; /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Teclado/kbdex_ctrl.vhd   ;         ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                          ;
++----------------------------------+-----------------+-----------------------+--------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type             ; File Name with Absolute Path                                             ; Library ;
++----------------------------------+-----------------+-----------------------+--------------------------------------------------------------------------+---------+
+; ps2_iobase.vhd                   ; yes             ; User VHDL File        ; /home/ec2015/ra165457/Desktop/MC613/Lab06/Teclado/ps2_iobase.vhd         ;         ;
+; bin2hex.vhd                      ; yes             ; User VHDL File        ; /home/ec2015/ra165457/Desktop/MC613/Lab06/Teclado/bin2hex.vhd            ;         ;
+; kbdex_ctrl.vhd                   ; yes             ; User VHDL File        ; /home/ec2015/ra165457/Desktop/MC613/Lab06/Teclado/kbdex_ctrl.vhd         ;         ;
+; kbd_alphanum_board.vhd           ; yes             ; Auto-Found VHDL File  ; /home/ec2015/ra165457/Desktop/MC613/Lab06/Teclado/kbd_alphanum_board.vhd ;         ;
+; kbd_alphanum.vhd                 ; yes             ; Auto-Found VHDL File  ; /home/ec2015/ra165457/Desktop/MC613/Lab06/Teclado/kbd_alphanum.vhd       ;         ;
+; reg_caps.vhd                     ; yes             ; Auto-Found VHDL File  ; /home/ec2015/ra165457/Desktop/MC613/Lab06/Teclado/reg_caps.vhd           ;         ;
+; dec_tec2asc.vhd                  ; yes             ; Auto-Found VHDL File  ; /home/ec2015/ra165457/Desktop/MC613/Lab06/Teclado/dec_tec2asc.vhd        ;         ;
++----------------------------------+-----------------+-----------------------+--------------------------------------------------------------------------+---------+
 
 
 +--------------------------------------------------------------+
@@ -194,45 +197,48 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 164            ;
+; Estimate of Logic utilization (ALMs needed) ; 173            ;
 ;                                             ;                ;
-; Combinational ALUT usage for logic          ; 276            ;
-;     -- 7 input functions                    ; 1              ;
-;     -- 6 input functions                    ; 45             ;
-;     -- 5 input functions                    ; 28             ;
-;     -- 4 input functions                    ; 51             ;
-;     -- <=3 input functions                  ; 151            ;
+; Combinational ALUT usage for logic          ; 268            ;
+;     -- 7 input functions                    ; 5              ;
+;     -- 6 input functions                    ; 66             ;
+;     -- 5 input functions                    ; 40             ;
+;     -- 4 input functions                    ; 47             ;
+;     -- <=3 input functions                  ; 110            ;
 ;                                             ;                ;
-; Dedicated logic registers                   ; 174            ;
+; Dedicated logic registers                   ; 133            ;
 ;                                             ;                ;
-; I/O pins                                    ; 55             ;
+; I/O pins                                    ; 17             ;
 ;                                             ;                ;
 ; Total DSP Blocks                            ; 0              ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
-; Maximum fan-out                             ; 144            ;
-; Total fan-out                               ; 1634           ;
-; Average fan-out                             ; 2.91           ;
+; Maximum fan-out                             ; 109            ;
+; Total fan-out                               ; 1566           ;
+; Average fan-out                             ; 3.58           ;
 +---------------------------------------------+----------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                        ;
-+-----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------+--------------+--------------+
-; Compilation Hierarchy Node  ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                   ; Entity Name  ; Library Name ;
-+-----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------+--------------+--------------+
-; |ps2_kbd_test               ; 276 (39)            ; 174 (29)                  ; 0                 ; 0          ; 55   ; 0            ; |ps2_kbd_test                                         ; ps2_kbd_test ; work         ;
-;    |bin2hex:hexseg0|        ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ps2_kbd_test|bin2hex:hexseg0                         ; bin2hex      ; work         ;
-;    |bin2hex:hexseg1|        ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ps2_kbd_test|bin2hex:hexseg1                         ; bin2hex      ; work         ;
-;    |kbdex_ctrl:kbd_ctrl|    ; 223 (85)            ; 145 (64)                  ; 0                 ; 0          ; 0    ; 0            ; |ps2_kbd_test|kbdex_ctrl:kbd_ctrl                     ; kbdex_ctrl   ; work         ;
-;       |ps2_iobase:ps2_ctrl| ; 138 (138)           ; 81 (81)                   ; 0                 ; 0          ; 0    ; 0            ; |ps2_kbd_test|kbdex_ctrl:kbd_ctrl|ps2_iobase:ps2_ctrl ; ps2_iobase   ; work         ;
-+-----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------+--------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                         ;
++------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------+--------------------+--------------+
+; Compilation Hierarchy Node               ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                 ; Entity Name        ; Library Name ;
++------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------+--------------------+--------------+
+; |kbd_alphanum_board                      ; 268 (2)             ; 133 (0)                   ; 0                 ; 0          ; 17   ; 0            ; |kbd_alphanum_board                                                                 ; kbd_alphanum_board ; work         ;
+;    |kbd_alphanum:kbd_alphanum_inst|      ; 78 (13)             ; 1 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |kbd_alphanum_board|kbd_alphanum:kbd_alphanum_inst                                  ; kbd_alphanum       ; work         ;
+;       |bin2hex:hexseg0|                  ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |kbd_alphanum_board|kbd_alphanum:kbd_alphanum_inst|bin2hex:hexseg0                  ; bin2hex            ; work         ;
+;       |bin2hex:hexseg1|                  ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |kbd_alphanum_board|kbd_alphanum:kbd_alphanum_inst|bin2hex:hexseg1                  ; bin2hex            ; work         ;
+;       |dec_tec2asc:dec_tec2asc_instance| ; 50 (50)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |kbd_alphanum_board|kbd_alphanum:kbd_alphanum_inst|dec_tec2asc:dec_tec2asc_instance ; dec_tec2asc        ; work         ;
+;       |reg_caps:reg_caps_instance|       ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |kbd_alphanum_board|kbd_alphanum:kbd_alphanum_inst|reg_caps:reg_caps_instance       ; reg_caps           ; work         ;
+;    |kbdex_ctrl:kbdex_ctrl_inst|          ; 188 (69)            ; 132 (54)                  ; 0                 ; 0          ; 0    ; 0            ; |kbd_alphanum_board|kbdex_ctrl:kbdex_ctrl_inst                                      ; kbdex_ctrl         ; work         ;
+;       |ps2_iobase:ps2_ctrl|              ; 119 (119)           ; 78 (78)                   ; 0                 ; 0          ; 0    ; 0            ; |kbd_alphanum_board|kbdex_ctrl:kbdex_ctrl_inst|ps2_iobase:ps2_ctrl                  ; ps2_iobase         ; work         ;
++------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------+--------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
 Encoding Type:  One-Hot
 +------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |ps2_kbd_test|kbdex_ctrl:kbd_ctrl|cmdstate                                                                                           ;
+; State Machine - |kbd_alphanum_board|kbdex_ctrl:kbdex_ctrl_inst|cmdstate                                                                              ;
 +--------------------+----------------+-------------------+------------------+--------------------+------------------+---------------+-----------------+
 ; Name               ; cmdstate.CLEAR ; cmdstate.WAITACK1 ; cmdstate.SENDVAL ; cmdstate.SETLIGHTS ; cmdstate.WAITACK ; cmdstate.SEND ; cmdstate.SETCMD ;
 +--------------------+----------------+-------------------+------------------+--------------------+------------------+---------------+-----------------+
@@ -248,7 +254,7 @@ Encoding Type:  One-Hot
 
 Encoding Type:  One-Hot
 +------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |ps2_kbd_test|kbdex_ctrl:kbd_ctrl|state                                                                      ;
+; State Machine - |kbd_alphanum_board|kbdex_ctrl:kbdex_ctrl_inst|state                                                         ;
 +---------------+-------------+------------+------------+---------------+------------+--------------+-------------+------------+
 ; Name          ; state.CLRDP ; state.EXT1 ; state.EXT0 ; state.RELEASE ; state.CODE ; state.DECODE ; state.FETCH ; state.IDLE ;
 +---------------+-------------+------------+------------+---------------+------------+--------------+-------------+------------+
@@ -268,42 +274,53 @@ Encoding Type:  One-Hot
 +----------------------------------------------------+---------------------+------------------------+
 ; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
 +----------------------------------------------------+---------------------+------------------------+
-; kbdex_ctrl:kbd_ctrl|selbt                          ; GND                 ; yes                    ;
-; kbdex_ctrl:kbd_ctrl|relbt                          ; GND                 ; yes                    ;
-; kbdex_ctrl:kbd_ctrl|selE0                          ; GND                 ; yes                    ;
+; kbdex_ctrl:kbdex_ctrl_inst|selbt                   ; GND                 ; yes                    ;
+; kbdex_ctrl:kbdex_ctrl_inst|relbt                   ; GND                 ; yes                    ;
+; kbdex_ctrl:kbdex_ctrl_inst|selE0                   ; GND                 ; yes                    ;
 ; Number of user-specified and inferred latches = 3  ;                     ;                        ;
 +----------------------------------------------------+---------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
-+---------------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                                  ;
-+------------------------------------------------------+--------------------------------------------------------------+
-; Register name                                        ; Reason for Removal                                           ;
-+------------------------------------------------------+--------------------------------------------------------------+
-; kbdex_ctrl:kbd_ctrl|key2code[8..12]                  ; Stuck at GND due to stuck port data_in                       ;
-; kbdex_ctrl:kbd_ctrl|hdata[4]                         ; Stuck at GND due to stuck port data_in                       ;
-; kbdex_ctrl:kbd_ctrl|key1code[8..12]                  ; Stuck at GND due to stuck port data_in                       ;
-; kbdex_ctrl:kbd_ctrl|key0code[8..12]                  ; Stuck at GND due to stuck port data_in                       ;
-; kbdex_ctrl:kbd_ctrl|ps2_iobase:ps2_ctrl|hdata[4]     ; Stuck at GND due to stuck port data_in                       ;
-; kbdex_ctrl:kbd_ctrl|ps2_iobase:ps2_ctrl|ps2_clk~reg0 ; Stuck at GND due to stuck port data_in                       ;
-; kbdex_ctrl:kbd_ctrl|key2code[14,15]                  ; Merged with kbdex_ctrl:kbd_ctrl|key2code[13]                 ;
-; kbdex_ctrl:kbd_ctrl|key1code[14,15]                  ; Merged with kbdex_ctrl:kbd_ctrl|key1code[13]                 ;
-; kbdex_ctrl:kbd_ctrl|key0code[14,15]                  ; Merged with kbdex_ctrl:kbd_ctrl|key0code[13]                 ;
-; kbdex_ctrl:kbd_ctrl|ps2_iobase:ps2_ctrl|hdata[5..7]  ; Merged with kbdex_ctrl:kbd_ctrl|ps2_iobase:ps2_ctrl|hdata[3] ;
-; kbdex_ctrl:kbd_ctrl|hdata[5..7]                      ; Merged with kbdex_ctrl:kbd_ctrl|hdata[3]                     ;
-; Total Number of Removed Registers = 30               ;                                                              ;
-+------------------------------------------------------+--------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                ;
++-------------------------------------------------------------+---------------------------------------------------------------------+
+; Register name                                               ; Reason for Removal                                                  ;
++-------------------------------------------------------------+---------------------------------------------------------------------+
+; kbdex_ctrl:kbdex_ctrl_inst|key2code[8..12]                  ; Stuck at GND due to stuck port data_in                              ;
+; kbdex_ctrl:kbdex_ctrl_inst|laststate[1,2]                   ; Stuck at GND due to stuck port data_in                              ;
+; kbdex_ctrl:kbdex_ctrl_inst|hdata[4]                         ; Stuck at GND due to stuck port data_in                              ;
+; kbdex_ctrl:kbdex_ctrl_inst|laststate[0]                     ; Stuck at GND due to stuck port data_in                              ;
+; kbdex_ctrl:kbdex_ctrl_inst|key1code[8..12]                  ; Stuck at GND due to stuck port data_in                              ;
+; kbdex_ctrl:kbdex_ctrl_inst|key0code[8..12]                  ; Stuck at GND due to stuck port data_in                              ;
+; kbdex_ctrl:kbdex_ctrl_inst|ps2_iobase:ps2_ctrl|hdata[4]     ; Stuck at GND due to stuck port data_in                              ;
+; kbdex_ctrl:kbdex_ctrl_inst|ps2_iobase:ps2_ctrl|ps2_clk~reg0 ; Stuck at GND due to stuck port data_in                              ;
+; kbdex_ctrl:kbdex_ctrl_inst|key0code[14,15]                  ; Merged with kbdex_ctrl:kbdex_ctrl_inst|key0code[13]                 ;
+; kbdex_ctrl:kbdex_ctrl_inst|key1code[14,15]                  ; Merged with kbdex_ctrl:kbdex_ctrl_inst|key1code[13]                 ;
+; kbdex_ctrl:kbdex_ctrl_inst|key2code[14,15]                  ; Merged with kbdex_ctrl:kbdex_ctrl_inst|key2code[13]                 ;
+; kbdex_ctrl:kbdex_ctrl_inst|ps2_iobase:ps2_ctrl|hdata[5..7]  ; Merged with kbdex_ctrl:kbdex_ctrl_inst|ps2_iobase:ps2_ctrl|hdata[3] ;
+; kbdex_ctrl:kbdex_ctrl_inst|ps2_iobase:ps2_ctrl|hdata[2]     ; Merged with kbdex_ctrl:kbdex_ctrl_inst|ps2_iobase:ps2_ctrl|hdata[0] ;
+; kbdex_ctrl:kbdex_ctrl_inst|hdata[5..7]                      ; Merged with kbdex_ctrl:kbdex_ctrl_inst|hdata[3]                     ;
+; kbdex_ctrl:kbdex_ctrl_inst|hdata[2]                         ; Merged with kbdex_ctrl:kbdex_ctrl_inst|hdata[0]                     ;
+; kbdex_ctrl:kbdex_ctrl_inst|siguplights                      ; Stuck at GND due to stuck port data_in                              ;
+; kbdex_ctrl:kbdex_ctrl_inst|hdata[0]                         ; Merged with kbdex_ctrl:kbdex_ctrl_inst|hdata[3]                     ;
+; kbdex_ctrl:kbdex_ctrl_inst|hdata[1]                         ; Stuck at GND due to stuck port data_in                              ;
+; kbdex_ctrl:kbdex_ctrl_inst|ps2_iobase:ps2_ctrl|hdata[1]     ; Stuck at GND due to stuck port data_in                              ;
+; kbdex_ctrl:kbdex_ctrl_inst|ps2_iobase:ps2_ctrl|hdata[3]     ; Merged with kbdex_ctrl:kbdex_ctrl_inst|ps2_iobase:ps2_ctrl|hdata[0] ;
+; Total Number of Removed Registers = 40                      ;                                                                     ;
++-------------------------------------------------------------+---------------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                 ;
-+------------------------------+---------------------------+--------------------------------------------------+
-; Register name                ; Reason for Removal        ; Registers Removed due to This Register           ;
-+------------------------------+---------------------------+--------------------------------------------------+
-; kbdex_ctrl:kbd_ctrl|hdata[4] ; Stuck at GND              ; kbdex_ctrl:kbd_ctrl|ps2_iobase:ps2_ctrl|hdata[4] ;
-;                              ; due to stuck port data_in ;                                                  ;
-+------------------------------+---------------------------+--------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                               ;
++-------------------------------------+---------------------------+---------------------------------------------------------+
+; Register name                       ; Reason for Removal        ; Registers Removed due to This Register                  ;
++-------------------------------------+---------------------------+---------------------------------------------------------+
+; kbdex_ctrl:kbdex_ctrl_inst|hdata[4] ; Stuck at GND              ; kbdex_ctrl:kbdex_ctrl_inst|ps2_iobase:ps2_ctrl|hdata[4] ;
+;                                     ; due to stuck port data_in ;                                                         ;
+; kbdex_ctrl:kbdex_ctrl_inst|hdata[1] ; Stuck at GND              ; kbdex_ctrl:kbdex_ctrl_inst|ps2_iobase:ps2_ctrl|hdata[1] ;
+;                                     ; due to stuck port data_in ;                                                         ;
++-------------------------------------+---------------------------+---------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -311,71 +328,81 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 174   ;
+; Total registers                              ; 133   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 142   ;
+; Number of registers using Synchronous Load   ; 21    ;
+; Number of registers using Asynchronous Clear ; 95    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 113   ;
+; Number of registers using Clock Enable       ; 75    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+------------------------------------------------------------------+
-; Inverted Register Statistics                                     ;
-+--------------------------------------------------------+---------+
-; Inverted Register                                      ; Fan out ;
-+--------------------------------------------------------+---------+
-; kbdex_ctrl:kbd_ctrl|sigsending                         ; 2       ;
-; kbdex_ctrl:kbd_ctrl|ps2_iobase:ps2_ctrl|sigclkreleased ; 3       ;
-; lights[0]                                              ; 7       ;
-; Total number of inverted registers = 3                 ;         ;
-+--------------------------------------------------------+---------+
++-------------------------------------------------------------------------+
+; Inverted Register Statistics                                            ;
++---------------------------------------------------------------+---------+
+; Inverted Register                                             ; Fan out ;
++---------------------------------------------------------------+---------+
+; kbdex_ctrl:kbdex_ctrl_inst|sigsending                         ; 9       ;
+; kbdex_ctrl:kbdex_ctrl_inst|ps2_iobase:ps2_ctrl|sigclkreleased ; 3       ;
+; kbdex_ctrl:kbdex_ctrl_inst|ps2_iobase:ps2_ctrl|fcount[8]      ; 3       ;
+; kbdex_ctrl:kbdex_ctrl_inst|ps2_iobase:ps2_ctrl|fcount[6]      ; 3       ;
+; kbdex_ctrl:kbdex_ctrl_inst|ps2_iobase:ps2_ctrl|fcount[3]      ; 2       ;
+; kbdex_ctrl:kbdex_ctrl_inst|ps2_iobase:ps2_ctrl|fcount[2]      ; 2       ;
+; kbdex_ctrl:kbdex_ctrl_inst|ps2_iobase:ps2_ctrl|fcount[0]      ; 2       ;
+; kbdex_ctrl:kbdex_ctrl_inst|ps2_iobase:ps2_ctrl|rcount[8]      ; 3       ;
+; kbdex_ctrl:kbdex_ctrl_inst|ps2_iobase:ps2_ctrl|rcount[6]      ; 3       ;
+; kbdex_ctrl:kbdex_ctrl_inst|ps2_iobase:ps2_ctrl|rcount[3]      ; 2       ;
+; kbdex_ctrl:kbdex_ctrl_inst|ps2_iobase:ps2_ctrl|rcount[2]      ; 2       ;
+; kbdex_ctrl:kbdex_ctrl_inst|ps2_iobase:ps2_ctrl|rcount[0]      ; 2       ;
+; Total number of inverted registers = 12                       ;         ;
++---------------------------------------------------------------+---------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                      ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------+
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |ps2_kbd_test|kbdex_ctrl:kbd_ctrl|ps2_iobase:ps2_ctrl|fcount[1] ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |ps2_kbd_test|kbdex_ctrl:kbd_ctrl|ps2_iobase:ps2_ctrl|rcount[4] ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |ps2_kbd_test|kbdex_ctrl:kbd_ctrl|hdata[2]                      ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |ps2_kbd_test|kbdex_ctrl:kbd_ctrl|ps2_iobase:ps2_ctrl|fcount[8] ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |ps2_kbd_test|kbdex_ctrl:kbd_ctrl|ps2_iobase:ps2_ctrl|rcount[8] ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |ps2_kbd_test|kbdex_ctrl:kbd_ctrl|state.CODE                    ;
-; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |ps2_kbd_test|kbdex_ctrl:kbd_ctrl|Selector13                    ;
-; 8:1                ; 2 bits    ; 10 LEs        ; 6 LEs                ; 4 LEs                  ; No         ; |ps2_kbd_test|kbdex_ctrl:kbd_ctrl|Selector12                    ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------+
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |kbd_alphanum_board|kbdex_ctrl:kbdex_ctrl_inst|ps2_iobase:ps2_ctrl|fcount[7] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |kbd_alphanum_board|kbdex_ctrl:kbdex_ctrl_inst|ps2_iobase:ps2_ctrl|rcount[5] ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |kbd_alphanum_board|kbdex_ctrl:kbdex_ctrl_inst|ps2_iobase:ps2_ctrl|fcount[0] ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |kbd_alphanum_board|kbdex_ctrl:kbdex_ctrl_inst|ps2_iobase:ps2_ctrl|rcount[8] ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |kbd_alphanum_board|kbdex_ctrl:kbdex_ctrl_inst|nstate.CODE                   ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |kbd_alphanum_board|kbdex_ctrl:kbdex_ctrl_inst|Selector10                    ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 6 LEs                ; 4 LEs                  ; No         ; |kbd_alphanum_board|kbdex_ctrl:kbdex_ctrl_inst|Selector9                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: kbdex_ctrl:kbd_ctrl ;
-+----------------+-------+-----------------------------------------+
-; Parameter Name ; Value ; Type                                    ;
-+----------------+-------+-----------------------------------------+
-; clkfreq        ; 50000 ; Signed Integer                          ;
-+----------------+-------+-----------------------------------------+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: kbdex_ctrl:kbdex_ctrl_inst ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; clkfreq        ; 50000 ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+--------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: kbdex_ctrl:kbd_ctrl|ps2_iobase:ps2_ctrl ;
-+----------------+-------+-------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                        ;
-+----------------+-------+-------------------------------------------------------------+
-; clkfreq        ; 50000 ; Signed Integer                                              ;
-+----------------+-------+-------------------------------------------------------------+
++---------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: kbdex_ctrl:kbdex_ctrl_inst|ps2_iobase:ps2_ctrl ;
++----------------+-------+--------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                               ;
++----------------+-------+--------------------------------------------------------------------+
+; clkfreq        ; 50000 ; Signed Integer                                                     ;
++----------------+-------+--------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "kbdex_ctrl:kbd_ctrl"                                                                            ;
-+------------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port             ; Type   ; Severity ; Details                                                                             ;
-+------------------+--------+----------+-------------------------------------------------------------------------------------+
-; key_code[47..16] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------------------+--------+----------+-------------------------------------------------------------------------------------+
++--------------------------------------------------------+
+; Port Connectivity Checks: "kbdex_ctrl:kbdex_ctrl_inst" ;
++--------+-------+----------+----------------------------+
+; Port   ; Type  ; Severity ; Details                    ;
++--------+-------+----------+----------------------------+
+; en     ; Input ; Info     ; Stuck at VCC               ;
+; resetn ; Input ; Info     ; Stuck at VCC               ;
+; lights ; Input ; Info     ; Stuck at GND               ;
++--------+-------+----------+----------------------------+
 
 
 +-----------------------------------------------------+
@@ -383,30 +410,31 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 174                         ;
-;     CLR               ; 36                          ;
-;     ENA               ; 7                           ;
-;     ENA CLR           ; 106                         ;
-;     plain             ; 25                          ;
+; arriav_ff             ; 133                         ;
+;     CLR               ; 25                          ;
+;     CLR SLD           ; 21                          ;
+;     ENA               ; 26                          ;
+;     ENA CLR           ; 49                          ;
+;     plain             ; 12                          ;
 ; arriav_io_obuf        ; 2                           ;
-; arriav_lcell_comb     ; 281                         ;
-;     arith             ; 73                          ;
-;         1 data inputs ; 63                          ;
-;         2 data inputs ; 10                          ;
-;     extend            ; 1                           ;
-;         7 data inputs ; 1                           ;
-;     normal            ; 207                         ;
-;         0 data inputs ; 2                           ;
-;         1 data inputs ; 7                           ;
-;         2 data inputs ; 45                          ;
-;         3 data inputs ; 29                          ;
-;         4 data inputs ; 51                          ;
-;         5 data inputs ; 28                          ;
-;         6 data inputs ; 45                          ;
-; boundary_port         ; 55                          ;
+; arriav_lcell_comb     ; 270                         ;
+;     arith             ; 50                          ;
+;         1 data inputs ; 49                          ;
+;         2 data inputs ; 1                           ;
+;     extend            ; 5                           ;
+;         7 data inputs ; 5                           ;
+;     normal            ; 215                         ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 5                           ;
+;         2 data inputs ; 32                          ;
+;         3 data inputs ; 24                          ;
+;         4 data inputs ; 47                          ;
+;         5 data inputs ; 40                          ;
+;         6 data inputs ; 66                          ;
+; boundary_port         ; 17                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 4.60                        ;
-; Average LUT depth     ; 2.59                        ;
+; Max LUT depth         ; 7.00                        ;
+; Average LUT depth     ; 3.05                        ;
 +-----------------------+-----------------------------+
 
 
@@ -415,7 +443,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -425,124 +453,94 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Fri Apr  6 20:36:43 2018
+    Info: Processing started: Sat Apr  7 18:38:12 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Teclado -c Teclado
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file ps2_kbd_test.vhd
-    Info (12022): Found design unit 1: ps2_kbd_test-struct File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Teclado/ps2_kbd_test.vhd Line: 31
-    Info (12023): Found entity 1: ps2_kbd_test File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Teclado/ps2_kbd_test.vhd Line: 4
+    Info (12022): Found design unit 1: ps2_kbd_test-struct File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Teclado/ps2_kbd_test.vhd Line: 31
+    Info (12023): Found entity 1: ps2_kbd_test File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Teclado/ps2_kbd_test.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file ps2_iobase.vhd
-    Info (12022): Found design unit 1: ps2_iobase-rtl File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Teclado/ps2_iobase.vhd Line: 41
-    Info (12023): Found entity 1: ps2_iobase File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Teclado/ps2_iobase.vhd Line: 20
+    Info (12022): Found design unit 1: ps2_iobase-rtl File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Teclado/ps2_iobase.vhd Line: 41
+    Info (12023): Found entity 1: ps2_iobase File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Teclado/ps2_iobase.vhd Line: 20
 Info (12021): Found 2 design units, including 1 entities, in source file bin2hex.vhd
-    Info (12022): Found design unit 1: bin2hex-LogicFunction File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Teclado/bin2hex.vhd Line: 11
-    Info (12023): Found entity 1: bin2hex File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Teclado/bin2hex.vhd Line: 4
+    Info (12022): Found design unit 1: bin2hex-LogicFunction File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Teclado/bin2hex.vhd Line: 11
+    Info (12023): Found entity 1: bin2hex File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Teclado/bin2hex.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file kbdex_ctrl.vhd
-    Info (12022): Found design unit 1: kbdex_ctrl-rtl File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Teclado/kbdex_ctrl.vhd Line: 63
-    Info (12023): Found entity 1: kbdex_ctrl File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Teclado/kbdex_ctrl.vhd Line: 47
-Info (12127): Elaborating entity "ps2_kbd_test" for the top level hierarchy
-Critical Warning (10920): VHDL Incomplete Partial Association warning at ps2_kbd_test.vhd(74): port or argument "key_code" has 32/48 unassociated elements File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Teclado/ps2_kbd_test.vhd Line: 74
-Warning (10873): Using initial value X (don't care) for net "LEDR[9..8]" at ps2_kbd_test.vhd(23) File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Teclado/ps2_kbd_test.vhd Line: 23
-Warning (10873): Using initial value X (don't care) for net "LEDR[4..0]" at ps2_kbd_test.vhd(23) File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Teclado/ps2_kbd_test.vhd Line: 23
-Info (12128): Elaborating entity "bin2hex" for hierarchy "bin2hex:hexseg0" File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Teclado/ps2_kbd_test.vhd Line: 61
-Info (12128): Elaborating entity "kbdex_ctrl" for hierarchy "kbdex_ctrl:kbd_ctrl" File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Teclado/ps2_kbd_test.vhd Line: 74
-Warning (10492): VHDL Process Statement warning at kbdex_ctrl.vhd(125): signal "en" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Teclado/kbdex_ctrl.vhd Line: 125
-Warning (10492): VHDL Process Statement warning at kbdex_ctrl.vhd(148): signal "fetchdata" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Teclado/kbdex_ctrl.vhd Line: 148
-Warning (10492): VHDL Process Statement warning at kbdex_ctrl.vhd(150): signal "fetchdata" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Teclado/kbdex_ctrl.vhd Line: 150
-Warning (10492): VHDL Process Statement warning at kbdex_ctrl.vhd(152): signal "fetchdata" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Teclado/kbdex_ctrl.vhd Line: 152
-Warning (10492): VHDL Process Statement warning at kbdex_ctrl.vhd(203): signal "sigfetch" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Teclado/kbdex_ctrl.vhd Line: 203
-Warning (10631): VHDL Process Statement warning at kbdex_ctrl.vhd(212): inferring latch(es) for signal or variable "selE0", which holds its previous value in one or more paths through the process File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Teclado/kbdex_ctrl.vhd Line: 212
-Warning (10492): VHDL Process Statement warning at kbdex_ctrl.vhd(237): signal "key0en" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Teclado/kbdex_ctrl.vhd Line: 237
-Warning (10492): VHDL Process Statement warning at kbdex_ctrl.vhd(247): signal "key1en" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Teclado/kbdex_ctrl.vhd Line: 247
-Warning (10492): VHDL Process Statement warning at kbdex_ctrl.vhd(257): signal "key2en" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Teclado/kbdex_ctrl.vhd Line: 257
-Warning (10631): VHDL Process Statement warning at kbdex_ctrl.vhd(266): inferring latch(es) for signal or variable "relbt", which holds its previous value in one or more paths through the process File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Teclado/kbdex_ctrl.vhd Line: 266
-Warning (10631): VHDL Process Statement warning at kbdex_ctrl.vhd(276): inferring latch(es) for signal or variable "selbt", which holds its previous value in one or more paths through the process File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Teclado/kbdex_ctrl.vhd Line: 276
-Warning (10492): VHDL Process Statement warning at kbdex_ctrl.vhd(293): signal "datacode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Teclado/kbdex_ctrl.vhd Line: 293
-Warning (10492): VHDL Process Statement warning at kbdex_ctrl.vhd(293): signal "key0code" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Teclado/kbdex_ctrl.vhd Line: 293
-Warning (10492): VHDL Process Statement warning at kbdex_ctrl.vhd(293): signal "key1code" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Teclado/kbdex_ctrl.vhd Line: 293
-Warning (10492): VHDL Process Statement warning at kbdex_ctrl.vhd(294): signal "datacode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Teclado/kbdex_ctrl.vhd Line: 294
-Warning (10492): VHDL Process Statement warning at kbdex_ctrl.vhd(294): signal "key2code" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Teclado/kbdex_ctrl.vhd Line: 294
-Warning (10492): VHDL Process Statement warning at kbdex_ctrl.vhd(295): signal "key0code" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Teclado/kbdex_ctrl.vhd Line: 295
-Warning (10492): VHDL Process Statement warning at kbdex_ctrl.vhd(297): signal "key1code" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Teclado/kbdex_ctrl.vhd Line: 297
-Warning (10492): VHDL Process Statement warning at kbdex_ctrl.vhd(299): signal "key2code" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Teclado/kbdex_ctrl.vhd Line: 299
-Warning (10492): VHDL Process Statement warning at kbdex_ctrl.vhd(306): signal "datacode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Teclado/kbdex_ctrl.vhd Line: 306
-Warning (10492): VHDL Process Statement warning at kbdex_ctrl.vhd(307): signal "key0code" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Teclado/kbdex_ctrl.vhd Line: 307
-Warning (10492): VHDL Process Statement warning at kbdex_ctrl.vhd(309): signal "key1code" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Teclado/kbdex_ctrl.vhd Line: 309
-Warning (10492): VHDL Process Statement warning at kbdex_ctrl.vhd(311): signal "key2code" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Teclado/kbdex_ctrl.vhd Line: 311
-Warning (10492): VHDL Process Statement warning at kbdex_ctrl.vhd(314): signal "datacode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Teclado/kbdex_ctrl.vhd Line: 314
-Warning (10492): VHDL Process Statement warning at kbdex_ctrl.vhd(315): signal "key0code" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Teclado/kbdex_ctrl.vhd Line: 315
-Warning (10492): VHDL Process Statement warning at kbdex_ctrl.vhd(317): signal "key1code" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Teclado/kbdex_ctrl.vhd Line: 317
-Warning (10492): VHDL Process Statement warning at kbdex_ctrl.vhd(319): signal "key2code" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Teclado/kbdex_ctrl.vhd Line: 319
-Warning (10492): VHDL Process Statement warning at kbdex_ctrl.vhd(324): signal "key0code" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Teclado/kbdex_ctrl.vhd Line: 324
-Warning (10492): VHDL Process Statement warning at kbdex_ctrl.vhd(324): signal "datacode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Teclado/kbdex_ctrl.vhd Line: 324
-Warning (10492): VHDL Process Statement warning at kbdex_ctrl.vhd(326): signal "key1code" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Teclado/kbdex_ctrl.vhd Line: 326
-Warning (10492): VHDL Process Statement warning at kbdex_ctrl.vhd(326): signal "datacode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Teclado/kbdex_ctrl.vhd Line: 326
-Warning (10492): VHDL Process Statement warning at kbdex_ctrl.vhd(328): signal "key2code" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Teclado/kbdex_ctrl.vhd Line: 328
-Warning (10492): VHDL Process Statement warning at kbdex_ctrl.vhd(328): signal "datacode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Teclado/kbdex_ctrl.vhd Line: 328
-Info (10041): Inferred latch for "selbt" at kbdex_ctrl.vhd(276) File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Teclado/kbdex_ctrl.vhd Line: 276
-Info (10041): Inferred latch for "relbt" at kbdex_ctrl.vhd(266) File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Teclado/kbdex_ctrl.vhd Line: 266
-Info (10041): Inferred latch for "selE0" at kbdex_ctrl.vhd(212) File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Teclado/kbdex_ctrl.vhd Line: 212
-Info (12128): Elaborating entity "ps2_iobase" for hierarchy "kbdex_ctrl:kbd_ctrl|ps2_iobase:ps2_ctrl" File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Teclado/kbdex_ctrl.vhd Line: 114
-Warning (10492): VHDL Process Statement warning at ps2_iobase.vhd(161): signal "sigsending" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Teclado/ps2_iobase.vhd Line: 161
+    Info (12022): Found design unit 1: kbdex_ctrl-rtl File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Teclado/kbdex_ctrl.vhd Line: 63
+    Info (12023): Found entity 1: kbdex_ctrl File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Teclado/kbdex_ctrl.vhd Line: 47
+Warning (12019): Can't analyze file -- file output_files/kbd_alphanum.vhd is missing
+Warning (12019): Can't analyze file -- file output_files/dec_tec2asc.vhd is missing
+Warning (12125): Using design file kbd_alphanum_board.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: kbd_alphanum_board-rtl File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Teclado/kbd_alphanum_board.vhd Line: 14
+    Info (12023): Found entity 1: kbd_alphanum_board File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Teclado/kbd_alphanum_board.vhd Line: 4
+Info (12127): Elaborating entity "kbd_alphanum_board" for the top level hierarchy
+Info (12128): Elaborating entity "kbdex_ctrl" for hierarchy "kbdex_ctrl:kbdex_ctrl_inst" File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Teclado/kbd_alphanum_board.vhd Line: 45
+Warning (10492): VHDL Process Statement warning at kbdex_ctrl.vhd(125): signal "en" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Teclado/kbdex_ctrl.vhd Line: 125
+Warning (10492): VHDL Process Statement warning at kbdex_ctrl.vhd(148): signal "fetchdata" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Teclado/kbdex_ctrl.vhd Line: 148
+Warning (10492): VHDL Process Statement warning at kbdex_ctrl.vhd(150): signal "fetchdata" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Teclado/kbdex_ctrl.vhd Line: 150
+Warning (10492): VHDL Process Statement warning at kbdex_ctrl.vhd(152): signal "fetchdata" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Teclado/kbdex_ctrl.vhd Line: 152
+Warning (10492): VHDL Process Statement warning at kbdex_ctrl.vhd(203): signal "sigfetch" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Teclado/kbdex_ctrl.vhd Line: 203
+Warning (10631): VHDL Process Statement warning at kbdex_ctrl.vhd(212): inferring latch(es) for signal or variable "selE0", which holds its previous value in one or more paths through the process File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Teclado/kbdex_ctrl.vhd Line: 212
+Warning (10492): VHDL Process Statement warning at kbdex_ctrl.vhd(237): signal "key0en" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Teclado/kbdex_ctrl.vhd Line: 237
+Warning (10492): VHDL Process Statement warning at kbdex_ctrl.vhd(247): signal "key1en" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Teclado/kbdex_ctrl.vhd Line: 247
+Warning (10492): VHDL Process Statement warning at kbdex_ctrl.vhd(257): signal "key2en" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Teclado/kbdex_ctrl.vhd Line: 257
+Warning (10631): VHDL Process Statement warning at kbdex_ctrl.vhd(266): inferring latch(es) for signal or variable "relbt", which holds its previous value in one or more paths through the process File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Teclado/kbdex_ctrl.vhd Line: 266
+Warning (10631): VHDL Process Statement warning at kbdex_ctrl.vhd(276): inferring latch(es) for signal or variable "selbt", which holds its previous value in one or more paths through the process File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Teclado/kbdex_ctrl.vhd Line: 276
+Warning (10492): VHDL Process Statement warning at kbdex_ctrl.vhd(293): signal "datacode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Teclado/kbdex_ctrl.vhd Line: 293
+Warning (10492): VHDL Process Statement warning at kbdex_ctrl.vhd(293): signal "key0code" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Teclado/kbdex_ctrl.vhd Line: 293
+Warning (10492): VHDL Process Statement warning at kbdex_ctrl.vhd(293): signal "key1code" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Teclado/kbdex_ctrl.vhd Line: 293
+Warning (10492): VHDL Process Statement warning at kbdex_ctrl.vhd(294): signal "datacode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Teclado/kbdex_ctrl.vhd Line: 294
+Warning (10492): VHDL Process Statement warning at kbdex_ctrl.vhd(294): signal "key2code" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Teclado/kbdex_ctrl.vhd Line: 294
+Warning (10492): VHDL Process Statement warning at kbdex_ctrl.vhd(295): signal "key0code" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Teclado/kbdex_ctrl.vhd Line: 295
+Warning (10492): VHDL Process Statement warning at kbdex_ctrl.vhd(297): signal "key1code" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Teclado/kbdex_ctrl.vhd Line: 297
+Warning (10492): VHDL Process Statement warning at kbdex_ctrl.vhd(299): signal "key2code" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Teclado/kbdex_ctrl.vhd Line: 299
+Warning (10492): VHDL Process Statement warning at kbdex_ctrl.vhd(306): signal "datacode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Teclado/kbdex_ctrl.vhd Line: 306
+Warning (10492): VHDL Process Statement warning at kbdex_ctrl.vhd(307): signal "key0code" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Teclado/kbdex_ctrl.vhd Line: 307
+Warning (10492): VHDL Process Statement warning at kbdex_ctrl.vhd(309): signal "key1code" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Teclado/kbdex_ctrl.vhd Line: 309
+Warning (10492): VHDL Process Statement warning at kbdex_ctrl.vhd(311): signal "key2code" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Teclado/kbdex_ctrl.vhd Line: 311
+Warning (10492): VHDL Process Statement warning at kbdex_ctrl.vhd(314): signal "datacode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Teclado/kbdex_ctrl.vhd Line: 314
+Warning (10492): VHDL Process Statement warning at kbdex_ctrl.vhd(315): signal "key0code" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Teclado/kbdex_ctrl.vhd Line: 315
+Warning (10492): VHDL Process Statement warning at kbdex_ctrl.vhd(317): signal "key1code" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Teclado/kbdex_ctrl.vhd Line: 317
+Warning (10492): VHDL Process Statement warning at kbdex_ctrl.vhd(319): signal "key2code" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Teclado/kbdex_ctrl.vhd Line: 319
+Warning (10492): VHDL Process Statement warning at kbdex_ctrl.vhd(324): signal "key0code" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Teclado/kbdex_ctrl.vhd Line: 324
+Warning (10492): VHDL Process Statement warning at kbdex_ctrl.vhd(324): signal "datacode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Teclado/kbdex_ctrl.vhd Line: 324
+Warning (10492): VHDL Process Statement warning at kbdex_ctrl.vhd(326): signal "key1code" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Teclado/kbdex_ctrl.vhd Line: 326
+Warning (10492): VHDL Process Statement warning at kbdex_ctrl.vhd(326): signal "datacode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Teclado/kbdex_ctrl.vhd Line: 326
+Warning (10492): VHDL Process Statement warning at kbdex_ctrl.vhd(328): signal "key2code" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Teclado/kbdex_ctrl.vhd Line: 328
+Warning (10492): VHDL Process Statement warning at kbdex_ctrl.vhd(328): signal "datacode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Teclado/kbdex_ctrl.vhd Line: 328
+Info (10041): Inferred latch for "selbt" at kbdex_ctrl.vhd(276) File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Teclado/kbdex_ctrl.vhd Line: 276
+Info (10041): Inferred latch for "relbt" at kbdex_ctrl.vhd(266) File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Teclado/kbdex_ctrl.vhd Line: 266
+Info (10041): Inferred latch for "selE0" at kbdex_ctrl.vhd(212) File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Teclado/kbdex_ctrl.vhd Line: 212
+Info (12128): Elaborating entity "ps2_iobase" for hierarchy "kbdex_ctrl:kbdex_ctrl_inst|ps2_iobase:ps2_ctrl" File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Teclado/kbdex_ctrl.vhd Line: 114
+Warning (10492): VHDL Process Statement warning at ps2_iobase.vhd(161): signal "sigsending" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Teclado/ps2_iobase.vhd Line: 161
+Warning (12125): Using design file kbd_alphanum.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: kbd_alphanum-rtl File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Teclado/kbd_alphanum.vhd Line: 14
+    Info (12023): Found entity 1: kbd_alphanum File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Teclado/kbd_alphanum.vhd Line: 4
+Info (12128): Elaborating entity "kbd_alphanum" for hierarchy "kbd_alphanum:kbd_alphanum_inst" File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Teclado/kbd_alphanum_board.vhd Line: 60
+Info (12128): Elaborating entity "bin2hex" for hierarchy "kbd_alphanum:kbd_alphanum_inst|bin2hex:hexseg0" File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Teclado/kbd_alphanum.vhd Line: 43
+Warning (12125): Using design file reg_caps.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: reg_caps-rtl File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Teclado/reg_caps.vhd Line: 11
+    Info (12023): Found entity 1: reg_caps File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Teclado/reg_caps.vhd Line: 4
+Info (12128): Elaborating entity "reg_caps" for hierarchy "kbd_alphanum:kbd_alphanum_inst|reg_caps:reg_caps_instance" File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Teclado/kbd_alphanum.vhd Line: 58
+Warning (12125): Using design file dec_tec2asc.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: dec_tec2asc-struct File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Teclado/dec_tec2asc.vhd Line: 12
+    Info (12023): Found entity 1: dec_tec2asc File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Teclado/dec_tec2asc.vhd Line: 4
+Info (12128): Elaborating entity "dec_tec2asc" for hierarchy "kbd_alphanum:kbd_alphanum_inst|dec_tec2asc:dec_tec2asc_instance" File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Teclado/kbd_alphanum.vhd Line: 63
 Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
-    Warning (13310): Register "kbdex_ctrl:kbd_ctrl|ps2_iobase:ps2_ctrl|ps2_data~en" is converted into an equivalent circuit using register "kbdex_ctrl:kbd_ctrl|ps2_iobase:ps2_ctrl|ps2_data~en_emulated" and latch "kbdex_ctrl:kbd_ctrl|ps2_iobase:ps2_ctrl|ps2_data~1" File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Teclado/ps2_iobase.vhd Line: 25
-    Warning (13310): Register "kbdex_ctrl:kbd_ctrl|ps2_iobase:ps2_ctrl|send_rdy" is converted into an equivalent circuit using register "kbdex_ctrl:kbd_ctrl|ps2_iobase:ps2_ctrl|send_rdy~_emulated" and latch "kbdex_ctrl:kbd_ctrl|ps2_iobase:ps2_ctrl|send_rdy~1" File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Teclado/ps2_iobase.vhd Line: 34
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "HEX2[0]" is stuck at GND File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Teclado/ps2_kbd_test.vhd Line: 19
-    Warning (13410): Pin "HEX2[1]" is stuck at GND File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Teclado/ps2_kbd_test.vhd Line: 19
-    Warning (13410): Pin "HEX2[2]" is stuck at GND File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Teclado/ps2_kbd_test.vhd Line: 19
-    Warning (13410): Pin "HEX2[3]" is stuck at GND File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Teclado/ps2_kbd_test.vhd Line: 19
-    Warning (13410): Pin "HEX2[4]" is stuck at GND File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Teclado/ps2_kbd_test.vhd Line: 19
-    Warning (13410): Pin "HEX2[5]" is stuck at GND File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Teclado/ps2_kbd_test.vhd Line: 19
-    Warning (13410): Pin "HEX2[6]" is stuck at VCC File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Teclado/ps2_kbd_test.vhd Line: 19
-    Warning (13410): Pin "HEX3[0]" is stuck at GND File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Teclado/ps2_kbd_test.vhd Line: 20
-    Warning (13410): Pin "HEX3[3]" is stuck at GND File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Teclado/ps2_kbd_test.vhd Line: 20
-    Warning (13410): Pin "HEX3[4]" is stuck at GND File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Teclado/ps2_kbd_test.vhd Line: 20
-    Warning (13410): Pin "HEX3[5]" is stuck at GND File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Teclado/ps2_kbd_test.vhd Line: 20
-    Warning (13410): Pin "LEDR[0]" is stuck at GND File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Teclado/ps2_kbd_test.vhd Line: 23
-    Warning (13410): Pin "LEDR[1]" is stuck at GND File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Teclado/ps2_kbd_test.vhd Line: 23
-    Warning (13410): Pin "LEDR[2]" is stuck at GND File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Teclado/ps2_kbd_test.vhd Line: 23
-    Warning (13410): Pin "LEDR[3]" is stuck at GND File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Teclado/ps2_kbd_test.vhd Line: 23
-    Warning (13410): Pin "LEDR[4]" is stuck at GND File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Teclado/ps2_kbd_test.vhd Line: 23
-    Warning (13410): Pin "LEDR[8]" is stuck at GND File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Teclado/ps2_kbd_test.vhd Line: 23
-    Warning (13410): Pin "LEDR[9]" is stuck at GND File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Teclado/ps2_kbd_test.vhd Line: 23
+    Warning (13310): Register "kbdex_ctrl:kbdex_ctrl_inst|ps2_iobase:ps2_ctrl|ps2_data~en" is converted into an equivalent circuit using register "kbdex_ctrl:kbdex_ctrl_inst|ps2_iobase:ps2_ctrl|ps2_data~en_emulated" and latch "kbdex_ctrl:kbdex_ctrl_inst|ps2_iobase:ps2_ctrl|ps2_data~1" File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Teclado/ps2_iobase.vhd Line: 25
 Info (286030): Timing-Driven Synthesis is running
-Critical Warning (18061): Ignored Power-Up Level option on the following registers
-    Critical Warning (18010): Register kbdex_ctrl:kbd_ctrl|ps2_iobase:ps2_ctrl|fcount[8] will power up to Low File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Teclado/ps2_iobase.vhd Line: 52
-    Critical Warning (18010): Register kbdex_ctrl:kbd_ctrl|ps2_iobase:ps2_ctrl|fcount[6] will power up to Low File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Teclado/ps2_iobase.vhd Line: 52
-    Critical Warning (18010): Register kbdex_ctrl:kbd_ctrl|ps2_iobase:ps2_ctrl|fcount[3] will power up to Low File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Teclado/ps2_iobase.vhd Line: 52
-    Critical Warning (18010): Register kbdex_ctrl:kbd_ctrl|ps2_iobase:ps2_ctrl|fcount[2] will power up to Low File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Teclado/ps2_iobase.vhd Line: 52
-    Critical Warning (18010): Register kbdex_ctrl:kbd_ctrl|ps2_iobase:ps2_ctrl|fcount[0] will power up to Low File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Teclado/ps2_iobase.vhd Line: 52
-    Critical Warning (18010): Register kbdex_ctrl:kbd_ctrl|ps2_iobase:ps2_ctrl|rcount[8] will power up to Low File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Teclado/ps2_iobase.vhd Line: 52
-    Critical Warning (18010): Register kbdex_ctrl:kbd_ctrl|ps2_iobase:ps2_ctrl|rcount[6] will power up to Low File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Teclado/ps2_iobase.vhd Line: 52
-    Critical Warning (18010): Register kbdex_ctrl:kbd_ctrl|ps2_iobase:ps2_ctrl|rcount[3] will power up to Low File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Teclado/ps2_iobase.vhd Line: 52
-    Critical Warning (18010): Register kbdex_ctrl:kbd_ctrl|ps2_iobase:ps2_ctrl|rcount[2] will power up to Low File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Teclado/ps2_iobase.vhd Line: 52
-    Critical Warning (18010): Register kbdex_ctrl:kbd_ctrl|ps2_iobase:ps2_ctrl|rcount[0] will power up to Low File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Teclado/ps2_iobase.vhd Line: 52
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 12 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "KEY[2]" File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Teclado/ps2_kbd_test.vhd Line: 11
-    Warning (15610): No output dependent on input pin "KEY[3]" File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Teclado/ps2_kbd_test.vhd Line: 11
-    Warning (15610): No output dependent on input pin "SW[0]" File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Teclado/ps2_kbd_test.vhd Line: 14
-    Warning (15610): No output dependent on input pin "SW[1]" File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Teclado/ps2_kbd_test.vhd Line: 14
-    Warning (15610): No output dependent on input pin "SW[2]" File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Teclado/ps2_kbd_test.vhd Line: 14
-    Warning (15610): No output dependent on input pin "SW[3]" File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Teclado/ps2_kbd_test.vhd Line: 14
-    Warning (15610): No output dependent on input pin "SW[4]" File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Teclado/ps2_kbd_test.vhd Line: 14
-    Warning (15610): No output dependent on input pin "SW[5]" File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Teclado/ps2_kbd_test.vhd Line: 14
-    Warning (15610): No output dependent on input pin "SW[6]" File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Teclado/ps2_kbd_test.vhd Line: 14
-    Warning (15610): No output dependent on input pin "SW[7]" File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Teclado/ps2_kbd_test.vhd Line: 14
-    Warning (15610): No output dependent on input pin "SW[8]" File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Teclado/ps2_kbd_test.vhd Line: 14
-    Warning (15610): No output dependent on input pin "SW[9]" File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Teclado/ps2_kbd_test.vhd Line: 14
-Info (21057): Implemented 380 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 15 input pins
-    Info (21059): Implemented 38 output pins
+Info (21057): Implemented 327 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 1 input pins
+    Info (21059): Implemented 14 output pins
     Info (21060): Implemented 2 bidirectional pins
-    Info (21061): Implemented 325 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 84 warnings
-    Info: Peak virtual memory: 1182 megabytes
-    Info: Processing ended: Fri Apr  6 20:36:53 2018
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:21
+    Info (21061): Implemented 310 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 43 warnings
+    Info: Peak virtual memory: 1183 megabytes
+    Info: Processing ended: Sat Apr  7 18:38:25 2018
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:25
 
 

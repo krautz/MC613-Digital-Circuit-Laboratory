@@ -1,0 +1,62 @@
+LIBRARY ieee ;
+USE ieee.std_logic_1164.all ;
+
+ENTITY dec_tec2asc IS
+PORT (
+		entrada:in std_logic_vector (7 DOWNTO 0);
+		saida: out std_logic_vector (7 DOWNTO 0)
+	);
+END dec_tec2asc ;
+
+ARCHITECTURE struct OF dec_tec2asc IS
+BEGIN
+
+	with entrada select
+		saida <= x"61" when x"1c",
+					x"62" when x"32",
+					x"63" when x"21",
+					x"64" when x"23",
+					x"65" when x"24",
+					x"66" when x"2b",
+					x"67" when x"34",
+					x"68" when x"33",
+					x"69" when x"43",
+					x"6a" when x"3b",
+					x"6b" when x"42",
+					x"6c" when x"4b",
+					x"6d" when x"3a",
+					x"6e" when x"31",
+					x"6f" when x"44",
+					x"70" when x"4d",
+					x"71" when x"15",
+					x"72" when x"2d",
+					x"73" when x"1b",
+					x"74" when x"2c",
+					x"75" when x"3c",
+					x"76" when x"2a",
+					x"77" when x"1d",
+					x"78" when x"22",
+					x"79" when x"35",
+					x"7a" when x"1a",
+					x"30" when x"45",
+					x"31" when x"16",
+					x"32" when x"1e",
+					x"33" when x"26",
+					x"34" when x"25",
+					x"35" when x"2e",
+					x"36" when x"36",
+					x"37" when x"3d",
+					x"38" when x"3e",
+					x"39" when x"46",
+					x"30" when x"70",
+					x"31" when x"69",
+					x"32" when x"72",
+					x"33" when x"7a",
+					x"34" when x"6b",
+					x"35" when x"73",
+					x"36" when x"74",
+					x"37" when x"6c",
+					x"38" when x"75",
+					x"39" when x"7d";
+end struct;
+		
