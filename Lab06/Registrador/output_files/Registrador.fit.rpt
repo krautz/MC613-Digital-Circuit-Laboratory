@@ -1,5 +1,5 @@
 Fitter report for Registrador
-Fri Apr  6 19:54:05 2018
+Mon Apr  9 14:35:45 2018
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -61,7 +61,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Fitter Summary                                                                ;
 +---------------------------------+---------------------------------------------+
-; Fitter Status                   ; Successful - Fri Apr  6 19:54:05 2018       ;
+; Fitter Status                   ; Successful - Mon Apr  9 14:35:45 2018       ;
 ; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; Registrador                                 ;
 ; Top-level Entity Name           ; register_bank_placa                         ;
@@ -156,9 +156,9 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.2%      ;
-;     Processor 3            ;   0.2%      ;
-;     Processor 4            ;   0.2%      ;
+;     Processor 2            ;   0.4%      ;
+;     Processor 3            ;   0.4%      ;
+;     Processor 4            ;   0.4%      ;
 +----------------------------+-------------+
 
 
@@ -455,7 +455,7 @@ refer to the applicable agreement for further details.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/output_files/Registrador.pin.
+The pin-out file can be found in /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/output_files/Registrador.pin.
 
 
 +------------------------------------------------------------------------------------------+
@@ -2346,7 +2346,7 @@ Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "VGA_R[7]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "VGA_SYNC_N" is assigned to location or region, but does not exist in design
     Warning (15706): Node "VGA_VS" is assigned to location or region, but does not exist in design
-Info (11798): Fitter preparation operations ending: elapsed time is 00:00:11
+Info (11798): Fitter preparation operations ending: elapsed time is 00:00:12
 Info (170189): Fitter placement preparation operations beginning
 Info (14951): The Fitter is using Advanced Physical Optimization.
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:01
@@ -2365,19 +2365,19 @@ Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:02
+Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:03
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
-Info (144001): Generated suppressed messages file /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/output_files/Registrador.fit.smsg
+Info (144001): Generated suppressed messages file /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/output_files/Registrador.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 247 warnings
-    Info: Peak virtual memory: 2493 megabytes
-    Info: Processing ended: Fri Apr  6 19:54:05 2018
-    Info: Elapsed time: 00:00:28
-    Info: Total CPU time (on all processors): 00:00:43
+    Info: Peak virtual memory: 2491 megabytes
+    Info: Processing ended: Mon Apr  9 14:35:46 2018
+    Info: Elapsed time: 00:00:34
+    Info: Total CPU time (on all processors): 00:00:45
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/output_files/Registrador.fit.smsg.
+The suppressed messages can be found in /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/output_files/Registrador.fit.smsg.
 
 

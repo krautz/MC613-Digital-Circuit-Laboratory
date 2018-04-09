@@ -1,0 +1,52 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/ec2015/ra165457/Desktop/MC613/Lab07/RDU/simulation/qsim
+vshift_register
+Z1 !s110 1523303917
+!i10b 1
+!s100 f6X:SKGcYZ5NPfB6@ndg22
+IDLG07U[IVRV1bDHX:A<9b2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1523303916
+8RDU.vo
+FRDU.vo
+L0 31
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1523303917.000000
+!s107 RDU.vo|
+!s90 -work|work|RDU.vo|
+!i113 1
+Z5 o-work work
+Z6 tCvgOpt 0
+vshift_register_vlg_vec_tst
+R1
+!i10b 1
+!s100 6ieMea_biGYNFDSZdXO9n0
+IWiKF3D3jL>nU>z`^NQ8aJ3
+R2
+R0
+w1523303915
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+L0 29
+R3
+r1
+!s85 0
+31
+R4
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R5
+R6

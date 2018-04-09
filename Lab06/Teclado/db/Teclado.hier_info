@@ -3,20 +3,20 @@ CLOCK_50 => kbdex_ctrl:kbdex_ctrl_inst.clk
 CLOCK_50 => kbd_alphanum:kbd_alphanum_inst.clk
 PS2_DAT <> kbdex_ctrl:kbdex_ctrl_inst.ps2_data
 PS2_CLK <> kbdex_ctrl:kbdex_ctrl_inst.ps2_clk
-HEX1[0] <= kbd_alphanum:kbd_alphanum_inst.HEX1[0]
-HEX1[1] <= kbd_alphanum:kbd_alphanum_inst.HEX1[1]
-HEX1[2] <= kbd_alphanum:kbd_alphanum_inst.HEX1[2]
-HEX1[3] <= kbd_alphanum:kbd_alphanum_inst.HEX1[3]
-HEX1[4] <= kbd_alphanum:kbd_alphanum_inst.HEX1[4]
-HEX1[5] <= kbd_alphanum:kbd_alphanum_inst.HEX1[5]
-HEX1[6] <= kbd_alphanum:kbd_alphanum_inst.HEX1[6]
-HEX0[0] <= kbd_alphanum:kbd_alphanum_inst.HEX0[0]
-HEX0[1] <= kbd_alphanum:kbd_alphanum_inst.HEX0[1]
-HEX0[2] <= kbd_alphanum:kbd_alphanum_inst.HEX0[2]
-HEX0[3] <= kbd_alphanum:kbd_alphanum_inst.HEX0[3]
-HEX0[4] <= kbd_alphanum:kbd_alphanum_inst.HEX0[4]
-HEX0[5] <= kbd_alphanum:kbd_alphanum_inst.HEX0[5]
-HEX0[6] <= kbd_alphanum:kbd_alphanum_inst.HEX0[6]
+HEX1[0] << kbd_alphanum:kbd_alphanum_inst.HEX1[0]
+HEX1[1] << kbd_alphanum:kbd_alphanum_inst.HEX1[1]
+HEX1[2] << kbd_alphanum:kbd_alphanum_inst.HEX1[2]
+HEX1[3] << kbd_alphanum:kbd_alphanum_inst.HEX1[3]
+HEX1[4] << kbd_alphanum:kbd_alphanum_inst.HEX1[4]
+HEX1[5] << kbd_alphanum:kbd_alphanum_inst.HEX1[5]
+HEX1[6] << kbd_alphanum:kbd_alphanum_inst.HEX1[6]
+HEX0[0] << kbd_alphanum:kbd_alphanum_inst.HEX0[0]
+HEX0[1] << kbd_alphanum:kbd_alphanum_inst.HEX0[1]
+HEX0[2] << kbd_alphanum:kbd_alphanum_inst.HEX0[2]
+HEX0[3] << kbd_alphanum:kbd_alphanum_inst.HEX0[3]
+HEX0[4] << kbd_alphanum:kbd_alphanum_inst.HEX0[4]
+HEX0[5] << kbd_alphanum:kbd_alphanum_inst.HEX0[5]
+HEX0[6] << kbd_alphanum:kbd_alphanum_inst.HEX0[6]
 
 
 |kbd_alphanum_board|kbdex_ctrl:kbdex_ctrl_inst
@@ -323,34 +323,34 @@ odata[7] <= sdata[7].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |kbd_alphanum_board|kbd_alphanum:kbd_alphanum_inst
-clk => ~NO_FANOUT~
-key_on[0] => ~NO_FANOUT~
+clk => reg_caps:reg_caps_instance.clk
+key_on[0] => reg_caps:reg_caps_instance.key_on
 key_on[1] => ~NO_FANOUT~
 key_on[2] => ~NO_FANOUT~
 key_code[0] => Mux0.IN263
 key_code[0] => key2[0].DATAA
-key_code[0] => Equal0.IN4
+key_code[0] => Equal1.IN4
 key_code[1] => Mux0.IN262
 key_code[1] => key2[1].DATAA
-key_code[1] => Equal0.IN3
+key_code[1] => Equal1.IN3
 key_code[2] => Mux0.IN261
 key_code[2] => key2[2].DATAA
-key_code[2] => Equal0.IN2
+key_code[2] => Equal1.IN2
 key_code[3] => Mux0.IN260
 key_code[3] => key2[3].DATAA
-key_code[3] => Equal0.IN7
+key_code[3] => Equal1.IN7
 key_code[4] => Mux0.IN259
 key_code[4] => key2[4].DATAA
-key_code[4] => Equal0.IN6
+key_code[4] => Equal1.IN6
 key_code[5] => Mux0.IN258
 key_code[5] => key2[5].DATAA
-key_code[5] => Equal0.IN1
+key_code[5] => Equal1.IN1
 key_code[6] => Mux0.IN257
 key_code[6] => key2[6].DATAA
-key_code[6] => Equal0.IN5
+key_code[6] => Equal1.IN5
 key_code[7] => Mux0.IN256
 key_code[7] => key2[7].DATAA
-key_code[7] => Equal0.IN0
+key_code[7] => Equal1.IN0
 key_code[8] => ~NO_FANOUT~
 key_code[9] => ~NO_FANOUT~
 key_code[10] => ~NO_FANOUT~
@@ -391,20 +391,20 @@ key_code[44] => ~NO_FANOUT~
 key_code[45] => ~NO_FANOUT~
 key_code[46] => ~NO_FANOUT~
 key_code[47] => ~NO_FANOUT~
-HEX1[0] <= bin2hex:hexseg1.HEX0[0]
-HEX1[1] <= bin2hex:hexseg1.HEX0[1]
-HEX1[2] <= bin2hex:hexseg1.HEX0[2]
-HEX1[3] <= bin2hex:hexseg1.HEX0[3]
-HEX1[4] <= bin2hex:hexseg1.HEX0[4]
-HEX1[5] <= bin2hex:hexseg1.HEX0[5]
-HEX1[6] <= bin2hex:hexseg1.HEX0[6]
-HEX0[0] <= bin2hex:hexseg0.HEX0[0]
-HEX0[1] <= bin2hex:hexseg0.HEX0[1]
-HEX0[2] <= bin2hex:hexseg0.HEX0[2]
-HEX0[3] <= bin2hex:hexseg0.HEX0[3]
-HEX0[4] <= bin2hex:hexseg0.HEX0[4]
-HEX0[5] <= bin2hex:hexseg0.HEX0[5]
-HEX0[6] <= bin2hex:hexseg0.HEX0[6]
+HEX1[0] <= HEX1.DB_MAX_OUTPUT_PORT_TYPE
+HEX1[1] <= HEX1.DB_MAX_OUTPUT_PORT_TYPE
+HEX1[2] <= HEX1.DB_MAX_OUTPUT_PORT_TYPE
+HEX1[3] <= HEX1.DB_MAX_OUTPUT_PORT_TYPE
+HEX1[4] <= HEX1.DB_MAX_OUTPUT_PORT_TYPE
+HEX1[5] <= HEX1.DB_MAX_OUTPUT_PORT_TYPE
+HEX1[6] <= HEX1.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[0] <= HEX0.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[1] <= HEX0.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[2] <= HEX0.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[3] <= HEX0.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[4] <= HEX0.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[5] <= HEX0.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[6] <= HEX0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |kbd_alphanum_board|kbd_alphanum:kbd_alphanum_inst|bin2hex:hexseg0
@@ -484,8 +484,13 @@ HEX0[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |kbd_alphanum_board|kbd_alphanum:kbd_alphanum_inst|reg_caps:reg_caps_instance
-data_in => var.CLK
-data_out <= var.DB_MAX_OUTPUT_PORT_TYPE
+clk => Q~reg0.CLK
+clk => ajuda.CLK
+clk => var.CLK
+T => process_0.IN0
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+key_on => process_0.IN1
+key_on => ajuda.OUTPUTSELECT
 
 
 |kbd_alphanum_board|kbd_alphanum:kbd_alphanum_inst|dec_tec2asc:dec_tec2asc_instance

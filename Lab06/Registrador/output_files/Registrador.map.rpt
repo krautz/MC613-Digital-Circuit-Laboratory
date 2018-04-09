@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Registrador
-Fri Apr  6 19:53:37 2018
+Mon Apr  9 14:35:11 2018
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -51,7 +51,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Fri Apr  6 19:53:37 2018       ;
+; Analysis & Synthesis Status     ; Successful - Mon Apr  9 14:35:11 2018       ;
 ; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; Registrador                                 ;
 ; Top-level Entity Name           ; register_bank_placa                         ;
@@ -174,17 +174,17 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                  ;
-+----------------------------------+-----------------+-----------------------+--------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type             ; File Name with Absolute Path                                                                     ; Library ;
-+----------------------------------+-----------------+-----------------------+--------------------------------------------------------------------------------------------------+---------+
-; zbuffer.vhd                      ; yes             ; User VHDL File        ; /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/zbuffer.vhd             ;         ;
-; dec3_to_8.vhd                    ; yes             ; User VHDL File        ; /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/dec3_to_8.vhd           ;         ;
-; register_bank_placa.vhd          ; yes             ; Auto-Found VHDL File  ; /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/register_bank_placa.vhd ;         ;
-; reg.vhd                          ; yes             ; Auto-Found VHDL File  ; /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/reg.vhd                 ;         ;
-; bin2hex.vhd                      ; yes             ; Auto-Found VHDL File  ; /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/bin2hex.vhd             ;         ;
-+----------------------------------+-----------------+-----------------------+--------------------------------------------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                               ;
++----------------------------------+-----------------+-----------------------+-------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type             ; File Name with Absolute Path                                                  ; Library ;
++----------------------------------+-----------------+-----------------------+-------------------------------------------------------------------------------+---------+
+; zbuffer.vhd                      ; yes             ; User VHDL File        ; /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/zbuffer.vhd             ;         ;
+; dec3_to_8.vhd                    ; yes             ; User VHDL File        ; /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/dec3_to_8.vhd           ;         ;
+; register_bank_placa.vhd          ; yes             ; Auto-Found VHDL File  ; /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/register_bank_placa.vhd ;         ;
+; reg.vhd                          ; yes             ; Auto-Found VHDL File  ; /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/reg.vhd                 ;         ;
+; bin2hex.vhd                      ; yes             ; Auto-Found VHDL File  ; /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/bin2hex.vhd             ;         ;
++----------------------------------+-----------------+-----------------------+-------------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -376,70 +376,70 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Fri Apr  6 19:53:27 2018
+    Info: Processing started: Mon Apr  9 14:34:59 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Registrador -c Registrador
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file zbuffer.vhd
-    Info (12022): Found design unit 1: zbuffer-Behavior File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/zbuffer.vhd Line: 13
-    Info (12023): Found entity 1: zbuffer File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/zbuffer.vhd Line: 4
+    Info (12022): Found design unit 1: zbuffer-Behavior File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/zbuffer.vhd Line: 13
+    Info (12023): Found entity 1: zbuffer File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/zbuffer.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file dec3_to_8.vhd
-    Info (12022): Found design unit 1: dec3_to_8-rtl File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/dec3_to_8.vhd Line: 12
-    Info (12023): Found entity 1: dec3_to_8 File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/dec3_to_8.vhd Line: 4
+    Info (12022): Found design unit 1: dec3_to_8-rtl File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/dec3_to_8.vhd Line: 12
+    Info (12023): Found entity 1: dec3_to_8 File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/dec3_to_8.vhd Line: 4
 Warning (12125): Using design file register_bank_placa.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: register_bank_placa-structural File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/register_bank_placa.vhd Line: 17
-    Info (12023): Found entity 1: register_bank_placa File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/register_bank_placa.vhd Line: 4
+    Info (12022): Found design unit 1: register_bank_placa-structural File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/register_bank_placa.vhd Line: 17
+    Info (12023): Found entity 1: register_bank_placa File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/register_bank_placa.vhd Line: 4
 Info (12127): Elaborating entity "register_bank_placa" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at register_bank_placa.vhd(8): used implicit default value for signal "data_out" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/register_bank_placa.vhd Line: 8
-Info (12128): Elaborating entity "dec3_to_8" for hierarchy "dec3_to_8:dec3_to_8_instance_1" File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/register_bank_placa.vhd Line: 61
+Warning (10541): VHDL Signal Declaration warning at register_bank_placa.vhd(8): used implicit default value for signal "data_out" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/register_bank_placa.vhd Line: 8
+Info (12128): Elaborating entity "dec3_to_8" for hierarchy "dec3_to_8:dec3_to_8_instance_1" File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/register_bank_placa.vhd Line: 61
 Warning (12125): Using design file reg.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: reg-rtl File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/reg.vhd Line: 17
-    Info (12023): Found entity 1: reg File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/reg.vhd Line: 4
-Info (12128): Elaborating entity "reg" for hierarchy "reg:\G1:0:reg_instance" File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/register_bank_placa.vhd Line: 71
-Warning (10492): VHDL Process Statement warning at reg.vhd(28): signal "load" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/reg.vhd Line: 28
-Info (12128): Elaborating entity "zbuffer" for hierarchy "zbuffer:\G1:0:buffer_instance" File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/register_bank_placa.vhd Line: 76
+    Info (12022): Found design unit 1: reg-rtl File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/reg.vhd Line: 17
+    Info (12023): Found entity 1: reg File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/reg.vhd Line: 4
+Info (12128): Elaborating entity "reg" for hierarchy "reg:\G1:0:reg_instance" File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/register_bank_placa.vhd Line: 71
+Warning (10492): VHDL Process Statement warning at reg.vhd(28): signal "load" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/reg.vhd Line: 28
+Info (12128): Elaborating entity "zbuffer" for hierarchy "zbuffer:\G1:0:buffer_instance" File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/register_bank_placa.vhd Line: 76
 Warning (12125): Using design file bin2hex.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: bin2hex-LogicFunction File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/bin2hex.vhd Line: 11
-    Info (12023): Found entity 1: bin2hex File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/bin2hex.vhd Line: 4
-Info (12128): Elaborating entity "bin2hex" for hierarchy "bin2hex:bin2hex_instance" File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/register_bank_placa.vhd Line: 93
+    Info (12022): Found design unit 1: bin2hex-LogicFunction File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/bin2hex.vhd Line: 11
+    Info (12023): Found entity 1: bin2hex File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/bin2hex.vhd Line: 4
+Info (12128): Elaborating entity "bin2hex" for hierarchy "bin2hex:bin2hex_instance" File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/register_bank_placa.vhd Line: 93
 Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
-    Warning (13049): Converted tri-state buffer "zbuffer:\G1:7:buffer_instance|F[0]" feeding internal logic into a wire File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/zbuffer.vhd Line: 8
-    Warning (13049): Converted tri-state buffer "zbuffer:\G1:7:buffer_instance|F[1]" feeding internal logic into a wire File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/zbuffer.vhd Line: 8
-    Warning (13049): Converted tri-state buffer "zbuffer:\G1:7:buffer_instance|F[2]" feeding internal logic into a wire File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/zbuffer.vhd Line: 8
-    Warning (13049): Converted tri-state buffer "zbuffer:\G1:7:buffer_instance|F[3]" feeding internal logic into a wire File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/zbuffer.vhd Line: 8
-    Warning (13049): Converted tri-state buffer "zbuffer:\G1:6:buffer_instance|F[0]" feeding internal logic into a wire File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/zbuffer.vhd Line: 8
-    Warning (13049): Converted tri-state buffer "zbuffer:\G1:6:buffer_instance|F[1]" feeding internal logic into a wire File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/zbuffer.vhd Line: 8
-    Warning (13049): Converted tri-state buffer "zbuffer:\G1:6:buffer_instance|F[2]" feeding internal logic into a wire File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/zbuffer.vhd Line: 8
-    Warning (13049): Converted tri-state buffer "zbuffer:\G1:6:buffer_instance|F[3]" feeding internal logic into a wire File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/zbuffer.vhd Line: 8
-    Warning (13049): Converted tri-state buffer "zbuffer:\G1:5:buffer_instance|F[0]" feeding internal logic into a wire File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/zbuffer.vhd Line: 8
-    Warning (13049): Converted tri-state buffer "zbuffer:\G1:5:buffer_instance|F[1]" feeding internal logic into a wire File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/zbuffer.vhd Line: 8
-    Warning (13049): Converted tri-state buffer "zbuffer:\G1:5:buffer_instance|F[2]" feeding internal logic into a wire File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/zbuffer.vhd Line: 8
-    Warning (13049): Converted tri-state buffer "zbuffer:\G1:5:buffer_instance|F[3]" feeding internal logic into a wire File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/zbuffer.vhd Line: 8
-    Warning (13049): Converted tri-state buffer "zbuffer:\G1:4:buffer_instance|F[0]" feeding internal logic into a wire File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/zbuffer.vhd Line: 8
-    Warning (13049): Converted tri-state buffer "zbuffer:\G1:4:buffer_instance|F[1]" feeding internal logic into a wire File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/zbuffer.vhd Line: 8
-    Warning (13049): Converted tri-state buffer "zbuffer:\G1:4:buffer_instance|F[2]" feeding internal logic into a wire File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/zbuffer.vhd Line: 8
-    Warning (13049): Converted tri-state buffer "zbuffer:\G1:4:buffer_instance|F[3]" feeding internal logic into a wire File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/zbuffer.vhd Line: 8
-    Warning (13049): Converted tri-state buffer "zbuffer:\G1:3:buffer_instance|F[0]" feeding internal logic into a wire File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/zbuffer.vhd Line: 8
-    Warning (13049): Converted tri-state buffer "zbuffer:\G1:3:buffer_instance|F[1]" feeding internal logic into a wire File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/zbuffer.vhd Line: 8
-    Warning (13049): Converted tri-state buffer "zbuffer:\G1:3:buffer_instance|F[2]" feeding internal logic into a wire File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/zbuffer.vhd Line: 8
-    Warning (13049): Converted tri-state buffer "zbuffer:\G1:3:buffer_instance|F[3]" feeding internal logic into a wire File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/zbuffer.vhd Line: 8
-    Warning (13049): Converted tri-state buffer "zbuffer:\G1:2:buffer_instance|F[0]" feeding internal logic into a wire File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/zbuffer.vhd Line: 8
-    Warning (13049): Converted tri-state buffer "zbuffer:\G1:2:buffer_instance|F[1]" feeding internal logic into a wire File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/zbuffer.vhd Line: 8
-    Warning (13049): Converted tri-state buffer "zbuffer:\G1:2:buffer_instance|F[2]" feeding internal logic into a wire File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/zbuffer.vhd Line: 8
-    Warning (13049): Converted tri-state buffer "zbuffer:\G1:2:buffer_instance|F[3]" feeding internal logic into a wire File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/zbuffer.vhd Line: 8
-    Warning (13049): Converted tri-state buffer "zbuffer:\G1:1:buffer_instance|F[0]" feeding internal logic into a wire File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/zbuffer.vhd Line: 8
-    Warning (13049): Converted tri-state buffer "zbuffer:\G1:1:buffer_instance|F[1]" feeding internal logic into a wire File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/zbuffer.vhd Line: 8
-    Warning (13049): Converted tri-state buffer "zbuffer:\G1:1:buffer_instance|F[2]" feeding internal logic into a wire File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/zbuffer.vhd Line: 8
-    Warning (13049): Converted tri-state buffer "zbuffer:\G1:1:buffer_instance|F[3]" feeding internal logic into a wire File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/zbuffer.vhd Line: 8
-    Warning (13049): Converted tri-state buffer "zbuffer:\G1:0:buffer_instance|F[0]" feeding internal logic into a wire File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/zbuffer.vhd Line: 8
-    Warning (13049): Converted tri-state buffer "zbuffer:\G1:0:buffer_instance|F[1]" feeding internal logic into a wire File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/zbuffer.vhd Line: 8
-    Warning (13049): Converted tri-state buffer "zbuffer:\G1:0:buffer_instance|F[2]" feeding internal logic into a wire File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/zbuffer.vhd Line: 8
-    Warning (13049): Converted tri-state buffer "zbuffer:\G1:0:buffer_instance|F[3]" feeding internal logic into a wire File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/zbuffer.vhd Line: 8
+    Warning (13049): Converted tri-state buffer "zbuffer:\G1:7:buffer_instance|F[0]" feeding internal logic into a wire File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/zbuffer.vhd Line: 8
+    Warning (13049): Converted tri-state buffer "zbuffer:\G1:7:buffer_instance|F[1]" feeding internal logic into a wire File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/zbuffer.vhd Line: 8
+    Warning (13049): Converted tri-state buffer "zbuffer:\G1:7:buffer_instance|F[2]" feeding internal logic into a wire File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/zbuffer.vhd Line: 8
+    Warning (13049): Converted tri-state buffer "zbuffer:\G1:7:buffer_instance|F[3]" feeding internal logic into a wire File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/zbuffer.vhd Line: 8
+    Warning (13049): Converted tri-state buffer "zbuffer:\G1:6:buffer_instance|F[0]" feeding internal logic into a wire File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/zbuffer.vhd Line: 8
+    Warning (13049): Converted tri-state buffer "zbuffer:\G1:6:buffer_instance|F[1]" feeding internal logic into a wire File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/zbuffer.vhd Line: 8
+    Warning (13049): Converted tri-state buffer "zbuffer:\G1:6:buffer_instance|F[2]" feeding internal logic into a wire File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/zbuffer.vhd Line: 8
+    Warning (13049): Converted tri-state buffer "zbuffer:\G1:6:buffer_instance|F[3]" feeding internal logic into a wire File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/zbuffer.vhd Line: 8
+    Warning (13049): Converted tri-state buffer "zbuffer:\G1:5:buffer_instance|F[0]" feeding internal logic into a wire File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/zbuffer.vhd Line: 8
+    Warning (13049): Converted tri-state buffer "zbuffer:\G1:5:buffer_instance|F[1]" feeding internal logic into a wire File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/zbuffer.vhd Line: 8
+    Warning (13049): Converted tri-state buffer "zbuffer:\G1:5:buffer_instance|F[2]" feeding internal logic into a wire File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/zbuffer.vhd Line: 8
+    Warning (13049): Converted tri-state buffer "zbuffer:\G1:5:buffer_instance|F[3]" feeding internal logic into a wire File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/zbuffer.vhd Line: 8
+    Warning (13049): Converted tri-state buffer "zbuffer:\G1:4:buffer_instance|F[0]" feeding internal logic into a wire File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/zbuffer.vhd Line: 8
+    Warning (13049): Converted tri-state buffer "zbuffer:\G1:4:buffer_instance|F[1]" feeding internal logic into a wire File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/zbuffer.vhd Line: 8
+    Warning (13049): Converted tri-state buffer "zbuffer:\G1:4:buffer_instance|F[2]" feeding internal logic into a wire File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/zbuffer.vhd Line: 8
+    Warning (13049): Converted tri-state buffer "zbuffer:\G1:4:buffer_instance|F[3]" feeding internal logic into a wire File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/zbuffer.vhd Line: 8
+    Warning (13049): Converted tri-state buffer "zbuffer:\G1:3:buffer_instance|F[0]" feeding internal logic into a wire File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/zbuffer.vhd Line: 8
+    Warning (13049): Converted tri-state buffer "zbuffer:\G1:3:buffer_instance|F[1]" feeding internal logic into a wire File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/zbuffer.vhd Line: 8
+    Warning (13049): Converted tri-state buffer "zbuffer:\G1:3:buffer_instance|F[2]" feeding internal logic into a wire File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/zbuffer.vhd Line: 8
+    Warning (13049): Converted tri-state buffer "zbuffer:\G1:3:buffer_instance|F[3]" feeding internal logic into a wire File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/zbuffer.vhd Line: 8
+    Warning (13049): Converted tri-state buffer "zbuffer:\G1:2:buffer_instance|F[0]" feeding internal logic into a wire File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/zbuffer.vhd Line: 8
+    Warning (13049): Converted tri-state buffer "zbuffer:\G1:2:buffer_instance|F[1]" feeding internal logic into a wire File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/zbuffer.vhd Line: 8
+    Warning (13049): Converted tri-state buffer "zbuffer:\G1:2:buffer_instance|F[2]" feeding internal logic into a wire File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/zbuffer.vhd Line: 8
+    Warning (13049): Converted tri-state buffer "zbuffer:\G1:2:buffer_instance|F[3]" feeding internal logic into a wire File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/zbuffer.vhd Line: 8
+    Warning (13049): Converted tri-state buffer "zbuffer:\G1:1:buffer_instance|F[0]" feeding internal logic into a wire File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/zbuffer.vhd Line: 8
+    Warning (13049): Converted tri-state buffer "zbuffer:\G1:1:buffer_instance|F[1]" feeding internal logic into a wire File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/zbuffer.vhd Line: 8
+    Warning (13049): Converted tri-state buffer "zbuffer:\G1:1:buffer_instance|F[2]" feeding internal logic into a wire File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/zbuffer.vhd Line: 8
+    Warning (13049): Converted tri-state buffer "zbuffer:\G1:1:buffer_instance|F[3]" feeding internal logic into a wire File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/zbuffer.vhd Line: 8
+    Warning (13049): Converted tri-state buffer "zbuffer:\G1:0:buffer_instance|F[0]" feeding internal logic into a wire File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/zbuffer.vhd Line: 8
+    Warning (13049): Converted tri-state buffer "zbuffer:\G1:0:buffer_instance|F[1]" feeding internal logic into a wire File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/zbuffer.vhd Line: 8
+    Warning (13049): Converted tri-state buffer "zbuffer:\G1:0:buffer_instance|F[2]" feeding internal logic into a wire File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/zbuffer.vhd Line: 8
+    Warning (13049): Converted tri-state buffer "zbuffer:\G1:0:buffer_instance|F[3]" feeding internal logic into a wire File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/zbuffer.vhd Line: 8
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "data_out[0]" is stuck at GND File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/register_bank_placa.vhd Line: 8
-    Warning (13410): Pin "data_out[1]" is stuck at GND File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/register_bank_placa.vhd Line: 8
-    Warning (13410): Pin "data_out[2]" is stuck at GND File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/register_bank_placa.vhd Line: 8
-    Warning (13410): Pin "data_out[3]" is stuck at GND File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab06/Registrador/register_bank_placa.vhd Line: 8
+    Warning (13410): Pin "data_out[0]" is stuck at GND File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/register_bank_placa.vhd Line: 8
+    Warning (13410): Pin "data_out[1]" is stuck at GND File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/register_bank_placa.vhd Line: 8
+    Warning (13410): Pin "data_out[2]" is stuck at GND File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/register_bank_placa.vhd Line: 8
+    Warning (13410): Pin "data_out[3]" is stuck at GND File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Registrador/register_bank_placa.vhd Line: 8
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -448,9 +448,9 @@ Info (21057): Implemented 89 device resources after synthesis - the final resour
     Info (21059): Implemented 11 output pins
     Info (21061): Implemented 65 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 44 warnings
-    Info: Peak virtual memory: 1162 megabytes
-    Info: Processing ended: Fri Apr  6 19:53:37 2018
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:20
+    Info: Peak virtual memory: 1172 megabytes
+    Info: Processing ended: Mon Apr  9 14:35:11 2018
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:21
 
 

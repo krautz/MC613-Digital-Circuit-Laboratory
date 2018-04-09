@@ -1,0 +1,29 @@
+|shift_register
+clk => Q_buffer[0].CLK
+clk => Q_buffer[1].CLK
+clk => Q_buffer[2].CLK
+clk => Q_buffer[3].CLK
+clk => Q_buffer[4].CLK
+clk => Q_buffer[5].CLK
+mode[0] => Equal0.IN1
+mode[0] => Equal1.IN0
+mode[0] => Equal2.IN1
+mode[1] => Equal0.IN0
+mode[1] => Equal1.IN1
+mode[1] => Equal2.IN0
+ser_in => Q_buffer.DATAB
+ser_in => Q_buffer.DATAB
+par_in[0] => Q_buffer.DATAB
+par_in[1] => Q_buffer.DATAB
+par_in[2] => Q_buffer.DATAB
+par_in[3] => Q_buffer.DATAB
+par_in[4] => Q_buffer.DATAB
+par_in[5] => Q_buffer.DATAB
+par_out[0] << Q_buffer[0].DB_MAX_OUTPUT_PORT_TYPE
+par_out[1] << Q_buffer[1].DB_MAX_OUTPUT_PORT_TYPE
+par_out[2] << Q_buffer[2].DB_MAX_OUTPUT_PORT_TYPE
+par_out[3] << Q_buffer[3].DB_MAX_OUTPUT_PORT_TYPE
+par_out[4] << Q_buffer[4].DB_MAX_OUTPUT_PORT_TYPE
+par_out[5] << Q_buffer[5].DB_MAX_OUTPUT_PORT_TYPE
+
+

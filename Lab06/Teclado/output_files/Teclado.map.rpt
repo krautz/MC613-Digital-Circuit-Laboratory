@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Teclado
-Sat Apr  7 18:38:25 2018
+Mon Apr  9 16:06:37 2018
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -52,13 +52,13 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sat Apr  7 18:38:25 2018       ;
+; Analysis & Synthesis Status     ; Successful - Mon Apr  9 16:06:37 2018       ;
 ; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; Teclado                                     ;
 ; Top-level Entity Name           ; kbd_alphanum_board                          ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 133                                         ;
+; Total registers                 ; 135                                         ;
 ; Total pins                      ; 17                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
@@ -197,24 +197,24 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 173            ;
+; Estimate of Logic utilization (ALMs needed) ; 185            ;
 ;                                             ;                ;
-; Combinational ALUT usage for logic          ; 268            ;
-;     -- 7 input functions                    ; 5              ;
-;     -- 6 input functions                    ; 66             ;
-;     -- 5 input functions                    ; 40             ;
-;     -- 4 input functions                    ; 47             ;
-;     -- <=3 input functions                  ; 110            ;
+; Combinational ALUT usage for logic          ; 283            ;
+;     -- 7 input functions                    ; 0              ;
+;     -- 6 input functions                    ; 80             ;
+;     -- 5 input functions                    ; 36             ;
+;     -- 4 input functions                    ; 45             ;
+;     -- <=3 input functions                  ; 122            ;
 ;                                             ;                ;
-; Dedicated logic registers                   ; 133            ;
+; Dedicated logic registers                   ; 135            ;
 ;                                             ;                ;
 ; I/O pins                                    ; 17             ;
 ;                                             ;                ;
 ; Total DSP Blocks                            ; 0              ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
-; Maximum fan-out                             ; 109            ;
-; Total fan-out                               ; 1566           ;
+; Maximum fan-out                             ; 112            ;
+; Total fan-out                               ; 1624           ;
 ; Average fan-out                             ; 3.58           ;
 +---------------------------------------------+----------------+
 
@@ -224,13 +224,13 @@ refer to the applicable agreement for further details.
 +------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------+--------------------+--------------+
 ; Compilation Hierarchy Node               ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                 ; Entity Name        ; Library Name ;
 +------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------+--------------------+--------------+
-; |kbd_alphanum_board                      ; 268 (2)             ; 133 (0)                   ; 0                 ; 0          ; 17   ; 0            ; |kbd_alphanum_board                                                                 ; kbd_alphanum_board ; work         ;
-;    |kbd_alphanum:kbd_alphanum_inst|      ; 78 (13)             ; 1 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |kbd_alphanum_board|kbd_alphanum:kbd_alphanum_inst                                  ; kbd_alphanum       ; work         ;
-;       |bin2hex:hexseg0|                  ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |kbd_alphanum_board|kbd_alphanum:kbd_alphanum_inst|bin2hex:hexseg0                  ; bin2hex            ; work         ;
+; |kbd_alphanum_board                      ; 283 (1)             ; 135 (0)                   ; 0                 ; 0          ; 17   ; 0            ; |kbd_alphanum_board                                                                 ; kbd_alphanum_board ; work         ;
+;    |kbd_alphanum:kbd_alphanum_inst|      ; 92 (24)             ; 2 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |kbd_alphanum_board|kbd_alphanum:kbd_alphanum_inst                                  ; kbd_alphanum       ; work         ;
+;       |bin2hex:hexseg0|                  ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |kbd_alphanum_board|kbd_alphanum:kbd_alphanum_inst|bin2hex:hexseg0                  ; bin2hex            ; work         ;
 ;       |bin2hex:hexseg1|                  ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |kbd_alphanum_board|kbd_alphanum:kbd_alphanum_inst|bin2hex:hexseg1                  ; bin2hex            ; work         ;
-;       |dec_tec2asc:dec_tec2asc_instance| ; 50 (50)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |kbd_alphanum_board|kbd_alphanum:kbd_alphanum_inst|dec_tec2asc:dec_tec2asc_instance ; dec_tec2asc        ; work         ;
-;       |reg_caps:reg_caps_instance|       ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |kbd_alphanum_board|kbd_alphanum:kbd_alphanum_inst|reg_caps:reg_caps_instance       ; reg_caps           ; work         ;
-;    |kbdex_ctrl:kbdex_ctrl_inst|          ; 188 (69)            ; 132 (54)                  ; 0                 ; 0          ; 0    ; 0            ; |kbd_alphanum_board|kbdex_ctrl:kbdex_ctrl_inst                                      ; kbdex_ctrl         ; work         ;
+;       |dec_tec2asc:dec_tec2asc_instance| ; 51 (51)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |kbd_alphanum_board|kbd_alphanum:kbd_alphanum_inst|dec_tec2asc:dec_tec2asc_instance ; dec_tec2asc        ; work         ;
+;       |reg_caps:reg_caps_instance|       ; 5 (5)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |kbd_alphanum_board|kbd_alphanum:kbd_alphanum_inst|reg_caps:reg_caps_instance       ; reg_caps           ; work         ;
+;    |kbdex_ctrl:kbdex_ctrl_inst|          ; 190 (71)            ; 133 (55)                  ; 0                 ; 0          ; 0    ; 0            ; |kbd_alphanum_board|kbdex_ctrl:kbdex_ctrl_inst                                      ; kbdex_ctrl         ; work         ;
 ;       |ps2_iobase:ps2_ctrl|              ; 119 (119)           ; 78 (78)                   ; 0                 ; 0          ; 0    ; 0            ; |kbd_alphanum_board|kbdex_ctrl:kbdex_ctrl_inst|ps2_iobase:ps2_ctrl                  ; ps2_iobase         ; work         ;
 +------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------+--------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -282,33 +282,34 @@ Encoding Type:  One-Hot
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                                                ;
-+-------------------------------------------------------------+---------------------------------------------------------------------+
-; Register name                                               ; Reason for Removal                                                  ;
-+-------------------------------------------------------------+---------------------------------------------------------------------+
-; kbdex_ctrl:kbdex_ctrl_inst|key2code[8..12]                  ; Stuck at GND due to stuck port data_in                              ;
-; kbdex_ctrl:kbdex_ctrl_inst|laststate[1,2]                   ; Stuck at GND due to stuck port data_in                              ;
-; kbdex_ctrl:kbdex_ctrl_inst|hdata[4]                         ; Stuck at GND due to stuck port data_in                              ;
-; kbdex_ctrl:kbdex_ctrl_inst|laststate[0]                     ; Stuck at GND due to stuck port data_in                              ;
-; kbdex_ctrl:kbdex_ctrl_inst|key1code[8..12]                  ; Stuck at GND due to stuck port data_in                              ;
-; kbdex_ctrl:kbdex_ctrl_inst|key0code[8..12]                  ; Stuck at GND due to stuck port data_in                              ;
-; kbdex_ctrl:kbdex_ctrl_inst|ps2_iobase:ps2_ctrl|hdata[4]     ; Stuck at GND due to stuck port data_in                              ;
-; kbdex_ctrl:kbdex_ctrl_inst|ps2_iobase:ps2_ctrl|ps2_clk~reg0 ; Stuck at GND due to stuck port data_in                              ;
-; kbdex_ctrl:kbdex_ctrl_inst|key0code[14,15]                  ; Merged with kbdex_ctrl:kbdex_ctrl_inst|key0code[13]                 ;
-; kbdex_ctrl:kbdex_ctrl_inst|key1code[14,15]                  ; Merged with kbdex_ctrl:kbdex_ctrl_inst|key1code[13]                 ;
-; kbdex_ctrl:kbdex_ctrl_inst|key2code[14,15]                  ; Merged with kbdex_ctrl:kbdex_ctrl_inst|key2code[13]                 ;
-; kbdex_ctrl:kbdex_ctrl_inst|ps2_iobase:ps2_ctrl|hdata[5..7]  ; Merged with kbdex_ctrl:kbdex_ctrl_inst|ps2_iobase:ps2_ctrl|hdata[3] ;
-; kbdex_ctrl:kbdex_ctrl_inst|ps2_iobase:ps2_ctrl|hdata[2]     ; Merged with kbdex_ctrl:kbdex_ctrl_inst|ps2_iobase:ps2_ctrl|hdata[0] ;
-; kbdex_ctrl:kbdex_ctrl_inst|hdata[5..7]                      ; Merged with kbdex_ctrl:kbdex_ctrl_inst|hdata[3]                     ;
-; kbdex_ctrl:kbdex_ctrl_inst|hdata[2]                         ; Merged with kbdex_ctrl:kbdex_ctrl_inst|hdata[0]                     ;
-; kbdex_ctrl:kbdex_ctrl_inst|siguplights                      ; Stuck at GND due to stuck port data_in                              ;
-; kbdex_ctrl:kbdex_ctrl_inst|hdata[0]                         ; Merged with kbdex_ctrl:kbdex_ctrl_inst|hdata[3]                     ;
-; kbdex_ctrl:kbdex_ctrl_inst|hdata[1]                         ; Stuck at GND due to stuck port data_in                              ;
-; kbdex_ctrl:kbdex_ctrl_inst|ps2_iobase:ps2_ctrl|hdata[1]     ; Stuck at GND due to stuck port data_in                              ;
-; kbdex_ctrl:kbdex_ctrl_inst|ps2_iobase:ps2_ctrl|hdata[3]     ; Merged with kbdex_ctrl:kbdex_ctrl_inst|ps2_iobase:ps2_ctrl|hdata[0] ;
-; Total Number of Removed Registers = 40                      ;                                                                     ;
-+-------------------------------------------------------------+---------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                      ;
++---------------------------------------------------------------+-------------------------------------------------------------------------+
+; Register name                                                 ; Reason for Removal                                                      ;
++---------------------------------------------------------------+-------------------------------------------------------------------------+
+; kbdex_ctrl:kbdex_ctrl_inst|key2code[8..12]                    ; Stuck at GND due to stuck port data_in                                  ;
+; kbdex_ctrl:kbdex_ctrl_inst|laststate[1,2]                     ; Stuck at GND due to stuck port data_in                                  ;
+; kbdex_ctrl:kbdex_ctrl_inst|hdata[4]                           ; Stuck at GND due to stuck port data_in                                  ;
+; kbdex_ctrl:kbdex_ctrl_inst|laststate[0]                       ; Stuck at GND due to stuck port data_in                                  ;
+; kbdex_ctrl:kbdex_ctrl_inst|key1code[8..12]                    ; Stuck at GND due to stuck port data_in                                  ;
+; kbdex_ctrl:kbdex_ctrl_inst|key0code[8..12]                    ; Stuck at GND due to stuck port data_in                                  ;
+; kbdex_ctrl:kbdex_ctrl_inst|ps2_iobase:ps2_ctrl|hdata[4]       ; Stuck at GND due to stuck port data_in                                  ;
+; kbdex_ctrl:kbdex_ctrl_inst|ps2_iobase:ps2_ctrl|ps2_clk~reg0   ; Stuck at GND due to stuck port data_in                                  ;
+; kbd_alphanum:kbd_alphanum_inst|reg_caps:reg_caps_instance|var ; Merged with kbd_alphanum:kbd_alphanum_inst|reg_caps:reg_caps_instance|Q ;
+; kbdex_ctrl:kbdex_ctrl_inst|key2code[14,15]                    ; Merged with kbdex_ctrl:kbdex_ctrl_inst|key2code[13]                     ;
+; kbdex_ctrl:kbdex_ctrl_inst|key1code[14,15]                    ; Merged with kbdex_ctrl:kbdex_ctrl_inst|key1code[13]                     ;
+; kbdex_ctrl:kbdex_ctrl_inst|key0code[14,15]                    ; Merged with kbdex_ctrl:kbdex_ctrl_inst|key0code[13]                     ;
+; kbdex_ctrl:kbdex_ctrl_inst|ps2_iobase:ps2_ctrl|hdata[5..7]    ; Merged with kbdex_ctrl:kbdex_ctrl_inst|ps2_iobase:ps2_ctrl|hdata[3]     ;
+; kbdex_ctrl:kbdex_ctrl_inst|ps2_iobase:ps2_ctrl|hdata[2]       ; Merged with kbdex_ctrl:kbdex_ctrl_inst|ps2_iobase:ps2_ctrl|hdata[0]     ;
+; kbdex_ctrl:kbdex_ctrl_inst|hdata[5..7]                        ; Merged with kbdex_ctrl:kbdex_ctrl_inst|hdata[3]                         ;
+; kbdex_ctrl:kbdex_ctrl_inst|hdata[2]                           ; Merged with kbdex_ctrl:kbdex_ctrl_inst|hdata[0]                         ;
+; kbdex_ctrl:kbdex_ctrl_inst|siguplights                        ; Stuck at GND due to stuck port data_in                                  ;
+; kbdex_ctrl:kbdex_ctrl_inst|hdata[0]                           ; Merged with kbdex_ctrl:kbdex_ctrl_inst|hdata[3]                         ;
+; kbdex_ctrl:kbdex_ctrl_inst|hdata[1]                           ; Stuck at GND due to stuck port data_in                                  ;
+; kbdex_ctrl:kbdex_ctrl_inst|ps2_iobase:ps2_ctrl|hdata[1]       ; Stuck at GND due to stuck port data_in                                  ;
+; kbdex_ctrl:kbdex_ctrl_inst|ps2_iobase:ps2_ctrl|hdata[3]       ; Merged with kbdex_ctrl:kbdex_ctrl_inst|ps2_iobase:ps2_ctrl|hdata[0]     ;
+; Total Number of Removed Registers = 41                        ;                                                                         ;
++---------------------------------------------------------------+-------------------------------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -328,7 +329,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 133   ;
+; Total registers                              ; 135   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 21    ;
 ; Number of registers using Asynchronous Clear ; 95    ;
@@ -364,9 +365,9 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                   ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------+
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |kbd_alphanum_board|kbdex_ctrl:kbdex_ctrl_inst|ps2_iobase:ps2_ctrl|fcount[7] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |kbd_alphanum_board|kbdex_ctrl:kbdex_ctrl_inst|ps2_iobase:ps2_ctrl|fcount[5] ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |kbd_alphanum_board|kbdex_ctrl:kbdex_ctrl_inst|ps2_iobase:ps2_ctrl|rcount[5] ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |kbd_alphanum_board|kbdex_ctrl:kbdex_ctrl_inst|ps2_iobase:ps2_ctrl|fcount[0] ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |kbd_alphanum_board|kbdex_ctrl:kbdex_ctrl_inst|ps2_iobase:ps2_ctrl|fcount[2] ;
 ; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |kbd_alphanum_board|kbdex_ctrl:kbdex_ctrl_inst|ps2_iobase:ps2_ctrl|rcount[8] ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |kbd_alphanum_board|kbdex_ctrl:kbdex_ctrl_inst|nstate.CODE                   ;
 ; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |kbd_alphanum_board|kbdex_ctrl:kbdex_ctrl_inst|Selector10                    ;
@@ -410,31 +411,29 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 133                         ;
+; arriav_ff             ; 135                         ;
 ;     CLR               ; 25                          ;
 ;     CLR SLD           ; 21                          ;
 ;     ENA               ; 26                          ;
 ;     ENA CLR           ; 49                          ;
-;     plain             ; 12                          ;
+;     plain             ; 14                          ;
 ; arriav_io_obuf        ; 2                           ;
-; arriav_lcell_comb     ; 270                         ;
+; arriav_lcell_comb     ; 284                         ;
 ;     arith             ; 50                          ;
 ;         1 data inputs ; 49                          ;
 ;         2 data inputs ; 1                           ;
-;     extend            ; 5                           ;
-;         7 data inputs ; 5                           ;
-;     normal            ; 215                         ;
+;     normal            ; 234                         ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 5                           ;
-;         2 data inputs ; 32                          ;
-;         3 data inputs ; 24                          ;
-;         4 data inputs ; 47                          ;
-;         5 data inputs ; 40                          ;
-;         6 data inputs ; 66                          ;
+;         1 data inputs ; 3                           ;
+;         2 data inputs ; 37                          ;
+;         3 data inputs ; 32                          ;
+;         4 data inputs ; 45                          ;
+;         5 data inputs ; 36                          ;
+;         6 data inputs ; 80                          ;
 ; boundary_port         ; 17                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 7.00                        ;
-; Average LUT depth     ; 3.05                        ;
+; Max LUT depth         ; 8.00                        ;
+; Average LUT depth     ; 3.41                        ;
 +-----------------------+-----------------------------+
 
 
@@ -453,7 +452,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Sat Apr  7 18:38:12 2018
+    Info: Processing started: Mon Apr  9 16:06:26 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Teclado -c Teclado
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -518,29 +517,29 @@ Warning (12125): Using design file kbd_alphanum.vhd, which is not specified as a
     Info (12022): Found design unit 1: kbd_alphanum-rtl File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Teclado/kbd_alphanum.vhd Line: 14
     Info (12023): Found entity 1: kbd_alphanum File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Teclado/kbd_alphanum.vhd Line: 4
 Info (12128): Elaborating entity "kbd_alphanum" for hierarchy "kbd_alphanum:kbd_alphanum_inst" File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Teclado/kbd_alphanum_board.vhd Line: 60
-Info (12128): Elaborating entity "bin2hex" for hierarchy "kbd_alphanum:kbd_alphanum_inst|bin2hex:hexseg0" File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Teclado/kbd_alphanum.vhd Line: 43
+Info (12128): Elaborating entity "bin2hex" for hierarchy "kbd_alphanum:kbd_alphanum_inst|bin2hex:hexseg0" File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Teclado/kbd_alphanum.vhd Line: 46
 Warning (12125): Using design file reg_caps.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: reg_caps-rtl File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Teclado/reg_caps.vhd Line: 11
+    Info (12022): Found design unit 1: reg_caps-rtl File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Teclado/reg_caps.vhd Line: 13
     Info (12023): Found entity 1: reg_caps File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Teclado/reg_caps.vhd Line: 4
-Info (12128): Elaborating entity "reg_caps" for hierarchy "kbd_alphanum:kbd_alphanum_inst|reg_caps:reg_caps_instance" File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Teclado/kbd_alphanum.vhd Line: 58
+Info (12128): Elaborating entity "reg_caps" for hierarchy "kbd_alphanum:kbd_alphanum_inst|reg_caps:reg_caps_instance" File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Teclado/kbd_alphanum.vhd Line: 64
 Warning (12125): Using design file dec_tec2asc.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
     Info (12022): Found design unit 1: dec_tec2asc-struct File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Teclado/dec_tec2asc.vhd Line: 12
     Info (12023): Found entity 1: dec_tec2asc File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Teclado/dec_tec2asc.vhd Line: 4
-Info (12128): Elaborating entity "dec_tec2asc" for hierarchy "kbd_alphanum:kbd_alphanum_inst|dec_tec2asc:dec_tec2asc_instance" File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Teclado/kbd_alphanum.vhd Line: 63
+Info (12128): Elaborating entity "dec_tec2asc" for hierarchy "kbd_alphanum:kbd_alphanum_inst|dec_tec2asc:dec_tec2asc_instance" File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Teclado/kbd_alphanum.vhd Line: 69
 Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
     Warning (13310): Register "kbdex_ctrl:kbdex_ctrl_inst|ps2_iobase:ps2_ctrl|ps2_data~en" is converted into an equivalent circuit using register "kbdex_ctrl:kbdex_ctrl_inst|ps2_iobase:ps2_ctrl|ps2_data~en_emulated" and latch "kbdex_ctrl:kbdex_ctrl_inst|ps2_iobase:ps2_ctrl|ps2_data~1" File: /home/ec2015/ra165457/Desktop/MC613/Lab06/Teclado/ps2_iobase.vhd Line: 25
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 327 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 342 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 1 input pins
     Info (21059): Implemented 14 output pins
     Info (21060): Implemented 2 bidirectional pins
-    Info (21061): Implemented 310 logic cells
+    Info (21061): Implemented 325 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 43 warnings
     Info: Peak virtual memory: 1183 megabytes
-    Info: Processing ended: Sat Apr  7 18:38:25 2018
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:25
+    Info: Processing ended: Mon Apr  9 16:06:37 2018
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:21
 
 
