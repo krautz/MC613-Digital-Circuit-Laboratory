@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Clock
-Tue Apr 10 21:21:53 2018
+Wed Apr 11 20:07:43 2018
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -14,10 +14,11 @@ Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Multiplexer Restructuring Statistics (Restructuring Performed)
- 10. Post-Synthesis Netlist Statistics for Top Partition
- 11. Elapsed Time Per Partition
- 12. Analysis & Synthesis Messages
+  9. Inverted Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Post-Synthesis Netlist Statistics for Top Partition
+ 12. Elapsed Time Per Partition
+ 13. Analysis & Synthesis Messages
 
 
 
@@ -43,14 +44,14 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Apr 10 21:21:53 2018       ;
+; Analysis & Synthesis Status     ; Successful - Wed Apr 11 20:07:43 2018       ;
 ; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; Clock                                       ;
 ; Top-level Entity Name           ; clock_board                                 ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 42                                          ;
-; Total pins                      ; 55                                          ;
+; Total registers                 ; 82                                          ;
+; Total pins                      ; 54                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -163,69 +164,68 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
-;     Processors 3-4         ;   0.0%      ;
+;     Processors 2-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                        ;
-+----------------------------------+-----------------+-----------------------+------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type             ; File Name with Absolute Path                                           ; Library ;
-+----------------------------------+-----------------+-----------------------+------------------------------------------------------------------------+---------+
-; transf_8bits_5bits.vhd           ; yes             ; User VHDL File        ; /home/ec2015/ra165457/Desktop/MC613/Lab07/Clock/transf_8bits_5bits.vhd ;         ;
-; clock_board.vhd                  ; yes             ; Auto-Found VHDL File  ; /home/ec2015/ra165457/Desktop/MC613/Lab07/Clock/clock_board.vhd        ;         ;
-; clock.vhd                        ; yes             ; Auto-Found VHDL File  ; /home/ec2015/ra165457/Desktop/MC613/Lab07/Clock/clock.vhd              ;         ;
-; contador.vhd                     ; yes             ; Auto-Found VHDL File  ; /home/ec2015/ra165457/Desktop/MC613/Lab07/Clock/contador.vhd           ;         ;
-; transf_5bits_8bits.vhd           ; yes             ; Auto-Found VHDL File  ; /home/ec2015/ra165457/Desktop/MC613/Lab07/Clock/transf_5bits_8bits.vhd ;         ;
-; bin2hex.vhd                      ; yes             ; Auto-Found VHDL File  ; /home/ec2015/ra165457/Desktop/MC613/Lab07/Clock/bin2hex.vhd            ;         ;
-+----------------------------------+-----------------+-----------------------+------------------------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                 ;
++----------------------------------+-----------------+-----------------------+-----------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type             ; File Name with Absolute Path                                    ; Library ;
++----------------------------------+-----------------+-----------------------+-----------------------------------------------------------------+---------+
+; clock_board.vhd                  ; yes             ; Auto-Found VHDL File  ; /home/ec2015/ra165457/Desktop/MC613/Lab07/Clock/clock_board.vhd ;         ;
+; clock.vhd                        ; yes             ; Auto-Found VHDL File  ; /home/ec2015/ra165457/Desktop/MC613/Lab07/Clock/clock.vhd       ;         ;
+; clk_div.vhd                      ; yes             ; Auto-Found VHDL File  ; /home/ec2015/ra165457/Desktop/MC613/Lab07/Clock/clk_div.vhd     ;         ;
+; contador.vhd                     ; yes             ; Auto-Found VHDL File  ; /home/ec2015/ra165457/Desktop/MC613/Lab07/Clock/contador.vhd    ;         ;
+; confere_set.vhd                  ; yes             ; Auto-Found VHDL File  ; /home/ec2015/ra165457/Desktop/MC613/Lab07/Clock/confere_set.vhd ;         ;
+; bin2hex.vhd                      ; yes             ; Auto-Found VHDL File  ; /home/ec2015/ra165457/Desktop/MC613/Lab07/Clock/bin2hex.vhd     ;         ;
++----------------------------------+-----------------+-----------------------+-----------------------------------------------------------------+---------+
 
 
-+------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                ;
-+---------------------------------------------+--------------+
-; Resource                                    ; Usage        ;
-+---------------------------------------------+--------------+
-; Estimate of Logic utilization (ALMs needed) ; 57           ;
-;                                             ;              ;
-; Combinational ALUT usage for logic          ; 88           ;
-;     -- 7 input functions                    ; 0            ;
-;     -- 6 input functions                    ; 9            ;
-;     -- 5 input functions                    ; 8            ;
-;     -- 4 input functions                    ; 52           ;
-;     -- <=3 input functions                  ; 19           ;
-;                                             ;              ;
-; Dedicated logic registers                   ; 42           ;
-;                                             ;              ;
-; I/O pins                                    ; 55           ;
-;                                             ;              ;
-; Total DSP Blocks                            ; 0            ;
-;                                             ;              ;
-; Maximum fan-out node                        ; KEY[0]~input ;
-; Maximum fan-out                             ; 42           ;
-; Total fan-out                               ; 574          ;
-; Average fan-out                             ; 2.39         ;
-+---------------------------------------------+--------------+
++---------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                                 ;
++---------------------------------------------+-----------------------------------------------+
+; Resource                                    ; Usage                                         ;
++---------------------------------------------+-----------------------------------------------+
+; Estimate of Logic utilization (ALMs needed) ; 87                                            ;
+;                                             ;                                               ;
+; Combinational ALUT usage for logic          ; 132                                           ;
+;     -- 7 input functions                    ; 0                                             ;
+;     -- 6 input functions                    ; 16                                            ;
+;     -- 5 input functions                    ; 16                                            ;
+;     -- 4 input functions                    ; 56                                            ;
+;     -- <=3 input functions                  ; 44                                            ;
+;                                             ;                                               ;
+; Dedicated logic registers                   ; 82                                            ;
+;                                             ;                                               ;
+; I/O pins                                    ; 54                                            ;
+;                                             ;                                               ;
+; Total DSP Blocks                            ; 0                                             ;
+;                                             ;                                               ;
+; Maximum fan-out node                        ; clock:clock_inst|clk_div:clock_divider|clk_hz ;
+; Maximum fan-out                             ; 48                                            ;
+; Total fan-out                               ; 855                                           ;
+; Average fan-out                             ; 2.66                                          ;
++---------------------------------------------+-----------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                            ;
-+----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------+--------------------+--------------+
-; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                ; Entity Name        ; Library Name ;
-+----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------+--------------------+--------------+
-; |clock_board                                 ; 88 (0)              ; 42 (0)                    ; 0                 ; 0          ; 55   ; 0            ; |clock_board                                                       ; clock_board        ; work         ;
-;    |clock:clock_inst|                        ; 88 (0)              ; 42 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |clock_board|clock:clock_inst                                      ; clock              ; work         ;
-;       |bin2hex:bin2hex_hour_dec|             ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |clock_board|clock:clock_inst|bin2hex:bin2hex_hour_dec             ; bin2hex            ; work         ;
-;       |bin2hex:bin2hex_hour_un|              ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |clock_board|clock:clock_inst|bin2hex:bin2hex_hour_un              ; bin2hex            ; work         ;
-;       |bin2hex:bin2hex_min_dec|              ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |clock_board|clock:clock_inst|bin2hex:bin2hex_min_dec              ; bin2hex            ; work         ;
-;       |bin2hex:bin2hex_min_un|               ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |clock_board|clock:clock_inst|bin2hex:bin2hex_min_un               ; bin2hex            ; work         ;
-;       |bin2hex:bin2hex_sec_dec|              ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |clock_board|clock:clock_inst|bin2hex:bin2hex_sec_dec              ; bin2hex            ; work         ;
-;       |bin2hex:bin2hex_sec_un|               ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |clock_board|clock:clock_inst|bin2hex:bin2hex_sec_un               ; bin2hex            ; work         ;
-;       |contador:contador_instance|           ; 41 (41)             ; 42 (42)                   ; 0                 ; 0          ; 0    ; 0            ; |clock_board|clock:clock_inst|contador:contador_instance           ; contador           ; work         ;
-;       |transf_5bits_8bits:transforma_hora|   ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |clock_board|clock:clock_inst|transf_5bits_8bits:transforma_hora   ; transf_5bits_8bits ; work         ;
-;       |transf_8bits_5bits:transforma_hora_2| ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |clock_board|clock:clock_inst|transf_8bits_5bits:transforma_hora_2 ; transf_8bits_5bits ; work         ;
-+----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------+--------------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                           ;
++---------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------+-------------+--------------+
+; Compilation Hierarchy Node                  ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                       ; Entity Name ; Library Name ;
++---------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------+-------------+--------------+
+; |clock_board                                ; 132 (0)             ; 82 (0)                    ; 0                 ; 0          ; 54   ; 0            ; |clock_board                                                                              ; clock_board ; work         ;
+;    |clock:clock_inst|                       ; 132 (0)             ; 82 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |clock_board|clock:clock_inst                                                             ; clock       ; work         ;
+;       |bin2hex:bin2hex_hour_dec|            ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |clock_board|clock:clock_inst|bin2hex:bin2hex_hour_dec                                    ; bin2hex     ; work         ;
+;       |bin2hex:bin2hex_hour_un|             ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |clock_board|clock:clock_inst|bin2hex:bin2hex_hour_un                                     ; bin2hex     ; work         ;
+;       |bin2hex:bin2hex_min_dec|             ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |clock_board|clock:clock_inst|bin2hex:bin2hex_min_dec                                     ; bin2hex     ; work         ;
+;       |bin2hex:bin2hex_min_un|              ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |clock_board|clock:clock_inst|bin2hex:bin2hex_min_un                                      ; bin2hex     ; work         ;
+;       |bin2hex:bin2hex_sec_dec|             ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |clock_board|clock:clock_inst|bin2hex:bin2hex_sec_dec                                     ; bin2hex     ; work         ;
+;       |bin2hex:bin2hex_sec_un|              ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |clock_board|clock:clock_inst|bin2hex:bin2hex_sec_un                                      ; bin2hex     ; work         ;
+;       |clk_div:clock_divider|               ; 44 (44)             ; 34 (34)                   ; 0                 ; 0          ; 0    ; 0            ; |clock_board|clock:clock_inst|clk_div:clock_divider                                       ; clk_div     ; work         ;
+;       |contador:contador_instance|          ; 46 (42)             ; 48 (48)                   ; 0                 ; 0          ; 0    ; 0            ; |clock_board|clock:clock_inst|contador:contador_instance                                  ; contador    ; work         ;
+;          |confere_set:confere_set_instance| ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |clock_board|clock:clock_inst|contador:contador_instance|confere_set:confere_set_instance ; confere_set ; work         ;
++---------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -234,28 +234,40 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 42    ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 16    ;
+; Total registers                              ; 82    ;
+; Number of registers using Synchronous Clear  ; 31    ;
+; Number of registers using Synchronous Load   ; 24    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 16    ;
+; Number of registers using Clock Enable       ; 24    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                        ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                              ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------+
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |clock_board|clock:clock_inst|contador:contador_instance|min_dec_aux[3] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |clock_board|clock:clock_inst|contador:contador_instance|sec_un_aux[3]  ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |clock_board|clock:clock_inst|contador:contador_instance|hour_aux       ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |clock_board|clock:clock_inst|contador:contador_instance|sec_dec_aux    ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |clock_board|clock:clock_inst|contador:contador_instance|min_un_aux     ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |clock_board|clock:clock_inst|contador:contador_instance|min_dec_aux    ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------+
++-------------------------------------------------------------+
+; Inverted Register Statistics                                ;
++---------------------------------------------------+---------+
+; Inverted Register                                 ; Fan out ;
++---------------------------------------------------+---------+
+; clock:clock_inst|clk_div:clock_divider|counter[0] ; 1       ;
+; Total number of inverted registers = 1            ;         ;
++---------------------------------------------------+---------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------+
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |clock_board|clock:clock_inst|contador:contador_instance|hour_dec_aux[0] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |clock_board|clock:clock_inst|contador:contador_instance|min_dec_aux[3]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |clock_board|clock:clock_inst|contador:contador_instance|sec_dec_aux[3]  ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |clock_board|clock:clock_inst|contador:contador_instance|sec_dec_aux     ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |clock_board|clock:clock_inst|contador:contador_instance|min_un_aux      ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |clock_board|clock:clock_inst|contador:contador_instance|min_dec_aux     ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |clock_board|clock:clock_inst|contador:contador_instance|hour_un_aux     ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |clock_board|clock:clock_inst|contador:contador_instance|hour_dec_aux    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -263,22 +275,24 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 42                          ;
-;     ENA SLD           ; 16                          ;
-;     plain             ; 26                          ;
-; arriav_lcell_comb     ; 95                          ;
-;     normal            ; 95                          ;
-;         0 data inputs ; 1                           ;
+; arriav_ff             ; 82                          ;
+;     ENA SLD           ; 24                          ;
+;     SCLR              ; 31                          ;
+;     plain             ; 27                          ;
+; arriav_lcell_comb     ; 138                         ;
+;     arith             ; 32                          ;
+;         1 data inputs ; 32                          ;
+;     normal            ; 106                         ;
 ;         1 data inputs ; 8                           ;
-;         2 data inputs ; 9                           ;
-;         3 data inputs ; 8                           ;
-;         4 data inputs ; 52                          ;
-;         5 data inputs ; 8                           ;
-;         6 data inputs ; 9                           ;
-; boundary_port         ; 55                          ;
+;         2 data inputs ; 3                           ;
+;         3 data inputs ; 7                           ;
+;         4 data inputs ; 56                          ;
+;         5 data inputs ; 16                          ;
+;         6 data inputs ; 16                          ;
+; boundary_port         ; 54                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 4.00                        ;
-; Average LUT depth     ; 2.21                        ;
+; Max LUT depth         ; 6.60                        ;
+; Average LUT depth     ; 3.40                        ;
 +-----------------------+-----------------------------+
 
 
@@ -297,7 +311,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Tue Apr 10 21:21:43 2018
+    Info: Processing started: Wed Apr 11 20:07:33 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Clock -c Clock
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -306,45 +320,43 @@ Warning (12019): Can't analyze file -- file transf_5bits_8bits.vhdl is missing
 Info (12021): Found 2 design units, including 1 entities, in source file transf_8bits_5bits.vhd
     Info (12022): Found design unit 1: transf_8bits_5bits-Behavior File: /home/ec2015/ra165457/Desktop/MC613/Lab07/Clock/transf_8bits_5bits.vhd Line: 10
     Info (12023): Found entity 1: transf_8bits_5bits File: /home/ec2015/ra165457/Desktop/MC613/Lab07/Clock/transf_8bits_5bits.vhd Line: 5
+Warning (12019): Can't analyze file -- file output_files/confere_set.vhd is missing
 Warning (12125): Using design file clock_board.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
     Info (12022): Found design unit 1: clock_board-rtl File: /home/ec2015/ra165457/Desktop/MC613/Lab07/Clock/clock_board.vhd Line: 13
     Info (12023): Found entity 1: clock_board File: /home/ec2015/ra165457/Desktop/MC613/Lab07/Clock/clock_board.vhd Line: 4
 Info (12127): Elaborating entity "clock_board" for the top level hierarchy
 Warning (12125): Using design file clock.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: clock-rtl File: /home/ec2015/ra165457/Desktop/MC613/Lab07/Clock/clock.vhd Line: 19
+    Info (12022): Found design unit 1: clock-rtl File: /home/ec2015/ra165457/Desktop/MC613/Lab07/Clock/clock.vhd Line: 18
     Info (12023): Found entity 1: clock File: /home/ec2015/ra165457/Desktop/MC613/Lab07/Clock/clock.vhd Line: 4
-Info (12128): Elaborating entity "clock" for hierarchy "clock:clock_inst" File: /home/ec2015/ra165457/Desktop/MC613/Lab07/Clock/clock_board.vhd Line: 30
-Info (12128): Elaborating entity "transf_8bits_5bits" for hierarchy "clock:clock_inst|transf_8bits_5bits:transforma_hora_2" File: /home/ec2015/ra165457/Desktop/MC613/Lab07/Clock/clock.vhd Line: 65
+Info (12128): Elaborating entity "clock" for hierarchy "clock:clock_inst" File: /home/ec2015/ra165457/Desktop/MC613/Lab07/Clock/clock_board.vhd Line: 29
+Warning (12125): Using design file clk_div.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: clk_div-behavioral File: /home/ec2015/ra165457/Desktop/MC613/Lab07/Clock/clk_div.vhd Line: 11
+    Info (12023): Found entity 1: clk_div File: /home/ec2015/ra165457/Desktop/MC613/Lab07/Clock/clk_div.vhd Line: 4
+Info (12128): Elaborating entity "clk_div" for hierarchy "clock:clock_inst|clk_div:clock_divider" File: /home/ec2015/ra165457/Desktop/MC613/Lab07/Clock/clock.vhd Line: 46
 Warning (12125): Using design file contador.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: contador-Behavior File: /home/ec2015/ra165457/Desktop/MC613/Lab07/Clock/contador.vhd Line: 13
+    Info (12022): Found design unit 1: contador-Behavior File: /home/ec2015/ra165457/Desktop/MC613/Lab07/Clock/contador.vhd Line: 11
     Info (12023): Found entity 1: contador File: /home/ec2015/ra165457/Desktop/MC613/Lab07/Clock/contador.vhd Line: 5
-Info (12128): Elaborating entity "contador" for hierarchy "clock:clock_inst|contador:contador_instance" File: /home/ec2015/ra165457/Desktop/MC613/Lab07/Clock/clock.vhd Line: 69
-Warning (10492): VHDL Process Statement warning at contador.vhd(21): signal "set_hour" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/ec2015/ra165457/Desktop/MC613/Lab07/Clock/contador.vhd Line: 21
-Warning (10492): VHDL Process Statement warning at contador.vhd(21): signal "set_minute" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/ec2015/ra165457/Desktop/MC613/Lab07/Clock/contador.vhd Line: 21
-Warning (10492): VHDL Process Statement warning at contador.vhd(21): signal "set_second" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/ec2015/ra165457/Desktop/MC613/Lab07/Clock/contador.vhd Line: 21
-Warning (12125): Using design file transf_5bits_8bits.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: transf_5bits_8bits-Behavior File: /home/ec2015/ra165457/Desktop/MC613/Lab07/Clock/transf_5bits_8bits.vhd Line: 10
-    Info (12023): Found entity 1: transf_5bits_8bits File: /home/ec2015/ra165457/Desktop/MC613/Lab07/Clock/transf_5bits_8bits.vhd Line: 5
-Info (12128): Elaborating entity "transf_5bits_8bits" for hierarchy "clock:clock_inst|transf_5bits_8bits:transforma_hora" File: /home/ec2015/ra165457/Desktop/MC613/Lab07/Clock/clock.vhd Line: 73
+Info (12128): Elaborating entity "contador" for hierarchy "clock:clock_inst|contador:contador_instance" File: /home/ec2015/ra165457/Desktop/MC613/Lab07/Clock/clock.vhd Line: 48
+Warning (10492): VHDL Process Statement warning at contador.vhd(32): signal "pode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/ec2015/ra165457/Desktop/MC613/Lab07/Clock/contador.vhd Line: 32
+Warning (12125): Using design file confere_set.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: confere_set-Behavior File: /home/ec2015/ra165457/Desktop/MC613/Lab07/Clock/confere_set.vhd Line: 11
+    Info (12023): Found entity 1: confere_set File: /home/ec2015/ra165457/Desktop/MC613/Lab07/Clock/confere_set.vhd Line: 5
+Info (12128): Elaborating entity "confere_set" for hierarchy "clock:clock_inst|contador:contador_instance|confere_set:confere_set_instance" File: /home/ec2015/ra165457/Desktop/MC613/Lab07/Clock/contador.vhd Line: 24
 Warning (12125): Using design file bin2hex.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
     Info (12022): Found design unit 1: bin2hex-LogicFunction File: /home/ec2015/ra165457/Desktop/MC613/Lab07/Clock/bin2hex.vhd Line: 11
     Info (12023): Found entity 1: bin2hex File: /home/ec2015/ra165457/Desktop/MC613/Lab07/Clock/bin2hex.vhd Line: 4
-Info (12128): Elaborating entity "bin2hex" for hierarchy "clock:clock_inst|bin2hex:bin2hex_sec_un" File: /home/ec2015/ra165457/Desktop/MC613/Lab07/Clock/clock.vhd Line: 77
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "HEX5[1]" is stuck at GND File: /home/ec2015/ra165457/Desktop/MC613/Lab07/Clock/clock_board.vhd Line: 9
+Info (12128): Elaborating entity "bin2hex" for hierarchy "clock:clock_inst|bin2hex:bin2hex_sec_un" File: /home/ec2015/ra165457/Desktop/MC613/Lab07/Clock/clock.vhd Line: 52
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "CLOCK_50" File: /home/ec2015/ra165457/Desktop/MC613/Lab07/Clock/clock_board.vhd Line: 6
-Info (21057): Implemented 176 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 13 input pins
+Info (21057): Implemented 266 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 12 input pins
     Info (21059): Implemented 42 output pins
-    Info (21061): Implemented 121 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 15 warnings
-    Info: Peak virtual memory: 1175 megabytes
-    Info: Processing ended: Tue Apr 10 21:21:53 2018
+    Info (21061): Implemented 212 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 11 warnings
+    Info: Peak virtual memory: 1186 megabytes
+    Info: Processing ended: Wed Apr 11 20:07:43 2018
     Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:20
+    Info: Total CPU time (on all processors): 00:00:21
 
 

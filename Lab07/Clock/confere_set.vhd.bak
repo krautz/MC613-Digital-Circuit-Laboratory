@@ -1,0 +1,15 @@
+LIBRARY ieee ;
+USE ieee.std_logic_1164.all ;
+USE ieee.std_logic_unsigned.all ;
+
+ENTITY confere_set IS
+	PORT ( 	Clock, set_hour, set_minute, set_second, Clock_50 : IN STD_LOGIC ;
+				un_set, dec_set : in std_logic_vector (3 downto 0);
+				sec_un, sec_dec, min_un, min_dec, hour_un, hour_dec : OUT STD_LOGIC_VECTOR (3 DOWNTO 0)
+	) ;
+	END confere_set ;
+ARCHITECTURE Behavior OF confere_set IS
+
+	
+
+BEGIN

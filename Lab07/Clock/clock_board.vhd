@@ -5,7 +5,7 @@ entity clock_board is
   port (
     CLOCK_50 : in std_logic;
     SW : in std_logic_vector(7 downto 0);
-    KEY : in std_logic_vector(3 downto 0);
+    KEY : in std_logic_vector(3 downto 1);
     HEX5, HEX4, HEX3, HEX2, HEX1, HEX0 : out std_logic_vector(6 downto 0)
   );
 end clock_board;
@@ -13,7 +13,6 @@ end clock_board;
 architecture rtl of clock_board is
   component clock is
     port (
-	 clk_aux : in std_logic;
     clk : in std_logic;
     decimal : in std_logic_vector(3 downto 0);
     unity : in std_logic_vector(3 downto 0);
@@ -34,7 +33,6 @@ begin
     set_hour => NOT KEY(3),
     set_minute => NOT KEY(2),
     set_second => NOT KEY(1),
-	 clk_aux => NOT KEY(0),
     hour_dec => HEX5,
     hour_un => HEX4,
     min_dec => HEX3,

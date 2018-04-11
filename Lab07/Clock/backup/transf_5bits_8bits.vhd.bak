@@ -1,0 +1,10 @@
+LIBRARY ieee ;
+USE ieee.std_logic_1164.all ;
+
+
+ENTITY upcount IS
+	PORT ( 	Clock, E, is_un, is_dec, is_hour : IN STD_LOGIC ;
+				Q : OUT STD_LOGIC_VECTOR (4 DOWNTO 0)
+	) ;
+	END upcount ;
+ARCHITECTURE Behavior OF upcount IS

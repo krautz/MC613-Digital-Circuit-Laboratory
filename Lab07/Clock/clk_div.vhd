@@ -10,20 +10,19 @@ end clk_div;
 
 architecture behavioral of clk_div is
 
-	signal counter: integer := 0;
-
 begin
 
 	process
+		variable counter: integer := 1;
+		variable temp : std_logic := '0';
 	begin
 	wait until clk'event and clk = '1';
-	g1: for i in 0 to 50000000 loop
-		counter <= counter + 1;
-		if counter = 25000000 then
-			clk_hz <= '1';
-		end if;
-	end loop;
-	clk_hz <= '0';
+	counter := counter + 1;
+	if counter = 25000000 then
+		temp := not(temp);
+		counter := 1;
+	end if;
+	clk_hz <= temp;
 	end process;
 
 end behavioral;
