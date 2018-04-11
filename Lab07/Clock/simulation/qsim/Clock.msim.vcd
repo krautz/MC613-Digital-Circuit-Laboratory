@@ -1,0 +1,438 @@
+$comment
+	File created using the following command:
+		vcd file Clock.msim.vcd -direction
+$end
+$date
+	Tue Apr 10 19:25:09 2018
+$end
+$version
+	ModelSim Version 10.5b
+$end
+$timescale
+	1ps
+$end
+
+$scope module contador_vhd_vec_tst $end
+$var wire 1 ! Clock $end
+$var wire 1 " E $end
+$var wire 1 # is_dec $end
+$var wire 1 $ is_hour $end
+$var wire 1 % is_un $end
+$var wire 1 & Q [4] $end
+$var wire 1 ' Q [3] $end
+$var wire 1 ( Q [2] $end
+$var wire 1 ) Q [1] $end
+$var wire 1 * Q [0] $end
+
+$scope module i1 $end
+$var wire 1 + gnd $end
+$var wire 1 , vcc $end
+$var wire 1 - unknown $end
+$var wire 1 . devoe $end
+$var wire 1 / devclrn $end
+$var wire 1 0 devpor $end
+$var wire 1 1 ww_devoe $end
+$var wire 1 2 ww_devclrn $end
+$var wire 1 3 ww_devpor $end
+$var wire 1 4 ww_Clock $end
+$var wire 1 5 ww_E $end
+$var wire 1 6 ww_is_un $end
+$var wire 1 7 ww_is_dec $end
+$var wire 1 8 ww_is_hour $end
+$var wire 1 9 ww_Q [4] $end
+$var wire 1 : ww_Q [3] $end
+$var wire 1 ; ww_Q [2] $end
+$var wire 1 < ww_Q [1] $end
+$var wire 1 = ww_Q [0] $end
+$var wire 1 > \Q[0]~output_o\ $end
+$var wire 1 ? \Q[1]~output_o\ $end
+$var wire 1 @ \Q[2]~output_o\ $end
+$var wire 1 A \Q[3]~output_o\ $end
+$var wire 1 B \Q[4]~output_o\ $end
+$var wire 1 C \Clock~input_o\ $end
+$var wire 1 D \Count[0]~8_combout\ $end
+$var wire 1 E \E~input_o\ $end
+$var wire 1 F \is_hour~input_o\ $end
+$var wire 1 G \Count~2_combout\ $end
+$var wire 1 H \Count~1_combout\ $end
+$var wire 1 I \Count~6_combout\ $end
+$var wire 1 J \is_un~input_o\ $end
+$var wire 1 K \is_dec~input_o\ $end
+$var wire 1 L \Count[0]~0_combout\ $end
+$var wire 1 M \Count~7_combout\ $end
+$var wire 1 N Count [4] $end
+$var wire 1 O Count [3] $end
+$var wire 1 P Count [2] $end
+$var wire 1 Q Count [1] $end
+$var wire 1 R Count [0] $end
+$var wire 1 S \ALT_INV_Count[0]~0_combout\ $end
+$var wire 1 T ALT_INV_Count [4] $end
+$var wire 1 U ALT_INV_Count [3] $end
+$var wire 1 V ALT_INV_Count [2] $end
+$var wire 1 W ALT_INV_Count [1] $end
+$var wire 1 X ALT_INV_Count [0] $end
+$var wire 1 Y \ALT_INV_is_hour~input_o\ $end
+$var wire 1 Z \ALT_INV_is_dec~input_o\ $end
+$var wire 1 [ \ALT_INV_is_un~input_o\ $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+1"
+0#
+0$
+1%
+0+
+1,
+x-
+1.
+1/
+10
+11
+12
+13
+04
+15
+16
+07
+08
+0>
+0?
+0@
+0A
+0B
+0C
+1D
+1E
+0F
+0G
+0H
+0I
+1J
+0K
+0L
+0M
+1S
+1Y
+1Z
+0[
+09
+0:
+0;
+0<
+0=
+0N
+0O
+0P
+0Q
+0R
+1T
+1U
+1V
+1W
+1X
+0&
+0'
+0(
+0)
+0*
+$end
+#25000
+1!
+14
+1C
+1R
+0X
+0D
+1M
+1>
+1=
+1*
+#50000
+0!
+04
+0C
+#75000
+1!
+14
+1C
+0R
+1Q
+0W
+1X
+1D
+1?
+0>
+1<
+0=
+0*
+1)
+#100000
+0!
+04
+0C
+#125000
+1!
+14
+1C
+1R
+0X
+0D
+1I
+0M
+1>
+1=
+1*
+#150000
+0!
+04
+0C
+#175000
+1!
+14
+1C
+0R
+1P
+0Q
+1W
+0V
+1X
+1D
+0?
+1@
+0>
+0<
+1;
+0=
+0*
+0)
+1(
+#200000
+0!
+04
+0C
+#225000
+1!
+14
+1C
+1R
+0X
+0D
+1M
+1>
+1=
+1*
+#250000
+0!
+04
+0C
+#275000
+1!
+14
+1C
+0R
+1Q
+0W
+1X
+1D
+1?
+0>
+1<
+0=
+0*
+1)
+#300000
+0!
+04
+0C
+#325000
+1!
+14
+1C
+1R
+0X
+0D
+1G
+0I
+0M
+1>
+1=
+1*
+#350000
+0!
+04
+0C
+#375000
+1!
+14
+1C
+0R
+1O
+0P
+0Q
+1W
+1V
+0U
+1X
+1D
+1L
+0S
+0?
+0@
+1A
+0>
+0<
+0;
+1:
+0=
+0*
+0)
+0(
+1'
+#400000
+0!
+04
+0C
+#425000
+1!
+14
+1C
+1R
+0X
+0D
+0G
+1>
+1=
+1*
+#450000
+0!
+04
+0C
+#475000
+1!
+14
+1C
+0R
+0O
+1U
+1X
+1D
+0L
+1S
+0A
+0>
+0:
+0=
+0*
+0'
+#500000
+0!
+04
+0C
+#525000
+1!
+14
+1C
+1R
+0X
+0D
+1M
+1>
+1=
+1*
+#550000
+0!
+04
+0C
+#575000
+1!
+14
+1C
+0R
+1Q
+0W
+1X
+1D
+1?
+0>
+1<
+0=
+0*
+1)
+#600000
+0!
+04
+0C
+#625000
+1!
+14
+1C
+1R
+0X
+0D
+1I
+0M
+1>
+1=
+1*
+#650000
+0!
+04
+0C
+#675000
+1!
+14
+1C
+0R
+1P
+0Q
+1W
+0V
+1X
+1D
+0?
+1@
+0>
+0<
+1;
+0=
+0*
+0)
+1(
+#700000
+0!
+04
+0C
+#725000
+1!
+14
+1C
+1R
+0X
+0D
+1M
+1>
+1=
+1*
+#750000
+0!
+04
+0C
+#775000
+1!
+14
+1C
+0R
+1Q
+0W
+1X
+1D
+1?
+0>
+1<
+0=
+0*
+1)
+#800000

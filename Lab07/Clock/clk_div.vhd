@@ -19,8 +19,11 @@ begin
 	wait until clk'event and clk = '1';
 	g1: for i in 0 to 50000000 loop
 		counter <= counter + 1;
+		if counter = 25000000 then
+			clk_hz <= '1';
+		end if;
 	end loop;
+	clk_hz <= '0';
 	end process;
-	clk_hz <= '1';
 
 end behavioral;
