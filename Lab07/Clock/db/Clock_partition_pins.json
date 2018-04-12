@@ -180,11 +180,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "SW[6]",
+					"name" : "KEY[3]",
 					"strict" : false
 				},
 				{
-					"name" : "KEY[3]",
+					"name" : "SW[6]",
 					"strict" : false
 				},
 				{
@@ -212,11 +212,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "SW[0]",
+					"name" : "CLOCK_50",
 					"strict" : false
 				},
 				{
-					"name" : "CLOCK_50",
+					"name" : "SW[0]",
 					"strict" : false
 				}
 			]

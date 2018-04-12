@@ -25,54 +25,55 @@ BEGIN
 		set_hour, set_minute, set_second, un_set, dec_set, pode
 	);
 
-	PROCESS (Clock)
+	PROCESS 
 		variable min_dec_aux, min_un_aux, sec_dec_aux, sec_un_aux, hour_dec_aux, hour_un_aux : std_logic_vector (3 downto 0) := (others => '0');
 	BEGIN
 	
-	IF (Clock'event and clock = '1') and (pode = '1') then
-		if set_second = '1' then
-			sec_un_aux := un_set;
-			sec_dec_aux := dec_set;
-		elsif set_minute = '1' then
-			min_un_aux := un_set;
-			min_dec_aux := dec_set;
-		elsif set_hour = '1' then
-			hour_un_aux := un_set;
-			hour_dec_aux := dec_set;
-		end if;
+	wait until Clock_50'event and (clock_50 = '1');
+		if (pode = '1') then 
+			if set_second = '1' then
+				sec_un_aux := un_set;
+				sec_dec_aux := dec_set;
+			elsif set_minute = '1' then
+				min_un_aux := un_set;
+				min_dec_aux := dec_set;
+			elsif set_hour = '1' then
+				hour_un_aux := un_set;
+				hour_dec_aux := dec_set;
+			end if;
 	
-	ELSIF (Clock'EVENT AND Clock = '1') THEN
-		
-		sec_un_aux := sec_un_aux + 1;
-		if sec_un_aux = "1010" then
-			sec_un_aux := "0000";
-			sec_dec_aux := sec_dec_aux + 1;
-			if sec_dec_aux = "0110" then
-				sec_dec_aux := "0000";
-				min_un_aux := min_un_aux + 1;
-				if min_un_aux = "1010" then
-					min_un_aux := "0000";
-					min_dec_aux := min_dec_aux + 1;
-					if min_dec_aux = "0110" then
-						min_dec_aux := "0000";
-						hour_un_aux := hour_un_aux + 1;
-						if hour_dec_aux = "0010" and hour_un_aux = "0100" then
-							hour_un_aux := "0000";
-							hour_dec_aux := "0000";
-						elsif hour_un_aux = "1010" then
-							hour_un_aux := "0000";
-							hour_dec_aux := hour_dec_aux + 1;
+		ELSIF (Clock = '1') THEN
+			
+			sec_un_aux := sec_un_aux + 1;
+			if sec_un_aux = "1010" then
+				sec_un_aux := "0000";
+				sec_dec_aux := sec_dec_aux + 1;
+				if sec_dec_aux = "0110" then
+					sec_dec_aux := "0000";
+					min_un_aux := min_un_aux + 1;
+					if min_un_aux = "1010" then
+						min_un_aux := "0000";
+						min_dec_aux := min_dec_aux + 1;
+						if min_dec_aux = "0110" then
+							min_dec_aux := "0000";
+							hour_un_aux := hour_un_aux + 1;
+							if hour_dec_aux = "0010" and hour_un_aux = "0100" then
+								hour_un_aux := "0000";
+								hour_dec_aux := "0000";
+							elsif hour_un_aux = "1010" then
+								hour_un_aux := "0000";
+								hour_dec_aux := hour_dec_aux + 1;
+							end if;
 						end if;
 					end if;
 				end if;
 			end if;
-		end if;
+		END IF ;
 		sec_un <= sec_un_aux;
 		sec_dec <= sec_dec_aux;
 		min_un <= min_un_aux;
 		min_dec <= min_dec_aux;
 		hour_un <= hour_un_aux;
 		hour_dec <= hour_dec_aux;
-	END IF ;
 	END PROCESS ;
 END Behavior ;

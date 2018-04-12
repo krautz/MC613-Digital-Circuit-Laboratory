@@ -12,15 +12,17 @@ architecture behavioral of clk_div is
 
 begin
 
-	process
+	process (clk)
 		variable counter: integer := 1;
 		variable temp : std_logic := '0';
 	begin
-	wait until clk'event and clk = '1';
-	counter := counter + 1;
-	if counter = 25000000 then
-		temp := not(temp);
-		counter := 1;
+	if (clk'event and clk = '1') then
+		counter := counter + 1;
+		temp := '0';
+		if counter = 50000000 then
+			temp := '1';
+			counter := 1;
+		end if;
 	end if;
 	clk_hz <= temp;
 	end process;
