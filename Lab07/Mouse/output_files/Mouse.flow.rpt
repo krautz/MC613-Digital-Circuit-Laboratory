@@ -1,5 +1,5 @@
 Flow report for Mouse
-Tue Apr 10 17:43:15 2018
+Mon Apr 16 13:38:14 2018
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -40,7 +40,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Tue Apr 10 17:43:09 2018       ;
+; Flow Status                     ; Successful - Mon Apr 16 13:38:08 2018       ;
 ; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; Mouse                                       ;
 ; Top-level Entity Name           ; ps2_mouse_test                              ;
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/10/2018 17:42:08 ;
+; Start date & time ; 04/16/2018 13:37:09 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Mouse               ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+----------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name    ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+----------------+------------+
-; COMPILER_SIGNATURE_ID               ; 273440552275620.152339292812791        ; --            ; --             ; --         ;
+; COMPILER_SIGNATURE_ID               ; 273440552275620.152389662808221        ; --            ; --             ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --             ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --             ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; ps2_mouse_test ; Top        ;
@@ -96,11 +96,11 @@ refer to the applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:10     ; 1.0                     ; 1154 MB             ; 00:00:21                           ;
-; Fitter                    ; 00:00:42     ; 1.0                     ; 2553 MB             ; 00:01:01                           ;
-; Assembler                 ; 00:00:07     ; 1.0                     ; 1091 MB             ; 00:00:06                           ;
-; TimeQuest Timing Analyzer ; 00:00:06     ; 1.2                     ; 1337 MB             ; 00:00:06                           ;
-; Total                     ; 00:01:05     ; --                      ; --                  ; 00:01:34                           ;
+; Analysis & Synthesis      ; 00:00:11     ; 1.0                     ; 1162 MB             ; 00:00:22                           ;
+; Fitter                    ; 00:00:40     ; 1.0                     ; 2555 MB             ; 00:01:03                           ;
+; Assembler                 ; 00:00:06     ; 1.0                     ; 1096 MB             ; 00:00:06                           ;
+; TimeQuest Timing Analyzer ; 00:00:06     ; 1.2                     ; 1332 MB             ; 00:00:06                           ;
+; Total                     ; 00:01:03     ; --                      ; --                  ; 00:01:37                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

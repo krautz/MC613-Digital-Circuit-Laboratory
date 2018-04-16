@@ -1,5 +1,5 @@
 Fitter report for RDU
-Mon Apr  9 17:09:13 2018
+Mon Apr 16 13:56:18 2018
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -63,7 +63,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Fitter Summary                                                                ;
 +---------------------------------+---------------------------------------------+
-; Fitter Status                   ; Successful - Mon Apr  9 17:09:13 2018       ;
+; Fitter Status                   ; Successful - Mon Apr 16 13:56:18 2018       ;
 ; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; RDU                                         ;
 ; Top-level Entity Name           ; shift_register                              ;
@@ -158,7 +158,7 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.1%      ;
+;     Processor 2            ;   0.2%      ;
 ;     Processors 3-4         ;   0.1%      ;
 +----------------------------+-------------+
 
@@ -349,7 +349,6 @@ refer to the applicable agreement for further details.
 ; Location ;                ;              ; HEX5[6]        ; PIN_AA25      ; QSF Assignment ;
 ; Location ;                ;              ; IRDA_RXD       ; PIN_AA30      ; QSF Assignment ;
 ; Location ;                ;              ; IRDA_TXD       ; PIN_AB30      ; QSF Assignment ;
-; Location ;                ;              ; KEY[0]         ; PIN_AA14      ; QSF Assignment ;
 ; Location ;                ;              ; KEY[1]         ; PIN_AA15      ; QSF Assignment ;
 ; Location ;                ;              ; KEY[2]         ; PIN_W15       ; QSF Assignment ;
 ; Location ;                ;              ; KEY[3]         ; PIN_Y16       ; QSF Assignment ;
@@ -376,6 +375,7 @@ refer to the applicable agreement for further details.
 ; Location ;                ;              ; SW[6]          ; PIN_AE11      ; QSF Assignment ;
 ; Location ;                ;              ; SW[7]          ; PIN_AC9       ; QSF Assignment ;
 ; Location ;                ;              ; SW[8]          ; PIN_AD10      ; QSF Assignment ;
+; Location ;                ;              ; SW[9]          ; PIN_AE12      ; QSF Assignment ;
 ; Location ;                ;              ; TD_CLK27       ; PIN_H15       ; QSF Assignment ;
 ; Location ;                ;              ; TD_DATA[0]     ; PIN_D2        ; QSF Assignment ;
 ; Location ;                ;              ; TD_DATA[1]     ; PIN_B1        ; QSF Assignment ;
@@ -673,7 +673,7 @@ The pin-out file can be found in /home/ec2015/ra165457/Desktop/MC613/Lab07/RDU/o
 +-----------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
 ; Name      ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Termination Control Block ; Location assigned by ; Slew Rate ;
 +-----------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
-; clk       ; AE12  ; 3A       ; 2            ; 0            ; 57           ; 6                     ; 0                  ; yes    ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
+; clk       ; AA14  ; 3B       ; 36           ; 0            ; 0            ; 6                     ; 0                  ; yes    ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 ; mode[0]   ; AC9   ; 3A       ; 4            ; 0            ; 0            ; 7                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 ; mode[1]   ; AD10  ; 3A       ; 4            ; 0            ; 17           ; 7                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 ; par_in[0] ; AB12  ; 3A       ; 12           ; 0            ; 17           ; 1                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
@@ -700,26 +700,26 @@ The pin-out file can be found in /home/ec2015/ra165457/Desktop/MC613/Lab07/RDU/o
 +------------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+---------------------+-----------------------------+----------------------+----------------------+---------------------+
 
 
-+----------------------------------------------------------------------------+
-; I/O Bank Usage                                                             ;
-+----------+------------------+---------------+--------------+---------------+
-; I/O Bank ; Usage            ; VCCIO Voltage ; VREF Voltage ; VCCPD Voltage ;
-+----------+------------------+---------------+--------------+---------------+
-; B2L      ; 0 / 0 ( -- )     ; --            ; --           ; --            ;
-; B1L      ; 0 / 0 ( -- )     ; --            ; --           ; --            ;
-; 3A       ; 10 / 32 ( 31 % ) ; 2.5V          ; --           ; 2.5V          ;
-; 3B       ; 0 / 48 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
-; 4A       ; 6 / 80 ( 8 % )   ; 2.5V          ; --           ; 2.5V          ;
-; 5A       ; 0 / 32 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
-; 5B       ; 0 / 16 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
-; 6B       ; 0 / 44 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
-; 6A       ; 0 / 56 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
-; 7A       ; 0 / 19 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
-; 7B       ; 0 / 22 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
-; 7C       ; 0 / 12 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
-; 7D       ; 0 / 14 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
-; 8A       ; 0 / 80 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
-+----------+------------------+---------------+--------------+---------------+
++---------------------------------------------------------------------------+
+; I/O Bank Usage                                                            ;
++----------+-----------------+---------------+--------------+---------------+
+; I/O Bank ; Usage           ; VCCIO Voltage ; VREF Voltage ; VCCPD Voltage ;
++----------+-----------------+---------------+--------------+---------------+
+; B2L      ; 0 / 0 ( -- )    ; --            ; --           ; --            ;
+; B1L      ; 0 / 0 ( -- )    ; --            ; --           ; --            ;
+; 3A       ; 9 / 32 ( 28 % ) ; 2.5V          ; --           ; 2.5V          ;
+; 3B       ; 1 / 48 ( 2 % )  ; 2.5V          ; --           ; 2.5V          ;
+; 4A       ; 6 / 80 ( 8 % )  ; 2.5V          ; --           ; 2.5V          ;
+; 5A       ; 0 / 32 ( 0 % )  ; 2.5V          ; --           ; 2.5V          ;
+; 5B       ; 0 / 16 ( 0 % )  ; 2.5V          ; --           ; 2.5V          ;
+; 6B       ; 0 / 44 ( 0 % )  ; 2.5V          ; --           ; 2.5V          ;
+; 6A       ; 0 / 56 ( 0 % )  ; 2.5V          ; --           ; 2.5V          ;
+; 7A       ; 0 / 19 ( 0 % )  ; 2.5V          ; --           ; 2.5V          ;
+; 7B       ; 0 / 22 ( 0 % )  ; 2.5V          ; --           ; 2.5V          ;
+; 7C       ; 0 / 12 ( 0 % )  ; 2.5V          ; --           ; 2.5V          ;
+; 7D       ; 0 / 14 ( 0 % )  ; 2.5V          ; --           ; 2.5V          ;
+; 8A       ; 0 / 80 ( 0 % )  ; 2.5V          ; --           ; 2.5V          ;
++----------+-----------------+---------------+--------------+---------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -768,7 +768,7 @@ The pin-out file can be found in /home/ec2015/ra165457/Desktop/MC613/Lab07/RDU/o
 ; AA11     ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AA12     ; 74         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AA13     ; 90         ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AA14     ; 122        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AA14     ; 122        ; 3B             ; clk                             ; input  ; 2.5 V        ;                     ; Column I/O   ; Y               ; no       ; Off          ;
 ; AA15     ; 120        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AA16     ; 146        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AA17     ;            ; 4A             ; VCCIO4A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
@@ -886,7 +886,7 @@ The pin-out file can be found in /home/ec2015/ra165457/Desktop/MC613/Lab07/RDU/o
 ; AE9      ; 53         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AE10     ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AE11     ; 59         ; 3A             ; ser_in                          ; input  ; 2.5 V        ;                     ; Column I/O   ; Y               ; no       ; Off          ;
-; AE12     ; 52         ; 3A             ; clk                             ; input  ; 2.5 V        ;                     ; Column I/O   ; Y               ; no       ; Off          ;
+; AE12     ; 52         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AE13     ; 95         ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AE14     ; 96         ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AE15     ;            ; 3B             ; VCCIO3B                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
@@ -1676,7 +1676,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; ser_in     ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; mode[1]    ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; par_in[0]  ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; clk        ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; clk        ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; par_in[1]  ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; par_in[2]  ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; par_in[3]  ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
@@ -1712,7 +1712,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; par_in[0]               ;                   ;         ;
 ;      - Q_buffer~0       ; 0                 ; 0       ;
 ; clk                     ;                   ;         ;
-;      - clk~inputCLKENA0 ; 1                 ; 0       ;
+;      - clk~inputCLKENA0 ; 0                 ; 0       ;
 ; par_in[1]               ;                   ;         ;
 ;      - Q_buffer~2       ; 0                 ; 0       ;
 ; par_in[2]               ;                   ;         ;
@@ -1732,7 +1732,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Name          ; Location           ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +---------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 ; Q_buffer[0]~1 ; LABCELL_X13_Y2_N18 ; 6       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; clk           ; PIN_AE12           ; 6       ; Clock        ; yes    ; Global Clock         ; GCLK7            ; --                        ;
+; clk           ; PIN_AA14           ; 6       ; Clock        ; yes    ; Global Clock         ; GCLK6            ; --                        ;
 +---------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
 
@@ -1741,7 +1741,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------+----------+---------+----------------------+------------------+---------------------------+
 ; Name ; Location ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +------+----------+---------+----------------------+------------------+---------------------------+
-; clk  ; PIN_AE12 ; 6       ; Global Clock         ; GCLK7            ; --                        ;
+; clk  ; PIN_AA14 ; 6       ; Global Clock         ; GCLK6            ; --                        ;
 +------+----------+---------+----------------------+------------------+---------------------------+
 
 
@@ -1752,8 +1752,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------+------------------------+
 ; Block interconnects                         ; 17 / 289,320 ( < 1 % ) ;
 ; C12 interconnects                           ; 0 / 13,420 ( 0 % )     ;
-; C2 interconnects                            ; 14 / 119,108 ( < 1 % ) ;
-; C4 interconnects                            ; 4 / 56,300 ( < 1 % )   ;
+; C2 interconnects                            ; 15 / 119,108 ( < 1 % ) ;
+; C4 interconnects                            ; 3 / 56,300 ( < 1 % )   ;
 ; DQS bus muxes                               ; 0 / 25 ( 0 % )         ;
 ; DQS-18 I/O buses                            ; 0 / 25 ( 0 % )         ;
 ; DQS-9 I/O buses                             ; 0 / 25 ( 0 % )         ;
@@ -1815,8 +1815,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Horizontal periphery clocks                 ; 0 / 72 ( 0 % )         ;
 ; Local interconnects                         ; 6 / 84,580 ( < 1 % )   ;
 ; Quadrant clocks                             ; 0 / 66 ( 0 % )         ;
-; R14 interconnects                           ; 23 / 12,676 ( < 1 % )  ;
-; R14/C12 interconnect drivers                ; 23 / 20,720 ( < 1 % )  ;
+; R14 interconnects                           ; 21 / 12,676 ( < 1 % )  ;
+; R14/C12 interconnect drivers                ; 21 / 20,720 ( < 1 % )  ;
 ; R3 interconnects                            ; 6 / 130,992 ( < 1 % )  ;
 ; R6 interconnects                            ; 23 / 266,960 ( < 1 % ) ;
 ; Spine clocks                                ; 1 / 360 ( < 1 % )      ;
@@ -1961,12 +1961,12 @@ This will disable optimization of problematic paths and expose them for further 
 +-----------------+----------------------+-------------------+
 ; Source Register ; Destination Register ; Delay Added in ns ;
 +-----------------+----------------------+-------------------+
-; Q_buffer[2]     ; Q_buffer[3]          ; 0.228             ;
-; Q_buffer[1]     ; Q_buffer[2]          ; 0.217             ;
-; Q_buffer[0]     ; Q_buffer[1]          ; 0.213             ;
-; Q_buffer[4]     ; Q_buffer[5]          ; 0.206             ;
-; Q_buffer[3]     ; Q_buffer[4]          ; 0.196             ;
-; Q_buffer[5]     ; Q_buffer[4]          ; 0.169             ;
+; Q_buffer[2]     ; Q_buffer[3]          ; 0.226             ;
+; Q_buffer[1]     ; Q_buffer[2]          ; 0.215             ;
+; Q_buffer[0]     ; Q_buffer[1]          ; 0.212             ;
+; Q_buffer[4]     ; Q_buffer[3]          ; 0.204             ;
+; Q_buffer[3]     ; Q_buffer[4]          ; 0.194             ;
+; Q_buffer[5]     ; Q_buffer[4]          ; 0.168             ;
 +-----------------+----------------------+-------------------+
 Note: This table only shows the top 6 path(s) that have the largest delay added for hold.
 
@@ -1984,11 +1984,11 @@ Warning (292013): Feature LogicLock is only available with a valid subscription 
 Warning (15714): Some pins have incomplete I/O assignments. Refer to the I/O Assignment Warnings report for details
 Info (184020): Starting Fitter periphery placement operations
 Info (11191): Automatically promoted 1 clock (1 global)
-    Info (11162): clk~inputCLKENA0 with 6 fanout uses global clock CLKCTRL_G2
+    Info (11162): clk~inputCLKENA0 with 6 fanout uses global clock CLKCTRL_G6
         Info (12525): This signal is driven by core routing -- it may be moved during placement to reduce routing delays
 Warning (16406): 1 global input pin(s) will use non-dedicated clock routing
-    Warning (16407): Source REFCLK I/O is not placed onto a dedicated REFCLK input pin for global clock driver clk~inputCLKENA0, placed at CLKCTRL_G2
-        Info (179012): Refclk input I/O pad clk is placed onto PIN_AE12
+    Warning (16407): Source REFCLK I/O is not placed onto a dedicated REFCLK input pin for global clock driver clk~inputCLKENA0, placed at CLKCTRL_G6
+        Info (179012): Refclk input I/O pad clk is placed onto PIN_AA14
 Info (184021): Fitter periphery placement operations ending: elapsed time is 00:00:00
 Info (176233): Starting register packing
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'RDU.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
@@ -2171,7 +2171,6 @@ Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "HEX5[6]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "IRDA_RXD" is assigned to location or region, but does not exist in design
     Warning (15706): Node "IRDA_TXD" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "KEY[0]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "KEY[1]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "KEY[2]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "KEY[3]" is assigned to location or region, but does not exist in design
@@ -2198,6 +2197,7 @@ Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "SW[6]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "SW[7]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "SW[8]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "SW[9]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "TD_CLK27" is assigned to location or region, but does not exist in design
     Warning (15706): Node "TD_DATA[0]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "TD_DATA[1]" is assigned to location or region, but does not exist in design
@@ -2256,10 +2256,10 @@ Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "VGA_R[7]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "VGA_SYNC_N" is assigned to location or region, but does not exist in design
     Warning (15706): Node "VGA_VS" is assigned to location or region, but does not exist in design
-Info (11798): Fitter preparation operations ending: elapsed time is 00:00:11
+Info (11798): Fitter preparation operations ending: elapsed time is 00:00:12
 Info (170189): Fitter placement preparation operations beginning
 Info (14951): The Fitter is using Advanced Physical Optimization.
-Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
+Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:01
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
 Info (170192): Fitter placement operations ending: elapsed time is 00:00:01
@@ -2269,7 +2269,7 @@ Info (170195): Router estimated average interconnect usage is 0% of the availabl
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
-Info (11888): Total time spent on timing analysis during the Fitter is 0.18 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.22 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
@@ -2279,9 +2279,9 @@ Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments 
 Info (144001): Generated suppressed messages file /home/ec2015/ra165457/Desktop/MC613/Lab07/RDU/output_files/RDU.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 265 warnings
     Info: Peak virtual memory: 2489 megabytes
-    Info: Processing ended: Mon Apr  9 17:09:13 2018
-    Info: Elapsed time: 00:00:28
-    Info: Total CPU time (on all processors): 00:00:44
+    Info: Processing ended: Mon Apr 16 13:56:24 2018
+    Info: Elapsed time: 00:00:38
+    Info: Total CPU time (on all processors): 00:00:47
 
 
 +----------------------------+

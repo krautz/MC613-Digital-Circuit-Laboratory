@@ -1,0 +1,15 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity muda_cor is
+  port (    
+	 flag_chamada : in std_logic;
+    cor_out: out  std_logic_vector (2 downto 0)
+    );
+end muda_cor;
+
+architecture struct of muda_cor is
+
+begin
+
+	PROCESS (
