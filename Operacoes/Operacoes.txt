@@ -75,4 +75,5 @@ Para fazer o uso de for, esse deve estar dentro de um rotulo, com Generate e seg
 
 -------------------------------------------------------------------------
 
-
+EDIT -> Templates -> VHDL
+TOOLS -> IP Catalog

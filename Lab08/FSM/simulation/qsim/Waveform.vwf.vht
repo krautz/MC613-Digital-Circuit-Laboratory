@@ -18,7 +18,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "04/16/2018 16:32:29"
+-- Generated on "04/23/2018 16:08:20"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          fsm_table
 -- 
@@ -42,7 +42,7 @@ COMPONENT fsm_table
 	clock : IN STD_LOGIC;
 	reset : IN STD_LOGIC;
 	w : IN STD_LOGIC;
-	z : OUT STD_LOGIC
+	z : BUFFER STD_LOGIC
 	);
 END COMPONENT;
 BEGIN

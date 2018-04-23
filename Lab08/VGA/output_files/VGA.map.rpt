@@ -1,5 +1,5 @@
 Analysis & Synthesis report for VGA
-Sat Apr 21 21:34:50 2018
+Mon Apr 23 16:02:21 2018
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -57,13 +57,13 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sat Apr 21 21:34:50 2018       ;
+; Analysis & Synthesis Status     ; Successful - Mon Apr 23 16:02:21 2018       ;
 ; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; VGA                                         ;
 ; Top-level Entity Name           ; vga_ball                                    ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 107                                         ;
+; Total registers                 ; 103                                         ;
 ; Total pins                      ; 31                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 36,864                                      ;
@@ -182,38 +182,38 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                              ;
-+----------------------------------+-----------------+----------------------------------------+---------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                                ; Library ;
-+----------------------------------+-----------------+----------------------------------------+---------------------------------------------------------------------------------------------+---------+
-; vga_pll.vhd                      ; yes             ; User Wizard-Generated File             ; /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab08/VGA/vga_pll.vhd                ;         ;
-; vga_pll_0002.v                   ; yes             ; User Verilog HDL File                  ; /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab08/VGA/vga_pll_0002.v             ;         ;
-; vga_ball.vhd                     ; yes             ; User VHDL File                         ; /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab08/VGA/vga_ball.vhd               ;         ;
-; vgacon.vhd                       ; yes             ; User VHDL File                         ; /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab08/VGA/vgacon.vhd                 ;         ;
-; muda_cor.vhd                     ; yes             ; User VHDL File                         ; /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab08/VGA/muda_cor.vhd               ;         ;
-; altera_pll.v                     ; yes             ; Megafunction                           ; /opt/altera/17.1/quartus/libraries/megafunctions/altera_pll.v                               ;         ;
-; altsyncram.tdf                   ; yes             ; Megafunction                           ; /opt/altera/17.1/quartus/libraries/megafunctions/altsyncram.tdf                             ;         ;
-; stratix_ram_block.inc            ; yes             ; Megafunction                           ; /opt/altera/17.1/quartus/libraries/megafunctions/stratix_ram_block.inc                      ;         ;
-; lpm_mux.inc                      ; yes             ; Megafunction                           ; /opt/altera/17.1/quartus/libraries/megafunctions/lpm_mux.inc                                ;         ;
-; lpm_decode.inc                   ; yes             ; Megafunction                           ; /opt/altera/17.1/quartus/libraries/megafunctions/lpm_decode.inc                             ;         ;
-; aglobal171.inc                   ; yes             ; Megafunction                           ; /opt/altera/17.1/quartus/libraries/megafunctions/aglobal171.inc                             ;         ;
-; a_rdenreg.inc                    ; yes             ; Megafunction                           ; /opt/altera/17.1/quartus/libraries/megafunctions/a_rdenreg.inc                              ;         ;
-; altrom.inc                       ; yes             ; Megafunction                           ; /opt/altera/17.1/quartus/libraries/megafunctions/altrom.inc                                 ;         ;
-; altram.inc                       ; yes             ; Megafunction                           ; /opt/altera/17.1/quartus/libraries/megafunctions/altram.inc                                 ;         ;
-; altdpram.inc                     ; yes             ; Megafunction                           ; /opt/altera/17.1/quartus/libraries/megafunctions/altdpram.inc                               ;         ;
-; db/altsyncram_qkl1.tdf           ; yes             ; Auto-Generated Megafunction            ; /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab08/VGA/db/altsyncram_qkl1.tdf     ;         ;
-; vga_mem.mif                      ; yes             ; Auto-Found Memory Initialization File  ; /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab08/VGA/vga_mem.mif                ;         ;
-; db/decode_5la.tdf                ; yes             ; Auto-Generated Megafunction            ; /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab08/VGA/db/decode_5la.tdf          ;         ;
-; db/decode_u0a.tdf                ; yes             ; Auto-Generated Megafunction            ; /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab08/VGA/db/decode_u0a.tdf          ;         ;
-; db/mux_gfb.tdf                   ; yes             ; Auto-Generated Megafunction            ; /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab08/VGA/db/mux_gfb.tdf             ;         ;
-; lpm_divide.tdf                   ; yes             ; Megafunction                           ; /opt/altera/17.1/quartus/libraries/megafunctions/lpm_divide.tdf                             ;         ;
-; abs_divider.inc                  ; yes             ; Megafunction                           ; /opt/altera/17.1/quartus/libraries/megafunctions/abs_divider.inc                            ;         ;
-; sign_div_unsign.inc              ; yes             ; Megafunction                           ; /opt/altera/17.1/quartus/libraries/megafunctions/sign_div_unsign.inc                        ;         ;
-; db/lpm_divide_dbm.tdf            ; yes             ; Auto-Generated Megafunction            ; /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab08/VGA/db/lpm_divide_dbm.tdf      ;         ;
-; db/sign_div_unsign_jlh.tdf       ; yes             ; Auto-Generated Megafunction            ; /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab08/VGA/db/sign_div_unsign_jlh.tdf ;         ;
-; db/alt_u_div_cve.tdf             ; yes             ; Auto-Generated Megafunction            ; /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab08/VGA/db/alt_u_div_cve.tdf       ;         ;
-+----------------------------------+-----------------+----------------------------------------+---------------------------------------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                           ;
++----------------------------------+-----------------+----------------------------------------+--------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                             ; Library ;
++----------------------------------+-----------------+----------------------------------------+--------------------------------------------------------------------------+---------+
+; vga_pll.vhd                      ; yes             ; User Wizard-Generated File             ; /home/ec2015/ra165457/Desktop/MC613/Lab08/VGA/vga_pll.vhd                ;         ;
+; vga_pll_0002.v                   ; yes             ; User Verilog HDL File                  ; /home/ec2015/ra165457/Desktop/MC613/Lab08/VGA/vga_pll_0002.v             ;         ;
+; vga_ball.vhd                     ; yes             ; User VHDL File                         ; /home/ec2015/ra165457/Desktop/MC613/Lab08/VGA/vga_ball.vhd               ;         ;
+; vgacon.vhd                       ; yes             ; User VHDL File                         ; /home/ec2015/ra165457/Desktop/MC613/Lab08/VGA/vgacon.vhd                 ;         ;
+; muda_cor.vhd                     ; yes             ; User VHDL File                         ; /home/ec2015/ra165457/Desktop/MC613/Lab08/VGA/muda_cor.vhd               ;         ;
+; altera_pll.v                     ; yes             ; Megafunction                           ; /opt/altera/17.1/quartus/libraries/megafunctions/altera_pll.v            ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                           ; /opt/altera/17.1/quartus/libraries/megafunctions/altsyncram.tdf          ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                           ; /opt/altera/17.1/quartus/libraries/megafunctions/stratix_ram_block.inc   ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                           ; /opt/altera/17.1/quartus/libraries/megafunctions/lpm_mux.inc             ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                           ; /opt/altera/17.1/quartus/libraries/megafunctions/lpm_decode.inc          ;         ;
+; aglobal171.inc                   ; yes             ; Megafunction                           ; /opt/altera/17.1/quartus/libraries/megafunctions/aglobal171.inc          ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                           ; /opt/altera/17.1/quartus/libraries/megafunctions/a_rdenreg.inc           ;         ;
+; altrom.inc                       ; yes             ; Megafunction                           ; /opt/altera/17.1/quartus/libraries/megafunctions/altrom.inc              ;         ;
+; altram.inc                       ; yes             ; Megafunction                           ; /opt/altera/17.1/quartus/libraries/megafunctions/altram.inc              ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                           ; /opt/altera/17.1/quartus/libraries/megafunctions/altdpram.inc            ;         ;
+; db/altsyncram_qkl1.tdf           ; yes             ; Auto-Generated Megafunction            ; /home/ec2015/ra165457/Desktop/MC613/Lab08/VGA/db/altsyncram_qkl1.tdf     ;         ;
+; vga_mem.mif                      ; yes             ; Auto-Found Memory Initialization File  ; /home/ec2015/ra165457/Desktop/MC613/Lab08/VGA/vga_mem.mif                ;         ;
+; db/decode_5la.tdf                ; yes             ; Auto-Generated Megafunction            ; /home/ec2015/ra165457/Desktop/MC613/Lab08/VGA/db/decode_5la.tdf          ;         ;
+; db/decode_u0a.tdf                ; yes             ; Auto-Generated Megafunction            ; /home/ec2015/ra165457/Desktop/MC613/Lab08/VGA/db/decode_u0a.tdf          ;         ;
+; db/mux_gfb.tdf                   ; yes             ; Auto-Generated Megafunction            ; /home/ec2015/ra165457/Desktop/MC613/Lab08/VGA/db/mux_gfb.tdf             ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                           ; /opt/altera/17.1/quartus/libraries/megafunctions/lpm_divide.tdf          ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                           ; /opt/altera/17.1/quartus/libraries/megafunctions/abs_divider.inc         ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                           ; /opt/altera/17.1/quartus/libraries/megafunctions/sign_div_unsign.inc     ;         ;
+; db/lpm_divide_dbm.tdf            ; yes             ; Auto-Generated Megafunction            ; /home/ec2015/ra165457/Desktop/MC613/Lab08/VGA/db/lpm_divide_dbm.tdf      ;         ;
+; db/sign_div_unsign_jlh.tdf       ; yes             ; Auto-Generated Megafunction            ; /home/ec2015/ra165457/Desktop/MC613/Lab08/VGA/db/sign_div_unsign_jlh.tdf ;         ;
+; db/alt_u_div_cve.tdf             ; yes             ; Auto-Generated Megafunction            ; /home/ec2015/ra165457/Desktop/MC613/Lab08/VGA/db/alt_u_div_cve.tdf       ;         ;
++----------------------------------+-----------------+----------------------------------------+--------------------------------------------------------------------------+---------+
 
 
 +--------------------------------------------------------------+
@@ -223,14 +223,14 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+----------------+
 ; Estimate of Logic utilization (ALMs needed) ; 141            ;
 ;                                             ;                ;
-; Combinational ALUT usage for logic          ; 259            ;
+; Combinational ALUT usage for logic          ; 258            ;
 ;     -- 7 input functions                    ; 1              ;
-;     -- 6 input functions                    ; 19             ;
-;     -- 5 input functions                    ; 25             ;
+;     -- 6 input functions                    ; 20             ;
+;     -- 5 input functions                    ; 26             ;
 ;     -- 4 input functions                    ; 32             ;
-;     -- <=3 input functions                  ; 182            ;
+;     -- <=3 input functions                  ; 179            ;
 ;                                             ;                ;
-; Dedicated logic registers                   ; 107            ;
+; Dedicated logic registers                   ; 103            ;
 ;                                             ;                ;
 ; I/O pins                                    ; 31             ;
 ; Total MLAB memory bits                      ; 0              ;
@@ -242,9 +242,9 @@ refer to the applicable agreement for further details.
 ;     -- PLLs                                 ; 1              ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
-; Maximum fan-out                             ; 70             ;
-; Total fan-out                               ; 1346           ;
-; Average fan-out                             ; 3.09           ;
+; Maximum fan-out                             ; 66             ;
+; Total fan-out                               ; 1345           ;
+; Average fan-out                             ; 3.13           ;
 +---------------------------------------------+----------------+
 
 
@@ -253,7 +253,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                ; Entity Name         ; Library Name ;
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |vga_ball                                    ; 259 (86)            ; 107 (63)                  ; 36864             ; 0          ; 31   ; 0            ; |vga_ball                                                                                                                          ; vga_ball            ; work         ;
+; |vga_ball                                    ; 258 (85)            ; 103 (59)                  ; 36864             ; 0          ; 31   ; 0            ; |vga_ball                                                                                                                          ; vga_ball            ; work         ;
 ;    |muda_cor:muda_cor_instance|              ; 3 (3)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_ball|muda_cor:muda_cor_instance                                                                                               ; muda_cor            ; work         ;
 ;    |vgacon:vga_controller|                   ; 170 (43)            ; 41 (40)                   ; 36864             ; 0          ; 0    ; 0            ; |vga_ball|vgacon:vga_controller                                                                                                    ; vgacon              ; work         ;
 ;       |dual_clock_ram:vgamem|                ; 2 (0)               ; 1 (0)                     ; 36864             ; 0          ; 0    ; 0            ; |vga_ball|vgacon:vga_controller|dual_clock_ram:vgamem                                                                              ; dual_clock_ram      ; work         ;
@@ -314,7 +314,7 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 107   ;
+; Total registers                              ; 103   ;
 ; Number of registers using Synchronous Clear  ; 41    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 35    ;
@@ -350,8 +350,7 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |vga_ball|pixel[2]         ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |vga_ball|pos_x[3]         ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |vga_ball|pos_x[6]         ;
 ; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |vga_ball|pos_y[0]         ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
@@ -774,14 +773,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 107                         ;
+; arriav_ff             ; 103                         ;
 ;     ENA               ; 16                          ;
 ;     ENA CLR           ; 14                          ;
 ;     ENA CLR SCLR      ; 21                          ;
 ;     ENA SCLR          ; 10                          ;
 ;     SCLR              ; 10                          ;
-;     plain             ; 36                          ;
-; arriav_lcell_comb     ; 261                         ;
+;     plain             ; 32                          ;
+; arriav_lcell_comb     ; 260                         ;
 ;     arith             ; 154                         ;
 ;         0 data inputs ; 16                          ;
 ;         1 data inputs ; 95                          ;
@@ -790,20 +789,20 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;         4 data inputs ; 12                          ;
 ;     extend            ; 1                           ;
 ;         7 data inputs ; 1                           ;
-;     normal            ; 106                         ;
+;     normal            ; 105                         ;
 ;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 7                           ;
-;         2 data inputs ; 27                          ;
-;         3 data inputs ; 6                           ;
+;         2 data inputs ; 22                          ;
+;         3 data inputs ; 8                           ;
 ;         4 data inputs ; 20                          ;
-;         5 data inputs ; 25                          ;
-;         6 data inputs ; 19                          ;
+;         5 data inputs ; 26                          ;
+;         6 data inputs ; 20                          ;
 ; boundary_port         ; 31                          ;
 ; generic_pll           ; 1                           ;
 ; stratixv_ram_block    ; 6                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 18.20                       ;
-; Average LUT depth     ; 7.47                        ;
+; Average LUT depth     ; 7.54                        ;
 +-----------------------+-----------------------------+
 
 
@@ -822,40 +821,40 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Sat Apr 21 21:34:39 2018
+    Info: Processing started: Mon Apr 23 16:02:10 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off VGA -c VGA
 Warning (125092): Tcl Script File vga_pll/vga_pll_0002.qip not found
     Info (125063): set_global_assignment -name QIP_FILE vga_pll/vga_pll_0002.qip -qip vga_pll.qip -library vga_pll
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file vga_pll.vhd
-    Info (12022): Found design unit 1: vga_pll-rtl File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab08/VGA/vga_pll.vhd Line: 19
-    Info (12023): Found entity 1: vga_pll File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab08/VGA/vga_pll.vhd Line: 11
+    Info (12022): Found design unit 1: vga_pll-rtl File: /home/ec2015/ra165457/Desktop/MC613/Lab08/VGA/vga_pll.vhd Line: 19
+    Info (12023): Found entity 1: vga_pll File: /home/ec2015/ra165457/Desktop/MC613/Lab08/VGA/vga_pll.vhd Line: 11
 Warning (12019): Can't analyze file -- file vga_pll/vga_pll_0002.v is missing
 Info (12021): Found 1 design units, including 1 entities, in source file vga_pll_0002.v
-    Info (12023): Found entity 1: vga_pll_0002 File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab08/VGA/vga_pll_0002.v Line: 2
+    Info (12023): Found entity 1: vga_pll_0002 File: /home/ec2015/ra165457/Desktop/MC613/Lab08/VGA/vga_pll_0002.v Line: 2
 Info (12021): Found 2 design units, including 1 entities, in source file vga_ball.vhd
-    Info (12022): Found design unit 1: vga_ball-comportamento File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab08/VGA/vga_ball.vhd Line: 42
-    Info (12023): Found entity 1: vga_ball File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab08/VGA/vga_ball.vhd Line: 31
+    Info (12022): Found design unit 1: vga_ball-comportamento File: /home/ec2015/ra165457/Desktop/MC613/Lab08/VGA/vga_ball.vhd Line: 42
+    Info (12023): Found entity 1: vga_ball File: /home/ec2015/ra165457/Desktop/MC613/Lab08/VGA/vga_ball.vhd Line: 31
 Info (12021): Found 2 design units, including 1 entities, in source file test.vhd
-    Info (12022): Found design unit 1: TEST-behavior File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab08/VGA/test.vhd Line: 16
-    Info (12023): Found entity 1: test File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab08/VGA/test.vhd Line: 4
+    Info (12022): Found design unit 1: TEST-behavior File: /home/ec2015/ra165457/Desktop/MC613/Lab08/VGA/test.vhd Line: 16
+    Info (12023): Found entity 1: test File: /home/ec2015/ra165457/Desktop/MC613/Lab08/VGA/test.vhd Line: 4
 Info (12021): Found 4 design units, including 2 entities, in source file vgacon.vhd
-    Info (12022): Found design unit 1: vgacon-behav File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab08/VGA/vgacon.vhd Line: 96
-    Info (12022): Found design unit 2: dual_clock_ram-behav File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab08/VGA/vgacon.vhd Line: 269
-    Info (12023): Found entity 1: vgacon File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab08/VGA/vgacon.vhd Line: 75
-    Info (12023): Found entity 2: dual_clock_ram File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab08/VGA/vgacon.vhd Line: 256
+    Info (12022): Found design unit 1: vgacon-behav File: /home/ec2015/ra165457/Desktop/MC613/Lab08/VGA/vgacon.vhd Line: 96
+    Info (12022): Found design unit 2: dual_clock_ram-behav File: /home/ec2015/ra165457/Desktop/MC613/Lab08/VGA/vgacon.vhd Line: 269
+    Info (12023): Found entity 1: vgacon File: /home/ec2015/ra165457/Desktop/MC613/Lab08/VGA/vgacon.vhd Line: 75
+    Info (12023): Found entity 2: dual_clock_ram File: /home/ec2015/ra165457/Desktop/MC613/Lab08/VGA/vgacon.vhd Line: 256
 Info (12021): Found 2 design units, including 1 entities, in source file muda_cor.vhd
-    Info (12022): Found design unit 1: muda_cor-struct File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab08/VGA/muda_cor.vhd Line: 12
-    Info (12023): Found entity 1: muda_cor File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab08/VGA/muda_cor.vhd Line: 5
+    Info (12022): Found design unit 1: muda_cor-struct File: /home/ec2015/ra165457/Desktop/MC613/Lab08/VGA/muda_cor.vhd Line: 12
+    Info (12023): Found entity 1: muda_cor File: /home/ec2015/ra165457/Desktop/MC613/Lab08/VGA/muda_cor.vhd Line: 5
 Info (12127): Elaborating entity "vga_ball" for the top level hierarchy
-Info (12128): Elaborating entity "vgacon" for hierarchy "vgacon:vga_controller" File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab08/VGA/vga_ball.vhd Line: 113
-Info (12128): Elaborating entity "vga_pll" for hierarchy "vgacon:vga_controller|vga_pll:divider" File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab08/VGA/vgacon.vhd Line: 118
-Info (12128): Elaborating entity "vga_pll_0002" for hierarchy "vgacon:vga_controller|vga_pll:divider|vga_pll_0002:vga_pll_inst" File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab08/VGA/vga_pll.vhd Line: 31
-Info (12128): Elaborating entity "altera_pll" for hierarchy "vgacon:vga_controller|vga_pll:divider|vga_pll_0002:vga_pll_inst|altera_pll:altera_pll_i" File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab08/VGA/vga_pll_0002.v Line: 85
+Info (12128): Elaborating entity "vgacon" for hierarchy "vgacon:vga_controller" File: /home/ec2015/ra165457/Desktop/MC613/Lab08/VGA/vga_ball.vhd Line: 113
+Info (12128): Elaborating entity "vga_pll" for hierarchy "vgacon:vga_controller|vga_pll:divider" File: /home/ec2015/ra165457/Desktop/MC613/Lab08/VGA/vgacon.vhd Line: 118
+Info (12128): Elaborating entity "vga_pll_0002" for hierarchy "vgacon:vga_controller|vga_pll:divider|vga_pll_0002:vga_pll_inst" File: /home/ec2015/ra165457/Desktop/MC613/Lab08/VGA/vga_pll.vhd Line: 31
+Info (12128): Elaborating entity "altera_pll" for hierarchy "vgacon:vga_controller|vga_pll:divider|vga_pll_0002:vga_pll_inst|altera_pll:altera_pll_i" File: /home/ec2015/ra165457/Desktop/MC613/Lab08/VGA/vga_pll_0002.v Line: 85
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "wire_to_nowhere_64" into its bus
-Info (12130): Elaborated megafunction instantiation "vgacon:vga_controller|vga_pll:divider|vga_pll_0002:vga_pll_inst|altera_pll:altera_pll_i" File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab08/VGA/vga_pll_0002.v Line: 85
-Info (12133): Instantiated megafunction "vgacon:vga_controller|vga_pll:divider|vga_pll_0002:vga_pll_inst|altera_pll:altera_pll_i" with the following parameter: File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab08/VGA/vga_pll_0002.v Line: 85
+Info (12130): Elaborated megafunction instantiation "vgacon:vga_controller|vga_pll:divider|vga_pll_0002:vga_pll_inst|altera_pll:altera_pll_i" File: /home/ec2015/ra165457/Desktop/MC613/Lab08/VGA/vga_pll_0002.v Line: 85
+Info (12133): Instantiated megafunction "vgacon:vga_controller|vga_pll:divider|vga_pll_0002:vga_pll_inst|altera_pll:altera_pll_i" with the following parameter: File: /home/ec2015/ra165457/Desktop/MC613/Lab08/VGA/vga_pll_0002.v Line: 85
     Info (12134): Parameter "fractional_vco_multiplier" = "false"
     Info (12134): Parameter "reference_clock_frequency" = "50.0 MHz"
     Info (12134): Parameter "operation_mode" = "direct"
@@ -916,8 +915,8 @@ Info (12133): Instantiated megafunction "vgacon:vga_controller|vga_pll:divider|v
     Info (12134): Parameter "duty_cycle17" = "50"
     Info (12134): Parameter "pll_type" = "General"
     Info (12134): Parameter "pll_subtype" = "General"
-Info (12128): Elaborating entity "dual_clock_ram" for hierarchy "vgacon:vga_controller|dual_clock_ram:vgamem" File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab08/VGA/vgacon.vhd Line: 124
-Info (12128): Elaborating entity "muda_cor" for hierarchy "muda_cor:muda_cor_instance" File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab08/VGA/vga_ball.vhd Line: 185
+Info (12128): Elaborating entity "dual_clock_ram" for hierarchy "vgacon:vga_controller|dual_clock_ram:vgamem" File: /home/ec2015/ra165457/Desktop/MC613/Lab08/VGA/vgacon.vhd Line: 124
+Info (12128): Elaborating entity "muda_cor" for hierarchy "muda_cor:muda_cor_instance" File: /home/ec2015/ra165457/Desktop/MC613/Lab08/VGA/vga_ball.vhd Line: 192
 Info (19000): Inferred 1 megafunctions from design logic
     Info (276029): Inferred altsyncram megafunction from the following design logic: "vgacon:vga_controller|dual_clock_ram:vgamem|ram_block_rtl_0" 
         Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
@@ -936,8 +935,8 @@ Info (19000): Inferred 1 megafunctions from design logic
         Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
         Info (286033): Parameter INIT_FILE set to vga_mem.mif
 Info (278001): Inferred 2 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "vgacon:vga_controller|Div0" File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab08/VGA/vgacon.vhd Line: 229
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "vgacon:vga_controller|Div1" File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab08/VGA/vgacon.vhd Line: 230
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "vgacon:vga_controller|Div0" File: /home/ec2015/ra165457/Desktop/MC613/Lab08/VGA/vgacon.vhd Line: 229
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "vgacon:vga_controller|Div1" File: /home/ec2015/ra165457/Desktop/MC613/Lab08/VGA/vgacon.vhd Line: 230
 Info (12130): Elaborated megafunction instantiation "vgacon:vga_controller|dual_clock_ram:vgamem|altsyncram:ram_block_rtl_0"
 Info (12133): Instantiated megafunction "vgacon:vga_controller|dual_clock_ram:vgamem|altsyncram:ram_block_rtl_0" with the following parameter:
     Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
@@ -956,34 +955,34 @@ Info (12133): Instantiated megafunction "vgacon:vga_controller|dual_clock_ram:vg
     Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
     Info (12134): Parameter "INIT_FILE" = "vga_mem.mif"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_qkl1.tdf
-    Info (12023): Found entity 1: altsyncram_qkl1 File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab08/VGA/db/altsyncram_qkl1.tdf Line: 33
+    Info (12023): Found entity 1: altsyncram_qkl1 File: /home/ec2015/ra165457/Desktop/MC613/Lab08/VGA/db/altsyncram_qkl1.tdf Line: 33
 Info (12021): Found 1 design units, including 1 entities, in source file db/decode_5la.tdf
-    Info (12023): Found entity 1: decode_5la File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab08/VGA/db/decode_5la.tdf Line: 22
+    Info (12023): Found entity 1: decode_5la File: /home/ec2015/ra165457/Desktop/MC613/Lab08/VGA/db/decode_5la.tdf Line: 22
 Info (12021): Found 1 design units, including 1 entities, in source file db/decode_u0a.tdf
-    Info (12023): Found entity 1: decode_u0a File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab08/VGA/db/decode_u0a.tdf Line: 22
+    Info (12023): Found entity 1: decode_u0a File: /home/ec2015/ra165457/Desktop/MC613/Lab08/VGA/db/decode_u0a.tdf Line: 22
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_gfb.tdf
-    Info (12023): Found entity 1: mux_gfb File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab08/VGA/db/mux_gfb.tdf Line: 22
-Info (12130): Elaborated megafunction instantiation "vgacon:vga_controller|lpm_divide:Div0" File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab08/VGA/vgacon.vhd Line: 229
-Info (12133): Instantiated megafunction "vgacon:vga_controller|lpm_divide:Div0" with the following parameter: File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab08/VGA/vgacon.vhd Line: 229
+    Info (12023): Found entity 1: mux_gfb File: /home/ec2015/ra165457/Desktop/MC613/Lab08/VGA/db/mux_gfb.tdf Line: 22
+Info (12130): Elaborated megafunction instantiation "vgacon:vga_controller|lpm_divide:Div0" File: /home/ec2015/ra165457/Desktop/MC613/Lab08/VGA/vgacon.vhd Line: 229
+Info (12133): Instantiated megafunction "vgacon:vga_controller|lpm_divide:Div0" with the following parameter: File: /home/ec2015/ra165457/Desktop/MC613/Lab08/VGA/vgacon.vhd Line: 229
     Info (12134): Parameter "LPM_WIDTHN" = "10"
     Info (12134): Parameter "LPM_WIDTHD" = "3"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_dbm.tdf
-    Info (12023): Found entity 1: lpm_divide_dbm File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab08/VGA/db/lpm_divide_dbm.tdf Line: 24
+    Info (12023): Found entity 1: lpm_divide_dbm File: /home/ec2015/ra165457/Desktop/MC613/Lab08/VGA/db/lpm_divide_dbm.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_jlh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_jlh File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab08/VGA/db/sign_div_unsign_jlh.tdf Line: 24
+    Info (12023): Found entity 1: sign_div_unsign_jlh File: /home/ec2015/ra165457/Desktop/MC613/Lab08/VGA/db/sign_div_unsign_jlh.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_cve.tdf
-    Info (12023): Found entity 1: alt_u_div_cve File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab08/VGA/db/alt_u_div_cve.tdf Line: 22
-Info (12130): Elaborated megafunction instantiation "vgacon:vga_controller|lpm_divide:Div1" File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab08/VGA/vgacon.vhd Line: 230
-Info (12133): Instantiated megafunction "vgacon:vga_controller|lpm_divide:Div1" with the following parameter: File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab08/VGA/vgacon.vhd Line: 230
+    Info (12023): Found entity 1: alt_u_div_cve File: /home/ec2015/ra165457/Desktop/MC613/Lab08/VGA/db/alt_u_div_cve.tdf Line: 22
+Info (12130): Elaborated megafunction instantiation "vgacon:vga_controller|lpm_divide:Div1" File: /home/ec2015/ra165457/Desktop/MC613/Lab08/VGA/vgacon.vhd Line: 230
+Info (12133): Instantiated megafunction "vgacon:vga_controller|lpm_divide:Div1" with the following parameter: File: /home/ec2015/ra165457/Desktop/MC613/Lab08/VGA/vgacon.vhd Line: 230
     Info (12134): Parameter "LPM_WIDTHN" = "10"
     Info (12134): Parameter "LPM_WIDTHD" = "3"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "VGA_BLANK_N" is stuck at VCC File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab08/VGA/vga_ball.vhd Line: 37
-    Warning (13410): Pin "VGA_SYNC_N" is stuck at GND File: /home/ec2015/ra175188/MC613-Digital-Circuit-Laboratory/Lab08/VGA/vga_ball.vhd Line: 37
+    Warning (13410): Pin "VGA_BLANK_N" is stuck at VCC File: /home/ec2015/ra165457/Desktop/MC613/Lab08/VGA/vga_ball.vhd Line: 37
+    Warning (13410): Pin "VGA_SYNC_N" is stuck at GND File: /home/ec2015/ra165457/Desktop/MC613/Lab08/VGA/vga_ball.vhd Line: 37
 Info (286030): Timing-Driven Synthesis is running
 Warning (20013): Ignored 571 assignments for entity "DE1_SoC" -- entity does not exist in design
     Warning (20014): Assignment for entity set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to HPS_DDR3_ADDR[0] -entity DE1_SoC was ignored
@@ -1561,16 +1560,16 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 5 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
 Warning: RST port on the PLL is not properly connected on instance vgacon:vga_controller|vga_pll:divider|vga_pll_0002:vga_pll_inst|altera_pll:altera_pll_i|general[0].gpll. The reset port on the PLL should be connected. If the PLL loses lock for any reason, you might need to manually reset the PLL in order to re-establish lock to the reference clock. File: /opt/altera/17.1/quartus/libraries/megafunctions/altera_pll.v Line: 748
     Info: Must be connected
-Info (21057): Implemented 321 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 320 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 29 output pins
-    Info (21061): Implemented 283 logic cells
+    Info (21061): Implemented 282 logic cells
     Info (21064): Implemented 6 RAM segments
     Info (21065): Implemented 1 PLLs
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 579 warnings
-    Info: Peak virtual memory: 1234 megabytes
-    Info: Processing ended: Sat Apr 21 21:34:50 2018
+    Info: Peak virtual memory: 1236 megabytes
+    Info: Processing ended: Mon Apr 23 16:02:21 2018
     Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:22
+    Info: Total CPU time (on all processors): 00:00:21
 
 

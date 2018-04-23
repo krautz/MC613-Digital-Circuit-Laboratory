@@ -1,0 +1,94 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/ec2015/ra165457/Desktop/MC613/Lab09/RAM/simulation/qsim
+vram
+!s110 1524515651
+!i10b 1
+!s100 T[?b:[chNz5f>I2RJzSZ?0
+I2SA@FVSI6?MdD?5<;9`I42
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1524515649
+Z2 8RAM.vo
+Z3 FRAM.vo
+Z4 L0 31
+Z5 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1524515650.000000
+Z6 !s107 RAM.vo|
+Z7 !s90 -work|work|RAM.vo|
+!i113 1
+Z8 o-work work
+Z9 tCvgOpt 0
+vram_block
+!s110 1524512111
+!i10b 1
+!s100 ff<]ol`PIIoI<hcn4LYM61
+I4=^EdhR>a0Tm9j@eod:0?0
+R1
+R0
+w1524512111
+R2
+R3
+R4
+R5
+r1
+!s85 0
+31
+Z10 !s108 1524512111.000000
+R6
+R7
+!i113 1
+R8
+R9
+vram_block_vlg_vec_tst
+!s110 1524512112
+!i10b 1
+!s100 ;KjHViPHbJEFQmX>Z>dMB1
+IQ=FA:kGYbiamoCOZQ12:<0
+R1
+R0
+w1524512109
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+Z11 L0 29
+R5
+r1
+!s85 0
+31
+R10
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R8
+R9
+vram_vlg_vec_tst
+!s110 1524515655
+!i10b 1
+!s100 [Zh?HVDVjKee`kl2XZiLK3
+ISSP4`SmOPWJ[MTZTSUjz@3
+R1
+R0
+w1524515646
+8Waveform1.vwf.vt
+FWaveform1.vwf.vt
+R11
+R5
+r1
+!s85 0
+31
+!s108 1524515652.000000
+!s107 Waveform1.vwf.vt|
+!s90 -work|work|Waveform1.vwf.vt|
+!i113 1
+R8
+R9

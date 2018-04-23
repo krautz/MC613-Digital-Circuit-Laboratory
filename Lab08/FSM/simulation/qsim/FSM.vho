@@ -16,7 +16,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition"
 
--- DATE "04/16/2018 16:32:30"
+-- DATE "04/23/2018 16:08:21"
 
 -- 
 -- Device: Altera 5CSEMA5F31C6 Package FBGA896
@@ -40,7 +40,7 @@ ENTITY 	fsm_table IS
 	clock : IN std_logic;
 	reset : IN std_logic;
 	w : IN std_logic;
-	z : OUT std_logic
+	z : BUFFER std_logic
 	);
 END fsm_table;
 
@@ -59,26 +59,24 @@ SIGNAL ww_reset : std_logic;
 SIGNAL ww_w : std_logic;
 SIGNAL ww_z : std_logic;
 SIGNAL \z~output_o\ : std_logic;
+SIGNAL \w~input_o\ : std_logic;
 SIGNAL \clock~input_o\ : std_logic;
 SIGNAL \reset~input_o\ : std_logic;
-SIGNAL \w~input_o\ : std_logic;
 SIGNAL \y~9_combout\ : std_logic;
-SIGNAL \y.D~q\ : std_logic;
-SIGNAL \y~10_combout\ : std_logic;
 SIGNAL \y.A~q\ : std_logic;
 SIGNAL \y~11_combout\ : std_logic;
 SIGNAL \y.C~q\ : std_logic;
-SIGNAL \y~8_combout\ : std_logic;
+SIGNAL \y~10_combout\ : std_logic;
 SIGNAL \y.B~q\ : std_logic;
-SIGNAL \z~0_combout\ : std_logic;
-SIGNAL \z~reg0_q\ : std_logic;
-SIGNAL \ALT_INV_w~input_o\ : std_logic;
+SIGNAL \y~8_combout\ : std_logic;
+SIGNAL \y.D~q\ : std_logic;
+SIGNAL \Selector1~0_combout\ : std_logic;
 SIGNAL \ALT_INV_reset~input_o\ : std_logic;
+SIGNAL \ALT_INV_w~input_o\ : std_logic;
 SIGNAL \ALT_INV_y.C~q\ : std_logic;
+SIGNAL \ALT_INV_y.B~q\ : std_logic;
 SIGNAL \ALT_INV_y.A~q\ : std_logic;
 SIGNAL \ALT_INV_y.D~q\ : std_logic;
-SIGNAL \ALT_INV_y.B~q\ : std_logic;
-SIGNAL \ALT_INV_z~reg0_q\ : std_logic;
 
 BEGIN
 
@@ -89,13 +87,12 @@ z <= ww_z;
 ww_devoe <= devoe;
 ww_devclrn <= devclrn;
 ww_devpor <= devpor;
-\ALT_INV_w~input_o\ <= NOT \w~input_o\;
 \ALT_INV_reset~input_o\ <= NOT \reset~input_o\;
+\ALT_INV_w~input_o\ <= NOT \w~input_o\;
 \ALT_INV_y.C~q\ <= NOT \y.C~q\;
+\ALT_INV_y.B~q\ <= NOT \y.B~q\;
 \ALT_INV_y.A~q\ <= NOT \y.A~q\;
 \ALT_INV_y.D~q\ <= NOT \y.D~q\;
-\ALT_INV_y.B~q\ <= NOT \y.B~q\;
-\ALT_INV_z~reg0_q\ <= NOT \z~reg0_q\;
 
 \z~output\ : cyclonev_io_obuf
 -- pragma translate_off
@@ -105,9 +102,19 @@ GENERIC MAP (
 	shift_series_termination_control => "false")
 -- pragma translate_on
 PORT MAP (
-	i => \z~reg0_q\,
+	i => \Selector1~0_combout\,
 	devoe => ww_devoe,
 	o => \z~output_o\);
+
+\w~input\ : cyclonev_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => ww_w,
+	o => \w~input_o\);
 
 \clock~input\ : cyclonev_io_ibuf
 -- pragma translate_off
@@ -129,60 +136,21 @@ PORT MAP (
 	i => ww_reset,
 	o => \reset~input_o\);
 
-\w~input\ : cyclonev_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_w,
-	o => \w~input_o\);
-
 \y~9\ : cyclonev_lcell_comb
 -- Equation(s):
--- \y~9_combout\ = (!\reset~input_o\ & (!\w~input_o\ & \y.B~q\))
+-- \y~9_combout\ = (!\reset~input_o\ & ((!\y.D~q\) # (\w~input_o\)))
 
 -- pragma translate_off
 GENERIC MAP (
 	extended_lut => "off",
-	lut_mask => "0000100000001000000010000000100000001000000010000000100000001000",
+	lut_mask => "1101000011010000110100001101000011010000110100001101000011010000",
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \ALT_INV_reset~input_o\,
-	datab => \ALT_INV_w~input_o\,
-	datac => \ALT_INV_y.B~q\,
+	dataa => \ALT_INV_w~input_o\,
+	datab => \ALT_INV_y.D~q\,
+	datac => \ALT_INV_reset~input_o\,
 	combout => \y~9_combout\);
-
-\y.D\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clock~input_o\,
-	d => \y~9_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \y.D~q\);
-
-\y~10\ : cyclonev_lcell_comb
--- Equation(s):
--- \y~10_combout\ = (!\reset~input_o\ & ((!\y.D~q\) # (\w~input_o\)))
-
--- pragma translate_off
-GENERIC MAP (
-	extended_lut => "off",
-	lut_mask => "1010001010100010101000101010001010100010101000101010001010100010",
-	shared_arith => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => \ALT_INV_reset~input_o\,
-	datab => \ALT_INV_w~input_o\,
-	datac => \ALT_INV_y.D~q\,
-	combout => \y~10_combout\);
 
 \y.A\ : dffeas
 -- pragma translate_off
@@ -192,7 +160,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clock~input_o\,
-	d => \y~10_combout\,
+	d => \y~9_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \y.A~q\);
@@ -204,13 +172,13 @@ PORT MAP (
 -- pragma translate_off
 GENERIC MAP (
 	extended_lut => "off",
-	lut_mask => "1000001010000010100000101000001010000010100000101000001010000010",
+	lut_mask => "1001000010010000100100001001000010010000100100001001000010010000",
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \ALT_INV_reset~input_o\,
-	datab => \ALT_INV_w~input_o\,
-	datac => \ALT_INV_y.A~q\,
+	dataa => \ALT_INV_w~input_o\,
+	datab => \ALT_INV_y.A~q\,
+	datac => \ALT_INV_reset~input_o\,
 	combout => \y~11_combout\);
 
 \y.C\ : dffeas
@@ -226,24 +194,53 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \y.C~q\);
 
-\y~8\ : cyclonev_lcell_comb
+\y~10\ : cyclonev_lcell_comb
 -- Equation(s):
--- \y~8_combout\ = (!\reset~input_o\ & ((!\w~input_o\ & ((\y.C~q\))) # (\w~input_o\ & (!\y.A~q\))))
+-- \y~10_combout\ = (!\reset~input_o\ & ((!\w~input_o\ & ((\y.C~q\))) # (\w~input_o\ & (!\y.A~q\))))
 
 -- pragma translate_off
 GENERIC MAP (
 	extended_lut => "off",
-	lut_mask => "0010000010101000001000001010100000100000101010000010000010101000",
+	lut_mask => "0100000011100000010000001110000001000000111000000100000011100000",
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \ALT_INV_reset~input_o\,
-	datab => \ALT_INV_w~input_o\,
-	datac => \ALT_INV_y.A~q\,
+	dataa => \ALT_INV_w~input_o\,
+	datab => \ALT_INV_y.A~q\,
+	datac => \ALT_INV_reset~input_o\,
 	datad => \ALT_INV_y.C~q\,
-	combout => \y~8_combout\);
+	combout => \y~10_combout\);
 
 \y.B\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clock~input_o\,
+	d => \y~10_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \y.B~q\);
+
+\y~8\ : cyclonev_lcell_comb
+-- Equation(s):
+-- \y~8_combout\ = (!\w~input_o\ & (\y.B~q\ & !\reset~input_o\))
+
+-- pragma translate_off
+GENERIC MAP (
+	extended_lut => "off",
+	lut_mask => "0010000000100000001000000010000000100000001000000010000000100000",
+	shared_arith => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \ALT_INV_w~input_o\,
+	datab => \ALT_INV_y.B~q\,
+	datac => \ALT_INV_reset~input_o\,
+	combout => \y~8_combout\);
+
+\y.D\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -254,40 +251,24 @@ PORT MAP (
 	d => \y~8_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \y.B~q\);
+	q => \y.D~q\);
 
-\z~0\ : cyclonev_lcell_comb
+\Selector1~0\ : cyclonev_lcell_comb
 -- Equation(s):
--- \z~0_combout\ = ( \y.D~q\ & ( \y.A~q\ & ( (!\reset~input_o\ & (((\y.B~q\) # (\w~input_o\)))) # (\reset~input_o\ & (\z~reg0_q\)) ) ) ) # ( !\y.D~q\ & ( \y.A~q\ & ( (!\reset~input_o\ & (((!\w~input_o\ & \y.B~q\)))) # (\reset~input_o\ & (\z~reg0_q\)) ) ) ) # 
--- ( \y.D~q\ & ( !\y.A~q\ & ( (!\reset~input_o\) # (\z~reg0_q\) ) ) ) # ( !\y.D~q\ & ( !\y.A~q\ & ( (!\reset~input_o\) # (\z~reg0_q\) ) ) )
+-- \Selector1~0_combout\ = (!\y.A~q\) # ((!\w~input_o\ & ((\y.B~q\))) # (\w~input_o\ & (\y.D~q\)))
 
 -- pragma translate_off
 GENERIC MAP (
 	extended_lut => "off",
-	lut_mask => "1101110111011101110111011101110100010001110100010001110111011101",
+	lut_mask => "1111000111111011111100011111101111110001111110111111000111111011",
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \ALT_INV_z~reg0_q\,
-	datab => \ALT_INV_reset~input_o\,
-	datac => \ALT_INV_w~input_o\,
+	dataa => \ALT_INV_w~input_o\,
+	datab => \ALT_INV_y.D~q\,
+	datac => \ALT_INV_y.A~q\,
 	datad => \ALT_INV_y.B~q\,
-	datae => \ALT_INV_y.D~q\,
-	dataf => \ALT_INV_y.A~q\,
-	combout => \z~0_combout\);
-
-\z~reg0\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clock~input_o\,
-	d => \z~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \z~reg0_q\);
+	combout => \Selector1~0_combout\);
 
 ww_z <= \z~output_o\;
 END structure;

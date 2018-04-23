@@ -40,16 +40,17 @@ entity vga_ball is
 end vga_ball;
 
 architecture comportamento of vga_ball is
-
-  component muda_cor is
-  port (    
+	
+	 component muda_cor is
+	port (    
 	 flag_chamada : in std_logic;
     cor_out: out  std_logic_vector (2 downto 0)
     );
-end component;
-
-  signal enable_muda_cor_1, enable_muda_cor_2 : std_logic := '0';
-
+	end component;
+	
+	signal enable_muda_cor_1, enable_muda_cor_2 : std_logic := '0';
+	signal color : std_logic_vector(2 downto 0);
+  
   signal rstn : std_logic;              -- reset active low para nossos
                                         -- circuitos sequenciais.
 
@@ -57,9 +58,8 @@ end component;
 
   signal we : std_logic;                        -- write enable ('1' p/ escrita)
   signal addr : integer range 0 to 12287;       -- endereco mem. vga
-  signal pixel : std_logic_vector(2 downto 0) := (others => '0');  -- valor de cor do pixel
-  signal pixel_bit : std_logic_vector(2 downto 0);                 -- um bit do vetor acima
-  signal color : std_logic_vector(2 downto 0);
+  signal pixel : std_logic_vector(2 downto 0);  -- valor de cor do pixel
+  signal pixel_bit : std_logic;                 -- um bit do vetor acima
 
   -- Sinais dos contadores de linhas e colunas utilizados para percorrer
   -- as posições da memória de vídeo (pixels) no momento de construir um quadro.
@@ -79,8 +79,8 @@ end component;
   -- Sinais que armazem a posição de uma bola, que deverá ser desenhada
   -- na tela de acordo com sua posição.
 
-  signal pos_x: integer range 0 to 127;  -- coluna atual da bola
-  signal pos_y: integer range 0 to 95;   -- linha atual da bola
+  signal pos_x : integer range 0 to 127;  -- coluna atual da bola
+  signal pos_y : integer range 0 to 95;   -- linha atual da bola
 
   signal atualiza_pos_x : std_logic;    -- se '1' = bola muda sua pos. no eixo x
   signal atualiza_pos_y : std_logic;    -- se '1' = bola muda sua pos. no eixo y
@@ -181,17 +181,18 @@ begin  -- comportamento
   fim_escrita <= '1' when (line = 95) and (col = 127)
                  else '0'; 
 
-					  
-	muda_cor_instance: muda_cor port map (
-		enable_muda_cor_1 or enable_muda_cor_2, color
-	);
-					  
-					  
   -----------------------------------------------------------------------------
   -- Abaixo estão processos relacionados com a atualização da posição da
   -- bola. Todos são controlados por sinais de enable de modo que a posição
   -- só é de fato atualizada quando o controle (uma máquina de estados)
   -- solicitar.
+  
+  -----------------------------------------------------------------------------
+  
+  muda_cor_instance: muda_cor port map (
+		enable_muda_cor_1 or enable_muda_cor_2, color
+	);
+  
   -----------------------------------------------------------------------------
 
   -- purpose: Este processo irá atualizar a coluna atual da bola,
@@ -203,12 +204,15 @@ begin  -- comportamento
     type direcao_t is (direita, esquerda);
     variable direcao : direcao_t := direita;
   begin  -- process p_atualiza_pos_x
-	if CLOCK_50'event and CLOCK_50 = '1' then  -- rising clock edge
+    --if rstn = '0' then                  -- asynchronous reset (active low)
+    --  pos_x <= 0;
+    --els
+	 if CLOCK_50'event and CLOCK_50 = '1' then  -- rising clock edge
       if atualiza_pos_x = '1' then
         if direcao = direita then         
           if pos_x = 127 then
+            direcao := esquerda; 
 				enable_muda_cor_1 <= '1';
-            direcao := esquerda;  
           else
             pos_x <= pos_x + 1;
 				enable_muda_cor_1 <= '0';
@@ -220,7 +224,6 @@ begin  -- comportamento
           else
             pos_x <= pos_x - 1;
 				enable_muda_cor_1 <= '0';
-				--rastro
           end if;
         end if;
       end if;
@@ -236,16 +239,18 @@ begin  -- comportamento
     type direcao_t is (desce, sobe);
     variable direcao : direcao_t := desce;
   begin  -- process p_atualiza_pos_x
-	if CLOCK_50'event and CLOCK_50 = '1' then  -- rising clock edge
+    --if rstn = '0' then                  -- asynchronous reset (active low)
+    --  pos_y <= 0;
+    --els
+	 if CLOCK_50'event and CLOCK_50 = '1' then  -- rising clock edge
       if atualiza_pos_y = '1' then
         if direcao = desce then         
           if pos_y = 95 then
-            direcao := sobe;  
+            direcao := sobe;
 				enable_muda_cor_2 <= '1';
           else
             pos_y <= pos_y + 1;
 				enable_muda_cor_2 <= '0';
-				--rastro
           end if;        
         else  -- se a direcao é para subir
           if pos_y = 0 then
@@ -254,7 +259,6 @@ begin  -- comportamento
           else
             pos_y <= pos_y - 1;
 				enable_muda_cor_2 <= '0';
-				--rastro
           end if;
         end if;
       end if;
@@ -268,26 +272,14 @@ begin  -- comportamento
   -- indicam o endereço do pixel sendo escrito para o quadro atual, casam com a
   -- posição da bola (sinais pos_x e pos_y). Caso contrário,
   -- o pixel é preto.
-	 
-	 --we <= '1' when (col = pos_x) and (line = pos_y) else '0';
-	 --pixel <= color;
-	rastro: process (CLOCK_50, rstn)
-  begin  -- process p_atualiza_pos_x
-  if CLOCK_50'event and CLOCK_50 = '1' then  -- rising clock edge
-      if rstn = '0' then                  -- asynchronous reset (active low)
-			we <= '1';
-			pixel <= "000";
-		else
-			if (col = pos_x) and (line = pos_y) then
-				we <= '1';
-				pixel <= color;
-			else 
-				we <= '0';
-				pixel <= "000";
-			end if;
-		end if;
-	end if;
-  end process rastro;
+
+  --pixel <= color when (col = pos_x) and (line = pos_y) else "000";
+  
+	we <= '1' when (rstn = '0') or ((col = pos_x) and (line = pos_y)) else '0';
+	pixel <= color when ((col = pos_x) and (line = pos_y)) else "000";
+  
+  
+  
   -- O endereço de memória pode ser construído com essa fórmula simples,
   -- a partir da linha e coluna atual
   addr  <= col + (128 * line);
@@ -367,7 +359,10 @@ begin  -- comportamento
   -- outputs: estado
   seq_fsm: process (CLOCK_50, rstn)
   begin  -- process seq_fsm
-    if CLOCK_50'event and CLOCK_50 = '1' then  -- rising clock edge
+    --if rstn = '0' then                  -- asynchronous reset (active low)
+    --  estado <= inicio;
+    --els
+	 if CLOCK_50'event and CLOCK_50 = '1' then  -- rising clock edge
       estado <= proximo_estado;
     end if;
   end process seq_fsm;
