@@ -1,0 +1,8 @@
+
+State Machine - |genius_board|estado
+Name estado.final estado.checking_color estado.show_color estado.generating_color estado.start 
+estado.start 0 0 0 0 0 
+estado.generating_color 0 0 0 1 1 
+estado.show_color 0 0 1 0 1 
+estado.checking_color 0 1 0 0 1 
+estado.final 1 0 0 0 1 

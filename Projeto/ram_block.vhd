@@ -34,6 +34,7 @@ begin
 		if(WrEn = '1') then
 			ram(addr_reg) <= data;
 		end if;
+		
 	end process;
 	
 	Q <= ram(addr_reg);
