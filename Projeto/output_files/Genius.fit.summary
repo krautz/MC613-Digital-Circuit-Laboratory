@@ -1,13 +1,13 @@
-Fitter Status : Successful - Mon May 14 17:59:29 2018
+Fitter Status : Successful - Wed May 16 13:57:35 2018
 Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 Revision Name : Genius
 Top-level Entity Name : genius_board
 Family : Cyclone V
 Device : 5CSEMA5F31C6
 Timing Models : Final
-Logic utilization (in ALMs) : 112 / 32,070 ( < 1 % )
-Total registers : 120
-Total pins : 9 / 457 ( 2 % )
+Logic utilization (in ALMs) : 127 / 32,070 ( < 1 % )
+Total registers : 123
+Total pins : 16 / 457 ( 4 % )
 Total virtual pins : 0
 Total block memory bits : 3,072 / 4,065,280 ( < 1 % )
 Total RAM Blocks : 1 / 397 ( < 1 % )

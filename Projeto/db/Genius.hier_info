@@ -75,25 +75,40 @@ CLOCK_50 => colors_checked[7].CLK
 CLOCK_50 => colors_checked[8].CLK
 CLOCK_50 => colors_checked[9].CLK
 CLOCK_50 => failed.CLK
+CLOCK_50 => pressed[0].CLK
+CLOCK_50 => pressed[1].CLK
+CLOCK_50 => pressed[2].CLK
+CLOCK_50 => pressed[3].CLK
 CLOCK_50 => color[0].CLK
 CLOCK_50 => color[1].CLK
 CLOCK_50 => estado~4.DATAIN
 KEY[0] => check.IN0
 KEY[0] => process_1.IN1
+KEY[0] => process_1.IN1
 KEY[0] => process_1.IN0
 KEY[1] => check.IN1
+KEY[1] => process_1.IN1
 KEY[1] => process_1.IN1
 KEY[1] => process_1.IN1
 KEY[2] => check.IN1
 KEY[2] => process_1.IN1
 KEY[2] => process_1.IN1
+KEY[2] => process_1.IN1
 KEY[3] => check.IN1
 KEY[3] => process_1.IN1
 KEY[3] => process_1.IN1
-LEDR[0] <= LEDR.DB_MAX_OUTPUT_PORT_TYPE
-LEDR[1] <= LEDR.DB_MAX_OUTPUT_PORT_TYPE
-LEDR[2] <= LEDR.DB_MAX_OUTPUT_PORT_TYPE
-LEDR[3] <= LEDR.DB_MAX_OUTPUT_PORT_TYPE
+KEY[3] => process_1.IN1
+LEDR[0] << LEDR.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[1] << LEDR.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[2] << LEDR.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[3] << LEDR.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[0] << bin2hex:seg_light.HEX0[0]
+HEX0[1] << bin2hex:seg_light.HEX0[1]
+HEX0[2] << bin2hex:seg_light.HEX0[2]
+HEX0[3] << bin2hex:seg_light.HEX0[3]
+HEX0[4] << bin2hex:seg_light.HEX0[4]
+HEX0[5] << bin2hex:seg_light.HEX0[5]
+HEX0[6] << bin2hex:seg_light.HEX0[6]
 
 
 |genius_board|ram_block:memory_acess
@@ -153,5 +168,43 @@ Q[1] <= ram.DATAOUT1
 Q[2] <= ram.DATAOUT2
 WrEn => process_0~13.DATAIN
 WrEn => ram.WE
+
+
+|genius_board|bin2hex:seg_light
+SW[0] => Mux0.IN19
+SW[0] => Mux1.IN19
+SW[0] => Mux2.IN19
+SW[0] => Mux3.IN19
+SW[0] => Mux4.IN19
+SW[0] => Mux5.IN19
+SW[0] => Mux6.IN19
+SW[1] => Mux0.IN18
+SW[1] => Mux1.IN18
+SW[1] => Mux2.IN18
+SW[1] => Mux3.IN18
+SW[1] => Mux4.IN18
+SW[1] => Mux5.IN18
+SW[1] => Mux6.IN18
+SW[2] => Mux0.IN17
+SW[2] => Mux1.IN17
+SW[2] => Mux2.IN17
+SW[2] => Mux3.IN17
+SW[2] => Mux4.IN17
+SW[2] => Mux5.IN17
+SW[2] => Mux6.IN17
+SW[3] => Mux0.IN16
+SW[3] => Mux1.IN16
+SW[3] => Mux2.IN16
+SW[3] => Mux3.IN16
+SW[3] => Mux4.IN16
+SW[3] => Mux5.IN16
+SW[3] => Mux6.IN16
+HEX0[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 

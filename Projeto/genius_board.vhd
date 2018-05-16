@@ -6,7 +6,8 @@ ENTITY genius_board IS
   PORT (
     CLOCK_50 : IN std_logic;
     KEY : IN std_logic_vector(3 DOWNTO 0);
-	 LEDR : OUT std_logic_vector (3 DOWNTO 0)
+	 LEDR : OUT std_logic_vector (3 DOWNTO 0);
+	 HEX0: out std_logic_vector (6 DOWNTO 0)
   );
 END genius_board;
 
@@ -22,6 +23,13 @@ ARCHITECTURE game OF genius_board IS
 			WrEn : in std_logic
 		);
 	END COMPONENT;
+	
+	COMPONENT bin2hex IS
+		PORT (
+		SW:in std_logic_vector (3 DOWNTO 0);
+		HEX0: out std_logic_vector (6 DOWNTO 0)
+		);
+	END COMPONENT ;
 
 	-- variables for the mealy state machine
 	TYPE estado_type IS (start, generating_color, show_color, checking_color, final);
@@ -44,7 +52,8 @@ ARCHITECTURE game OF genius_board IS
 	SIGNAL color : std_logic_vector (1 DOWNTO 0) := (OTHERS => '0');
 	SIGNAL color_ram_input, color_and_enable, color_ram_output : std_logic_vector (2 DOWNTO 0);
 	
-	SIGNAL key_pressed : std_logic_vector (3 DOWNTO 0);
+	-- for checking the sequence inputed by the user in the game
+	SIGNAL pressed : std_logic_vector (3 DOWNTO 0);
 
 BEGIN
 
@@ -78,6 +87,10 @@ BEGIN
 		CLOCK_50, addr_mem, color_ram_input, color_ram_output, Write_Enable
 	);
 	
+	seg_light: bin2hex PORT MAP (
+		addr_mem (3 downto 0), HEX0
+	);
+
 --------------------------------------------------------------------------------------------------------------------------------------------
 
 	-- checking I/O colors
@@ -87,20 +100,35 @@ BEGIN
 		WAIT UNTIL clock_50'EVENT and CLOCK_50 = '1';
 		IF (estado = checking_color) THEN
 			IF (KEY(0) = '0' or KEY(1) = '0' or KEY(2) = '0' or KEY(3) = '0') THEN
-				IF (KEY (0) = '0' and color_ram_output /= "001") THEN
+				IF (KEY (0) = '0' and color_ram_output = "001" and pressed(0) = '0') THEN
+					pressed(0) <= '1';
+				ELSIF (KEY (1) = '0' and color_ram_output = "011" and pressed(1) = '0') THEN
+					pressed(1) <= '1';
+				ELSIF (KEY (2) = '0' and color_ram_output = "101" and pressed(2) = '0') THEN
+					pressed(2) <= '1';
+				ELSIF (KEY (3) = '0' and color_ram_output = "111" and pressed(3) = '0') THEN
+					pressed(3) <= '1';
+				ELSIF (pressed = "0000") THEN
 					failed <= '1';
-				ELSIF (KEY (1) = '0' and color_ram_output /= "011") THEN
-					failed <= '1';
-				ELSIF (KEY (2) = '0' and color_ram_output /= "101") THEN
-					failed <= '1';
-				ELSIF (KEY (3) = '0' and color_ram_output /= "111") THEN
-					failed <= '1';
-				ELSE
-					colors_checked <= colors_checked + 1;
 				END IF;
+			END IF;
+			IF (pressed(0) = '1' and key(0) = '1') THEN
+				pressed(0) <= '0';
+				colors_checked <= colors_checked + 1;
+			ELSIF (pressed(1) = '1' and key(1) = '1') THEN
+				pressed(1) <= '0';
+				colors_checked <= colors_checked + 1;
+			ELSIF (pressed(2) = '1' and key(2) = '1') THEN
+				pressed(2) <= '0';
+				colors_checked <= colors_checked + 1;
+			ELSIF (pressed(3) = '1' and key(3) = '1') THEN
+				pressed(3) <= '0';
+				colors_checked <= colors_checked + 1;
 			END IF;
 		ELSE
 			colors_checked <= (OTHERS => '0');
+			pressed <= ( OTHERS => '0');
+			failed <= '0';
 		END IF;
 	END PROCESS;
 				
@@ -108,13 +136,13 @@ BEGIN
 
 	-- Turning off and on the leds for the sequence
 	
-	LEDR(0) <= '1' when (color_ram_output = "001" and show_color_led = '1') or (estado = start) else '0';
+	LEDR(0) <= '1' when (color_ram_output = "001" and show_color_led = '1') or (estado = start) or pressed(0) = '1' else '0';
 	--LEDR(0) <= '1' when estado = show_color or (estado = start) else '0';
-	LEDR(1) <= '1' when (color_ram_output = "011" and show_color_led = '1') or (estado = start) else '0';
+	LEDR(1) <= '1' when (color_ram_output = "011" and show_color_led = '1') or (estado = start) or pressed(1) = '1' else '0';
 	--LEDR(1) <= '1' when estado = generating_color or (estado = start) else '0';
-	LEDR(2) <= '1' when (color_ram_output = "101" and show_color_led = '1') or (estado = start) else '0';
+	LEDR(2) <= '1' when (color_ram_output = "101" and show_color_led = '1') or (estado = start) or pressed(2) = '1' else '0';
 	--LEDR(2) <= '1' when generate_color = '1' else '0';
-	LEDR(3) <= '1' when (color_ram_output = "111" and show_color_led = '1') or (estado = start) else '0';
+	LEDR(3) <= '1' when (color_ram_output = "111" and show_color_led = '1') or (estado = start) or pressed(3) = '1' else '0';
 	
 --------------------------------------------------------------------------------------------------------------------------------------------
 
