@@ -1,5 +1,5 @@
 Flow report for Genius
-Wed May 16 13:57:48 2018
+Sat May 19 20:34:43 2018
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -40,24 +40,24 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Wed May 16 13:57:42 2018       ;
+; Flow Status                     ; Successful - Sat May 19 20:34:36 2018       ;
 ; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; Genius                                      ;
 ; Top-level Entity Name           ; genius_board                                ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSEMA5F31C6                                ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 127 / 32,070 ( < 1 % )                      ;
-; Total registers                 ; 123                                         ;
-; Total pins                      ; 16 / 457 ( 4 % )                            ;
+; Logic utilization (in ALMs)     ; 237 / 32,070 ( < 1 % )                      ;
+; Total registers                 ; 193                                         ;
+; Total pins                      ; 52 / 457 ( 11 % )                           ;
 ; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 3,072 / 4,065,280 ( < 1 % )                 ;
+; Total block memory bits         ; 39,936 / 4,065,280 ( < 1 % )                ;
 ; Total DSP Blocks                ; 0 / 87 ( 0 % )                              ;
 ; Total HSSI RX PCSs              ; 0                                           ;
 ; Total HSSI PMA RX Deserializers ; 0                                           ;
 ; Total HSSI TX PCSs              ; 0                                           ;
 ; Total HSSI PMA TX Serializers   ; 0                                           ;
-; Total PLLs                      ; 0 / 6 ( 0 % )                               ;
+; Total PLLs                      ; 1 / 6 ( 17 % )                              ;
 ; Total DLLs                      ; 0 / 4 ( 0 % )                               ;
 +---------------------------------+---------------------------------------------+
 
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/16/2018 13:56:52 ;
+; Start date & time ; 05/19/2018 20:33:45 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Genius              ;
 +-------------------+---------------------+
@@ -78,15 +78,17 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+--------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name  ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+--------------+------------+
-; COMPILER_SIGNATURE_ID               ; 273440552278800.152648981221821        ; --            ; --           ; --         ;
+; COMPILER_SIGNATURE_ID               ; 273440552275050.152677282527258        ; --            ; --           ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --           ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --           ; --         ;
+; MISC_FILE                           ; vga_pll.cmp                            ; --            ; --           ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; genius_board ; Top        ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; genius_board ; Top        ;
 ; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; genius_board ; Top        ;
 ; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --            ; --           ; --         ;
 ; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --           ; --         ;
 ; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --            ; --           ; --         ;
+; SYNTHESIS_ONLY_QIP                  ; On                                     ; --            ; --           ; --         ;
 ; TOP_LEVEL_ENTITY                    ; genius_board                           ; Genius        ; --           ; --         ;
 +-------------------------------------+----------------------------------------+---------------+--------------+------------+
 
@@ -96,24 +98,24 @@ refer to the applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:10     ; 1.0                     ; 1178 MB             ; 00:00:21                           ;
-; Fitter                    ; 00:00:33     ; 1.0                     ; 2597 MB             ; 00:00:55                           ;
-; Assembler                 ; 00:00:05     ; 1.0                     ; 1093 MB             ; 00:00:06                           ;
-; TimeQuest Timing Analyzer ; 00:00:05     ; 1.1                     ; 1362 MB             ; 00:00:05                           ;
-; Total                     ; 00:00:53     ; --                      ; --                  ; 00:01:27                           ;
+; Analysis & Synthesis      ; 00:00:11     ; 1.0                     ; 1192 MB             ; 00:00:22                           ;
+; Fitter                    ; 00:00:33     ; 1.0                     ; 2627 MB             ; 00:00:56                           ;
+; Assembler                 ; 00:00:05     ; 1.0                     ; 1096 MB             ; 00:00:06                           ;
+; TimeQuest Timing Analyzer ; 00:00:06     ; 1.2                     ; 1389 MB             ; 00:00:06                           ;
+; Total                     ; 00:00:55     ; --                      ; --                  ; 00:01:30                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                                   ;
-+---------------------------+--------------------------+-------------+-------------+----------------+
-; Module Name               ; Machine Hostname         ; OS Name     ; OS Version  ; Processor type ;
-+---------------------------+--------------------------+-------------+-------------+----------------+
-; Analysis & Synthesis      ; canada.lab.ic.unicamp.br ; Fedora Core ; Fedora Core ; x86_64         ;
-; Fitter                    ; canada.lab.ic.unicamp.br ; Fedora Core ; Fedora Core ; x86_64         ;
-; Assembler                 ; canada.lab.ic.unicamp.br ; Fedora Core ; Fedora Core ; x86_64         ;
-; TimeQuest Timing Analyzer ; canada.lab.ic.unicamp.br ; Fedora Core ; Fedora Core ; x86_64         ;
-+---------------------------+--------------------------+-------------+-------------+----------------+
++-----------------------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                                     ;
++---------------------------+----------------------------+-------------+-------------+----------------+
+; Module Name               ; Machine Hostname           ; OS Name     ; OS Version  ; Processor type ;
++---------------------------+----------------------------+-------------+-------------+----------------+
+; Analysis & Synthesis      ; honduras.lab.ic.unicamp.br ; Fedora Core ; Fedora Core ; x86_64         ;
+; Fitter                    ; honduras.lab.ic.unicamp.br ; Fedora Core ; Fedora Core ; x86_64         ;
+; Assembler                 ; honduras.lab.ic.unicamp.br ; Fedora Core ; Fedora Core ; x86_64         ;
+; TimeQuest Timing Analyzer ; honduras.lab.ic.unicamp.br ; Fedora Core ; Fedora Core ; x86_64         ;
++---------------------------+----------------------------+-------------+-------------+----------------+
 
 
 ------------

@@ -3,12 +3,17 @@ USE ieee.std_logic_1164.all;
 USE ieee.std_logic_unsigned.all;
 
 ENTITY genius_board IS
-  PORT (
-    CLOCK_50 : IN std_logic;
-    KEY : IN std_logic_vector(3 DOWNTO 0);
-	 LEDR : OUT std_logic_vector (3 DOWNTO 0);
-	 HEX0: out std_logic_vector (6 DOWNTO 0)
-  );
+	PORT (
+		 CLOCK_50 : IN std_logic;
+		 KEY : IN std_logic_vector(3 DOWNTO 0);
+		 LEDR : OUT std_logic_vector (3 DOWNTO 0);
+		 VGA_R, VGA_G, VGA_B       : OUT std_logic_vector(7 DOWNTO 0);
+		 VGA_HS, VGA_VS            : OUT std_logic;
+		 VGA_BLANK_N, VGA_SYNC_N   : OUT std_logic;
+		 VGA_CLK                   : OUT std_logic;
+		 HEX0: out std_logic_vector (6 DOWNTO 0);
+		 HEX2: out std_logic_vector (6 DOWNTO 0)
+	);
 END genius_board;
 
 ARCHITECTURE game OF genius_board IS
@@ -16,11 +21,11 @@ ARCHITECTURE game OF genius_board IS
 	-- memory component
 	COMPONENT ram_block IS
 		PORT (
-			Clock : in std_logic;
-			Address : in std_logic_vector(9 downto 0);
-			Data : in std_logic_vector(2 downto 0);
-			Q : out std_logic_vector(2 downto 0);
-			WrEn : in std_logic
+			Clock : IN std_logic;
+			Address : IN std_logic_vector(9 DOWNTO 0);
+			Data : IN std_logic_vector(2 DOWNTO 0);
+			Q : OUT std_logic_vector(2 DOWNTO 0);
+			WrEn : IN std_logic
 		);
 	END COMPONENT;
 	
@@ -30,6 +35,16 @@ ARCHITECTURE game OF genius_board IS
 		HEX0: out std_logic_vector (6 DOWNTO 0)
 		);
 	END COMPONENT ;
+	
+	-- Interface com a memória de vídeo do controlador
+	SIGNAL we : std_logic;                        -- write enable ('1' p/ escrita)
+	SIGNAL addr : integer RANGE 0 TO 12287;       -- endereco mem. vga
+	SIGNAL pixel : std_logic_vector(2 DOWNTO 0);  -- valor de cor do pixel
+
+	SIGNAL line : integer RANGE 0 TO 95;  -- linha atual
+	SIGNAL col : integer RANGE 0 TO 127;  -- coluna atual
+												-- escrito na memória de vídeo
+	SIGNAL sync, blank: std_logic;
 
 	-- variables for the mealy state machine
 	TYPE estado_type IS (start, generating_color, show_color, checking_color, final);
@@ -54,8 +69,82 @@ ARCHITECTURE game OF genius_board IS
 	
 	-- for checking the sequence inputed by the user in the game
 	SIGNAL pressed : std_logic_vector (3 DOWNTO 0);
+	
+	signal aux : std_logic_vector (1 downto 0);
 
 BEGIN
+
+ -------------------------------------------------------------------------------------------------------------------------------------------
+	-- vga controller
+	
+	vga_controller: ENTITY work.vgacon PORT MAP (
+		 clk50M       => CLOCK_50,
+		 rstn         => '1',
+		 red          => VGA_R,
+		 green        => VGA_G,
+		 blue         => VGA_B,
+		 hsync        => VGA_HS,
+		 vsync        => VGA_VS,
+		 write_clk    => CLOCK_50,
+		 write_enable => we,
+		 write_addr   => addr,
+		 data_in      => pixel,
+		 vga_clk      => VGA_CLK,
+		 sync         => sync,
+		 blank        => blank
+	);
+	VGA_SYNC_N <= NOT sync;
+	VGA_BLANK_N <= NOT blank;
+	
+	addr  <= col + (128 * line);
+	
+	PROCESS
+	BEGIN 
+	WAIT UNTIL CLOCK_50'EVENT and CLOCK_50 = '1';
+	  IF col = 127 THEN
+		 col <= 0;
+	  ELSE
+		 col <= col + 1;  
+	  END IF;
+	END PROCESS;
+	
+	PROCESS
+	BEGIN
+	WAIT UNTIL CLOCK_50'EVENT and CLOCK_50 = '1';
+		IF col = 127 THEN
+		  IF line = 95 THEN               -- conta de 0 a 95 (96 linhas)
+			 line <= 0;
+		  ELSE
+			 line <= line + 1;  
+		  END IF;        
+		END IF;
+	END PROCESS;
+	
+	PROCESS
+	BEGIN
+   WAIT UNTIL CLOCK_50'EVENT and CLOCK_50 = '1';
+      IF (estado = checking_color or (show_color_led = '1' and color_ram_output = "010")) and (col >= 28) and (col < 52) and (line >= 12) and (line < 36) THEN --sup esq
+			we <= '1';
+			pixel <= "010";
+		ELSIF (estado = checking_color or (show_color_led = '1' and color_ram_output = "110")) and  (col >= 28) and (col < 52) and (line >= 60) and (line < 84) THEN -- inf esq
+			we <= '1';
+			pixel <= "110";
+		ELSIF (estado = checking_color or (show_color_led = '1' and color_ram_output = "100")) and  (col >= 76) and (col < 100) and (line >= 12) and (line < 36) THEN -- sup dir
+			we <= '1';
+			pixel <= "100";
+		ELSIF (estado = checking_color or (show_color_led = '1' and color_ram_output = "011")) and  (col >= 76) and (col < 100) and (line >= 60) and (line < 84) THEN -- inf dir
+			we <= '1';
+			pixel <= "011";
+		ELSIF (estado = start) and (line = 36 or line = 37 or line = 58 or line = 59) and ((col >= 28 and col < 40)) THEN
+			we <= '1';
+			pixel <= "111";
+		ELSE
+			we <= '1';
+			pixel <= "000";
+		END IF;
+  END PROCESS;
+	
+	
 
  -------------------------------------------------------------------------------------------------------------------------------------------
 	-- condition to start the game
@@ -73,11 +162,11 @@ BEGIN
 	
 	color_and_enable <= Write_Enable&color;
 	WITH color_and_enable SELECT
-		color_ram_input <= 	"001" when "100",
-									"011" when "101",
-									"101" when "110",
-									"111" when "111",
-									"---" when others;
+		color_ram_input <= 	"010" WHEN "100", -- verde
+									"100" WHEN "101", -- vermelho
+									"110" WHEN "110", -- amarelo
+									"011" WHEN "111", -- azul
+									"---" WHEN OTHERS;
 									
 --------------------------------------------------------------------------------------------------------------------------------------------
 							
@@ -90,6 +179,17 @@ BEGIN
 	seg_light: bin2hex PORT MAP (
 		addr_mem (3 downto 0), HEX0
 	);
+	
+	WITH color_ram_output SELECT
+		aux <= 					"00" when "010", 
+									"01" when "100",
+									"10" when "110",
+									"11" when "011",
+									"--" when others;
+	
+	seg_1: bin2hex PORT MAP (
+		"00"&aux, HEX2
+	);
 
 --------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -100,13 +200,13 @@ BEGIN
 		WAIT UNTIL clock_50'EVENT and CLOCK_50 = '1';
 		IF (estado = checking_color) THEN
 			IF (KEY(0) = '0' or KEY(1) = '0' or KEY(2) = '0' or KEY(3) = '0') THEN
-				IF (KEY (0) = '0' and color_ram_output = "001" and pressed(0) = '0') THEN
+				IF (KEY (0) = '0' and color_ram_output = "010" and pressed(0) = '0') THEN
 					pressed(0) <= '1';
-				ELSIF (KEY (1) = '0' and color_ram_output = "011" and pressed(1) = '0') THEN
+				ELSIF (KEY (1) = '0' and color_ram_output = "100" and pressed(1) = '0') THEN
 					pressed(1) <= '1';
-				ELSIF (KEY (2) = '0' and color_ram_output = "101" and pressed(2) = '0') THEN
+				ELSIF (KEY (2) = '0' and color_ram_output = "110" and pressed(2) = '0') THEN
 					pressed(2) <= '1';
-				ELSIF (KEY (3) = '0' and color_ram_output = "111" and pressed(3) = '0') THEN
+				ELSIF (KEY (3) = '0' and color_ram_output = "011" and pressed(3) = '0') THEN
 					pressed(3) <= '1';
 				ELSIF (pressed = "0000") THEN
 					failed <= '1';
@@ -136,13 +236,13 @@ BEGIN
 
 	-- Turning off and on the leds for the sequence
 	
-	LEDR(0) <= '1' when (color_ram_output = "001" and show_color_led = '1') or (estado = start) or pressed(0) = '1' else '0';
+	LEDR(0) <= '1' when (color_ram_output = "010" and show_color_led = '1') or (estado = start) or pressed(0) = '1' else '0';
 	--LEDR(0) <= '1' when estado = show_color or (estado = start) else '0';
-	LEDR(1) <= '1' when (color_ram_output = "011" and show_color_led = '1') or (estado = start) or pressed(1) = '1' else '0';
+	LEDR(1) <= '1' when (color_ram_output = "100" and show_color_led = '1') or (estado = start) or pressed(1) = '1' else '0';
 	--LEDR(1) <= '1' when estado = generating_color or (estado = start) else '0';
-	LEDR(2) <= '1' when (color_ram_output = "101" and show_color_led = '1') or (estado = start) or pressed(2) = '1' else '0';
+	LEDR(2) <= '1' when (color_ram_output = "110" and show_color_led = '1') or (estado = start) or pressed(2) = '1' else '0';
 	--LEDR(2) <= '1' when generate_color = '1' else '0';
-	LEDR(3) <= '1' when (color_ram_output = "111" and show_color_led = '1') or (estado = start) or pressed(3) = '1' else '0';
+	LEDR(3) <= '1' when (color_ram_output = "011" and show_color_led = '1') or (estado = start) or pressed(3) = '1' else '0';
 	
 --------------------------------------------------------------------------------------------------------------------------------------------
 
