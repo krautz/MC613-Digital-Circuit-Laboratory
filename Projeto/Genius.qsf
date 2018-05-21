@@ -883,12 +883,15 @@ set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name QIP_FILE vga_pll_0002.qip
 set_global_assignment -name QIP_FILE vga_pll.qip
 set_global_assignment -name VERILOG_FILE vga_pll_0002.v
+set_global_assignment -name VHDL_FILE generate_random_color.vhd
+set_global_assignment -name VHDL_FILE ps2_iobase.vhd
+set_global_assignment -name VHDL_FILE mouse_ctrl.vhd
 set_global_assignment -name VHDL_FILE vga_pll.vhd
 set_global_assignment -name VHDL_FILE vgacon.vhd
 set_global_assignment -name VHDL_FILE bin2hex.vhd
 set_global_assignment -name VHDL_FILE ram_block.vhd
-set_global_assignment -name VHDL_FILE vga_ball.vhd
-set_global_assignment -name VHDL_FILE muda_cor.vhd
 set_global_assignment -name VHDL_FILE clk_div.vhd
 set_global_assignment -name VHDL_FILE genius_board.vhd
+set_global_assignment -name VHDL_FILE vga_controller.vhd
+set_global_assignment -name VHDL_FILE checking_color.vhd
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

@@ -1,0 +1,37 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+USE ieee.std_logic_unsigned.all;
+
+ENTITY generate_random_color IS
+	PORT (
+		 CLOCK_50 : IN std_logic;
+		 KEY : IN std_logic_vector(3 DOWNTO 0);
+		 LEDR : OUT std_logic_vector (7 DOWNTO 0);
+		 VGA_R, VGA_G, VGA_B       : OUT std_logic_vector(7 DOWNTO 0);
+		 VGA_HS, VGA_VS            : OUT std_logic;
+		 VGA_BLANK_N, VGA_SYNC_N   : OUT std_logic;
+		 VGA_CLK                   : OUT std_logic;
+		 PS2_DAT 	:		inout	STD_LOGIC;
+		 PS2_CLK		:		inout	STD_LOGIC;	
+		 HEX0, HEX1, HEX2, HEX3, HEX4, HEX5 : out std_logic_vector (6 DOWNTO 0)
+	);
+END genius_board;
+
+
+
+
+
+
+PROCESS
+	BEGIN
+		WAIT UNTIL CLOCK_50'EVENT and CLOCK_50 = '1';
+		color <= color + 1;
+	END PROCESS;
+	
+	color_and_enable <= Write_Enable&color;
+	WITH color_and_enable SELECT
+		color_ram_input <= 	"010" WHEN "100", -- verde
+									"100" WHEN "101", -- vermelho
+									"110" WHEN "110", -- amarelo
+									"011" WHEN "111", -- azul
+									"---" WHEN OTHERS;

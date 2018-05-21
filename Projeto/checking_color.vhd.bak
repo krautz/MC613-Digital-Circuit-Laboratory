@@ -1,0 +1,36 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+ENTITY checking_color IS
+	PORT (
+			CLOCK_50 : IN std_logic;
+			estado_vector : IN std_logic_vector (4 DOWNTO 0);
+			line_mouse : IN integer RANGE 0 TO 95;
+			col_mouse : IN integer RANGE 0 TO 127;
+			show_color_led : IN std_logic;
+			color_ram_output : IN std_logic_vector (2 DOWNTO 0);
+			VGA_R, VGA_G, VGA_B       : OUT std_logic_vector(7 DOWNTO 0);
+			VGA_HS, VGA_VS            : OUT std_logic;
+			VGA_BLANK_N, VGA_SYNC_N   : OUT std_logic;
+			VGA_CLK                   : OUT std_logic
+		 
+	);
+END checking_color;
+
+
+ARCHITECTURE rtl OF checking_color IS
+
+	SIGNAL we : std_logic;                        -- write enable ('1' p/ escrita)
+	SIGNAL addr : integer RANGE 0 TO 12287;       -- endereco mem. vga
+	SIGNAL pixel : std_logic_vector(2 DOWNTO 0);  -- valor de cor do pixel
+
+	SIGNAL line	: integer RANGE 0 TO 95;  -- linha atual
+	SIGNAL col : integer RANGE 0 TO 127;  -- coluna atual
+												-- escrito na memória de vídeo
+	SIGNAL sync, blank: std_logic;
+
+
+BEGIN
+
+
+END rtl;

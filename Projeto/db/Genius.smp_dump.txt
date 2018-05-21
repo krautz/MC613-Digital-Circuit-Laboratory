@@ -1,8 +1,16 @@
 
 State Machine - |genius_board|estado
-Name estado.final estado.checking_color estado.show_color estado.generating_color estado.start 
+Name estado.final estado.eval_color estado.show_color estado.generating_color estado.start 
 estado.start 0 0 0 0 0 
 estado.generating_color 0 0 0 1 1 
 estado.show_color 0 0 1 0 1 
-estado.checking_color 0 1 0 0 1 
+estado.eval_color 0 1 0 0 1 
 estado.final 1 0 0 0 1 
+
+State Machine - |genius_board|mouse_ctrl:mousectrl|state
+Name state.CLEAR state.NEXTCMD state.WAITACK state.SEND state.SETCMD 
+state.SETCMD 0 0 0 0 0 
+state.SEND 0 0 0 1 1 
+state.WAITACK 0 0 1 0 1 
+state.NEXTCMD 0 1 0 0 1 
+state.CLEAR 1 0 0 0 1 
