@@ -7,7 +7,7 @@ estado.show_color 0 0 1 0 1
 estado.eval_color 0 1 0 0 1 
 estado.final 1 0 0 0 1 
 
-State Machine - |genius_board|mouse_ctrl:mousectrl|state
+State Machine - |genius_board|mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|state
 Name state.CLEAR state.NEXTCMD state.WAITACK state.SEND state.SETCMD 
 state.SETCMD 0 0 0 0 0 
 state.SEND 0 0 0 1 1 
