@@ -1,42 +1,42 @@
-library ieee;
-use ieee.std_logic_1164.all;
-use ieee.numeric_std.all;
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+USE ieee.numeric_std.all;
 
-entity ram_block is
-  port (
-    Clock : in std_logic;
-    Address : in std_logic_vector(9 downto 0);
-    Data : in std_logic_vector(2 downto 0);
-    Q : out std_logic_vector(2 downto 0);
-    WrEn : in std_logic
-  );
-end ram_block;
+ENTITY ram_block IS
+	PORT (
+		Clock 	: 	IN std_logic;
+		Address 	: 	IN std_logic_vector(9 DOWNTO 0);
+		Data 		: 	IN std_logic_vector(2 DOWNTO 0);
+		WrEn 		: 	IN std_logic;
+		Q 			: 	OUT std_logic_vector(2 DOWNTO 0)
+	);
+END ram_block;
 
-architecture direct of ram_block is
+ARCHITECTURE direct OF ram_block IS
 
 	-- Build a 2-D array type for the RAM
-	subtype word_t is std_logic_vector(2 downto 0);
-	type memory_t is array(1023 downto 0) of word_t;
+	SUBTYPE word_t IS std_logic_vector(2 DOWNTO 0);
+	TYPE memory_t IS ARRAY (1023 DOWNTO 0) OF word_t;
 
 	-- Declare the RAM signal.	
-	signal ram : memory_t;
+	SIGNAL ram : memory_t;
 
 	-- Register to hold the address 
-	signal addr_reg : integer range 0 to 1023;
+	SIGNAL addr_reg : integer RANGE 0 TO 1023;
 
-begin
+BEGIN
 
 	addr_reg <= to_integer(unsigned(address));
 	
-	process
-	begin
-	wait until (clock'event and clock = '1');
-		if(WrEn = '1') then
+	PROCESS
+	BEGIN
+	WAIT UNTIL (clock'EVENT and clock = '1');
+		IF (WrEn = '1') THEN
 			ram(addr_reg) <= data;
-		end if;
+		END IF;
 		
-	end process;
+	END PROCESS;
 	
 	Q <= ram(addr_reg);
 	
-end direct;
+END direct;

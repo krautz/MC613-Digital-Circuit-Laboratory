@@ -5,12 +5,12 @@ USE ieee.numeric_std.all;
 
 ENTITY mouse_controller IS
 	PORT (
-		col : OUT integer RANGE 0 TO 127;
-		line : OUT integer RANGE 0 TO 95;
-		click : OUT std_logic;
-		CLOCK_50 : IN std_logic;
-		PS2_DAT 	:		inout	STD_LOGIC;
-		PS2_CLK		:		inout	STD_LOGIC
+		PS2_DAT 	:	INOUT	STD_LOGIC;
+		PS2_CLK	:	INOUT	STD_LOGIC;
+		CLOCK_50	: 	IN std_logic;
+		col 		: 	OUT integer RANGE 0 TO 127;
+		line 		: 	OUT integer RANGE 0 TO 95;
+		click 	: 	OUT std_logic
 	);
 END mouse_controller;
 
@@ -22,16 +22,16 @@ ARCHITECTURE rtl OF mouse_controller IS
 			clkfreq : integer
 		);
 		PORT (
-			ps2_data	:	INOUT	std_logic;
+			ps2_data		:	INOUT	std_logic;
 			ps2_clk		:	INOUT	std_logic;
-			clk				:	IN 	std_logic;
+			clk			:	IN 	std_logic;
 			en				:	IN 	std_logic;
 			resetn		:	IN 	std_logic;
 			newdata		:	OUT	std_logic;
 			bt_on			:	OUT	std_logic_vector(2 DOWNTO 0);
 			ox, oy		:	OUT std_logic;
 			dx, dy		:	OUT	std_logic_vector(8 DOWNTO 0);
-			wheel			: OUT	std_logic_vector(3 DOWNTO 0)
+			wheel			: 	OUT	std_logic_vector(3 DOWNTO 0)
 		);
 	END COMPONENT;
 

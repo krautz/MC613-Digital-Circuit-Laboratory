@@ -5,13 +5,13 @@ USE ieee.numeric_std.all;
 
 ENTITY genius_board IS
 	PORT (
-		 CLOCK_50 : IN std_logic;
-		 VGA_R, VGA_G, VGA_B       : OUT std_logic_vector(7 DOWNTO 0);
-		 VGA_HS, VGA_VS            : OUT std_logic;
-		 VGA_BLANK_N, VGA_SYNC_N   : OUT std_logic;
-		 VGA_CLK                   : OUT std_logic;
-		 PS2_DAT 	:		inout	STD_LOGIC;
-		 PS2_CLK		:		inout	STD_LOGIC	
+		 PS2_DAT 						:	INOUT	STD_LOGIC;
+		 PS2_CLK							:	INOUT	STD_LOGIC;
+		 CLOCK_50 						: 	IN std_logic;
+		 VGA_R, VGA_G, VGA_B       : 	OUT std_logic_vector(7 DOWNTO 0);
+		 VGA_HS, VGA_VS            : 	OUT std_logic;
+		 VGA_BLANK_N, VGA_SYNC_N   : 	OUT std_logic;
+		 VGA_CLK                   : 	OUT std_logic	
 	);
 END genius_board;
 
@@ -20,62 +20,62 @@ ARCHITECTURE game OF genius_board IS
 	-- memory component
 	COMPONENT ram_block IS
 		PORT (
-			Clock : IN std_logic;
-			Address : IN std_logic_vector(9 DOWNTO 0);
-			Data : IN std_logic_vector(2 DOWNTO 0);
-			Q : OUT std_logic_vector(2 DOWNTO 0);
-			WrEn : IN std_logic
+			Clock 	: 	IN std_logic;
+			Address 	: 	IN std_logic_vector(9 DOWNTO 0);
+			Data 		: 	IN std_logic_vector(2 DOWNTO 0);
+			WrEn 		: 	IN std_logic;
+			Q 			: 	OUT std_logic_vector(2 DOWNTO 0)
 		);
 	END COMPONENT;
 
 	-- generate random color component
 	COMPONENT generate_random_color
 	PORT (
-		 CLOCK_50 : IN std_logic;
-		 Write_Enable : IN std_logic;
-		 color_ram_input : OUT std_logic_vector (2 DOWNTO 0)
+		 CLOCK_50 				: 	IN std_logic;
+		 Write_Enable 			: 	IN std_logic;
+		 color_ram_input		: 	OUT std_logic_vector (2 DOWNTO 0)
 	);
 	END COMPONENT;
 	
 	-- checking color component
 	COMPONENT checking_color
 	PORT (
-			CLOCK_50 : IN std_logic;
-			estado_vector : IN std_logic_vector (4 DOWNTO 0);
-			color_ram_output : IN std_logic_vector (2 DOWNTO 0);
-			mouse_click : IN std_logic;
-			line_mouse : IN integer RANGE 0 TO 95;
-			col_mouse : IN integer RANGE 0 TO 127;
-			failed : OUT std_logic;
-			colors_checked_output : OUT std_logic_vector (9 DOWNTO 0)
+			CLOCK_50 					: 	IN std_logic;
+			estado_vector 				: 	IN std_logic_vector (4 DOWNTO 0);
+			color_ram_output 			: 	IN std_logic_vector (2 DOWNTO 0);
+			mouse_click 				: 	IN std_logic;
+			line_mouse 					: 	IN integer RANGE 0 TO 95;
+			col_mouse 					: 	IN integer RANGE 0 TO 127;
+			failed 						: 	OUT std_logic;
+			colors_checked_output 	: 	OUT std_logic_vector (9 DOWNTO 0)
 	);
 	END COMPONENT;
 	
 	-- mouse controller component
 	COMPONENT mouse_controller
 	PORT (
-		col : OUT integer RANGE 0 TO 127;
-		line : OUT integer RANGE 0 TO 95;
-		click : OUT std_logic;
-		CLOCK_50 : IN std_logic;
-		PS2_DAT 	:		inout	STD_LOGIC;
-		PS2_CLK		:		inout	STD_LOGIC
+		PS2_DAT 	:	INOUT	STD_LOGIC;
+		PS2_CLK	:	INOUT	STD_LOGIC;
+		CLOCK_50	: 	IN std_logic;
+		col 		: 	OUT integer RANGE 0 TO 127;
+		line 		: 	OUT integer RANGE 0 TO 95;
+		click 	: 	OUT std_logic
 	);
 	END COMPONENT;
 	
 	-- vga controller component
 	COMPONENT vga_controller
 	PORT (
-			CLOCK_50 : IN std_logic;
-			estado_vector : IN std_logic_vector (4 DOWNTO 0);
-			line_mouse : IN integer RANGE 0 TO 95;
-			col_mouse : IN integer RANGE 0 TO 127;
-			show_color_led : IN std_logic;
-			color_ram_output : IN std_logic_vector (2 DOWNTO 0);
-			VGA_R, VGA_G, VGA_B       : OUT std_logic_vector(7 DOWNTO 0);
-			VGA_HS, VGA_VS            : OUT std_logic;
-			VGA_BLANK_N, VGA_SYNC_N   : OUT std_logic;
-			VGA_CLK                   : OUT std_logic
+			CLOCK_50	 						: 	IN std_logic;
+			estado_vector 					: 	IN std_logic_vector (4 DOWNTO 0);
+			line_mouse 						: 	IN integer RANGE 0 TO 95;
+			col_mouse 						: 	IN integer RANGE 0 TO 127;
+			show_color_led 				: 	IN std_logic;
+			color_ram_output				:	IN std_logic_vector (2 DOWNTO 0);
+			VGA_R, VGA_G, VGA_B       	:	OUT std_logic_vector(7 DOWNTO 0);
+			VGA_HS, VGA_VS            	: 	OUT std_logic;
+			VGA_BLANK_N, VGA_SYNC_N   	: 	OUT std_logic;
+			VGA_CLK                   	: 	OUT std_logic
 		 
 	);
 	END COMPONENT;
@@ -116,7 +116,7 @@ BEGIN
 	-- mouse controller
 
 	mouse_controller_instance: mouse_controller PORT MAP (
-		col_mouse, line_mouse, mouse_click, CLOCK_50, PS2_DAT, PS2_CLK	
+		PS2_DAT, PS2_CLK, CLOCK_50, col_mouse, line_mouse, mouse_click	
 	);
 
  -------------------------------------------------------------------------------------------------------------------------------------------
@@ -156,7 +156,7 @@ BEGIN
 	-- Acessing memory
 	
 	memory_acess: ram_block PORT MAP (
-		CLOCK_50, addr_mem, color_ram_input, color_ram_output, Write_Enable
+		CLOCK_50, addr_mem, color_ram_input, Write_Enable, color_ram_output
 	);
 	
 

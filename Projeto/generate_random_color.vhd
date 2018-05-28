@@ -4,9 +4,9 @@ USE ieee.std_logic_unsigned.all;
 
 ENTITY generate_random_color IS
 	PORT (
-		 CLOCK_50 : IN std_logic;
-		 Write_Enable : IN std_logic;
-		 color_ram_input : OUT std_logic_vector (2 DOWNTO 0)
+		 CLOCK_50 				: 	IN std_logic;
+		 Write_Enable 			: 	IN std_logic;
+		 color_ram_input		: 	OUT std_logic_vector (2 DOWNTO 0)
 	);
 END generate_random_color;
 

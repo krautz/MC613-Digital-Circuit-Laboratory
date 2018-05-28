@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for Genius
-Mon May 28 16:28:27 2018
+Mon May 28 17:47:00 2018
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -101,14 +101,14 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.56        ;
+; Average used               ; 1.55        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  19.5%      ;
-;     Processor 3            ;  18.5%      ;
-;     Processor 4            ;  18.2%      ;
+;     Processor 2            ;  18.8%      ;
+;     Processor 3            ;  18.1%      ;
+;     Processor 4            ;  17.6%      ;
 +----------------------------+-------------+
 
 
@@ -132,11 +132,11 @@ refer to the applicable agreement for further details.
 +------------+-----------------+--------------------------------------------------------------------------------------------------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                                                                                                         ; Note ;
 +------------+-----------------+--------------------------------------------------------------------------------------------------------------------+------+
-; 25.24 MHz  ; 25.24 MHz       ; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|newdata                                            ;      ;
-; 49.25 MHz  ; 49.25 MHz       ; vga_controller_instance|vga_controller|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ;      ;
-; 126.92 MHz ; 126.92 MHz      ; CLOCK_50                                                                                                           ;      ;
-; 267.45 MHz ; 267.45 MHz      ; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                        ;      ;
-; 378.79 MHz ; 378.79 MHz      ; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked                        ;      ;
+; 25.03 MHz  ; 25.03 MHz       ; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|newdata                                            ;      ;
+; 52.92 MHz  ; 52.92 MHz       ; vga_controller_instance|vga_controller|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ;      ;
+; 136.46 MHz ; 136.46 MHz      ; CLOCK_50                                                                                                           ;      ;
+; 230.52 MHz ; 230.52 MHz      ; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                        ;      ;
+; 341.3 MHz  ; 341.3 MHz       ; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked                        ;      ;
 +------------+-----------------+--------------------------------------------------------------------------------------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -152,12 +152,12 @@ HTML report is unavailable in plain text report export.
 +--------------------------------------------------------------------------------------------------------------------+---------+---------------+
 ; Clock                                                                                                              ; Slack   ; End Point TNS ;
 +--------------------------------------------------------------------------------------------------------------------+---------+---------------+
-; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|newdata                                            ; -38.624 ; -1618.547     ;
-; CLOCK_50                                                                                                           ; -4.360  ; -90.233       ;
-; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked                        ; -4.122  ; -90.404       ;
-; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                        ; -3.846  ; -51.491       ;
-; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend                                            ; -3.260  ; -22.704       ;
-; vga_controller_instance|vga_controller|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 19.417  ; 0.000         ;
+; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|newdata                                            ; -38.951 ; -1602.219     ;
+; CLOCK_50                                                                                                           ; -4.551  ; -100.176      ;
+; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked                        ; -4.114  ; -94.346       ;
+; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                        ; -3.735  ; -55.894       ;
+; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend                                            ; -3.289  ; -24.040       ;
+; vga_controller_instance|vga_controller|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 20.823  ; 0.000         ;
 +--------------------------------------------------------------------------------------------------------------------+---------+---------------+
 
 
@@ -166,12 +166,12 @@ HTML report is unavailable in plain text report export.
 +--------------------------------------------------------------------------------------------------------------------+-------+---------------+
 ; Clock                                                                                                              ; Slack ; End Point TNS ;
 +--------------------------------------------------------------------------------------------------------------------+-------+---------------+
-; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked                        ; 0.100 ; 0.000         ;
-; vga_controller_instance|vga_controller|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.332 ; 0.000         ;
-; CLOCK_50                                                                                                           ; 0.371 ; 0.000         ;
-; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|newdata                                            ; 0.545 ; 0.000         ;
-; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                        ; 0.551 ; 0.000         ;
-; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend                                            ; 1.918 ; 0.000         ;
+; CLOCK_50                                                                                                           ; 0.021 ; 0.000         ;
+; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked                        ; 0.120 ; 0.000         ;
+; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                        ; 0.211 ; 0.000         ;
+; vga_controller_instance|vga_controller|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.482 ; 0.000         ;
+; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|newdata                                            ; 0.655 ; 0.000         ;
+; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend                                            ; 2.201 ; 0.000         ;
 +--------------------------------------------------------------------------------------------------------------------+-------+---------------+
 
 
@@ -180,9 +180,9 @@ HTML report is unavailable in plain text report export.
 +---------------------------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                                       ; Slack  ; End Point TNS ;
 +---------------------------------------------------------------------------------------------+--------+---------------+
-; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend                     ; -4.557 ; -40.870       ;
-; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger ; -3.746 ; -44.631       ;
-; CLOCK_50                                                                                    ; -2.575 ; -96.415       ;
+; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend                     ; -4.856 ; -42.972       ;
+; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger ; -3.825 ; -41.543       ;
+; CLOCK_50                                                                                    ; -2.495 ; -90.030       ;
 +---------------------------------------------------------------------------------------------+--------+---------------+
 
 
@@ -191,9 +191,9 @@ HTML report is unavailable in plain text report export.
 +---------------------------------------------------------------------------------------------+-------+---------------+
 ; Clock                                                                                       ; Slack ; End Point TNS ;
 +---------------------------------------------------------------------------------------------+-------+---------------+
-; CLOCK_50                                                                                    ; 0.399 ; 0.000         ;
-; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger ; 0.479 ; 0.000         ;
-; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend                     ; 2.807 ; 0.000         ;
+; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger ; 0.286 ; 0.000         ;
+; CLOCK_50                                                                                    ; 0.361 ; 0.000         ;
+; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend                     ; 3.312 ; 0.000         ;
 +---------------------------------------------------------------------------------------------+-------+---------------+
 
 
@@ -202,13 +202,13 @@ HTML report is unavailable in plain text report export.
 +--------------------------------------------------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                                                              ; Slack  ; End Point TNS ;
 +--------------------------------------------------------------------------------------------------------------------+--------+---------------+
-; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|newdata                                            ; -0.394 ; -26.180       ;
-; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked                        ; -0.394 ; -14.600       ;
-; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                        ; -0.394 ; -13.077       ;
-; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend                                            ; -0.394 ; -5.571        ;
+; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|newdata                                            ; -0.394 ; -29.534       ;
+; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked                        ; -0.394 ; -15.643       ;
+; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                        ; -0.394 ; -12.401       ;
+; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend                                            ; -0.394 ; -4.755        ;
 ; vga_controller_instance|vga_controller|divider|vga_pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]   ; 0.325  ; 0.000         ;
-; CLOCK_50                                                                                                           ; 8.763  ; 0.000         ;
-; vga_controller_instance|vga_controller|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 18.608 ; 0.000         ;
+; CLOCK_50                                                                                                           ; 8.730  ; 0.000         ;
+; vga_controller_instance|vga_controller|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 18.618 ; 0.000         ;
 +--------------------------------------------------------------------------------------------------------------------+--------+---------------+
 
 
@@ -223,11 +223,11 @@ No synchronizer chains to report.
 +------------+-----------------+--------------------------------------------------------------------------------------------------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                                                                                                         ; Note ;
 +------------+-----------------+--------------------------------------------------------------------------------------------------------------------+------+
-; 25.18 MHz  ; 25.18 MHz       ; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|newdata                                            ;      ;
-; 48.51 MHz  ; 48.51 MHz       ; vga_controller_instance|vga_controller|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ;      ;
-; 128.82 MHz ; 128.82 MHz      ; CLOCK_50                                                                                                           ;      ;
-; 272.48 MHz ; 272.48 MHz      ; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                        ;      ;
-; 393.39 MHz ; 393.39 MHz      ; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked                        ;      ;
+; 25.05 MHz  ; 25.05 MHz       ; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|newdata                                            ;      ;
+; 51.65 MHz  ; 51.65 MHz       ; vga_controller_instance|vga_controller|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ;      ;
+; 138.93 MHz ; 138.93 MHz      ; CLOCK_50                                                                                                           ;      ;
+; 236.41 MHz ; 236.41 MHz      ; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                        ;      ;
+; 351.99 MHz ; 351.99 MHz      ; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked                        ;      ;
 +------------+-----------------+--------------------------------------------------------------------------------------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -237,27 +237,27 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------------------------------------------------------------------------------------------------------------------+---------+---------------+
 ; Clock                                                                                                              ; Slack   ; End Point TNS ;
 +--------------------------------------------------------------------------------------------------------------------+---------+---------------+
-; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|newdata                                            ; -38.707 ; -1635.648     ;
-; CLOCK_50                                                                                                           ; -4.262  ; -75.184       ;
-; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked                        ; -4.235  ; -91.623       ;
-; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                        ; -3.939  ; -52.056       ;
-; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend                                            ; -3.414  ; -23.954       ;
-; vga_controller_instance|vga_controller|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 19.104  ; 0.000         ;
+; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|newdata                                            ; -38.928 ; -1618.079     ;
+; CLOCK_50                                                                                                           ; -4.434  ; -84.737       ;
+; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked                        ; -4.191  ; -95.896       ;
+; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                        ; -3.793  ; -55.905       ;
+; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend                                            ; -3.424  ; -25.275       ;
+; vga_controller_instance|vga_controller|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 20.360  ; 0.000         ;
 +--------------------------------------------------------------------------------------------------------------------+---------+---------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------+
-; Slow 1100mV 0C Model Hold Summary                                                                                                          ;
-+--------------------------------------------------------------------------------------------------------------------+-------+---------------+
-; Clock                                                                                                              ; Slack ; End Point TNS ;
-+--------------------------------------------------------------------------------------------------------------------+-------+---------------+
-; CLOCK_50                                                                                                           ; 0.078 ; 0.000         ;
-; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked                        ; 0.119 ; 0.000         ;
-; vga_controller_instance|vga_controller|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.307 ; 0.000         ;
-; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|newdata                                            ; 0.535 ; 0.000         ;
-; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                        ; 0.536 ; 0.000         ;
-; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend                                            ; 2.080 ; 0.000         ;
-+--------------------------------------------------------------------------------------------------------------------+-------+---------------+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1100mV 0C Model Hold Summary                                                                                                           ;
++--------------------------------------------------------------------------------------------------------------------+--------+---------------+
+; Clock                                                                                                              ; Slack  ; End Point TNS ;
++--------------------------------------------------------------------------------------------------------------------+--------+---------------+
+; CLOCK_50                                                                                                           ; -0.314 ; -0.314        ;
+; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked                        ; 0.098  ; 0.000         ;
+; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                        ; 0.188  ; 0.000         ;
+; vga_controller_instance|vga_controller|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.480  ; 0.000         ;
+; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|newdata                                            ; 0.642  ; 0.000         ;
+; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend                                            ; 2.356  ; 0.000         ;
++--------------------------------------------------------------------------------------------------------------------+--------+---------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------+
@@ -265,9 +265,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                                       ; Slack  ; End Point TNS ;
 +---------------------------------------------------------------------------------------------+--------+---------------+
-; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend                     ; -4.326 ; -38.757       ;
-; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger ; -3.818 ; -43.805       ;
-; CLOCK_50                                                                                    ; -2.137 ; -79.486       ;
+; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend                     ; -4.622 ; -40.822       ;
+; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger ; -3.901 ; -40.748       ;
+; CLOCK_50                                                                                    ; -2.084 ; -74.408       ;
 +---------------------------------------------------------------------------------------------+--------+---------------+
 
 
@@ -276,9 +276,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                                       ; Slack  ; End Point TNS ;
 +---------------------------------------------------------------------------------------------+--------+---------------+
-; CLOCK_50                                                                                    ; -0.032 ; -0.053        ;
-; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger ; 0.413  ; 0.000         ;
-; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend                     ; 2.558  ; 0.000         ;
+; CLOCK_50                                                                                    ; -0.053 ; -0.053        ;
+; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger ; 0.215  ; 0.000         ;
+; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend                     ; 3.032  ; 0.000         ;
 +---------------------------------------------------------------------------------------------+--------+---------------+
 
 
@@ -287,12 +287,12 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------------------------------------------------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                                                              ; Slack  ; End Point TNS ;
 +--------------------------------------------------------------------------------------------------------------------+--------+---------------+
-; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|newdata                                            ; -0.394 ; -25.520       ;
-; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked                        ; -0.394 ; -14.448       ;
-; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                        ; -0.394 ; -12.991       ;
-; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend                                            ; -0.394 ; -5.543        ;
+; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|newdata                                            ; -0.394 ; -30.145       ;
+; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked                        ; -0.394 ; -15.283       ;
+; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                        ; -0.394 ; -12.317       ;
+; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend                                            ; -0.394 ; -4.707        ;
 ; vga_controller_instance|vga_controller|divider|vga_pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]   ; 0.325  ; 0.000         ;
-; CLOCK_50                                                                                                           ; 8.757  ; 0.000         ;
+; CLOCK_50                                                                                                           ; 8.717  ; 0.000         ;
 ; vga_controller_instance|vga_controller|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 18.599 ; 0.000         ;
 +--------------------------------------------------------------------------------------------------------------------+--------+---------------+
 
@@ -308,12 +308,12 @@ No synchronizer chains to report.
 +--------------------------------------------------------------------------------------------------------------------+---------+---------------+
 ; Clock                                                                                                              ; Slack   ; End Point TNS ;
 +--------------------------------------------------------------------------------------------------------------------+---------+---------------+
-; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|newdata                                            ; -21.854 ; -900.046      ;
-; CLOCK_50                                                                                                           ; -3.527  ; -60.282       ;
-; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked                        ; -2.092  ; -44.051       ;
-; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                        ; -1.947  ; -22.728       ;
-; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend                                            ; -1.571  ; -10.398       ;
-; vga_controller_instance|vga_controller|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 28.602  ; 0.000         ;
+; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|newdata                                            ; -22.273 ; -887.285      ;
+; CLOCK_50                                                                                                           ; -3.671  ; -67.117       ;
+; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked                        ; -2.010  ; -45.005       ;
+; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                        ; -1.833  ; -26.764       ;
+; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend                                            ; -1.573  ; -11.337       ;
+; vga_controller_instance|vga_controller|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 29.542  ; 0.000         ;
 +--------------------------------------------------------------------------------------------------------------------+---------+---------------+
 
 
@@ -322,12 +322,12 @@ No synchronizer chains to report.
 +--------------------------------------------------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                                                              ; Slack  ; End Point TNS ;
 +--------------------------------------------------------------------------------------------------------------------+--------+---------------+
-; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked                        ; -0.187 ; -0.260        ;
-; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                        ; 0.088  ; 0.000         ;
-; CLOCK_50                                                                                                           ; 0.108  ; 0.000         ;
-; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|newdata                                            ; 0.147  ; 0.000         ;
-; vga_controller_instance|vga_controller|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.229  ; 0.000         ;
-; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend                                            ; 0.863  ; 0.000         ;
+; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                        ; -0.129 ; -0.129        ;
+; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked                        ; -0.113 ; -0.426        ;
+; CLOCK_50                                                                                                           ; 0.047  ; 0.000         ;
+; vga_controller_instance|vga_controller|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.296  ; 0.000         ;
+; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|newdata                                            ; 0.298  ; 0.000         ;
+; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend                                            ; 1.059  ; 0.000         ;
 +--------------------------------------------------------------------------------------------------------------------+--------+---------------+
 
 
@@ -336,21 +336,21 @@ No synchronizer chains to report.
 +---------------------------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                                       ; Slack  ; End Point TNS ;
 +---------------------------------------------------------------------------------------------+--------+---------------+
-; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend                     ; -2.816 ; -25.272       ;
-; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger ; -1.843 ; -20.608       ;
-; CLOCK_50                                                                                    ; -1.749 ; -65.493       ;
+; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend                     ; -3.113 ; -27.677       ;
+; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger ; -1.909 ; -18.895       ;
+; CLOCK_50                                                                                    ; -1.708 ; -62.887       ;
 +---------------------------------------------------------------------------------------------+--------+---------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------+
-; Fast 1100mV 85C Model Removal Summary                                                                               ;
-+---------------------------------------------------------------------------------------------+-------+---------------+
-; Clock                                                                                       ; Slack ; End Point TNS ;
-+---------------------------------------------------------------------------------------------+-------+---------------+
-; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger ; 0.044 ; 0.000         ;
-; CLOCK_50                                                                                    ; 0.176 ; 0.000         ;
-; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend                     ; 1.451 ; 0.000         ;
-+---------------------------------------------------------------------------------------------+-------+---------------+
++----------------------------------------------------------------------------------------------------------------------+
+; Fast 1100mV 85C Model Removal Summary                                                                                ;
++---------------------------------------------------------------------------------------------+--------+---------------+
+; Clock                                                                                       ; Slack  ; End Point TNS ;
++---------------------------------------------------------------------------------------------+--------+---------------+
+; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger ; -0.087 ; -0.228        ;
+; CLOCK_50                                                                                    ; 0.194  ; 0.000         ;
+; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend                     ; 1.869  ; 0.000         ;
++---------------------------------------------------------------------------------------------+--------+---------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------+
@@ -358,13 +358,13 @@ No synchronizer chains to report.
 +--------------------------------------------------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                                                              ; Slack  ; End Point TNS ;
 +--------------------------------------------------------------------------------------------------------------------+--------+---------------+
-; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                        ; -0.040 ; -0.040        ;
-; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|newdata                                            ; -0.028 ; -0.400        ;
-; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked                        ; -0.011 ; -0.165        ;
-; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend                                            ; -0.009 ; -0.052        ;
+; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|newdata                                            ; -0.147 ; -2.802        ;
+; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked                        ; -0.118 ; -1.395        ;
+; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                        ; -0.048 ; -0.092        ;
+; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend                                            ; 0.095  ; 0.000         ;
 ; vga_controller_instance|vga_controller|divider|vga_pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]   ; 0.325  ; 0.000         ;
-; CLOCK_50                                                                                                           ; 8.788  ; 0.000         ;
-; vga_controller_instance|vga_controller|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 18.735 ; 0.000         ;
+; CLOCK_50                                                                                                           ; 8.790  ; 0.000         ;
+; vga_controller_instance|vga_controller|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 18.739 ; 0.000         ;
 +--------------------------------------------------------------------------------------------------------------------+--------+---------------+
 
 
@@ -379,12 +379,12 @@ No synchronizer chains to report.
 +--------------------------------------------------------------------------------------------------------------------+---------+---------------+
 ; Clock                                                                                                              ; Slack   ; End Point TNS ;
 +--------------------------------------------------------------------------------------------------------------------+---------+---------------+
-; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|newdata                                            ; -20.244 ; -836.639      ;
-; CLOCK_50                                                                                                           ; -3.023  ; -43.614       ;
-; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked                        ; -2.014  ; -42.362       ;
-; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                        ; -1.894  ; -20.994       ;
-; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend                                            ; -1.545  ; -10.431       ;
-; vga_controller_instance|vga_controller|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 29.375  ; 0.000         ;
+; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|newdata                                            ; -20.529 ; -824.148      ;
+; CLOCK_50                                                                                                           ; -3.152  ; -49.339       ;
+; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked                        ; -1.928  ; -43.328       ;
+; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                        ; -1.765  ; -24.374       ;
+; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend                                            ; -1.551  ; -11.302       ;
+; vga_controller_instance|vga_controller|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 30.207  ; 0.000         ;
 +--------------------------------------------------------------------------------------------------------------------+---------+---------------+
 
 
@@ -393,12 +393,12 @@ No synchronizer chains to report.
 +--------------------------------------------------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                                                              ; Slack  ; End Point TNS ;
 +--------------------------------------------------------------------------------------------------------------------+--------+---------------+
-; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked                        ; -0.197 ; -0.320        ;
-; CLOCK_50                                                                                                           ; -0.121 ; -0.567        ;
-; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                        ; 0.042  ; 0.000         ;
-; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|newdata                                            ; 0.116  ; 0.000         ;
-; vga_controller_instance|vga_controller|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.198  ; 0.000         ;
-; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend                                            ; 0.897  ; 0.000         ;
+; CLOCK_50                                                                                                           ; -0.179 ; -0.670        ;
+; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                        ; -0.164 ; -0.199        ;
+; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked                        ; -0.153 ; -0.850        ;
+; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|newdata                                            ; 0.269  ; 0.000         ;
+; vga_controller_instance|vga_controller|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.279  ; 0.000         ;
+; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend                                            ; 1.074  ; 0.000         ;
 +--------------------------------------------------------------------------------------------------------------------+--------+---------------+
 
 
@@ -407,9 +407,9 @@ No synchronizer chains to report.
 +---------------------------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                                       ; Slack  ; End Point TNS ;
 +---------------------------------------------------------------------------------------------+--------+---------------+
-; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend                     ; -2.391 ; -21.453       ;
-; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger ; -1.781 ; -18.416       ;
-; CLOCK_50                                                                                    ; -1.257 ; -46.536       ;
+; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend                     ; -2.665 ; -23.631       ;
+; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger ; -1.836 ; -16.826       ;
+; CLOCK_50                                                                                    ; -1.220 ; -44.616       ;
 +---------------------------------------------------------------------------------------------+--------+---------------+
 
 
@@ -418,9 +418,9 @@ No synchronizer chains to report.
 +---------------------------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                                       ; Slack  ; End Point TNS ;
 +---------------------------------------------------------------------------------------------+--------+---------------+
-; CLOCK_50                                                                                    ; -0.117 ; -0.329        ;
-; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger ; -0.007 ; -0.059        ;
-; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend                     ; 1.209  ; 0.000         ;
+; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger ; -0.136 ; -0.431        ;
+; CLOCK_50                                                                                    ; -0.109 ; -0.109        ;
+; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend                     ; 1.563  ; 0.000         ;
 +---------------------------------------------------------------------------------------------+--------+---------------+
 
 
@@ -429,13 +429,13 @@ No synchronizer chains to report.
 +--------------------------------------------------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                                                              ; Slack  ; End Point TNS ;
 +--------------------------------------------------------------------------------------------------------------------+--------+---------------+
-; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                        ; 0.002  ; 0.000         ;
-; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|newdata                                            ; 0.014  ; 0.000         ;
-; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked                        ; 0.019  ; 0.000         ;
-; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend                                            ; 0.024  ; 0.000         ;
+; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|newdata                                            ; -0.095 ; -1.247        ;
+; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked                        ; -0.048 ; -0.487        ;
+; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                        ; -0.011 ; -0.011        ;
+; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend                                            ; 0.103  ; 0.000         ;
 ; vga_controller_instance|vga_controller|divider|vga_pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]   ; 0.325  ; 0.000         ;
-; CLOCK_50                                                                                                           ; 8.780  ; 0.000         ;
-; vga_controller_instance|vga_controller|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 18.735 ; 0.000         ;
+; CLOCK_50                                                                                                           ; 8.784  ; 0.000         ;
+; vga_controller_instance|vga_controller|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 18.743 ; 0.000         ;
 +--------------------------------------------------------------------------------------------------------------------+--------+---------------+
 
 
@@ -450,20 +450,20 @@ No synchronizer chains to report.
 +---------------------------------------------------------------------------------------------------------------------+-----------+--------+----------+---------+---------------------+
 ; Clock                                                                                                               ; Setup     ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
 +---------------------------------------------------------------------------------------------------------------------+-----------+--------+----------+---------+---------------------+
-; Worst-case Slack                                                                                                    ; -38.707   ; -0.197 ; -4.557   ; -0.117  ; -0.394              ;
-;  CLOCK_50                                                                                                           ; -4.360    ; -0.121 ; -2.575   ; -0.117  ; 8.757               ;
-;  mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|newdata                                            ; -38.707   ; 0.116  ; N/A      ; N/A     ; -0.394              ;
-;  mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked                        ; -4.235    ; -0.197 ; N/A      ; N/A     ; -0.394              ;
-;  mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                        ; -3.939    ; 0.042  ; -3.818   ; -0.007  ; -0.394              ;
-;  mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend                                            ; -3.414    ; 0.863  ; -4.557   ; 1.209   ; -0.394              ;
+; Worst-case Slack                                                                                                    ; -38.951   ; -0.314 ; -4.856   ; -0.136  ; -0.394              ;
+;  CLOCK_50                                                                                                           ; -4.551    ; -0.314 ; -2.495   ; -0.109  ; 8.717               ;
+;  mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|newdata                                            ; -38.951   ; 0.269  ; N/A      ; N/A     ; -0.394              ;
+;  mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked                        ; -4.191    ; -0.153 ; N/A      ; N/A     ; -0.394              ;
+;  mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                        ; -3.793    ; -0.164 ; -3.901   ; -0.136  ; -0.394              ;
+;  mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend                                            ; -3.424    ; 1.059  ; -4.856   ; 1.563   ; -0.394              ;
 ;  vga_controller_instance|vga_controller|divider|vga_pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]   ; N/A       ; N/A    ; N/A      ; N/A     ; 0.325               ;
-;  vga_controller_instance|vga_controller|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 19.104    ; 0.198  ; N/A      ; N/A     ; 18.599              ;
-; Design-wide TNS                                                                                                     ; -1878.465 ; -0.887 ; -181.916 ; -0.388  ; -59.428             ;
-;  CLOCK_50                                                                                                           ; -90.233   ; -0.567 ; -96.415  ; -0.329  ; 0.000               ;
-;  mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|newdata                                            ; -1635.648 ; 0.000  ; N/A      ; N/A     ; -26.180             ;
-;  mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked                        ; -91.623   ; -0.320 ; N/A      ; N/A     ; -14.600             ;
-;  mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                        ; -52.056   ; 0.000  ; -44.631  ; -0.059  ; -13.077             ;
-;  mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend                                            ; -23.954   ; 0.000  ; -40.870  ; 0.000   ; -5.571              ;
+;  vga_controller_instance|vga_controller|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 20.360    ; 0.279  ; N/A      ; N/A     ; 18.599              ;
+; Design-wide TNS                                                                                                     ; -1879.892 ; -1.719 ; -174.545 ; -0.54   ; -62.452             ;
+;  CLOCK_50                                                                                                           ; -100.176  ; -0.670 ; -90.030  ; -0.109  ; 0.000               ;
+;  mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|newdata                                            ; -1618.079 ; 0.000  ; N/A      ; N/A     ; -30.145             ;
+;  mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked                        ; -95.896   ; -0.850 ; N/A      ; N/A     ; -15.643             ;
+;  mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                        ; -55.905   ; -0.199 ; -41.543  ; -0.431  ; -12.401             ;
+;  mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend                                            ; -25.275   ; 0.000  ; -42.972  ; 0.000   ; -4.755              ;
 ;  vga_controller_instance|vga_controller|divider|vga_pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]   ; N/A       ; N/A    ; N/A      ; N/A     ; 0.000               ;
 ;  vga_controller_instance|vga_controller|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.000     ; 0.000  ; N/A      ; N/A     ; 0.000               ;
 +---------------------------------------------------------------------------------------------------------------------+-----------+--------+----------+---------+---------------------+
@@ -680,9 +680,9 @@ No synchronizer chains to report.
 +--------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+--------------+----------+----------+----------+
 ; From Clock                                                                                                         ; To Clock                                                                                                           ; RR Paths     ; FR Paths ; RF Paths ; FF Paths ;
 +--------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+--------------+----------+----------+----------+
-; CLOCK_50                                                                                                           ; CLOCK_50                                                                                                           ; 17011        ; 0        ; 0        ; 0        ;
-; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|newdata                                            ; CLOCK_50                                                                                                           ; 122          ; 0        ; 0        ; 0        ;
-; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked                        ; CLOCK_50                                                                                                           ; 17           ; 3        ; 0        ; 0        ;
+; CLOCK_50                                                                                                           ; CLOCK_50                                                                                                           ; 20509        ; 0        ; 0        ; 0        ;
+; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|newdata                                            ; CLOCK_50                                                                                                           ; 72           ; 0        ; 0        ; 0        ;
+; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked                        ; CLOCK_50                                                                                                           ; 18           ; 3        ; 0        ; 0        ;
 ; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                        ; CLOCK_50                                                                                                           ; 25           ; 1        ; 0        ; 0        ;
 ; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend                                            ; CLOCK_50                                                                                                           ; 16           ; 0        ; 0        ; 0        ;
 ; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|newdata                                            ; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|newdata                                            ; > 2147483647 ; 0        ; 0        ; 0        ;
@@ -692,10 +692,10 @@ No synchronizer chains to report.
 ; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                        ; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked                        ; 19           ; 0        ; 0        ; 0        ;
 ; CLOCK_50                                                                                                           ; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                        ; 7            ; 0        ; 0        ; 0        ;
 ; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked                        ; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                        ; 1            ; 1        ; 0        ; 0        ;
-; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                        ; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                        ; 124          ; 0        ; 0        ; 0        ;
+; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                        ; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                        ; 120          ; 0        ; 0        ; 0        ;
 ; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend                                            ; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                        ; 23           ; 0        ; 0        ; 0        ;
 ; CLOCK_50                                                                                                           ; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend                                            ; 8            ; 0        ; 0        ; 0        ;
-; vga_controller_instance|vga_controller|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; vga_controller_instance|vga_controller|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 9465491      ; 0        ; 0        ; 0        ;
+; vga_controller_instance|vga_controller|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; vga_controller_instance|vga_controller|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 9465521      ; 0        ; 0        ; 0        ;
 +--------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+--------------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -705,9 +705,9 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +--------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+--------------+----------+----------+----------+
 ; From Clock                                                                                                         ; To Clock                                                                                                           ; RR Paths     ; FR Paths ; RF Paths ; FF Paths ;
 +--------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+--------------+----------+----------+----------+
-; CLOCK_50                                                                                                           ; CLOCK_50                                                                                                           ; 17011        ; 0        ; 0        ; 0        ;
-; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|newdata                                            ; CLOCK_50                                                                                                           ; 122          ; 0        ; 0        ; 0        ;
-; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked                        ; CLOCK_50                                                                                                           ; 17           ; 3        ; 0        ; 0        ;
+; CLOCK_50                                                                                                           ; CLOCK_50                                                                                                           ; 20509        ; 0        ; 0        ; 0        ;
+; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|newdata                                            ; CLOCK_50                                                                                                           ; 72           ; 0        ; 0        ; 0        ;
+; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked                        ; CLOCK_50                                                                                                           ; 18           ; 3        ; 0        ; 0        ;
 ; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                        ; CLOCK_50                                                                                                           ; 25           ; 1        ; 0        ; 0        ;
 ; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend                                            ; CLOCK_50                                                                                                           ; 16           ; 0        ; 0        ; 0        ;
 ; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|newdata                                            ; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|newdata                                            ; > 2147483647 ; 0        ; 0        ; 0        ;
@@ -717,10 +717,10 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 ; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                        ; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked                        ; 19           ; 0        ; 0        ; 0        ;
 ; CLOCK_50                                                                                                           ; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                        ; 7            ; 0        ; 0        ; 0        ;
 ; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked                        ; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                        ; 1            ; 1        ; 0        ; 0        ;
-; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                        ; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                        ; 124          ; 0        ; 0        ; 0        ;
+; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                        ; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                        ; 120          ; 0        ; 0        ; 0        ;
 ; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend                                            ; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                        ; 23           ; 0        ; 0        ; 0        ;
 ; CLOCK_50                                                                                                           ; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend                                            ; 8            ; 0        ; 0        ; 0        ;
-; vga_controller_instance|vga_controller|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; vga_controller_instance|vga_controller|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 9465491      ; 0        ; 0        ; 0        ;
+; vga_controller_instance|vga_controller|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; vga_controller_instance|vga_controller|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 9465521      ; 0        ; 0        ; 0        ;
 +--------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+--------------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -731,9 +731,9 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 ; From Clock                                                                                  ; To Clock                                                                                    ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +---------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------+----------+----------+----------+----------+
 ; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger ; CLOCK_50                                                                                    ; 16       ; 0        ; 0        ; 0        ;
-; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend                     ; CLOCK_50                                                                                    ; 23       ; 0        ; 0        ; 0        ;
+; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend                     ; CLOCK_50                                                                                    ; 22       ; 0        ; 0        ; 0        ;
 ; CLOCK_50                                                                                    ; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger ; 7        ; 0        ; 0        ; 0        ;
-; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend                     ; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger ; 22       ; 0        ; 0        ; 0        ;
+; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend                     ; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger ; 21       ; 0        ; 0        ; 0        ;
 ; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger ; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend                     ; 9        ; 0        ; 0        ; 0        ;
 +---------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
@@ -745,9 +745,9 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 ; From Clock                                                                                  ; To Clock                                                                                    ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +---------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------+----------+----------+----------+----------+
 ; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger ; CLOCK_50                                                                                    ; 16       ; 0        ; 0        ; 0        ;
-; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend                     ; CLOCK_50                                                                                    ; 23       ; 0        ; 0        ; 0        ;
+; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend                     ; CLOCK_50                                                                                    ; 22       ; 0        ; 0        ; 0        ;
 ; CLOCK_50                                                                                    ; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger ; 7        ; 0        ; 0        ; 0        ;
-; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend                     ; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger ; 22       ; 0        ; 0        ; 0        ;
+; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend                     ; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger ; 21       ; 0        ; 0        ; 0        ;
 ; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger ; mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend                     ; 9        ; 0        ; 0        ; 0        ;
 +---------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
@@ -894,7 +894,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime TimeQuest Timing Analyzer
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Mon May 28 16:28:20 2018
+    Info: Processing started: Mon May 28 17:46:53 2018
 Info: Command: quartus_sta Genius -c Genius
 Info: qsta_default_script.tcl version: #3
 Warning (20013): Ignored 571 assignments for entity "DE1_SoC" -- entity does not exist in design
@@ -1496,46 +1496,46 @@ Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -38.624
+Info (332146): Worst-case setup slack is -38.951
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -38.624           -1618.547 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|newdata 
-    Info (332119):    -4.360             -90.233 CLOCK_50 
-    Info (332119):    -4.122             -90.404 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked 
-    Info (332119):    -3.846             -51.491 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger 
-    Info (332119):    -3.260             -22.704 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend 
-    Info (332119):    19.417               0.000 vga_controller_instance|vga_controller|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-Info (332146): Worst-case hold slack is 0.100
+    Info (332119):   -38.951           -1602.219 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|newdata 
+    Info (332119):    -4.551            -100.176 CLOCK_50 
+    Info (332119):    -4.114             -94.346 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked 
+    Info (332119):    -3.735             -55.894 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger 
+    Info (332119):    -3.289             -24.040 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend 
+    Info (332119):    20.823               0.000 vga_controller_instance|vga_controller|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+Info (332146): Worst-case hold slack is 0.021
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.100               0.000 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked 
-    Info (332119):     0.332               0.000 vga_controller_instance|vga_controller|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):     0.371               0.000 CLOCK_50 
-    Info (332119):     0.545               0.000 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|newdata 
-    Info (332119):     0.551               0.000 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger 
-    Info (332119):     1.918               0.000 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend 
-Info (332146): Worst-case recovery slack is -4.557
+    Info (332119):     0.021               0.000 CLOCK_50 
+    Info (332119):     0.120               0.000 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked 
+    Info (332119):     0.211               0.000 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger 
+    Info (332119):     0.482               0.000 vga_controller_instance|vga_controller|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     0.655               0.000 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|newdata 
+    Info (332119):     2.201               0.000 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend 
+Info (332146): Worst-case recovery slack is -4.856
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -4.557             -40.870 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend 
-    Info (332119):    -3.746             -44.631 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger 
-    Info (332119):    -2.575             -96.415 CLOCK_50 
-Info (332146): Worst-case removal slack is 0.399
+    Info (332119):    -4.856             -42.972 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend 
+    Info (332119):    -3.825             -41.543 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger 
+    Info (332119):    -2.495             -90.030 CLOCK_50 
+Info (332146): Worst-case removal slack is 0.286
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.399               0.000 CLOCK_50 
-    Info (332119):     0.479               0.000 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger 
-    Info (332119):     2.807               0.000 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend 
+    Info (332119):     0.286               0.000 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger 
+    Info (332119):     0.361               0.000 CLOCK_50 
+    Info (332119):     3.312               0.000 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend 
 Info (332146): Worst-case minimum pulse width slack is -0.394
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.394             -26.180 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|newdata 
-    Info (332119):    -0.394             -14.600 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked 
-    Info (332119):    -0.394             -13.077 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger 
-    Info (332119):    -0.394              -5.571 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend 
+    Info (332119):    -0.394             -29.534 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|newdata 
+    Info (332119):    -0.394             -15.643 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked 
+    Info (332119):    -0.394             -12.401 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger 
+    Info (332119):    -0.394              -4.755 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend 
     Info (332119):     0.325               0.000 vga_controller_instance|vga_controller|divider|vga_pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0] 
-    Info (332119):     8.763               0.000 CLOCK_50 
-    Info (332119):    18.608               0.000 vga_controller_instance|vga_controller|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     8.730               0.000 CLOCK_50 
+    Info (332119):    18.618               0.000 vga_controller_instance|vga_controller|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
 Info: Analyzing Slow 1100mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
@@ -1546,45 +1546,45 @@ Info (332097): The following timing edges are non-unate.  TimeQuest will assume 
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -38.707
+Info (332146): Worst-case setup slack is -38.928
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -38.707           -1635.648 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|newdata 
-    Info (332119):    -4.262             -75.184 CLOCK_50 
-    Info (332119):    -4.235             -91.623 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked 
-    Info (332119):    -3.939             -52.056 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger 
-    Info (332119):    -3.414             -23.954 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend 
-    Info (332119):    19.104               0.000 vga_controller_instance|vga_controller|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-Info (332146): Worst-case hold slack is 0.078
+    Info (332119):   -38.928           -1618.079 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|newdata 
+    Info (332119):    -4.434             -84.737 CLOCK_50 
+    Info (332119):    -4.191             -95.896 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked 
+    Info (332119):    -3.793             -55.905 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger 
+    Info (332119):    -3.424             -25.275 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend 
+    Info (332119):    20.360               0.000 vga_controller_instance|vga_controller|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+Info (332146): Worst-case hold slack is -0.314
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.078               0.000 CLOCK_50 
-    Info (332119):     0.119               0.000 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked 
-    Info (332119):     0.307               0.000 vga_controller_instance|vga_controller|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):     0.535               0.000 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|newdata 
-    Info (332119):     0.536               0.000 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger 
-    Info (332119):     2.080               0.000 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend 
-Info (332146): Worst-case recovery slack is -4.326
+    Info (332119):    -0.314              -0.314 CLOCK_50 
+    Info (332119):     0.098               0.000 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked 
+    Info (332119):     0.188               0.000 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger 
+    Info (332119):     0.480               0.000 vga_controller_instance|vga_controller|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     0.642               0.000 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|newdata 
+    Info (332119):     2.356               0.000 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend 
+Info (332146): Worst-case recovery slack is -4.622
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -4.326             -38.757 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend 
-    Info (332119):    -3.818             -43.805 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger 
-    Info (332119):    -2.137             -79.486 CLOCK_50 
-Info (332146): Worst-case removal slack is -0.032
+    Info (332119):    -4.622             -40.822 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend 
+    Info (332119):    -3.901             -40.748 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger 
+    Info (332119):    -2.084             -74.408 CLOCK_50 
+Info (332146): Worst-case removal slack is -0.053
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.032              -0.053 CLOCK_50 
-    Info (332119):     0.413               0.000 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger 
-    Info (332119):     2.558               0.000 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend 
+    Info (332119):    -0.053              -0.053 CLOCK_50 
+    Info (332119):     0.215               0.000 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger 
+    Info (332119):     3.032               0.000 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend 
 Info (332146): Worst-case minimum pulse width slack is -0.394
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.394             -25.520 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|newdata 
-    Info (332119):    -0.394             -14.448 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked 
-    Info (332119):    -0.394             -12.991 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger 
-    Info (332119):    -0.394              -5.543 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend 
+    Info (332119):    -0.394             -30.145 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|newdata 
+    Info (332119):    -0.394             -15.283 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked 
+    Info (332119):    -0.394             -12.317 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger 
+    Info (332119):    -0.394              -4.707 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend 
     Info (332119):     0.325               0.000 vga_controller_instance|vga_controller|divider|vga_pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0] 
-    Info (332119):     8.757               0.000 CLOCK_50 
+    Info (332119):     8.717               0.000 CLOCK_50 
     Info (332119):    18.599               0.000 vga_controller_instance|vga_controller|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
 Info: Analyzing Fast 1100mV 85C Model
 Info (334003): Started post-fitting delay annotation
@@ -1596,46 +1596,46 @@ Info (332097): The following timing edges are non-unate.  TimeQuest will assume 
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -21.854
+Info (332146): Worst-case setup slack is -22.273
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -21.854            -900.046 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|newdata 
-    Info (332119):    -3.527             -60.282 CLOCK_50 
-    Info (332119):    -2.092             -44.051 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked 
-    Info (332119):    -1.947             -22.728 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger 
-    Info (332119):    -1.571             -10.398 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend 
-    Info (332119):    28.602               0.000 vga_controller_instance|vga_controller|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-Info (332146): Worst-case hold slack is -0.187
+    Info (332119):   -22.273            -887.285 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|newdata 
+    Info (332119):    -3.671             -67.117 CLOCK_50 
+    Info (332119):    -2.010             -45.005 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked 
+    Info (332119):    -1.833             -26.764 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger 
+    Info (332119):    -1.573             -11.337 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend 
+    Info (332119):    29.542               0.000 vga_controller_instance|vga_controller|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+Info (332146): Worst-case hold slack is -0.129
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.187              -0.260 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked 
-    Info (332119):     0.088               0.000 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger 
-    Info (332119):     0.108               0.000 CLOCK_50 
-    Info (332119):     0.147               0.000 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|newdata 
-    Info (332119):     0.229               0.000 vga_controller_instance|vga_controller|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):     0.863               0.000 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend 
-Info (332146): Worst-case recovery slack is -2.816
+    Info (332119):    -0.129              -0.129 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger 
+    Info (332119):    -0.113              -0.426 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked 
+    Info (332119):     0.047               0.000 CLOCK_50 
+    Info (332119):     0.296               0.000 vga_controller_instance|vga_controller|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     0.298               0.000 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|newdata 
+    Info (332119):     1.059               0.000 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend 
+Info (332146): Worst-case recovery slack is -3.113
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.816             -25.272 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend 
-    Info (332119):    -1.843             -20.608 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger 
-    Info (332119):    -1.749             -65.493 CLOCK_50 
-Info (332146): Worst-case removal slack is 0.044
+    Info (332119):    -3.113             -27.677 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend 
+    Info (332119):    -1.909             -18.895 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger 
+    Info (332119):    -1.708             -62.887 CLOCK_50 
+Info (332146): Worst-case removal slack is -0.087
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.044               0.000 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger 
-    Info (332119):     0.176               0.000 CLOCK_50 
-    Info (332119):     1.451               0.000 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend 
-Info (332146): Worst-case minimum pulse width slack is -0.040
+    Info (332119):    -0.087              -0.228 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger 
+    Info (332119):     0.194               0.000 CLOCK_50 
+    Info (332119):     1.869               0.000 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend 
+Info (332146): Worst-case minimum pulse width slack is -0.147
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.040              -0.040 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger 
-    Info (332119):    -0.028              -0.400 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|newdata 
-    Info (332119):    -0.011              -0.165 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked 
-    Info (332119):    -0.009              -0.052 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend 
+    Info (332119):    -0.147              -2.802 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|newdata 
+    Info (332119):    -0.118              -1.395 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked 
+    Info (332119):    -0.048              -0.092 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger 
+    Info (332119):     0.095               0.000 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend 
     Info (332119):     0.325               0.000 vga_controller_instance|vga_controller|divider|vga_pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0] 
-    Info (332119):     8.788               0.000 CLOCK_50 
-    Info (332119):    18.735               0.000 vga_controller_instance|vga_controller|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     8.790               0.000 CLOCK_50 
+    Info (332119):    18.739               0.000 vga_controller_instance|vga_controller|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
 Info: Analyzing Fast 1100mV 0C Model
 Info (332097): The following timing edges are non-unate.  TimeQuest will assume pos-unate behavior for these edges in the clock network.
     Info (332098): Cell: vga_controller_instance|vga_controller|divider|vga_pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL  from: refclkin  to: fbclk
@@ -1644,51 +1644,51 @@ Info (332097): The following timing edges are non-unate.  TimeQuest will assume 
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -20.244
+Info (332146): Worst-case setup slack is -20.529
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -20.244            -836.639 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|newdata 
-    Info (332119):    -3.023             -43.614 CLOCK_50 
-    Info (332119):    -2.014             -42.362 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked 
-    Info (332119):    -1.894             -20.994 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger 
-    Info (332119):    -1.545             -10.431 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend 
-    Info (332119):    29.375               0.000 vga_controller_instance|vga_controller|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-Info (332146): Worst-case hold slack is -0.197
+    Info (332119):   -20.529            -824.148 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|newdata 
+    Info (332119):    -3.152             -49.339 CLOCK_50 
+    Info (332119):    -1.928             -43.328 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked 
+    Info (332119):    -1.765             -24.374 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger 
+    Info (332119):    -1.551             -11.302 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend 
+    Info (332119):    30.207               0.000 vga_controller_instance|vga_controller|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+Info (332146): Worst-case hold slack is -0.179
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.197              -0.320 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked 
-    Info (332119):    -0.121              -0.567 CLOCK_50 
-    Info (332119):     0.042               0.000 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger 
-    Info (332119):     0.116               0.000 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|newdata 
-    Info (332119):     0.198               0.000 vga_controller_instance|vga_controller|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):     0.897               0.000 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend 
-Info (332146): Worst-case recovery slack is -2.391
+    Info (332119):    -0.179              -0.670 CLOCK_50 
+    Info (332119):    -0.164              -0.199 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger 
+    Info (332119):    -0.153              -0.850 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked 
+    Info (332119):     0.269               0.000 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|newdata 
+    Info (332119):     0.279               0.000 vga_controller_instance|vga_controller|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     1.074               0.000 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend 
+Info (332146): Worst-case recovery slack is -2.665
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.391             -21.453 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend 
-    Info (332119):    -1.781             -18.416 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger 
-    Info (332119):    -1.257             -46.536 CLOCK_50 
-Info (332146): Worst-case removal slack is -0.117
+    Info (332119):    -2.665             -23.631 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend 
+    Info (332119):    -1.836             -16.826 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger 
+    Info (332119):    -1.220             -44.616 CLOCK_50 
+Info (332146): Worst-case removal slack is -0.136
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.117              -0.329 CLOCK_50 
-    Info (332119):    -0.007              -0.059 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger 
-    Info (332119):     1.209               0.000 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend 
-Info (332146): Worst-case minimum pulse width slack is 0.002
+    Info (332119):    -0.136              -0.431 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger 
+    Info (332119):    -0.109              -0.109 CLOCK_50 
+    Info (332119):     1.563               0.000 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend 
+Info (332146): Worst-case minimum pulse width slack is -0.095
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.002               0.000 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger 
-    Info (332119):     0.014               0.000 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|newdata 
-    Info (332119):     0.019               0.000 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked 
-    Info (332119):     0.024               0.000 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend 
+    Info (332119):    -0.095              -1.247 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|newdata 
+    Info (332119):    -0.048              -0.487 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked 
+    Info (332119):    -0.011              -0.011 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger 
+    Info (332119):     0.103               0.000 mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend 
     Info (332119):     0.325               0.000 vga_controller_instance|vga_controller|divider|vga_pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0] 
-    Info (332119):     8.780               0.000 CLOCK_50 
-    Info (332119):    18.735               0.000 vga_controller_instance|vga_controller|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     8.784               0.000 CLOCK_50 
+    Info (332119):    18.743               0.000 vga_controller_instance|vga_controller|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 580 warnings
-    Info: Peak virtual memory: 1405 megabytes
-    Info: Processing ended: Mon May 28 16:28:27 2018
+    Info: Peak virtual memory: 1406 megabytes
+    Info: Processing ended: Mon May 28 17:47:00 2018
     Info: Elapsed time: 00:00:07
     Info: Total CPU time (on all processors): 00:00:10
 

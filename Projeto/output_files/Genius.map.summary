@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Mon May 28 16:27:19 2018
+Analysis & Synthesis Status : Successful - Mon May 28 17:50:34 2018
 Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 Revision Name : Genius
 Top-level Entity Name : genius_board
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 345
+Total registers : 346
 Total pins : 32
 Total virtual pins : 0
 Total block memory bits : 39,936
