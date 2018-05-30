@@ -1,4 +1,39 @@
 |genius_board
+PS2_DAT <> genius:genius_play.PS2_DAT
+PS2_CLK <> genius:genius_play.PS2_CLK
+CLOCK_50 => genius:genius_play.CLOCK_50
+VGA_R[0] << genius:genius_play.VGA_R[0]
+VGA_R[1] << genius:genius_play.VGA_R[1]
+VGA_R[2] << genius:genius_play.VGA_R[2]
+VGA_R[3] << genius:genius_play.VGA_R[3]
+VGA_R[4] << genius:genius_play.VGA_R[4]
+VGA_R[5] << genius:genius_play.VGA_R[5]
+VGA_R[6] << genius:genius_play.VGA_R[6]
+VGA_R[7] << genius:genius_play.VGA_R[7]
+VGA_G[0] << genius:genius_play.VGA_G[0]
+VGA_G[1] << genius:genius_play.VGA_G[1]
+VGA_G[2] << genius:genius_play.VGA_G[2]
+VGA_G[3] << genius:genius_play.VGA_G[3]
+VGA_G[4] << genius:genius_play.VGA_G[4]
+VGA_G[5] << genius:genius_play.VGA_G[5]
+VGA_G[6] << genius:genius_play.VGA_G[6]
+VGA_G[7] << genius:genius_play.VGA_G[7]
+VGA_B[0] << genius:genius_play.VGA_B[0]
+VGA_B[1] << genius:genius_play.VGA_B[1]
+VGA_B[2] << genius:genius_play.VGA_B[2]
+VGA_B[3] << genius:genius_play.VGA_B[3]
+VGA_B[4] << genius:genius_play.VGA_B[4]
+VGA_B[5] << genius:genius_play.VGA_B[5]
+VGA_B[6] << genius:genius_play.VGA_B[6]
+VGA_B[7] << genius:genius_play.VGA_B[7]
+VGA_HS << genius:genius_play.VGA_HS
+VGA_VS << genius:genius_play.VGA_VS
+VGA_BLANK_N << genius:genius_play.VGA_BLANK_N
+VGA_SYNC_N << genius:genius_play.VGA_SYNC_N
+VGA_CLK << genius:genius_play.VGA_CLK
+
+
+|genius_board|genius:genius_play
 PS2_DAT <> mouse_controller:mouse_controller_instance.PS2_DAT
 PS2_CLK <> mouse_controller:mouse_controller_instance.PS2_CLK
 CLOCK_50 => mouse_controller:mouse_controller_instance.CLOCK_50
@@ -71,8 +106,6 @@ CLOCK_50 => estado_vector[1].CLK
 CLOCK_50 => estado_vector[2].CLK
 CLOCK_50 => estado_vector[3].CLK
 CLOCK_50 => estado_vector[4].CLK
-CLOCK_50 => check.CLK
-CLOCK_50 => pressed.CLK
 CLOCK_50 => vga_controller:vga_controller_instance.CLOCK_50
 CLOCK_50 => generate_random_color:generate_random_color_instance.CLOCK_50
 CLOCK_50 => ram_block:memory_acess.Clock
@@ -109,10 +142,12 @@ VGA_SYNC_N <= vga_controller:vga_controller_instance.VGA_SYNC_N
 VGA_CLK <= vga_controller:vga_controller_instance.VGA_CLK
 
 
-|genius_board|mouse_controller:mouse_controller_instance
+|genius_board|genius:genius_play|mouse_controller:mouse_controller_instance
 PS2_DAT <> mouse_ctrl:mousectrl.ps2_data
 PS2_CLK <> mouse_ctrl:mousectrl.ps2_clk
 CLOCK_50 => mouse_ctrl:mousectrl.clk
+CLOCK_50 => Check~reg0.CLK
+CLOCK_50 => pressed.CLK
 col[0] <= col_mouse[0].DB_MAX_OUTPUT_PORT_TYPE
 col[1] <= col_mouse[1].DB_MAX_OUTPUT_PORT_TYPE
 col[2] <= col_mouse[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -128,9 +163,10 @@ line[4] <= line_mouse[4].DB_MAX_OUTPUT_PORT_TYPE
 line[5] <= line_mouse[5].DB_MAX_OUTPUT_PORT_TYPE
 line[6] <= line_mouse[6].DB_MAX_OUTPUT_PORT_TYPE
 click <= mouse_ctrl:mousectrl.bt_on[0]
+Check <= Check~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|genius_board|mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl
+|genius_board|genius:genius_play|mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl
 ps2_data <> ps2_iobase:ps2io.ps2_data
 ps2_clk <> ps2_iobase:ps2io.ps2_clk
 clk => ps2_iobase:ps2io.clk
@@ -185,7 +221,7 @@ wheel[2] <= wheel[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 wheel[3] <= wheel[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|genius_board|mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io
+|genius_board|genius:genius_play|mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io
 ps2_data <> ps2_data
 ps2_clk <> ps2_clk
 clk => sigclkheld.CLK
@@ -318,7 +354,7 @@ odata[6] <= sdata[6].DB_MAX_OUTPUT_PORT_TYPE
 odata[7] <= sdata[7].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|genius_board|vga_controller:vga_controller_instance
+|genius_board|genius:genius_play|vga_controller:vga_controller_instance
 CLOCK_50 => vgacon:vga_controller.clk50M
 CLOCK_50 => pixel[0].CLK
 CLOCK_50 => pixel[1].CLK
@@ -340,15 +376,20 @@ CLOCK_50 => col[5].CLK
 CLOCK_50 => col[6].CLK
 CLOCK_50 => vgacon:vga_controller.write_clk
 estado_vector[0] => Equal7.IN3
-estado_vector[0] => Equal33.IN3
+estado_vector[0] => Equal14.IN3
+estado_vector[0] => Equal56.IN4
 estado_vector[1] => Equal7.IN4
-estado_vector[1] => Equal33.IN2
+estado_vector[1] => Equal14.IN2
+estado_vector[1] => Equal56.IN3
 estado_vector[2] => Equal7.IN2
-estado_vector[2] => Equal33.IN1
+estado_vector[2] => Equal14.IN1
+estado_vector[2] => Equal56.IN2
 estado_vector[3] => Equal7.IN1
-estado_vector[3] => Equal33.IN0
+estado_vector[3] => Equal14.IN0
+estado_vector[3] => Equal56.IN1
 estado_vector[4] => Equal7.IN0
-estado_vector[4] => Equal33.IN4
+estado_vector[4] => Equal14.IN4
+estado_vector[4] => Equal56.IN0
 line_mouse[0] => Equal3.IN6
 line_mouse[1] => Equal3.IN5
 line_mouse[2] => Equal3.IN4
@@ -410,7 +451,7 @@ VGA_SYNC_N <= vgacon:vga_controller.sync
 VGA_CLK <= vgacon:vga_controller.vga_clk
 
 
-|genius_board|vga_controller:vga_controller_instance|vgacon:vga_controller
+|genius_board|genius:genius_play|vga_controller:vga_controller_instance|vgacon:vga_controller
 clk50M => vga_pll:divider.refclk
 rstn => vga_pll:divider.rst
 rstn => h_count_d[0].ACLR
@@ -503,20 +544,20 @@ sync <= <VCC>
 blank <= <GND>
 
 
-|genius_board|vga_controller:vga_controller_instance|vgacon:vga_controller|vga_pll:divider
+|genius_board|genius:genius_play|vga_controller:vga_controller_instance|vgacon:vga_controller|vga_pll:divider
 refclk => vga_pll_0002:vga_pll_inst.refclk
 rst => vga_pll_0002:vga_pll_inst.rst
 outclk_0 <= vga_pll_0002:vga_pll_inst.outclk_0
 
 
-|genius_board|vga_controller:vga_controller_instance|vgacon:vga_controller|vga_pll:divider|vga_pll_0002:vga_pll_inst
+|genius_board|genius:genius_play|vga_controller:vga_controller_instance|vgacon:vga_controller|vga_pll:divider|vga_pll_0002:vga_pll_inst
 refclk => refclk.IN1
 rst => rst.IN1
 outclk_0 <= altera_pll:altera_pll_i.outclk
 locked <= altera_pll:altera_pll_i.locked
 
 
-|genius_board|vga_controller:vga_controller_instance|vgacon:vga_controller|vga_pll:divider|vga_pll_0002:vga_pll_inst|altera_pll:altera_pll_i
+|genius_board|genius:genius_play|vga_controller:vga_controller_instance|vgacon:vga_controller|vga_pll:divider|vga_pll_0002:vga_pll_inst|altera_pll:altera_pll_i
 refclk => general[0].gpll.I_REFCLK
 refclk1 => ~NO_FANOUT~
 fbclk => ~NO_FANOUT~
@@ -688,7 +729,7 @@ cascade_out[0] <= <GND>
 zdbfbclk <> <GND>
 
 
-|genius_board|vga_controller:vga_controller_instance|vgacon:vga_controller|dual_clock_ram:vgamem
+|genius_board|genius:genius_play|vga_controller:vga_controller_instance|vgacon:vga_controller|dual_clock_ram:vgamem
 read_clk => data_out[0]~reg0.CLK
 read_clk => data_out[1]~reg0.CLK
 read_clk => data_out[2]~reg0.CLK
@@ -766,7 +807,7 @@ data_out[1] <= data_out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 data_out[2] <= data_out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|genius_board|generate_random_color:generate_random_color_instance
+|genius_board|genius:genius_play|generate_random_color:generate_random_color_instance
 CLOCK_50 => color[0].CLK
 CLOCK_50 => color[1].CLK
 Write_Enable => ~NO_FANOUT~
@@ -775,7 +816,7 @@ color_ram_input[1] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
 color_ram_input[2] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|genius_board|ram_block:memory_acess
+|genius_board|genius:genius_play|ram_block:memory_acess
 Clock => process_0~13.CLK
 Clock => process_0~0.CLK
 Clock => process_0~1.CLK
@@ -834,7 +875,7 @@ Q[1] <= ram.DATAOUT1
 Q[2] <= ram.DATAOUT2
 
 
-|genius_board|checking_color:checking_color_instance
+|genius_board|genius:genius_play|checking_color:checking_color_instance
 CLOCK_50 => failed~reg0.CLK
 CLOCK_50 => colors_checked[0].CLK
 CLOCK_50 => colors_checked[1].CLK

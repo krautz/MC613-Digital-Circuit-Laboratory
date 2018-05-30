@@ -10,7 +10,8 @@ ENTITY mouse_controller IS
 		CLOCK_50	: 	IN std_logic;
 		col 		: 	OUT integer RANGE 0 TO 127;
 		line 		: 	OUT integer RANGE 0 TO 95;
-		click 	: 	OUT std_logic
+		click 	: 	OUT std_logic;
+		Check		:	OUT std_logic
 	);
 END mouse_controller;
 
@@ -43,6 +44,8 @@ ARCHITECTURE rtl OF mouse_controller IS
 	
 	SIGNAL line_mouse : integer RANGE 0 TO 95;  -- linha atual
 	SIGNAL col_mouse : integer RANGE 0 TO 127;  -- coluna atual
+	
+	SIGNAL pressed : std_logic := '0';
 
 
 BEGIN
@@ -58,13 +61,23 @@ BEGIN
 	PROCESS(signewdata)
 		VARIABLE xacc, yacc : integer RANGE -10000 TO 10000 := 0;
 	BEGIN
-		if(rising_edge(signewdata)) then			
-				col_mouse <= col_mouse + ((xacc + to_integer(signed(dx))) / SENSIBILITY);
-				if (line_mouse - ((yacc + to_integer(signed(dy))) / SENSIBILITY) >= 96) then
+		IF (rising_edge(signewdata)) THEN		
+	
+				IF (col_mouse + ((xacc + to_integer(signed(dx))) / SENSIBILITY) >= 126) THEN
+					col_mouse <= 125;
+				ELSIF (col_mouse + ((xacc + to_integer(signed(dx))) / SENSIBILITY) < 0) THEN
+					col_mouse <= 0;
+				ELSE
+					col_mouse <= col_mouse + ((xacc + to_integer(signed(dx))) / SENSIBILITY);
+				END IF;
+	
+				IF (line_mouse - ((yacc + to_integer(signed(dy))) / SENSIBILITY) >= 96) THEN
+					line_mouse <= 95;
+				ELSIF (line_mouse - ((yacc + to_integer(signed(dy))) / SENSIBILITY) < 0) THEN
 					line_mouse <= 0;
-				else
+				ELSE
 					line_mouse <= line_mouse - ((yacc + to_integer(signed(dy))) / SENSIBILITY);
-				end if;
+				END IF;
 				xacc := ((xacc + to_integer(signed(dx))) rem SENSIBILITY);
 				yacc := ((yacc + to_integer(signed(dy))) rem SENSIBILITY);
 		END IF;
@@ -73,6 +86,19 @@ BEGIN
 	col <= col_mouse;
 	line <= line_mouse;
 	click <= mouse_click(0);
+	
+	PROCESS
+	BEGIN
+		WAIT UNTIL clock_50'EVENT and CLOCK_50 = '1';
+		IF (pressed = '0' and mouse_click(0) = '1') THEN
+			pressed <= '1';
+		ELSIF (pressed = '1' and mouse_click(0) = '0') THEN
+			pressed <= '0';
+			check <= '1';
+		ELSE
+			check <= '0';
+		END IF;
+	END PROCESS;
 	
 END rtl;
 

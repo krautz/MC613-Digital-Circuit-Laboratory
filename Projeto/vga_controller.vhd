@@ -123,6 +123,42 @@ BEGIN
 		ELSIF (estado_vector = "10000") and (line = 58 or line = 59) and ((col >= 28 and col < 40) or (col = 48 or col = 49) or (col = 58 or col = 59 or col = 68 or col = 69) or (col = 73 or col = 74 or col = 83 or col = 84) or (col = 93 or col = 94)) THEN
 			we <= '1';
 			pixel <= "101";
+		ELSIF (estado_vector = "00001") and (line = 36 or line = 37) and ((col >= 43 and col < 55) or (col = 58 or col = 59 or col = 60 or col = 61 or col = 68 or col = 69) or (col = 73 or col = 74 or col = 75 or col = 76)) THEN
+			we <= '1';
+			pixel <= "101";
+		ELSIF (estado_vector = "00001") and (line = 38 or line = 39) and ((col = 43 or col = 44) or (col = 58 or col = 59 or col = 60 or col = 61 or col = 68 or col = 69) or (col = 73 or col = 74 or col = 76 or col = 77)) THEN
+			we <= '1';
+			pixel <= "101";
+		ELSIF (estado_vector = "00001") and (line = 40 or line = 41) and ((col = 43 or col = 44) or (col = 58 or col = 59 or col = 61 or col = 62 or col = 68 or col = 69) or (col = 73 or col = 74 or col = 77 or col = 78)) THEN
+			we <= '1';
+			pixel <= "101";
+		ELSIF (estado_vector = "00001") and (line = 42 or line = 43) and ((col = 43 or col = 44) or (col = 58 or col = 59 or col = 61 or col = 62 or col = 68 or col = 69) or (col = 73 or col = 74 or col = 78 or col = 79)) THEN
+			we <= '1';
+			pixel <= "101";
+		ELSIF (estado_vector = "00001") and (line = 44 or line = 45) and ((col = 43 or col = 44) or (col = 58 or col = 59 or col = 62 or col = 63 or col = 68 or col = 69) or (col = 73 or col = 74 or col = 79 or col = 80)) THEN
+			we <= '1';
+			pixel <= "101";
+		ELSIF (estado_vector = "00001") and (line = 46 or line = 47) and ((col = 43 or col = 44) or (col = 58 or col = 59 or col = 62 or col = 63 or col = 68 or col = 69) or (col = 73 or col = 74 or col = 80 or col = 81)) THEN
+			we <= '1';
+			pixel <= "101";
+		ELSIF (estado_vector = "00001") and (line = 48 or line = 49) and ((col >= 43 and col < 55) or (col = 58 or col = 59 or col = 63 or col = 64 or col = 68 or col = 69) or (col = 73 or col = 74 or col = 80 or col = 81)) THEN
+			we <= '1';
+			pixel <= "101";
+		ELSIF (estado_vector = "00001") and (line = 50 or line = 51) and ((col = 43 or col = 44) or (col = 58 or col = 59 or col = 64 or col = 65 or col = 68 or col = 69) or (col = 73 or col = 74 or col = 79 or col = 80)) THEN
+			we <= '1';
+			pixel <= "101";
+		ELSIF (estado_vector = "00001") and (line = 52 or line = 53) and ((col = 43 or col = 44) or (col = 58 or col = 59 or col = 64 or col = 65 or col = 68 or col = 69) or (col = 73 or col = 74 or col = 78 or col = 79)) THEN
+			we <= '1';
+			pixel <= "101";
+		ELSIF (estado_vector = "00001") and (line = 54 or line = 55) and ((col = 43 or col = 44) or (col = 58 or col = 59 or col = 65 or col = 66 or col = 68 or col = 69) or (col = 73 or col = 74 or col = 77 or col = 78)) THEN
+			we <= '1';
+			pixel <= "101";
+		ELSIF (estado_vector = "00001") and (line = 56 or line = 57) and ((col = 43 or col = 44) or (col = 58 or col = 59 or col = 65 or col = 66 or col = 68 or col = 69) or (col = 73 or col = 74 or col = 76 or col = 77)) THEN
+			we <= '1';
+			pixel <= "101";
+		ELSIF (estado_vector = "00001") and (line = 58 or line = 59) and ((col >= 43 and col < 55) or (col = 58 or col = 59 or col = 66 or col = 67 or col = 68 or col = 69) or (col = 73 or col = 74 or col = 75 or col = 76)) THEN
+			we <= '1';
+			pixel <= "101";
 		ELSE
 			we <= '1';
 			pixel <= "000";
