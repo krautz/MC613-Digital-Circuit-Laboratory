@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Genius
-Wed May 30 17:57:18 2018
+Mon Jun  4 14:38:56 2018
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -68,7 +68,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed May 30 17:57:18 2018       ;
+; Analysis & Synthesis Status     ; Successful - Mon Jun  4 14:38:56 2018       ;
 ; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; Genius                                      ;
 ; Top-level Entity Name           ; genius_board                                ;
@@ -255,8 +255,8 @@ refer to the applicable agreement for further details.
 ;     -- 7 input functions                    ; 6              ;
 ;     -- 6 input functions                    ; 95             ;
 ;     -- 5 input functions                    ; 248            ;
-;     -- 4 input functions                    ; 354            ;
-;     -- <=3 input functions                  ; 1125           ;
+;     -- 4 input functions                    ; 355            ;
+;     -- <=3 input functions                  ; 1124           ;
 ;                                             ;                ;
 ; Dedicated logic registers                   ; 345            ;
 ;                                             ;                ;
@@ -271,7 +271,7 @@ refer to the applicable agreement for further details.
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
 ; Maximum fan-out                             ; 217            ;
-; Total fan-out                               ; 7234           ;
+; Total fan-out                               ; 7235           ;
 ; Average fan-out                             ; 3.22           ;
 +---------------------------------------------+----------------+
 
@@ -1126,8 +1126,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 12                          ;
 ;         2 data inputs ; 264                         ;
-;         3 data inputs ; 109                         ;
-;         4 data inputs ; 172                         ;
+;         3 data inputs ; 108                         ;
+;         4 data inputs ; 173                         ;
 ;         5 data inputs ; 248                         ;
 ;         6 data inputs ; 95                          ;
 ;     shared            ; 17                          ;
@@ -1139,7 +1139,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; stratixv_ram_block    ; 9                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 47.30                       ;
-; Average LUT depth     ; 29.19                       ;
+; Average LUT depth     ; 29.20                       ;
 +-----------------------+-----------------------------+
 
 
@@ -1158,7 +1158,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Wed May 30 17:57:02 2018
+    Info: Processing started: Mon Jun  4 14:38:40 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Genius -c Genius
 Warning (125092): Tcl Script File vga_pll/vga_pll_0002.qip not found
     Info (125063): set_global_assignment -name QIP_FILE vga_pll/vga_pll_0002.qip -qip vga_pll.qip -library vga_pll
@@ -2007,7 +2007,7 @@ Info (21057): Implemented 1996 device resources after synthesis - the final reso
     Info (21065): Implemented 1 PLLs
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 583 warnings
     Info: Peak virtual memory: 1253 megabytes
-    Info: Processing ended: Wed May 30 17:57:18 2018
+    Info: Processing ended: Mon Jun  4 14:38:56 2018
     Info: Elapsed time: 00:00:16
     Info: Total CPU time (on all processors): 00:00:27
 

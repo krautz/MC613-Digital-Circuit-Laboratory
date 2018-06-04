@@ -63,8 +63,8 @@ BEGIN
 	BEGIN
 		IF (rising_edge(signewdata)) THEN		
 	
-				IF (col_mouse + ((xacc + to_integer(signed(dx))) / SENSIBILITY) >= 126) THEN
-					col_mouse <= 125;
+				IF (col_mouse + ((xacc + to_integer(signed(dx))) / SENSIBILITY) >= 127) THEN
+					col_mouse <= 126;
 				ELSIF (col_mouse + ((xacc + to_integer(signed(dx))) / SENSIBILITY) < 0) THEN
 					col_mouse <= 0;
 				ELSE

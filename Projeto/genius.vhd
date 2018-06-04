@@ -213,7 +213,7 @@ BEGIN
 												colors_shown <= (OTHERS => '0');
 												counter := 0;
 												
-												IF (colors_checked = round_number) and (round_number = "0000010100") THEN
+												IF (colors_checked = round_number) and (round_number = "0000001111") THEN
 													estado <= final;
 												ELSIF (colors_checked = round_number) THEN
 													estado <= generating_color;

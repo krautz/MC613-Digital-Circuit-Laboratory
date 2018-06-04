@@ -3,391 +3,391 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1100mV 85C Model Setup 'genius:genius_play|mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|newdata'
-Slack : -39.045
-TNS   : -1624.755
+Slack : -38.545
+TNS   : -1617.573
 
 Type  : Slow 1100mV 85C Model Setup 'CLOCK_50'
-Slack : -4.854
-TNS   : -106.150
+Slack : -4.428
+TNS   : -103.927
 
 Type  : Slow 1100mV 85C Model Setup 'genius:genius_play|mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked'
-Slack : -4.113
-TNS   : -97.358
+Slack : -4.037
+TNS   : -93.380
 
 Type  : Slow 1100mV 85C Model Setup 'genius:genius_play|mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
-Slack : -3.661
-TNS   : -58.085
+Slack : -3.474
+TNS   : -49.426
 
 Type  : Slow 1100mV 85C Model Setup 'genius:genius_play|mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend'
-Slack : -3.539
-TNS   : -25.280
+Slack : -2.919
+TNS   : -22.608
 
 Type  : Slow 1100mV 85C Model Setup 'genius_play|vga_controller_instance|vga_controller|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 19.827
+Slack : 19.754
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'CLOCK_50'
-Slack : -0.397
-TNS   : -0.789
+Slack : -1.005
+TNS   : -2.705
 
 Type  : Slow 1100mV 85C Model Hold 'genius:genius_play|mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked'
-Slack : 0.023
-TNS   : 0.000
-
-Type  : Slow 1100mV 85C Model Hold 'genius_play|vga_controller_instance|vga_controller|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 0.340
+Slack : 0.182
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'genius:genius_play|mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
-Slack : 0.422
+Slack : 0.289
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'genius_play|vga_controller_instance|vga_controller|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.441
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'genius:genius_play|mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|newdata'
-Slack : 0.913
+Slack : 1.001
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'genius:genius_play|mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend'
-Slack : 2.177
+Slack : 1.995
 TNS   : 0.000
 
+Type  : Slow 1100mV 85C Model Recovery 'genius:genius_play|mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend'
+Slack : -4.857
+TNS   : -16.259
+
 Type  : Slow 1100mV 85C Model Recovery 'genius:genius_play|mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
-Slack : -3.647
-TNS   : -47.461
+Slack : -3.400
+TNS   : -46.938
 
 Type  : Slow 1100mV 85C Model Recovery 'CLOCK_50'
-Slack : -2.921
-TNS   : -106.595
+Slack : -2.611
+TNS   : -91.892
 
-Type  : Slow 1100mV 85C Model Recovery 'genius:genius_play|mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend'
-Slack : -1.270
-TNS   : -11.032
-
-Type  : Slow 1100mV 85C Model Removal 'genius:genius_play|mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
-Slack : 0.542
+Type  : Slow 1100mV 85C Model Removal 'CLOCK_50'
+Slack : 0.431
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Removal 'genius:genius_play|mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend'
-Slack : 0.630
+Slack : 0.577
 TNS   : 0.000
 
-Type  : Slow 1100mV 85C Model Removal 'CLOCK_50'
-Slack : 0.691
+Type  : Slow 1100mV 85C Model Removal 'genius:genius_play|mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
+Slack : 0.741
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'genius:genius_play|mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|newdata'
 Slack : -0.394
-TNS   : -31.316
+TNS   : -25.579
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'genius:genius_play|mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked'
 Slack : -0.394
-TNS   : -14.972
+TNS   : -13.822
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'genius:genius_play|mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
 Slack : -0.394
-TNS   : -14.784
+TNS   : -13.265
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'genius:genius_play|mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend'
 Slack : -0.394
-TNS   : -4.823
+TNS   : -5.434
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'genius_play|vga_controller_instance|vga_controller|divider|vga_pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]'
 Slack : 0.325
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
-Slack : 8.683
+Slack : 8.715
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'genius_play|vga_controller_instance|vga_controller|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 18.626
+Slack : 18.619
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Setup 'genius:genius_play|mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|newdata'
-Slack : -39.010
-TNS   : -1636.689
+Slack : -38.638
+TNS   : -1628.122
 
 Type  : Slow 1100mV 0C Model Setup 'CLOCK_50'
-Slack : -4.819
-TNS   : -90.806
+Slack : -4.376
+TNS   : -87.216
 
 Type  : Slow 1100mV 0C Model Setup 'genius:genius_play|mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked'
-Slack : -4.182
-TNS   : -97.768
+Slack : -4.165
+TNS   : -93.739
 
 Type  : Slow 1100mV 0C Model Setup 'genius:genius_play|mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
-Slack : -3.656
-TNS   : -57.780
+Slack : -3.523
+TNS   : -49.508
 
 Type  : Slow 1100mV 0C Model Setup 'genius:genius_play|mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend'
-Slack : -3.649
-TNS   : -26.238
+Slack : -3.080
+TNS   : -23.902
 
 Type  : Slow 1100mV 0C Model Setup 'genius_play|vga_controller_instance|vga_controller|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 19.390
+Slack : 19.367
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'CLOCK_50'
-Slack : -0.662
-TNS   : -1.317
+Slack : -1.180
+TNS   : -3.841
 
 Type  : Slow 1100mV 0C Model Hold 'genius:genius_play|mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked'
-Slack : 0.014
-TNS   : 0.000
-
-Type  : Slow 1100mV 0C Model Hold 'genius_play|vga_controller_instance|vga_controller|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 0.320
+Slack : 0.196
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'genius:genius_play|mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
-Slack : 0.364
+Slack : 0.278
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'genius_play|vga_controller_instance|vga_controller|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.412
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'genius:genius_play|mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|newdata'
-Slack : 0.953
+Slack : 1.019
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'genius:genius_play|mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend'
-Slack : 2.302
+Slack : 2.152
 TNS   : 0.000
 
+Type  : Slow 1100mV 0C Model Recovery 'genius:genius_play|mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend'
+Slack : -4.624
+TNS   : -15.518
+
 Type  : Slow 1100mV 0C Model Recovery 'genius:genius_play|mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
-Slack : -3.686
-TNS   : -46.076
+Slack : -3.459
+TNS   : -45.556
 
 Type  : Slow 1100mV 0C Model Recovery 'CLOCK_50'
-Slack : -2.495
-TNS   : -90.587
-
-Type  : Slow 1100mV 0C Model Recovery 'genius:genius_play|mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend'
-Slack : -1.196
-TNS   : -10.298
+Slack : -2.208
+TNS   : -76.139
 
 Type  : Slow 1100mV 0C Model Removal 'CLOCK_50'
-Slack : 0.314
+Slack : -0.018
+TNS   : -0.031
+
+Type  : Slow 1100mV 0C Model Removal 'genius:genius_play|mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend'
+Slack : 0.543
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Removal 'genius:genius_play|mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
-Slack : 0.469
-TNS   : 0.000
-
-Type  : Slow 1100mV 0C Model Removal 'genius:genius_play|mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend'
-Slack : 0.597
+Slack : 0.677
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'genius:genius_play|mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|newdata'
 Slack : -0.394
-TNS   : -30.934
+TNS   : -24.885
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'genius:genius_play|mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked'
 Slack : -0.394
-TNS   : -14.413
+TNS   : -13.605
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'genius:genius_play|mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
 Slack : -0.394
-TNS   : -14.112
+TNS   : -12.761
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'genius:genius_play|mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend'
 Slack : -0.394
-TNS   : -4.764
+TNS   : -5.434
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'genius_play|vga_controller_instance|vga_controller|divider|vga_pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]'
 Slack : 0.325
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
-Slack : 8.671
+Slack : 8.700
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'genius_play|vga_controller_instance|vga_controller|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 18.611
+Slack : 18.602
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Setup 'genius:genius_play|mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|newdata'
-Slack : -22.352
-TNS   : -908.035
+Slack : -21.976
+TNS   : -902.650
 
 Type  : Fast 1100mV 85C Model Setup 'CLOCK_50'
-Slack : -3.899
-TNS   : -72.624
+Slack : -3.656
+TNS   : -70.863
 
 Type  : Fast 1100mV 85C Model Setup 'genius:genius_play|mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked'
-Slack : -2.154
-TNS   : -48.541
-
-Type  : Fast 1100mV 85C Model Setup 'genius:genius_play|mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend'
-Slack : -1.791
-TNS   : -12.279
+Slack : -1.998
+TNS   : -45.822
 
 Type  : Fast 1100mV 85C Model Setup 'genius:genius_play|mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
-Slack : -1.764
-TNS   : -27.638
+Slack : -1.718
+TNS   : -22.482
+
+Type  : Fast 1100mV 85C Model Setup 'genius:genius_play|mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend'
+Slack : -1.345
+TNS   : -10.341
 
 Type  : Fast 1100mV 85C Model Setup 'genius_play|vga_controller_instance|vga_controller|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 28.911
+Slack : 29.037
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'CLOCK_50'
-Slack : -0.344
-TNS   : -0.686
+Slack : -0.711
+TNS   : -2.030
 
 Type  : Fast 1100mV 85C Model Hold 'genius:genius_play|mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked'
-Slack : -0.178
-TNS   : -0.924
+Slack : -0.144
+TNS   : -0.273
 
 Type  : Fast 1100mV 85C Model Hold 'genius:genius_play|mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
-Slack : -0.051
-TNS   : -0.078
+Slack : -0.112
+TNS   : -0.112
 
 Type  : Fast 1100mV 85C Model Hold 'genius_play|vga_controller_instance|vga_controller|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 0.204
+Slack : 0.255
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'genius:genius_play|mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|newdata'
-Slack : 0.290
+Slack : 0.269
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'genius:genius_play|mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend'
-Slack : 1.015
+Slack : 0.939
 TNS   : 0.000
-
-Type  : Fast 1100mV 85C Model Recovery 'CLOCK_50'
-Slack : -2.168
-TNS   : -76.790
-
-Type  : Fast 1100mV 85C Model Recovery 'genius:genius_play|mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
-Slack : -1.796
-TNS   : -22.703
 
 Type  : Fast 1100mV 85C Model Recovery 'genius:genius_play|mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend'
-Slack : -0.561
-TNS   : -4.364
+Slack : -3.145
+TNS   : -8.674
 
-Type  : Fast 1100mV 85C Model Removal 'genius:genius_play|mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
-Slack : 0.043
-TNS   : 0.000
+Type  : Fast 1100mV 85C Model Recovery 'CLOCK_50'
+Slack : -1.865
+TNS   : -66.095
+
+Type  : Fast 1100mV 85C Model Recovery 'genius:genius_play|mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
+Slack : -1.592
+TNS   : -22.413
 
 Type  : Fast 1100mV 85C Model Removal 'genius:genius_play|mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend'
-Slack : 0.180
+Slack : 0.112
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Removal 'genius:genius_play|mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
+Slack : 0.152
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Removal 'CLOCK_50'
-Slack : 0.430
+Slack : 0.322
 TNS   : 0.000
-
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'genius:genius_play|mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|newdata'
-Slack : -0.101
-TNS   : -3.919
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'genius:genius_play|mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
-Slack : -0.070
-TNS   : -0.284
-
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'genius:genius_play|mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked'
-Slack : -0.027
-TNS   : -0.225
+Slack : -0.072
+TNS   : -0.347
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'genius:genius_play|mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend'
-Slack : 0.078
-TNS   : 0.000
+Slack : -0.031
+TNS   : -0.110
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'genius:genius_play|mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked'
+Slack : -0.029
+TNS   : -0.181
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'genius:genius_play|mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|newdata'
+Slack : -0.006
+TNS   : -0.062
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'genius_play|vga_controller_instance|vga_controller|divider|vga_pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]'
 Slack : 0.325
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
-Slack : 8.777
+Slack : 8.780
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'genius_play|vga_controller_instance|vga_controller|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 18.743
+Slack : 18.741
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Setup 'genius:genius_play|mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|newdata'
-Slack : -20.603
-TNS   : -840.779
+Slack : -20.328
+TNS   : -838.026
 
 Type  : Fast 1100mV 0C Model Setup 'CLOCK_50'
-Slack : -3.348
-TNS   : -53.649
+Slack : -3.157
+TNS   : -52.160
 
 Type  : Fast 1100mV 0C Model Setup 'genius:genius_play|mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked'
-Slack : -2.049
-TNS   : -46.084
-
-Type  : Fast 1100mV 0C Model Setup 'genius:genius_play|mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend'
-Slack : -1.737
-TNS   : -12.076
+Slack : -1.944
+TNS   : -43.601
 
 Type  : Fast 1100mV 0C Model Setup 'genius:genius_play|mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
-Slack : -1.674
-TNS   : -24.987
+Slack : -1.595
+TNS   : -20.548
+
+Type  : Fast 1100mV 0C Model Setup 'genius:genius_play|mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend'
+Slack : -1.350
+TNS   : -10.408
 
 Type  : Fast 1100mV 0C Model Setup 'genius_play|vga_controller_instance|vga_controller|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 29.663
+Slack : 29.769
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Hold 'CLOCK_50'
-Slack : -0.529
-TNS   : -1.251
+Slack : -0.846
+TNS   : -2.649
 
 Type  : Fast 1100mV 0C Model Hold 'genius:genius_play|mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked'
-Slack : -0.218
-TNS   : -1.432
+Slack : -0.167
+TNS   : -0.605
 
 Type  : Fast 1100mV 0C Model Hold 'genius:genius_play|mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
-Slack : -0.082
-TNS   : -0.218
-
-Type  : Fast 1100mV 0C Model Hold 'genius_play|vga_controller_instance|vga_controller|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 0.184
-TNS   : 0.000
+Slack : -0.135
+TNS   : -0.135
 
 Type  : Fast 1100mV 0C Model Hold 'genius:genius_play|mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|newdata'
-Slack : 0.242
+Slack : 0.230
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'genius_play|vga_controller_instance|vga_controller|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.230
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Hold 'genius:genius_play|mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend'
-Slack : 1.031
+Slack : 0.966
 TNS   : 0.000
 
+Type  : Fast 1100mV 0C Model Recovery 'genius:genius_play|mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend'
+Slack : -2.687
+TNS   : -7.214
+
 Type  : Fast 1100mV 0C Model Recovery 'genius:genius_play|mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
-Slack : -1.721
-TNS   : -19.802
+Slack : -1.565
+TNS   : -19.921
 
 Type  : Fast 1100mV 0C Model Recovery 'CLOCK_50'
-Slack : -1.606
-TNS   : -56.163
+Slack : -1.369
+TNS   : -47.430
 
-Type  : Fast 1100mV 0C Model Recovery 'genius:genius_play|mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend'
-Slack : -0.450
-TNS   : -3.481
-
-Type  : Fast 1100mV 0C Model Removal 'genius:genius_play|mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
+Type  : Fast 1100mV 0C Model Removal 'CLOCK_50'
 Slack : 0.004
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Removal 'genius:genius_play|mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend'
-Slack : 0.125
+Slack : 0.058
 TNS   : 0.000
 
-Type  : Fast 1100mV 0C Model Removal 'CLOCK_50'
-Slack : 0.141
+Type  : Fast 1100mV 0C Model Removal 'genius:genius_play|mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
+Slack : 0.096
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'genius:genius_play|mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
+Slack : -0.015
+TNS   : -0.023
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'genius:genius_play|mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend'
+Slack : 0.008
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'genius:genius_play|mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked'
+Slack : 0.010
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'genius:genius_play|mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|newdata'
-Slack : -0.047
-TNS   : -1.564
-
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'genius:genius_play|mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
-Slack : -0.016
-TNS   : -0.032
-
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'genius:genius_play|mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked'
-Slack : 0.025
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'genius:genius_play|mouse_controller:mouse_controller_instance|mouse_ctrl:mousectrl|sigsend'
-Slack : 0.099
+Slack : 0.034
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'genius_play|vga_controller_instance|vga_controller|divider|vga_pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]'
@@ -395,11 +395,11 @@ Slack : 0.325
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
-Slack : 8.784
+Slack : 8.788
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'genius_play|vga_controller_instance|vga_controller|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 18.745
+Slack : 18.741
 TNS   : 0.000
 
 ------------------------------------------------------------

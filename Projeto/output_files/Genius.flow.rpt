@@ -1,5 +1,5 @@
 Flow report for Genius
-Wed May 30 17:58:31 2018
+Mon Jun  4 14:40:10 2018
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -40,15 +40,15 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Wed May 30 17:58:23 2018       ;
+; Flow Status                     ; Successful - Mon Jun  4 14:40:02 2018       ;
 ; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; Genius                                      ;
 ; Top-level Entity Name           ; genius_board                                ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSEMA5F31C6                                ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 974 / 32,070 ( 3 % )                        ;
-; Total registers                 ; 370                                         ;
+; Logic utilization (in ALMs)     ; 968 / 32,070 ( 3 % )                        ;
+; Total registers                 ; 372                                         ;
 ; Total pins                      ; 32 / 457 ( 7 % )                            ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 39,936 / 4,065,280 ( < 1 % )                ;
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/30/2018 17:57:03 ;
+; Start date & time ; 06/04/2018 14:38:40 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Genius              ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+--------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name  ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+--------------+------------+
-; COMPILER_SIGNATURE_ID               ; 273440552276240.152771382217715        ; --            ; --           ; --         ;
+; COMPILER_SIGNATURE_ID               ; 58166070750001.152813392021616         ; --            ; --           ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --           ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --           ; --         ;
 ; MISC_FILE                           ; vga_pll.cmp                            ; --            ; --           ; --         ;
@@ -98,24 +98,24 @@ refer to the applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:16     ; 1.0                     ; 1213 MB             ; 00:00:26                           ;
-; Fitter                    ; 00:00:56     ; 1.1                     ; 2661 MB             ; 00:01:46                           ;
-; Assembler                 ; 00:00:06     ; 1.0                     ; 1107 MB             ; 00:00:06                           ;
-; TimeQuest Timing Analyzer ; 00:00:08     ; 1.6                     ; 1410 MB             ; 00:00:10                           ;
-; Total                     ; 00:01:26     ; --                      ; --                  ; 00:02:28                           ;
+; Analysis & Synthesis      ; 00:00:15     ; 1.0                     ; 1215 MB             ; 00:00:27                           ;
+; Fitter                    ; 00:00:58     ; 1.1                     ; 2674 MB             ; 00:01:44                           ;
+; Assembler                 ; 00:00:06     ; 1.0                     ; 1105 MB             ; 00:00:06                           ;
+; TimeQuest Timing Analyzer ; 00:00:07     ; 1.6                     ; 1408 MB             ; 00:00:10                           ;
+; Total                     ; 00:01:26     ; --                      ; --                  ; 00:02:27                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                                   ;
-+---------------------------+--------------------------+-------------+-------------+----------------+
-; Module Name               ; Machine Hostname         ; OS Name     ; OS Version  ; Processor type ;
-+---------------------------+--------------------------+-------------+-------------+----------------+
-; Analysis & Synthesis      ; panama.lab.ic.unicamp.br ; Fedora Core ; Fedora Core ; x86_64         ;
-; Fitter                    ; panama.lab.ic.unicamp.br ; Fedora Core ; Fedora Core ; x86_64         ;
-; Assembler                 ; panama.lab.ic.unicamp.br ; Fedora Core ; Fedora Core ; x86_64         ;
-; TimeQuest Timing Analyzer ; panama.lab.ic.unicamp.br ; Fedora Core ; Fedora Core ; x86_64         ;
-+---------------------------+--------------------------+-------------+-------------+----------------+
++------------------------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                                      ;
++---------------------------+-----------------------------+-------------+-------------+----------------+
+; Module Name               ; Machine Hostname            ; OS Name     ; OS Version  ; Processor type ;
++---------------------------+-----------------------------+-------------+-------------+----------------+
+; Analysis & Synthesis      ; venezuela.lab.ic.unicamp.br ; Fedora Core ; Fedora Core ; x86_64         ;
+; Fitter                    ; venezuela.lab.ic.unicamp.br ; Fedora Core ; Fedora Core ; x86_64         ;
+; Assembler                 ; venezuela.lab.ic.unicamp.br ; Fedora Core ; Fedora Core ; x86_64         ;
+; TimeQuest Timing Analyzer ; venezuela.lab.ic.unicamp.br ; Fedora Core ; Fedora Core ; x86_64         ;
++---------------------------+-----------------------------+-------------+-------------+----------------+
 
 
 ------------
